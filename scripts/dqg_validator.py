@@ -26,7 +26,7 @@ DQG_RESULT_FILE = os.path.join(LOGS_DIR, "dqg_results.json")
 DQG_RULES = {
 
     "01_SAN_XUAT": {
-        # Actual columns from BO_Input_SX_PlanDO_GSBB_V2 → tab 01_SX_PLAN_DO
+        # Tab: 01_SX_PLAN_DO — BO_Input_SX_PlanDO_GSBB_V2
         "required_columns": [
             "Date", "Shift", "Site", "Work_Order",
             "Machine_Line", "Product_Group",
@@ -38,45 +38,80 @@ DQG_RULES = {
     },
 
     "02_KHSX_OTIF": {
+        # PENDING — Sheet ID not yet provided; rules are placeholder
         "required_columns": ["Date", "Site", "Order_No", "Plan_Delivery", "Actual_Delivery", "OTIF_Status"],
         "numeric_columns": [],
         "site_column": "Site",
     },
 
     "03_QLCL": {
-        "required_columns": ["Date", "Site", "NCR_No", "Issue_Type", "Severity", "Status"],
-        "numeric_columns": [],
+        # Tab: 03_QLCL_NCR_CAR — actual columns from synced sheet
+        "required_columns": [
+            "Date", "Site", "NCR_CAR_ID", "Severity", "Status", "Owner_Direct",
+        ],
+        "numeric_columns": ["Qty_Affected"],
         "site_column": "Site",
+        "date_column": "Date",
     },
 
     "04_QLTB_CD": {
-        "required_columns": ["Date", "Site", "Machine_ID", "Downtime_Min", "Cause_Category", "Status"],
+        # Tab: 04_MACHINE_DOWNTIME — actual columns from synced sheet
+        "required_columns": [
+            "Date", "Site", "Machine", "Downtime_Min", "Status",
+        ],
         "numeric_columns": ["Downtime_Min"],
         "site_column": "Site",
+        "date_column": "Date",
     },
 
     "05_KHO": {
-        "required_columns": ["Date", "Site", "Location", "Product_Group", "WIP_Qty", "Age_Days", "FIFO_Status"],
+        # Tab: 05_WIP_FIFO_KHO — actual columns from synced sheet (GS5 primary)
+        "required_columns": [
+            "Date", "Site", "Work_Order", "WIP_Qty", "FIFO_Status",
+        ],
         "numeric_columns": ["WIP_Qty", "Age_Days"],
         "site_column": "Site",
+        "date_column": "Date",
+    },
+
+    "05_KHO_GS1": {
+        # Tab: 05_WIP_FIFO_KHO — GS1 variant (same structure as 05_KHO)
+        "required_columns": [
+            "Date", "Site", "Work_Order", "WIP_Qty", "FIFO_Status",
+        ],
+        "numeric_columns": ["WIP_Qty", "Age_Days"],
+        "site_column": "Site",
+        "date_column": "Date",
     },
 
     "06_GSTT": {
-        "required_columns": ["Date", "Site", "Check_Area", "Finding", "Severity", "Evidence", "Status"],
+        # Tab: 06_GSTT_FIELD_LOG — actual columns from synced sheet
+        "required_columns": [
+            "Check_Date", "Site", "Category", "Severity", "Status",
+        ],
         "numeric_columns": [],
         "site_column": "Site",
+        "date_column": "Check_Date",
     },
 
     "07_CONG_NGHE_SPM": {
-        "required_columns": ["Date", "Site", "Process_Step", "SPM_Actual", "SPM_Standard", "Gap", "Action"],
-        "numeric_columns": ["SPM_Actual", "SPM_Standard", "Gap"],
+        # Tab: 08_SPM_TECH — actual columns from synced sheet
+        "required_columns": [
+            "Request_Date", "Site", "Sample_ID", "Status",
+        ],
+        "numeric_columns": [],
         "site_column": "Site",
+        "date_column": "Request_Date",
     },
 
     "08_BO_CONTROL": {
-        "required_columns": ["Date", "Issue_ID", "Issue_Description", "Owner", "PIC", "Deadline", "Status"],
+        # Tab: 09_ISSUE_ACTION — actual columns from synced sheet
+        "required_columns": [
+            "Issue_Date", "Source_Module", "Site", "Severity", "Owner", "Status",
+        ],
         "numeric_columns": [],
-        "site_column": None,   # BO Control issues may be cross-site
+        "site_column": "Site",
+        "date_column": "Issue_Date",
     },
 }
 

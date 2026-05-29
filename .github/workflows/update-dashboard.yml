@@ -1,0 +1,42 @@
+name: Update BO Dashboard
+
+on:
+  repository_dispatch:
+    types: [sheet-updated]
+  schedule:
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+
+jobs:
+  build-dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install gspread pandas google-auth openpyxl
+
+      - name: Fetch data from Google Sheets
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        run: python scripts/data_fetcher.py
+
+      - name: Run DQG Validation
+        run: python scripts/dqg_validator.py
+
+      - name: Build Dashboard HTML
+        run: python scripts/dashboard_builder.py
+
+      - name: Commit and Push
+        run: |
+          git config user.name "BO-Bot"
+          git config user.email "bo-bot@gsbb.vn"
+          git add docs/index.html logs/
+          git diff --staged --quiet || git commit -m "Dashboard update: $(date '+%Y-%m-%d %H:%M UTC')"
+          git push

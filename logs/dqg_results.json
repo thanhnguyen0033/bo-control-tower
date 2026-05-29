@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-29T16:10:00.593251Z",
-  "raw_data_from": "2026-05-29T16:10:00.548197Z",
+  "generated_at": "2026-05-29T16:36:43.467854Z",
+  "raw_data_from": "2026-05-29T16:36:43.423359Z",
   "summary": {
     "PASS": 0,
     "WARN": 0,
@@ -31,7 +31,7 @@
       "issues": [
         "Missing required columns: ['Date', 'Shift', 'Site', 'Work_Order', 'Machine_Line', 'Product_Group', 'Plan_Qty', 'Actual_Qty', 'NG_Qty', 'Plan_Do_%', 'RAG']"
       ],
-      "validated_at": "2026-05-29T16:10:00.593193Z"
+      "validated_at": "2026-05-29T16:36:43.467797Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -44,7 +44,7 @@
       "issues": [
         "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T16:10:00.593202Z"
+      "validated_at": "2026-05-29T16:36:43.467806Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -57,7 +57,7 @@
       "issues": [
         "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T16:10:00.593207Z"
+      "validated_at": "2026-05-29T16:36:43.467811Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -70,7 +70,7 @@
       "issues": [
         "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T16:10:00.593211Z"
+      "validated_at": "2026-05-29T16:36:43.467815Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -83,7 +83,7 @@
       "issues": [
         "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T16:10:00.593218Z"
+      "validated_at": "2026-05-29T16:36:43.467822Z"
     },
     "05_KHO_GS1": {
       "dept": "05_KHO_GS1",
@@ -96,7 +96,7 @@
       "issues": [
         "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T16:10:00.593224Z"
+      "validated_at": "2026-05-29T16:36:43.467828Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -109,7 +109,7 @@
       "issues": [
         "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T16:10:00.593228Z"
+      "validated_at": "2026-05-29T16:36:43.467832Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -122,7 +122,7 @@
       "issues": [
         "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T16:10:00.593235Z"
+      "validated_at": "2026-05-29T16:36:43.467840Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -135,7 +135,7 @@
       "issues": [
         "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T16:10:00.593240Z"
+      "validated_at": "2026-05-29T16:36:43.467844Z"
     }
   }
 }

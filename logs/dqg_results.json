@@ -1,0 +1,116 @@
+{
+  "generated_at": "2026-05-29T14:13:54.321668Z",
+  "raw_data_from": "2026-05-29T14:13:54.285576Z",
+  "summary": {
+    "PASS": 0,
+    "WARN": 0,
+    "FAIL": 0,
+    "SKIP": 8
+  },
+  "departments": {
+    "01_SAN_XUAT": {
+      "dept": "01_SAN_XUAT",
+      "dqg_status": "SKIP",
+      "description": "San xuat - Plan DO",
+      "row_count": 0,
+      "fail_count": 0,
+      "warn_count": 0,
+      "missing_columns": [],
+      "issues": [
+        "Sheet ID not configured yet — Pending DQG"
+      ],
+      "validated_at": "2026-05-29T14:13:54.321620Z"
+    },
+    "02_KHSX_OTIF": {
+      "dept": "02_KHSX_OTIF",
+      "dqg_status": "SKIP",
+      "description": "KHSX - OTIF Delivery",
+      "row_count": 0,
+      "fail_count": 0,
+      "warn_count": 0,
+      "missing_columns": [],
+      "issues": [
+        "Sheet ID not configured yet — Pending DQG"
+      ],
+      "validated_at": "2026-05-29T14:13:54.321628Z"
+    },
+    "03_QLCL": {
+      "dept": "03_QLCL",
+      "dqg_status": "SKIP",
+      "description": "Chat luong - NCR CAR",
+      "row_count": 0,
+      "fail_count": 0,
+      "warn_count": 0,
+      "missing_columns": [],
+      "issues": [
+        "Sheet ID not configured yet — Pending DQG"
+      ],
+      "validated_at": "2026-05-29T14:13:54.321632Z"
+    },
+    "04_QLTB_CD": {
+      "dept": "04_QLTB_CD",
+      "dqg_status": "SKIP",
+      "description": "Thiet bi - Machine Downtime",
+      "row_count": 0,
+      "fail_count": 0,
+      "warn_count": 0,
+      "missing_columns": [],
+      "issues": [
+        "Sheet ID not configured yet — Pending DQG"
+      ],
+      "validated_at": "2026-05-29T14:13:54.321635Z"
+    },
+    "05_KHO": {
+      "dept": "05_KHO",
+      "dqg_status": "SKIP",
+      "description": "Kho - WIP FIFO",
+      "row_count": 0,
+      "fail_count": 0,
+      "warn_count": 0,
+      "missing_columns": [],
+      "issues": [
+        "Sheet ID not configured yet — Pending DQG"
+      ],
+      "validated_at": "2026-05-29T14:13:54.321642Z"
+    },
+    "06_GSTT": {
+      "dept": "06_GSTT",
+      "dqg_status": "SKIP",
+      "description": "GSTT - Field Verification",
+      "row_count": 0,
+      "fail_count": 0,
+      "warn_count": 0,
+      "missing_columns": [],
+      "issues": [
+        "Sheet ID not configured yet — Pending DQG"
+      ],
+      "validated_at": "2026-05-29T14:13:54.321647Z"
+    },
+    "07_CONG_NGHE_SPM": {
+      "dept": "07_CONG_NGHE_SPM",
+      "dqg_status": "SKIP",
+      "description": "Cong nghe - SPM Technology",
+      "row_count": 0,
+      "fail_count": 0,
+      "warn_count": 0,
+      "missing_columns": [],
+      "issues": [
+        "Sheet ID not configured yet — Pending DQG"
+      ],
+      "validated_at": "2026-05-29T14:13:54.321651Z"
+    },
+    "08_BO_CONTROL": {
+      "dept": "08_BO_CONTROL",
+      "dqg_status": "SKIP",
+      "description": "BO Control - Issue Action",
+      "row_count": 0,
+      "fail_count": 0,
+      "warn_count": 0,
+      "missing_columns": [],
+      "issues": [
+        "Sheet ID not configured yet — Pending DQG"
+      ],
+      "validated_at": "2026-05-29T14:13:54.321658Z"
+    }
+  }
+}

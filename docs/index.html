@@ -1,18 +1,184 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head><meta charset="UTF-8"><title>BO Control Tower – Đang khởi động</title>
-<style>body{font-family:sans-serif;display:flex;align-items:center;justify-content:center;
-  height:100vh;background:#f1f5f9;color:#334155}
-.box{text-align:center;background:#fff;padding:40px 60px;border-radius:16px;
-  box-shadow:0 4px 24px rgba(0,0,0,.08)}
-h1{font-size:22px;margin-bottom:12px}p{color:#64748b;font-size:14px}</style>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BO Control Tower – GSBB</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+       background:#f1f5f9;color:#1e293b;padding:16px}
+  .container{max-width:860px;margin:0 auto}
+  .header{background:linear-gradient(135deg,#1e293b 0%,#334155 100%);
+           color:#fff;padding:20px 24px;border-radius:12px;margin-bottom:20px}
+  .header h1{font-size:20px;font-weight:700;letter-spacing:.3px}
+  .header .sub{font-size:13px;color:#94a3b8;margin-top:4px}
+  .overall{text-align:center;padding:16px;border-radius:10px;margin-bottom:20px;
+            background:#fff;border:2px solid #22c55e}
+  .overall .label{font-size:22px;font-weight:800;color:#22c55e}
+  .overall .sub{font-size:13px;color:#64748b;margin-top:4px}
+  .kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+  .kpi-box{background:#fff;border-radius:10px;padding:14px;text-align:center;
+            box-shadow:0 1px 4px rgba(0,0,0,.07)}
+  .kpi-box .num{font-size:28px;font-weight:800}
+  .kpi-box .lbl{font-size:12px;color:#64748b;margin-top:2px}
+  .section-title{font-size:15px;font-weight:700;color:#334155;
+                  margin-bottom:12px;padding-left:4px;
+                  border-left:4px solid #3b82f6;padding-left:10px}
+  .footer{text-align:center;font-size:11px;color:#94a3b8;margin-top:24px}
+  @media(max-width:500px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
+</style>
 </head>
 <body>
-<div class="box">
-  <h1>🏭 BO Control Tower – GSBB</h1>
-  <p>Dashboard đang được khởi tạo lần đầu.</p>
-  <p>GitHub Actions sẽ tự động build và cập nhật trang này.</p>
-  <p style="margin-top:16px;font-size:12px;color:#94a3b8">Vui lòng chờ 2–5 phút sau khi push code lên GitHub.</p>
+<div class="container">
+
+  <div class="header">
+    <h1>🏭 BO Control Tower – GSBB</h1>
+    <div class="sub">Data Quality Gate Dashboard &nbsp;|&nbsp;
+      Cập nhật: 2026-05-29 14:13 UTC &nbsp;|&nbsp;
+      DQG Run: N/A UTC</div>
+  </div>
+
+  <div class="overall">
+    <div class="label">OPERATIONAL</div>
+    <div class="sub">Tình trạng dữ liệu tổng quan 8 bộ phận</div>
+  </div>
+
+  <div class="kpi-row">
+    <div class="kpi-box">
+      <div class="num" style="color:#22c55e">0</div>
+      <div class="lbl">✅ PASS</div>
+    </div>
+    <div class="kpi-box">
+      <div class="num" style="color:#f59e0b">0</div>
+      <div class="lbl">⚠️ WARN</div>
+    </div>
+    <div class="kpi-box">
+      <div class="num" style="color:#ef4444">0</div>
+      <div class="lbl">❌ FAIL / ERROR</div>
+    </div>
+  </div>
+
+  <div class="section-title">Chi tiết DQG từng bộ phận</div>
+  
+        <div style="border:1px solid #64748b;border-left:5px solid #64748b;
+                    background:#f8fafc;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-weight:600;font-size:14px;color:#1e293b">? 01 | Sản Xuất – Plan/DO</span>
+            <span style="background:#64748b;color:#fff;padding:2px 10px;
+                         border-radius:20px;font-size:12px;font-weight:700">SKIP</span>
+          </div>
+          <div style="font-size:12px;color:#475569;margin-top:5px"></div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows fetched: 0
+            
+          </div>
+          
+        </div>
+        <div style="border:1px solid #64748b;border-left:5px solid #64748b;
+                    background:#f8fafc;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-weight:600;font-size:14px;color:#1e293b">? 02 | KHSX – OTIF Delivery</span>
+            <span style="background:#64748b;color:#fff;padding:2px 10px;
+                         border-radius:20px;font-size:12px;font-weight:700">SKIP</span>
+          </div>
+          <div style="font-size:12px;color:#475569;margin-top:5px"></div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows fetched: 0
+            
+          </div>
+          
+        </div>
+        <div style="border:1px solid #64748b;border-left:5px solid #64748b;
+                    background:#f8fafc;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-weight:600;font-size:14px;color:#1e293b">? 03 | Chất Lượng – NCR/CAR</span>
+            <span style="background:#64748b;color:#fff;padding:2px 10px;
+                         border-radius:20px;font-size:12px;font-weight:700">SKIP</span>
+          </div>
+          <div style="font-size:12px;color:#475569;margin-top:5px"></div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows fetched: 0
+            
+          </div>
+          
+        </div>
+        <div style="border:1px solid #64748b;border-left:5px solid #64748b;
+                    background:#f8fafc;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-weight:600;font-size:14px;color:#1e293b">? 04 | Thiết Bị – Downtime</span>
+            <span style="background:#64748b;color:#fff;padding:2px 10px;
+                         border-radius:20px;font-size:12px;font-weight:700">SKIP</span>
+          </div>
+          <div style="font-size:12px;color:#475569;margin-top:5px"></div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows fetched: 0
+            
+          </div>
+          
+        </div>
+        <div style="border:1px solid #64748b;border-left:5px solid #64748b;
+                    background:#f8fafc;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-weight:600;font-size:14px;color:#1e293b">? 05 | Kho – WIP/FIFO</span>
+            <span style="background:#64748b;color:#fff;padding:2px 10px;
+                         border-radius:20px;font-size:12px;font-weight:700">SKIP</span>
+          </div>
+          <div style="font-size:12px;color:#475569;margin-top:5px"></div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows fetched: 0
+            
+          </div>
+          
+        </div>
+        <div style="border:1px solid #64748b;border-left:5px solid #64748b;
+                    background:#f8fafc;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-weight:600;font-size:14px;color:#1e293b">? 06 | GSTT – Field Verify</span>
+            <span style="background:#64748b;color:#fff;padding:2px 10px;
+                         border-radius:20px;font-size:12px;font-weight:700">SKIP</span>
+          </div>
+          <div style="font-size:12px;color:#475569;margin-top:5px"></div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows fetched: 0
+            
+          </div>
+          
+        </div>
+        <div style="border:1px solid #64748b;border-left:5px solid #64748b;
+                    background:#f8fafc;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-weight:600;font-size:14px;color:#1e293b">? 07 | Công Nghệ – SPM</span>
+            <span style="background:#64748b;color:#fff;padding:2px 10px;
+                         border-radius:20px;font-size:12px;font-weight:700">SKIP</span>
+          </div>
+          <div style="font-size:12px;color:#475569;margin-top:5px"></div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows fetched: 0
+            
+          </div>
+          
+        </div>
+        <div style="border:1px solid #64748b;border-left:5px solid #64748b;
+                    background:#f8fafc;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-weight:600;font-size:14px;color:#1e293b">? 08 | BO Control – Issue/Action</span>
+            <span style="background:#64748b;color:#fff;padding:2px 10px;
+                         border-radius:20px;font-size:12px;font-weight:700">SKIP</span>
+          </div>
+          <div style="font-size:12px;color:#475569;margin-top:5px"></div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows fetched: 0
+            
+          </div>
+          
+        </div>
+
+  <div class="footer">
+    GSBB BO Control Tower &nbsp;·&nbsp; Auto-built by GitHub Actions &nbsp;·&nbsp;
+    Dữ liệu nguồn: Google Sheets &nbsp;·&nbsp; 2026-05-29 14:13 UTC
+  </div>
+
 </div>
 </body>
 </html>

@@ -1,116 +1,129 @@
 {
-  "generated_at": "2026-05-29T14:13:54.321668Z",
-  "raw_data_from": "2026-05-29T14:13:54.285576Z",
+  "generated_at": "2026-05-29T15:49:22.880782Z",
+  "raw_data_from": "2026-05-29T15:49:22.837905Z",
   "summary": {
     "PASS": 0,
     "WARN": 0,
-    "FAIL": 0,
-    "SKIP": 8
+    "FAIL": 9,
+    "SKIP": 0
   },
   "departments": {
     "01_SAN_XUAT": {
       "dept": "01_SAN_XUAT",
-      "dqg_status": "SKIP",
-      "description": "San xuat - Plan DO",
+      "dqg_status": "FAIL",
+      "description": "Sản Xuất – Plan/DO",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Sheet ID not configured yet — Pending DQG"
+        "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T14:13:54.321620Z"
+      "validated_at": "2026-05-29T15:49:22.880724Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
-      "dqg_status": "SKIP",
-      "description": "KHSX - OTIF Delivery",
+      "dqg_status": "FAIL",
+      "description": "KHSX – OTIF Delivery",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Sheet ID not configured yet — Pending DQG"
+        "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T14:13:54.321628Z"
+      "validated_at": "2026-05-29T15:49:22.880733Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
-      "dqg_status": "SKIP",
-      "description": "Chat luong - NCR CAR",
+      "dqg_status": "FAIL",
+      "description": "Chất Lượng – NCR/CAR",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Sheet ID not configured yet — Pending DQG"
+        "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T14:13:54.321632Z"
+      "validated_at": "2026-05-29T15:49:22.880738Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
-      "dqg_status": "SKIP",
-      "description": "Thiet bi - Machine Downtime",
+      "dqg_status": "FAIL",
+      "description": "Thiết Bị – Machine Downtime",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Sheet ID not configured yet — Pending DQG"
+        "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T14:13:54.321635Z"
+      "validated_at": "2026-05-29T15:49:22.880741Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
-      "dqg_status": "SKIP",
-      "description": "Kho - WIP FIFO",
+      "dqg_status": "FAIL",
+      "description": "Kho GS5 – WIP/FIFO",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Sheet ID not configured yet — Pending DQG"
+        "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T14:13:54.321642Z"
+      "validated_at": "2026-05-29T15:49:22.880748Z"
+    },
+    "05_KHO_GS1": {
+      "dept": "05_KHO_GS1",
+      "dqg_status": "FAIL",
+      "description": "Kho GS1 – WIP/FIFO",
+      "row_count": 0,
+      "fail_count": 0,
+      "warn_count": 0,
+      "missing_columns": [],
+      "issues": [
+        "Data fetch failed — sheet may not be public or Sheet ID wrong"
+      ],
+      "validated_at": "2026-05-29T15:49:22.880754Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
-      "dqg_status": "SKIP",
-      "description": "GSTT - Field Verification",
+      "dqg_status": "FAIL",
+      "description": "GSTT – Field Verification",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Sheet ID not configured yet — Pending DQG"
+        "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T14:13:54.321647Z"
+      "validated_at": "2026-05-29T15:49:22.880759Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
-      "dqg_status": "SKIP",
-      "description": "Cong nghe - SPM Technology",
+      "dqg_status": "FAIL",
+      "description": "Công Nghệ – SPM Technology",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Sheet ID not configured yet — Pending DQG"
+        "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T14:13:54.321651Z"
+      "validated_at": "2026-05-29T15:49:22.880767Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
-      "dqg_status": "SKIP",
-      "description": "BO Control - Issue Action",
+      "dqg_status": "FAIL",
+      "description": "BO Control – Issue/Action",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Sheet ID not configured yet — Pending DQG"
+        "Data fetch failed — sheet may not be public or Sheet ID wrong"
       ],
-      "validated_at": "2026-05-29T14:13:54.321658Z"
+      "validated_at": "2026-05-29T15:49:22.880772Z"
     }
   }
 }

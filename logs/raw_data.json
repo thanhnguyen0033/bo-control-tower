@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T16:02:02.035438Z",
+  "generated_at": "2026-05-29T16:10:00.548197Z",
   "summary": {
     "total_depts": 9,
     "ok": 1,
@@ -45,7 +45,7 @@
         ""
       ],
       "row_count": 1,
-      "fetched_at": "2026-05-29T16:02:00.231225Z",
+      "fetched_at": "2026-05-29T16:09:58.410484Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -56,7 +56,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T16:02:00.342717Z",
+      "fetched_at": "2026-05-29T16:09:58.575763Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "03_QLCL": {
@@ -67,7 +67,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T16:02:00.613363Z",
+      "fetched_at": "2026-05-29T16:09:58.900436Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "04_QLTB_CD": {
@@ -78,7 +78,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T16:02:00.854551Z",
+      "fetched_at": "2026-05-29T16:09:59.222420Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "05_KHO": {
@@ -89,7 +89,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T16:02:01.117337Z",
+      "fetched_at": "2026-05-29T16:09:59.504727Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "05_KHO_GS1": {
@@ -100,7 +100,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T16:02:01.352443Z",
+      "fetched_at": "2026-05-29T16:09:59.786901Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "06_GSTT": {
@@ -111,7 +111,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T16:02:01.614399Z",
+      "fetched_at": "2026-05-29T16:10:00.072477Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "07_CONG_NGHE_SPM": {
@@ -122,7 +122,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T16:02:01.848054Z",
+      "fetched_at": "2026-05-29T16:10:00.300689Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "08_BO_CONTROL": {
@@ -133,7 +133,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T16:02:02.035426Z",
+      "fetched_at": "2026-05-29T16:10:00.548184Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     }
   }

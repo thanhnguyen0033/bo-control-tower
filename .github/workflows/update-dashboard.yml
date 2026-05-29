@@ -1,42 +1,44 @@
-name: Update BO Dashboard
+name: Update BO Control Tower Dashboard
 
 on:
-  repository_dispatch:
-    types: [sheet-updated]
   schedule:
-    - cron: '0 */2 * * *'
-  workflow_dispatch:
+    - cron: '0 */2 * * *'   # every 2 hours
+  workflow_dispatch:          # manual trigger from GitHub Actions tab
+  repository_dispatch:
+    types: [update-dashboard]
 
 jobs:
-  build-dashboard:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup Python 3.11
-        uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install gspread pandas google-auth openpyxl
+        run: |
+          pip install pandas requests
 
-      - name: Fetch data from Google Sheets
-        env:
-          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+      - name: Fetch data from Google Sheets (CSV export)
         run: python scripts/data_fetcher.py
 
-      - name: Run DQG Validation
+      - name: Run Data Quality Gate
         run: python scripts/dqg_validator.py
 
-      - name: Build Dashboard HTML
+      - name: Build dashboard HTML
         run: python scripts/dashboard_builder.py
 
-      - name: Commit and Push
+      - name: Commit and push updated dashboard
         run: |
-          git config user.name "BO-Bot"
-          git config user.email "bo-bot@gsbb.vn"
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/index.html logs/
-          git diff --staged --quiet || git commit -m "Dashboard update: $(date '+%Y-%m-%d %H:%M UTC')"
+          git diff --cached --quiet || git commit -m "Auto-update dashboard $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push

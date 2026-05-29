@@ -1,157 +1,254 @@
 """
-dqg_validator.py – Data Quality Gate for BO Control Tower
-Reads logs/raw_data.json → validates each dept → writes logs/dqg_results.json
+dqg_validator.py — GSBB BO Control Tower
+Data Quality Gate (DQG): validates raw data before promoting to official KPI.
+
+Rules:
+- PASS  = all required columns present + 0 failing rows
+- WARN  = ≤10% rows fail validation checks
+- FAIL  = >10% rows fail OR required columns missing
+- SKIP  = dept is PENDING (Sheet ID not configured yet)
 """
-import json, os
-from datetime import datetime
 
-RAW_FILE    = "logs/raw_data.json"
-OUTPUT_FILE = "logs/dqg_results.json"
-os.makedirs("logs", exist_ok=True)
+import json
+import os
+import datetime
 
-from sheets_config import VALID_SITES
+LOGS_DIR = os.path.join(os.path.dirname(__file__), "..", "logs")
+RAW_DATA_FILE  = os.path.join(LOGS_DIR, "raw_data.json")
+DQG_RESULT_FILE = os.path.join(LOGS_DIR, "dqg_results.json")
 
-# ── DQG rules per department ───────────────────────────────────────────────────
-# required_columns : must not be blank in every data row
-# numeric_columns  : must be parseable as float
-# site_column      : column whose values must be in VALID_SITES (if present)
+# ──────────────────────────────────────────────────────────────
+# DQG RULES per department
+# required_columns : must all exist in the sheet header (Row 3)
+# numeric_columns  : these cells must be numeric (or empty = warning only)
+# site_column      : if present, value must be in VALID_SITES
+# ──────────────────────────────────────────────────────────────
 DQG_RULES = {
-    "01_SAN_XUAT":    {"required": ["Site", "Date", "Plan_Qty", "Actual_Qty", "Owner"],
-                       "numeric":  ["Plan_Qty", "Actual_Qty"],
-                       "site_col": "Site"},
-    "02_KHSX_OTIF":   {"required": ["Site", "Date", "OTIF_Target", "OTIF_Actual", "Owner"],
-                       "numeric":  ["OTIF_Target", "OTIF_Actual"],
-                       "site_col": "Site"},
-    "03_QLCL":        {"required": ["Site", "Date", "NCR_Count", "Owner"],
-                       "numeric":  ["NCR_Count"],
-                       "site_col": "Site"},
-    "04_QLTB_CD":     {"required": ["Site", "Date", "Machine_ID", "Downtime_hrs", "Owner"],
-                       "numeric":  ["Downtime_hrs"],
-                       "site_col": "Site"},
-    "05_KHO":         {"required": ["Site", "Date", "WIP_Qty", "Owner"],
-                       "numeric":  ["WIP_Qty"],
-                       "site_col": "Site"},
-    "06_GSTT":        {"required": ["Site", "Date", "Check_Item", "Result", "Verified_By"],
-                       "numeric":  [],
-                       "site_col": "Site"},
-    "07_CONG_NGHE_SPM": {"required": ["Site", "Date", "SPM_Item", "Status", "Owner"],
-                          "numeric":  [],
-                          "site_col": "Site"},
-    "08_BO_CONTROL":  {"required": ["Issue_ID", "Site", "Description", "Owner", "Deadline"],
-                       "numeric":  [],
-                       "site_col": "Site"},
+
+    "01_SAN_XUAT": {
+        # Actual columns from BO_Input_SX_PlanDO_GSBB_V2 → tab 01_SX_PLAN_DO
+        "required_columns": [
+            "Date", "Shift", "Site", "Work_Order",
+            "Machine_Line", "Product_Group",
+            "Plan_Qty", "Actual_Qty", "NG_Qty",
+            "Plan_Do_%", "RAG",
+        ],
+        "numeric_columns": ["Plan_Qty", "Actual_Qty", "NG_Qty", "Plan_Do_%"],
+        "site_column": "Site",
+    },
+
+    "02_KHSX_OTIF": {
+        "required_columns": ["Date", "Site", "Order_No", "Plan_Delivery", "Actual_Delivery", "OTIF_Status"],
+        "numeric_columns": [],
+        "site_column": "Site",
+    },
+
+    "03_QLCL": {
+        "required_columns": ["Date", "Site", "NCR_No", "Issue_Type", "Severity", "Status"],
+        "numeric_columns": [],
+        "site_column": "Site",
+    },
+
+    "04_QLTB_CD": {
+        "required_columns": ["Date", "Site", "Machine_ID", "Downtime_Min", "Cause_Category", "Status"],
+        "numeric_columns": ["Downtime_Min"],
+        "site_column": "Site",
+    },
+
+    "05_KHO": {
+        "required_columns": ["Date", "Site", "Location", "Product_Group", "WIP_Qty", "Age_Days", "FIFO_Status"],
+        "numeric_columns": ["WIP_Qty", "Age_Days"],
+        "site_column": "Site",
+    },
+
+    "06_GSTT": {
+        "required_columns": ["Date", "Site", "Check_Area", "Finding", "Severity", "Evidence", "Status"],
+        "numeric_columns": [],
+        "site_column": "Site",
+    },
+
+    "07_CONG_NGHE_SPM": {
+        "required_columns": ["Date", "Site", "Process_Step", "SPM_Actual", "SPM_Standard", "Gap", "Action"],
+        "numeric_columns": ["SPM_Actual", "SPM_Standard", "Gap"],
+        "site_column": "Site",
+    },
+
+    "08_BO_CONTROL": {
+        "required_columns": ["Date", "Issue_ID", "Issue_Description", "Owner", "PIC", "Deadline", "Status"],
+        "numeric_columns": [],
+        "site_column": None,   # BO Control issues may be cross-site
+    },
 }
 
-FAIL_THRESHOLD = 0.10   # >10% bad rows → FAIL
+VALID_SITES = ["GS1", "GS5", "GS6", "GSQV"]
 
-def validate_dept(dept_key, data):
-    """Return a validation result dict for one department."""
-    status    = data.get("status", "ERROR")
-    rows      = data.get("rows", [])
-    headers   = data.get("headers", [])
-    desc      = data.get("description", dept_key)
 
-    base = {"dept": dept_key, "description": desc,
-            "validated_at": datetime.utcnow().isoformat() + "Z",
-            "row_count": len(rows)}
+def is_numeric(value: str) -> bool:
+    """Return True if value can be parsed as a number (int or float)."""
+    try:
+        float(str(value).replace(",", "").strip())
+        return True
+    except (ValueError, TypeError):
+        return False
 
-    if status == "DEMO":
-        return {**base, "dqg_status": "DEMO",
-                "message": "Demo mode – not real data"}
 
-    if status in ("ERROR", "NO_DATA"):
-        return {**base, "dqg_status": status,
-                "message": data.get("error", "No data available")}
+def validate_dept(dept_key: str, dept_data: dict) -> dict:
+    """Run DQG for one department. Returns a result dict."""
+    status_from_fetch = dept_data.get("status", "PENDING")
 
-    if not rows:
-        return {**base, "dqg_status": "NO_DATA",
-                "message": "Sheet fetched but 0 data rows found"}
+    if status_from_fetch == "PENDING":
+        return {
+            "dept": dept_key,
+            "dqg_status": "SKIP",
+            "description": dept_data.get("description", dept_key),
+            "row_count": 0,
+            "fail_count": 0,
+            "warn_count": 0,
+            "missing_columns": [],
+            "issues": ["Sheet ID not configured yet — Pending DQG"],
+            "validated_at": datetime.datetime.utcnow().isoformat() + "Z",
+        }
 
-    rules = DQG_RULES.get(dept_key, {"required": [], "numeric": [], "site_col": None})
-    req_cols  = rules["required"]
-    num_cols  = rules["numeric"]
-    site_col  = rules.get("site_col")
+    if status_from_fetch == "FETCH_ERROR":
+        return {
+            "dept": dept_key,
+            "dqg_status": "FAIL",
+            "description": dept_data.get("description", dept_key),
+            "row_count": 0,
+            "fail_count": 0,
+            "warn_count": 0,
+            "missing_columns": [],
+            "issues": ["Data fetch failed — sheet may not be public or Sheet ID wrong"],
+            "validated_at": datetime.datetime.utcnow().isoformat() + "Z",
+        }
 
-    issues = []
-    bad_row_count = 0
+    rules   = DQG_RULES.get(dept_key, {})
+    records = dept_data.get("records", [])
+    columns = dept_data.get("columns", [])
 
-    for i, row in enumerate(rows, start=1):
+    required_cols   = rules.get("required_columns", [])
+    numeric_cols    = rules.get("numeric_columns", [])
+    site_col        = rules.get("site_column")
+
+    issues          = []
+    fail_count      = 0
+    warn_count      = 0
+
+    # ── 1. Check required columns exist ──
+    missing_cols = [c for c in required_cols if c not in columns]
+    if missing_cols:
+        issues.append(f"Missing required columns: {missing_cols}")
+        return {
+            "dept": dept_key,
+            "dqg_status": "FAIL",
+            "description": dept_data.get("description", dept_key),
+            "row_count": len(records),
+            "fail_count": len(records),
+            "warn_count": 0,
+            "missing_columns": missing_cols,
+            "issues": issues,
+            "validated_at": datetime.datetime.utcnow().isoformat() + "Z",
+        }
+
+    # ── 2. Row-level checks ──
+    for i, row in enumerate(records, start=4):   # row 4 = first data row in sheet
         row_issues = []
 
-        # Required columns check
-        for col in req_cols:
+        # Check numeric columns
+        for col in numeric_cols:
             val = row.get(col, "").strip()
-            if not val:
-                row_issues.append(f"Row {i}: '{col}' is blank")
+            if val and not is_numeric(val):
+                row_issues.append(f"Row {i} col '{col}' = '{val}' is not numeric")
 
-        # Numeric columns check
-        for col in num_cols:
-            val = row.get(col, "").strip()
-            if val:
-                try:
-                    float(val.replace(",", ""))
-                except ValueError:
-                    row_issues.append(f"Row {i}: '{col}' = '{val}' is not numeric")
-
-        # Site validation
+        # Check site validity
         if site_col:
             site_val = row.get(site_col, "").strip()
             if site_val and site_val not in VALID_SITES:
-                row_issues.append(f"Row {i}: site '{site_val}' not in {VALID_SITES}")
+                row_issues.append(f"Row {i} col '{site_col}' = '{site_val}' not in {VALID_SITES}")
 
         if row_issues:
-            bad_row_count += 1
-            issues.extend(row_issues[:3])   # cap per-row issues to avoid noise
+            fail_count += 1
+            issues.extend(row_issues)
 
-    bad_pct = bad_row_count / len(rows) if rows else 0
+    # ── 3. Determine DQG status ──
+    total_rows = len(records)
+    fail_pct   = (fail_count / total_rows * 100) if total_rows > 0 else 0
 
-    if bad_pct == 0:
-        dqg_status = "PASS"
-        message = f"All {len(rows)} rows passed DQG"
-    elif bad_pct <= FAIL_THRESHOLD:
+    if total_rows == 0:
         dqg_status = "WARN"
-        message = f"{bad_row_count}/{len(rows)} rows have issues (≤10% threshold)"
+        issues.append("No data rows found — sheet may be empty")
+    elif fail_count == 0:
+        dqg_status = "PASS"
+    elif fail_pct <= 10:
+        dqg_status = "WARN"
     else:
         dqg_status = "FAIL"
-        message = f"{bad_row_count}/{len(rows)} rows FAILED DQG (>{FAIL_THRESHOLD*100:.0f}% threshold)"
 
-    return {**base, "dqg_status": dqg_status, "message": message,
-            "bad_rows": bad_row_count, "issues_sample": issues[:10]}
+    return {
+        "dept": dept_key,
+        "dqg_status": dqg_status,
+        "description": dept_data.get("description", dept_key),
+        "row_count": total_rows,
+        "fail_count": fail_count,
+        "warn_count": warn_count,
+        "fail_pct": round(fail_pct, 1),
+        "missing_columns": [],
+        "issues": issues[:20],   # cap at 20 to keep log readable
+        "validated_at": datetime.datetime.utcnow().isoformat() + "Z",
+    }
 
-def main():
-    print("=== BO Control Tower – DQG Validator ===")
 
-    if not os.path.exists(RAW_FILE):
-        print(f"ERROR: {RAW_FILE} not found. Run data_fetcher.py first.")
-        return
+def run_dqg() -> dict:
+    """Load raw_data.json, run DQG for all depts, save dqg_results.json."""
+    os.makedirs(LOGS_DIR, exist_ok=True)
 
-    with open(RAW_FILE, encoding="utf-8") as f:
+    if not os.path.exists(RAW_DATA_FILE):
+        print("❌ raw_data.json not found — run data_fetcher.py first")
+        return {}
+
+    with open(RAW_DATA_FILE, "r", encoding="utf-8") as f:
         raw = json.load(f)
 
-    results = {}
-    summary = {"PASS": 0, "WARN": 0, "FAIL": 0,
-                "DEMO": 0, "NO_DATA": 0, "ERROR": 0}
+    departments = raw.get("departments", {})
 
-    for dept_key, data in raw.items():
-        res = validate_dept(dept_key, data)
-        results[dept_key] = res
-        s = res["dqg_status"]
-        summary[s] = summary.get(s, 0) + 1
-        icon = {"PASS": "✅", "WARN": "⚠ ", "FAIL": "❌",
-                "DEMO": "🔵", "NO_DATA": "⬜", "ERROR": "🔴"}.get(s, "?")
-        print(f"  {icon} {dept_key}: {s} — {res['message']}")
+    print(f"\n{'='*60}")
+    print(f"GSBB BO Control Tower — Data Quality Gate (DQG)")
+    print(f"Timestamp: {datetime.datetime.utcnow().isoformat()}Z")
+    print(f"{'='*60}\n")
+
+    results = {}
+    for dept_key, dept_data in departments.items():
+        result = validate_dept(dept_key, dept_data)
+        results[dept_key] = result
+        icon = {"PASS": "✅", "WARN": "⚠️", "FAIL": "❌", "SKIP": "⏳"}.get(result["dqg_status"], "?")
+        print(f"  {icon} [{dept_key}] {result['dqg_status']} — {result['row_count']} rows, {result['fail_count']} failures")
+        for issue in result["issues"][:3]:
+            print(f"       → {issue}")
+
+    summary = {
+        "PASS": sum(1 for v in results.values() if v["dqg_status"] == "PASS"),
+        "WARN": sum(1 for v in results.values() if v["dqg_status"] == "WARN"),
+        "FAIL": sum(1 for v in results.values() if v["dqg_status"] == "FAIL"),
+        "SKIP": sum(1 for v in results.values() if v["dqg_status"] == "SKIP"),
+    }
 
     output = {
-        "validated_at": datetime.utcnow().isoformat() + "Z",
+        "generated_at": datetime.datetime.utcnow().isoformat() + "Z",
+        "raw_data_from": raw.get("generated_at", ""),
         "summary": summary,
         "departments": results,
     }
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    with open(DQG_RESULT_FILE, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"\n📊 Summary: {summary}")
-    print(f"✅ DQG results saved → {OUTPUT_FILE}")
+    print(f"\n{'='*60}")
+    print(f"DQG results saved → logs/dqg_results.json")
+    print(f"Summary: PASS={summary['PASS']} | WARN={summary['WARN']} | FAIL={summary['FAIL']} | SKIP={summary['SKIP']}")
+    print(f"{'='*60}\n")
+
+    return results
+
 
 if __name__ == "__main__":
-    main()
+    run_dqg()

@@ -1,22 +1,52 @@
 {
-  "generated_at": "2026-05-29T15:49:22.837905Z",
+  "generated_at": "2026-05-29T16:02:02.035438Z",
   "summary": {
     "total_depts": 9,
-    "ok": 0,
+    "ok": 1,
     "pending": 0,
-    "fetch_error": 9
+    "fetch_error": 8
   },
   "departments": {
     "01_SAN_XUAT": {
-      "status": "FETCH_ERROR",
+      "status": "OK",
       "description": "Sản Xuất – Plan/DO",
       "tab_name": "01_SX_PLAN_DO",
       "sheet_id": "1FDN2w9fh0PbsIPv6V83DJmoxWzF3CTkSbz4rX1D90eQ",
-      "records": [],
-      "columns": [],
-      "row_count": 0,
-      "fetched_at": "2026-05-29T15:49:19.419464Z",
-      "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
+      "records": [
+        {
+          "2026-05-13": "2026-05-14",
+          "Ca 2": "Ca 1",
+          "GS1": "GS1",
+          "GS1234": "GS12345",
+          "Máy bồi": "Máy in",
+          "Carton": "Duplex",
+          "4.000": "6.500",
+          "2.980": "6.300",
+          "20": "200",
+          "74,5%": "96,9%",
+          "Red": "Green",
+          "Plan/DO": "Plan/DO",
+          "": ""
+        }
+      ],
+      "columns": [
+        "2026-05-13",
+        "Ca 2",
+        "GS1",
+        "GS1234",
+        "Máy bồi",
+        "Carton",
+        "4.000",
+        "2.980",
+        "20",
+        "74,5%",
+        "Red",
+        "Plan/DO",
+        ""
+      ],
+      "row_count": 1,
+      "fetched_at": "2026-05-29T16:02:00.231225Z",
+      "note": ""
     },
     "02_KHSX_OTIF": {
       "status": "FETCH_ERROR",
@@ -26,7 +56,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T15:49:19.510838Z",
+      "fetched_at": "2026-05-29T16:02:00.342717Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "03_QLCL": {
@@ -37,7 +67,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T15:49:19.801732Z",
+      "fetched_at": "2026-05-29T16:02:00.613363Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "04_QLTB_CD": {
@@ -48,7 +78,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T15:49:20.134583Z",
+      "fetched_at": "2026-05-29T16:02:00.854551Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "05_KHO": {
@@ -59,7 +89,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T15:49:20.497270Z",
+      "fetched_at": "2026-05-29T16:02:01.117337Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "05_KHO_GS1": {
@@ -70,7 +100,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T15:49:20.795532Z",
+      "fetched_at": "2026-05-29T16:02:01.352443Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "06_GSTT": {
@@ -81,7 +111,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T15:49:21.250492Z",
+      "fetched_at": "2026-05-29T16:02:01.614399Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "07_CONG_NGHE_SPM": {
@@ -92,7 +122,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T15:49:21.549397Z",
+      "fetched_at": "2026-05-29T16:02:01.848054Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     },
     "08_BO_CONTROL": {
@@ -103,7 +133,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-29T15:49:22.837890Z",
+      "fetched_at": "2026-05-29T16:02:02.035426Z",
       "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
     }
   }

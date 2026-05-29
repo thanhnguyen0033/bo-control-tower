@@ -2,8 +2,8 @@ name: Update BO Control Tower Dashboard
 
 on:
   schedule:
-    - cron: '0 */2 * * *'   # every 2 hours
-  workflow_dispatch:          # manual trigger from GitHub Actions tab
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
   repository_dispatch:
     types: [update-dashboard]
 
@@ -23,17 +23,22 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: |
-          pip install pandas requests
+        run: pip install pandas requests
 
       - name: Fetch data from Google Sheets (CSV export)
         run: python scripts/data_fetcher.py
+        env:
+          PYTHONPATH: ${{ github.workspace }}
 
       - name: Run Data Quality Gate
         run: python scripts/dqg_validator.py
+        env:
+          PYTHONPATH: ${{ github.workspace }}
 
       - name: Build dashboard HTML
         run: python scripts/dashboard_builder.py
+        env:
+          PYTHONPATH: ${{ github.workspace }}
 
       - name: Commit and push updated dashboard
         run: |

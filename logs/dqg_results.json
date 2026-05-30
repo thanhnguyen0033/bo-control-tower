@@ -1,135 +1,113 @@
 {
-  "generated_at": "2026-05-30T09:48:01.021328Z",
-  "raw_data_from": "2026-05-30T09:48:00.981514Z",
+  "generated_at": "2026-05-30T09:57:19.636222Z",
+  "raw_data_from": "2026-05-30T09:57:19.595514Z",
   "summary": {
-    "PASS": 0,
+    "PASS": 6,
     "WARN": 0,
-    "FAIL": 2,
-    "SKIP": 6
+    "FAIL": 1,
+    "SKIP": 1
   },
   "departments": {
     "01_SAN_XUAT": {
       "dept": "01_SAN_XUAT",
       "dqg_status": "FAIL",
       "description": "Sản Xuất – Plan/DO",
-      "row_count": 1,
-      "fail_count": 1,
+      "row_count": 3,
+      "fail_count": 3,
       "warn_count": 0,
-      "missing_columns": [
-        "Date",
-        "Shift",
-        "Site",
-        "Work_Order",
-        "Machine_Line",
-        "Product_Group",
-        "Plan_Qty",
-        "Actual_Qty",
-        "NG_Qty",
-        "Plan_Do_%",
-        "RAG"
-      ],
+      "fail_pct": 100.0,
+      "missing_columns": [],
       "issues": [
-        "Missing required columns: ['Date', 'Shift', 'Site', 'Work_Order', 'Machine_Line', 'Product_Group', 'Plan_Qty', 'Actual_Qty', 'NG_Qty', 'Plan_Do_%', 'RAG']"
+        "Row 4 col 'Plan_Do_%' = '96,0%' is not numeric",
+        "Row 5 col 'Plan_Do_%' = '74,5%' is not numeric",
+        "Row 6 col 'Plan_Do_%' = '96,9%' is not numeric"
       ],
-      "validated_at": "2026-05-30T09:48:01.021270Z"
+      "validated_at": "2026-05-30T09:57:19.636147Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
-      "dqg_status": "FAIL",
+      "dqg_status": "SKIP",
       "description": "KHSX – OTIF Delivery",
-      "row_count": 5,
-      "fail_count": 5,
+      "row_count": 0,
+      "fail_count": 0,
       "warn_count": 0,
-      "missing_columns": [
-        "Date",
-        "Site",
-        "Order_No",
-        "Plan_Delivery",
-        "Actual_Delivery",
-        "OTIF_Status"
-      ],
+      "missing_columns": [],
       "issues": [
-        "Missing required columns: ['Date', 'Site', 'Order_No', 'Plan_Delivery', 'Actual_Delivery', 'OTIF_Status']"
+        "Sheet ID not configured yet — Pending DQG"
       ],
-      "validated_at": "2026-05-30T09:48:01.021281Z"
+      "validated_at": "2026-05-30T09:57:19.636157Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
-      "dqg_status": "SKIP",
+      "dqg_status": "PASS",
       "description": "Chất Lượng – NCR/CAR",
-      "row_count": 0,
+      "row_count": 2,
       "fail_count": 0,
       "warn_count": 0,
+      "fail_pct": 0.0,
       "missing_columns": [],
-      "issues": [
-        "Tab accessible but contains no data rows yet — waiting for input"
-      ],
-      "validated_at": "2026-05-30T09:48:01.021286Z"
+      "issues": [],
+      "validated_at": "2026-05-30T09:57:19.636169Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
-      "dqg_status": "SKIP",
+      "dqg_status": "PASS",
       "description": "Thiết Bị – Machine Downtime",
-      "row_count": 0,
+      "row_count": 2,
       "fail_count": 0,
       "warn_count": 0,
+      "fail_pct": 0.0,
       "missing_columns": [],
-      "issues": [
-        "Tab accessible but contains no data rows yet — waiting for input"
-      ],
-      "validated_at": "2026-05-30T09:48:01.021294Z"
+      "issues": [],
+      "validated_at": "2026-05-30T09:57:19.636181Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
-      "dqg_status": "SKIP",
+      "dqg_status": "PASS",
       "description": "Kho GS5 – WIP/FIFO",
-      "row_count": 0,
+      "row_count": 2,
       "fail_count": 0,
       "warn_count": 0,
+      "fail_pct": 0.0,
       "missing_columns": [],
-      "issues": [
-        "Tab accessible but contains no data rows yet — waiting for input"
-      ],
-      "validated_at": "2026-05-30T09:48:01.021301Z"
+      "issues": [],
+      "validated_at": "2026-05-30T09:57:19.636194Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
-      "dqg_status": "SKIP",
+      "dqg_status": "PASS",
       "description": "GSTT – Field Verification",
-      "row_count": 0,
+      "row_count": 2,
       "fail_count": 0,
       "warn_count": 0,
+      "fail_pct": 0.0,
       "missing_columns": [],
-      "issues": [
-        "Tab accessible but contains no data rows yet — waiting for input"
-      ],
-      "validated_at": "2026-05-30T09:48:01.021306Z"
+      "issues": [],
+      "validated_at": "2026-05-30T09:57:19.636201Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
-      "dqg_status": "SKIP",
+      "dqg_status": "PASS",
       "description": "Công Nghệ – SPM Technology",
-      "row_count": 0,
+      "row_count": 2,
       "fail_count": 0,
       "warn_count": 0,
+      "fail_pct": 0.0,
       "missing_columns": [],
-      "issues": [
-        "Tab accessible but contains no data rows yet — waiting for input"
-      ],
-      "validated_at": "2026-05-30T09:48:01.021311Z"
+      "issues": [],
+      "validated_at": "2026-05-30T09:57:19.636208Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
-      "dqg_status": "SKIP",
+      "dqg_status": "PASS",
       "description": "BO Control – Issue/Action",
-      "row_count": 0,
+      "row_count": 1,
       "fail_count": 0,
       "warn_count": 0,
+      "fail_pct": 0.0,
       "missing_columns": [],
-      "issues": [
-        "Tab accessible but contains no data rows yet — waiting for input"
-      ],
-      "validated_at": "2026-05-30T09:48:01.021319Z"
+      "issues": [],
+      "validated_at": "2026-05-30T09:57:19.636213Z"
     }
   }
 }

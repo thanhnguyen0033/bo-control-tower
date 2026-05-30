@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-30T06:48:43.968685Z",
-  "raw_data_from": "2026-05-30T06:48:43.927602Z",
+  "generated_at": "2026-05-30T09:31:33.001296Z",
+  "raw_data_from": "2026-05-30T09:31:32.958551Z",
   "summary": {
     "PASS": 0,
     "WARN": 0,
-    "FAIL": 1,
-    "SKIP": 8
+    "FAIL": 2,
+    "SKIP": 6
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -31,20 +31,27 @@
       "issues": [
         "Missing required columns: ['Date', 'Shift', 'Site', 'Work_Order', 'Machine_Line', 'Product_Group', 'Plan_Qty', 'Actual_Qty', 'NG_Qty', 'Plan_Do_%', 'RAG']"
       ],
-      "validated_at": "2026-05-30T06:48:43.968626Z"
+      "validated_at": "2026-05-30T09:31:33.001236Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
-      "dqg_status": "SKIP",
+      "dqg_status": "FAIL",
       "description": "KHSX – OTIF Delivery",
-      "row_count": 0,
-      "fail_count": 0,
+      "row_count": 5,
+      "fail_count": 5,
       "warn_count": 0,
-      "missing_columns": [],
-      "issues": [
-        "Sheet ID not configured yet — Pending DQG"
+      "missing_columns": [
+        "Date",
+        "Site",
+        "Order_No",
+        "Plan_Delivery",
+        "Actual_Delivery",
+        "OTIF_Status"
       ],
-      "validated_at": "2026-05-30T06:48:43.968636Z"
+      "issues": [
+        "Missing required columns: ['Date', 'Site', 'Order_No', 'Plan_Delivery', 'Actual_Delivery', 'OTIF_Status']"
+      ],
+      "validated_at": "2026-05-30T09:31:33.001248Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -57,7 +64,7 @@
       "issues": [
         "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T06:48:43.968642Z"
+      "validated_at": "2026-05-30T09:31:33.001253Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -70,12 +77,12 @@
       "issues": [
         "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T06:48:43.968645Z"
+      "validated_at": "2026-05-30T09:31:33.001260Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
       "dqg_status": "SKIP",
-      "description": "Kho GS5 – WIP/FIFO",
+      "description": "Kho – WIP/FIFO",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
@@ -83,20 +90,7 @@
       "issues": [
         "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T06:48:43.968652Z"
-    },
-    "05_KHO_GS1": {
-      "dept": "05_KHO_GS1",
-      "dqg_status": "SKIP",
-      "description": "Kho GS1 – WIP/FIFO",
-      "row_count": 0,
-      "fail_count": 0,
-      "warn_count": 0,
-      "missing_columns": [],
-      "issues": [
-        "Tab accessible but contains no data rows yet — waiting for input"
-      ],
-      "validated_at": "2026-05-30T06:48:43.968657Z"
+      "validated_at": "2026-05-30T09:31:33.001267Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -109,7 +103,7 @@
       "issues": [
         "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T06:48:43.968662Z"
+      "validated_at": "2026-05-30T09:31:33.001273Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -122,7 +116,7 @@
       "issues": [
         "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T06:48:43.968669Z"
+      "validated_at": "2026-05-30T09:31:33.001277Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -135,7 +129,7 @@
       "issues": [
         "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T06:48:43.968675Z"
+      "validated_at": "2026-05-30T09:31:33.001285Z"
     }
   }
 }

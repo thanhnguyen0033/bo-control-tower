@@ -35,13 +35,13 @@
   <div class="header">
     <h1>🏭 BO Control Tower – GSBB</h1>
     <div class="sub">Data Quality Gate Dashboard &nbsp;|&nbsp;
-      Cập nhật: 2026-05-30 06:48 UTC &nbsp;|&nbsp;
+      Cập nhật: 2026-05-30 09:31 UTC &nbsp;|&nbsp;
       DQG Run: N/A UTC</div>
   </div>
 
   <div class="overall">
     <div class="label">DATA ISSUES DETECTED</div>
-    <div class="sub">Tình trạng dữ liệu tổng quan 9 bộ phận</div>
+    <div class="sub">Tình trạng dữ liệu tổng quan 8 bộ phận</div>
   </div>
 
   <div class="kpi-row">
@@ -54,15 +54,15 @@
       <div class="lbl">⚠️ WARN</div>
     </div>
     <div class="kpi-box">
-      <div class="num" style="color:#ef4444">1</div>
+      <div class="num" style="color:#ef4444">2</div>
       <div class="lbl">❌ FAIL / ACCESS ERR</div>
     </div>
     <div class="kpi-box">
-      <div class="num" style="color:#f59e0b">7</div>
+      <div class="num" style="color:#f59e0b">6</div>
       <div class="lbl">📭 Chưa có data</div>
     </div>
     <div class="kpi-box">
-      <div class="num" style="color:#64748b">1</div>
+      <div class="num" style="color:#64748b">0</div>
       <div class="lbl">⏳ PENDING/SKIP</div>
     </div>
   </div>
@@ -80,16 +80,16 @@
           <div style="font-size:11px;color:#94a3b8;margin-top:3px">Rows: 1 &nbsp;|&nbsp; Lỗi: <b style="color:#ef4444">1</b></div>
           <ul style='margin:6px 0 0 16px;font-size:11px;color:#475569'><li>Missing required columns: ['Date', 'Shift', 'Site', 'Work_Order', 'Machine_Line', 'Product_Group', 'Plan_Qty', 'Actual_Qty', 'NG_Qty', 'Plan_Do_%', 'RAG']</li></ul>
         </div>
-        <div style="border:1px solid #64748b;border-left:5px solid #64748b;
-                    background:#f8fafc;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+        <div style="border:1px solid #ef4444;border-left:5px solid #ef4444;
+                    background:#fef2f2;border-radius:8px;padding:14px 16px;margin-bottom:12px">
           <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-weight:600;font-size:14px;color:#1e293b">⏳ 02 | KHSX – OTIF Delivery</span>
-            <span style="background:#64748b;color:#fff;padding:2px 10px;
-                         border-radius:20px;font-size:12px;font-weight:700">SKIP</span>
+            <span style="font-weight:600;font-size:14px;color:#1e293b">❌ 02 | KHSX – OTIF Delivery</span>
+            <span style="background:#ef4444;color:#fff;padding:2px 10px;
+                         border-radius:20px;font-size:12px;font-weight:700">FAIL</span>
           </div>
-          <div style="font-size:12px;color:#475569;margin-top:5px">Bỏ qua DQG — chờ dữ liệu hoặc cấu hình</div>
-          <div style="font-size:11px;color:#94a3b8;margin-top:3px">Rows: 0</div>
-          <ul style='margin:6px 0 0 16px;font-size:11px;color:#475569'><li>Sheet ID not configured yet — Pending DQG</li></ul>
+          <div style="font-size:12px;color:#475569;margin-top:5px">DQG thất bại — không dùng làm KPI chính thức</div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">Rows: 5 &nbsp;|&nbsp; Lỗi: <b style="color:#ef4444">5</b></div>
+          <ul style='margin:6px 0 0 16px;font-size:11px;color:#475569'><li>Missing required columns: ['Date', 'Site', 'Order_No', 'Plan_Delivery', 'Actual_Delivery', 'OTIF_Status']</li></ul>
         </div>
         <div style="border:1px solid #64748b;border-left:5px solid #64748b;
                     background:#f8fafc;border-radius:8px;padding:14px 16px;margin-bottom:12px">
@@ -117,17 +117,6 @@
                     background:#f8fafc;border-radius:8px;padding:14px 16px;margin-bottom:12px">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <span style="font-weight:600;font-size:14px;color:#1e293b">⏳ 05 | Kho – WIP/FIFO</span>
-            <span style="background:#64748b;color:#fff;padding:2px 10px;
-                         border-radius:20px;font-size:12px;font-weight:700">SKIP</span>
-          </div>
-          <div style="font-size:12px;color:#475569;margin-top:5px">Bỏ qua DQG — chờ dữ liệu hoặc cấu hình</div>
-          <div style="font-size:11px;color:#94a3b8;margin-top:3px">Rows: 0</div>
-          <ul style='margin:6px 0 0 16px;font-size:11px;color:#475569'><li>Tab accessible but contains no data rows yet — waiting for input</li></ul>
-        </div>
-        <div style="border:1px solid #64748b;border-left:5px solid #64748b;
-                    background:#f8fafc;border-radius:8px;padding:14px 16px;margin-bottom:12px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-weight:600;font-size:14px;color:#1e293b">⏳ 05_KHO_GS1</span>
             <span style="background:#64748b;color:#fff;padding:2px 10px;
                          border-radius:20px;font-size:12px;font-weight:700">SKIP</span>
           </div>
@@ -171,7 +160,7 @@
 
   <div class="footer">
     GSBB BO Control Tower &nbsp;·&nbsp; Auto-built by GitHub Actions &nbsp;·&nbsp;
-    Dữ liệu nguồn: Google Sheets &nbsp;·&nbsp; 2026-05-30 06:48 UTC
+    Dữ liệu nguồn: Google Sheets &nbsp;·&nbsp; 2026-05-30 09:31 UTC
   </div>
 
 </div>

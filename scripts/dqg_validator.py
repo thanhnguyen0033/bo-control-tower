@@ -119,9 +119,11 @@ VALID_SITES = ["GS1", "GS5", "GS6", "GSQV"]
 
 
 def is_numeric(value: str) -> bool:
-    """Return True if value can be parsed as a number (int or float)."""
+    """Return True if value can be parsed as a number (int or float).
+    Handles: comma as decimal separator, % suffix, spaces."""
     try:
-        float(str(value).replace(",", "").strip())
+        cleaned = str(value).replace(",", ".").replace("%", "").strip()
+        float(cleaned)
         return True
     except (ValueError, TypeError):
         return False
@@ -194,6 +196,10 @@ def validate_dept(dept_key: str, dept_data: dict) -> dict:
     issues          = []
     fail_count      = 0
     warn_count      = 0
+
+    # ── DEBUG: print actual columns for diagnosis ──
+    print(f"    🔍 DQG [{dept_key}] actual columns ({len(columns)}): {columns}")
+    print(f"    🔍 DQG [{dept_key}] required     ({len(required_cols)}): {required_cols}")
 
     # ── 1. Check required columns exist ──
     missing_cols = [c for c in required_cols if c not in columns]

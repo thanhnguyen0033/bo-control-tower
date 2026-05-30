@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-30T09:31:33.001296Z",
-  "raw_data_from": "2026-05-30T09:31:32.958551Z",
+  "generated_at": "2026-05-30T09:48:01.021328Z",
+  "raw_data_from": "2026-05-30T09:48:00.981514Z",
   "summary": {
     "PASS": 0,
     "WARN": 0,
@@ -31,7 +31,7 @@
       "issues": [
         "Missing required columns: ['Date', 'Shift', 'Site', 'Work_Order', 'Machine_Line', 'Product_Group', 'Plan_Qty', 'Actual_Qty', 'NG_Qty', 'Plan_Do_%', 'RAG']"
       ],
-      "validated_at": "2026-05-30T09:31:33.001236Z"
+      "validated_at": "2026-05-30T09:48:01.021270Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -51,7 +51,7 @@
       "issues": [
         "Missing required columns: ['Date', 'Site', 'Order_No', 'Plan_Delivery', 'Actual_Delivery', 'OTIF_Status']"
       ],
-      "validated_at": "2026-05-30T09:31:33.001248Z"
+      "validated_at": "2026-05-30T09:48:01.021281Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -64,7 +64,7 @@
       "issues": [
         "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T09:31:33.001253Z"
+      "validated_at": "2026-05-30T09:48:01.021286Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -77,12 +77,12 @@
       "issues": [
         "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T09:31:33.001260Z"
+      "validated_at": "2026-05-30T09:48:01.021294Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
       "dqg_status": "SKIP",
-      "description": "Kho – WIP/FIFO",
+      "description": "Kho GS5 – WIP/FIFO",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
@@ -90,7 +90,7 @@
       "issues": [
         "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T09:31:33.001267Z"
+      "validated_at": "2026-05-30T09:48:01.021301Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -103,7 +103,7 @@
       "issues": [
         "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T09:31:33.001273Z"
+      "validated_at": "2026-05-30T09:48:01.021306Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -116,7 +116,7 @@
       "issues": [
         "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T09:31:33.001277Z"
+      "validated_at": "2026-05-30T09:48:01.021311Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -129,7 +129,7 @@
       "issues": [
         "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T09:31:33.001285Z"
+      "validated_at": "2026-05-30T09:48:01.021319Z"
     }
   }
 }

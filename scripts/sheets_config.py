@@ -14,8 +14,9 @@ SHEET_CONFIG = {
         "description": "Sản Xuất – Plan/DO",
     },
     "02_KHSX_OTIF": {
-        # Link Register INP-OTIF-001 — has 5 rows/2 cols, tab name TBC
-        "sheet_id":   "1Yj0b_Dr0D6ZWC_ihyioFW3FluQHaiJd4XpLO765jhgE",
+        # PENDING — Link Register ID 1Yj0b_Dr0D6ZWC... returns KHO content, not OTIF
+        # Need correct OTIF sheet ID from Mr Hưng / KHSX team
+        "sheet_id":   "PENDING",
         "tab_name":   "02_OTIF_DELIVERY",
         "header_row": 3,
         "description": "KHSX – OTIF Delivery",

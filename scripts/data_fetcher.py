@@ -51,23 +51,26 @@ def fetch_csv(url: str, timeout: int = 30) -> tuple[list[dict], str]:
         reader = csv.reader(io.StringIO(content))
         all_rows = list(reader)
 
-        # DEBUG: print first 4 rows to diagnose GVIZ CSV structure
+        # GVIZ CSV structure for these sheets (due to merged title/instruction cells):
+        # row[0] = merged: col[0] = "Title + Instructions + ColName_A", col[1+] = actual header names
+        # row[1:] = actual data rows
+        # Extract column A name = last word of the long merged text in col[0]
         print(f"    🔍 DEBUG total CSV rows: {len(all_rows)}")
-        for dbg_i in range(min(4, len(all_rows))):
-            non_empty = [(j, v) for j, v in enumerate(all_rows[dbg_i]) if v.strip()]
-            print(f"    🔍 CSV row[{dbg_i}]: {non_empty[:6]}")
 
-        if len(all_rows) < 3:
-            # Sheet accessible but even header rows are missing
+        if len(all_rows) < 2:
             return [], "EMPTY"
 
-        # Row 0 = sheet title (skip)
-        # Row 1 = instructions/notes (skip)
-        # Row 2 = actual column headers  ← header_row=3 in config means index 2
-        # Row 3+ = data
-        headers = [h.strip() for h in all_rows[2]]
-        data_rows = all_rows[3:]
-        print(f"    🔍 DEBUG headers: {headers}")
+        raw_headers = all_rows[0]
+        # Column 0: combined text ending with actual column name e.g. "...Dashboard. Date"
+        col0_text = raw_headers[0].strip() if raw_headers else ""
+        col0_name = col0_text.split()[-1] if col0_text else ""
+        headers = [col0_name] + [h.strip() for h in raw_headers[1:]]
+        # Remove trailing empty column names
+        while headers and not headers[-1]:
+            headers.pop()
+
+        data_rows = all_rows[1:]
+        print(f"    🔍 DEBUG headers (fixed): {headers[:8]}")
 
         records = []
         for row in data_rows:

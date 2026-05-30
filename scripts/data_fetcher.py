@@ -51,6 +51,12 @@ def fetch_csv(url: str, timeout: int = 30) -> tuple[list[dict], str]:
         reader = csv.reader(io.StringIO(content))
         all_rows = list(reader)
 
+        # DEBUG: print first 4 rows to diagnose GVIZ CSV structure
+        print(f"    🔍 DEBUG total CSV rows: {len(all_rows)}")
+        for dbg_i in range(min(4, len(all_rows))):
+            non_empty = [(j, v) for j, v in enumerate(all_rows[dbg_i]) if v.strip()]
+            print(f"    🔍 CSV row[{dbg_i}]: {non_empty[:6]}")
+
         if len(all_rows) < 3:
             # Sheet accessible but even header rows are missing
             return [], "EMPTY"
@@ -61,6 +67,7 @@ def fetch_csv(url: str, timeout: int = 30) -> tuple[list[dict], str]:
         # Row 3+ = data
         headers = [h.strip() for h in all_rows[2]]
         data_rows = all_rows[3:]
+        print(f"    🔍 DEBUG headers: {headers}")
 
         records = []
         for row in data_rows:
@@ -148,6 +155,7 @@ def fetch_all_sheets() -> dict:
         if fetch_status == "OK":
             columns = list(records[0].keys())
             print(f"    ✅ OK — {len(records)} data rows, {len(columns)} columns")
+            print(f"    🔍 DEBUG columns: {columns}")
             results[dept_key] = {
                 "status":      "OK",
                 "description": desc,

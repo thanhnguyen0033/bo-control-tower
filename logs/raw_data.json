@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T09:57:19.595514Z",
+  "generated_at": "2026-05-30T10:03:00.068843Z",
   "summary": {
     "total_depts": 8,
     "ok": 7,
@@ -81,7 +81,7 @@
         "Data_Checker"
       ],
       "row_count": 3,
-      "fetched_at": "2026-05-30T09:57:16.500387Z",
+      "fetched_at": "2026-05-30T10:02:56.655771Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -92,7 +92,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T09:57:16.500401Z",
+      "fetched_at": "2026-05-30T10:02:56.655787Z",
       "note": "Sheet ID not yet configured — replace REPLACE_WITH_ACTUAL_SHEET_ID"
     },
     "03_QLCL": {
@@ -169,7 +169,7 @@
         "Data_Check_Note"
       ],
       "row_count": 2,
-      "fetched_at": "2026-05-30T09:57:17.197154Z",
+      "fetched_at": "2026-05-30T10:02:57.560648Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -222,7 +222,7 @@
         "Evidence_Link"
       ],
       "row_count": 2,
-      "fetched_at": "2026-05-30T09:57:17.945553Z",
+      "fetched_at": "2026-05-30T10:02:58.232469Z",
       "note": ""
     },
     "05_KHO": {
@@ -293,7 +293,7 @@
         "Data_Check_Note"
       ],
       "row_count": 2,
-      "fetched_at": "2026-05-30T09:57:18.183303Z",
+      "fetched_at": "2026-05-30T10:02:58.568099Z",
       "note": ""
     },
     "06_GSTT": {
@@ -352,7 +352,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-05-30T09:57:18.692358Z",
+      "fetched_at": "2026-05-30T10:02:59.000184Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -411,7 +411,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-05-30T09:57:19.159048Z",
+      "fetched_at": "2026-05-30T10:02:59.420003Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -456,7 +456,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-05-30T09:57:19.595504Z",
+      "fetched_at": "2026-05-30T10:03:00.068831Z",
       "note": ""
     }
   }

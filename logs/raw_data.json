@@ -1,10 +1,12 @@
 {
-  "generated_at": "2026-05-30T01:24:26.854896Z",
+  "generated_at": "2026-05-30T01:51:07.559387Z",
   "summary": {
     "total_depts": 9,
     "ok": 1,
-    "pending": 0,
-    "fetch_error": 8
+    "empty": 7,
+    "pending": 1,
+    "access_error": 0,
+    "network_error": 0
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -45,96 +47,96 @@
         ""
       ],
       "row_count": 1,
-      "fetched_at": "2026-05-30T01:24:25.117674Z",
+      "fetched_at": "2026-05-30T01:51:03.088913Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
-      "status": "FETCH_ERROR",
+      "status": "PENDING",
       "description": "KHSX – OTIF Delivery",
       "tab_name": "02_OTIF_DELIVERY",
       "sheet_id": "PENDING",
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T01:24:25.237532Z",
-      "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
+      "fetched_at": "2026-05-30T01:51:03.088929Z",
+      "note": "Sheet ID not yet configured — replace REPLACE_WITH_ACTUAL_SHEET_ID"
     },
     "03_QLCL": {
-      "status": "FETCH_ERROR",
+      "status": "EMPTY",
       "description": "Chất Lượng – NCR/CAR",
       "tab_name": "03_QLCL_NCR_CAR",
       "sheet_id": "1fK3UGw4BGpqX4zay7gIyq9JP5MsLUGYf3ZsJMDSjzTY",
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T01:24:25.464011Z",
-      "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
+      "fetched_at": "2026-05-30T01:51:03.577717Z",
+      "note": "Tab '03_QLCL_NCR_CAR' is accessible but contains no data rows — please enter data"
     },
     "04_QLTB_CD": {
-      "status": "FETCH_ERROR",
+      "status": "EMPTY",
       "description": "Thiết Bị – Machine Downtime",
       "tab_name": "04_MACHINE_DOWNTIME",
       "sheet_id": "1_HhUXOaX9MeqsJC2I-NeTyPaII12sayyvtXMPFaUk0E",
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T01:24:25.681672Z",
-      "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
+      "fetched_at": "2026-05-30T01:51:04.088986Z",
+      "note": "Tab '04_MACHINE_DOWNTIME' is accessible but contains no data rows — please enter data"
     },
     "05_KHO": {
-      "status": "FETCH_ERROR",
+      "status": "EMPTY",
       "description": "Kho GS5 – WIP/FIFO",
       "tab_name": "05_WIP_FIFO_KHO",
       "sheet_id": "1G7tWo8KwD91BecbSmlZWVmugeWUad2Hoa73eUtHfppY",
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T01:24:25.890434Z",
-      "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
+      "fetched_at": "2026-05-30T01:51:05.195900Z",
+      "note": "Tab '05_WIP_FIFO_KHO' is accessible but contains no data rows — please enter data"
     },
     "05_KHO_GS1": {
-      "status": "FETCH_ERROR",
+      "status": "EMPTY",
       "description": "Kho GS1 – WIP/FIFO",
       "tab_name": "05_WIP_FIFO_KHO",
       "sheet_id": "1yl8K7TVN5XQXcWT3IlRWptoEg7J4Lb127aBHWE8Ve1s",
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T01:24:26.089224Z",
-      "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
+      "fetched_at": "2026-05-30T01:51:06.119482Z",
+      "note": "Tab '05_WIP_FIFO_KHO' is accessible but contains no data rows — please enter data"
     },
     "06_GSTT": {
-      "status": "FETCH_ERROR",
+      "status": "EMPTY",
       "description": "GSTT – Field Verification",
       "tab_name": "06_GSTT_FIELD_LOG",
       "sheet_id": "1Xd38NfvIpPUjR2-MWo020hUSl-KGt--mF23udkXTYYs",
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T01:24:26.390859Z",
-      "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
+      "fetched_at": "2026-05-30T01:51:06.582091Z",
+      "note": "Tab '06_GSTT_FIELD_LOG' is accessible but contains no data rows — please enter data"
     },
     "07_CONG_NGHE_SPM": {
-      "status": "FETCH_ERROR",
+      "status": "EMPTY",
       "description": "Công Nghệ – SPM Technology",
       "tab_name": "08_SPM_TECH",
       "sheet_id": "1gegI7IkIb9145n15SXChsQEWww74YJqXS8s88WnGUas",
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T01:24:26.625369Z",
-      "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
+      "fetched_at": "2026-05-30T01:51:07.178185Z",
+      "note": "Tab '08_SPM_TECH' is accessible but contains no data rows — please enter data"
     },
     "08_BO_CONTROL": {
-      "status": "FETCH_ERROR",
+      "status": "EMPTY",
       "description": "BO Control – Issue/Action",
       "tab_name": "09_ISSUE_ACTION",
       "sheet_id": "12Bi3CKN1FTXDYmnXWxMNQAErYSTsjpWQF8NIaq4T84Q",
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T01:24:26.854885Z",
-      "note": "Fetch failed — verify sheet is shared 'Anyone with link can view'"
+      "fetched_at": "2026-05-30T01:51:07.559374Z",
+      "note": "Tab '09_ISSUE_ACTION' is accessible but contains no data rows — please enter data"
     }
   }
 }

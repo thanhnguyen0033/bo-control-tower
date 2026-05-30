@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-30T01:24:26.895610Z",
-  "raw_data_from": "2026-05-30T01:24:26.854896Z",
+  "generated_at": "2026-05-30T01:51:07.602666Z",
+  "raw_data_from": "2026-05-30T01:51:07.559387Z",
   "summary": {
     "PASS": 0,
     "WARN": 0,
-    "FAIL": 9,
-    "SKIP": 0
+    "FAIL": 1,
+    "SKIP": 8
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -31,111 +31,111 @@
       "issues": [
         "Missing required columns: ['Date', 'Shift', 'Site', 'Work_Order', 'Machine_Line', 'Product_Group', 'Plan_Qty', 'Actual_Qty', 'NG_Qty', 'Plan_Do_%', 'RAG']"
       ],
-      "validated_at": "2026-05-30T01:24:26.895557Z"
+      "validated_at": "2026-05-30T01:51:07.602606Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
-      "dqg_status": "FAIL",
+      "dqg_status": "SKIP",
       "description": "KHSX – OTIF Delivery",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Data fetch failed — sheet may not be public or Sheet ID wrong"
+        "Sheet ID not configured yet — Pending DQG"
       ],
-      "validated_at": "2026-05-30T01:24:26.895565Z"
+      "validated_at": "2026-05-30T01:51:07.602616Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
-      "dqg_status": "FAIL",
+      "dqg_status": "SKIP",
       "description": "Chất Lượng – NCR/CAR",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Data fetch failed — sheet may not be public or Sheet ID wrong"
+        "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T01:24:26.895570Z"
+      "validated_at": "2026-05-30T01:51:07.602622Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
-      "dqg_status": "FAIL",
+      "dqg_status": "SKIP",
       "description": "Thiết Bị – Machine Downtime",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Data fetch failed — sheet may not be public or Sheet ID wrong"
+        "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T01:24:26.895573Z"
+      "validated_at": "2026-05-30T01:51:07.602626Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
-      "dqg_status": "FAIL",
+      "dqg_status": "SKIP",
       "description": "Kho GS5 – WIP/FIFO",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Data fetch failed — sheet may not be public or Sheet ID wrong"
+        "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T01:24:26.895580Z"
+      "validated_at": "2026-05-30T01:51:07.602633Z"
     },
     "05_KHO_GS1": {
       "dept": "05_KHO_GS1",
-      "dqg_status": "FAIL",
+      "dqg_status": "SKIP",
       "description": "Kho GS1 – WIP/FIFO",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Data fetch failed — sheet may not be public or Sheet ID wrong"
+        "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T01:24:26.895586Z"
+      "validated_at": "2026-05-30T01:51:07.602638Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
-      "dqg_status": "FAIL",
+      "dqg_status": "SKIP",
       "description": "GSTT – Field Verification",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Data fetch failed — sheet may not be public or Sheet ID wrong"
+        "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T01:24:26.895590Z"
+      "validated_at": "2026-05-30T01:51:07.602643Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
-      "dqg_status": "FAIL",
+      "dqg_status": "SKIP",
       "description": "Công Nghệ – SPM Technology",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Data fetch failed — sheet may not be public or Sheet ID wrong"
+        "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T01:24:26.895597Z"
+      "validated_at": "2026-05-30T01:51:07.602652Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
-      "dqg_status": "FAIL",
+      "dqg_status": "SKIP",
       "description": "BO Control – Issue/Action",
       "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
       "missing_columns": [],
       "issues": [
-        "Data fetch failed — sheet may not be public or Sheet ID wrong"
+        "Tab accessible but contains no data rows yet — waiting for input"
       ],
-      "validated_at": "2026-05-30T01:24:26.895601Z"
+      "validated_at": "2026-05-30T01:51:07.602656Z"
     }
   }
 }

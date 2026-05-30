@@ -144,7 +144,7 @@ def validate_dept(dept_key: str, dept_data: dict) -> dict:
             "validated_at": datetime.datetime.utcnow().isoformat() + "Z",
         }
 
-    if status_from_fetch == "FETCH_ERROR":
+    if status_from_fetch in ("ACCESS_ERROR", "FETCH_ERROR"):
         return {
             "dept": dept_key,
             "dqg_status": "FAIL",
@@ -153,7 +153,33 @@ def validate_dept(dept_key: str, dept_data: dict) -> dict:
             "fail_count": 0,
             "warn_count": 0,
             "missing_columns": [],
-            "issues": ["Data fetch failed — sheet may not be public or Sheet ID wrong"],
+            "issues": ["Access denied — verify sheet is set to 'Anyone with link can view' AND Sheet ID is correct"],
+            "validated_at": datetime.datetime.utcnow().isoformat() + "Z",
+        }
+
+    if status_from_fetch == "NETWORK_ERROR":
+        return {
+            "dept": dept_key,
+            "dqg_status": "SKIP",
+            "description": dept_data.get("description", dept_key),
+            "row_count": 0,
+            "fail_count": 0,
+            "warn_count": 0,
+            "missing_columns": [],
+            "issues": ["Network/DNS error — transient, will retry on next run"],
+            "validated_at": datetime.datetime.utcnow().isoformat() + "Z",
+        }
+
+    if status_from_fetch == "EMPTY":
+        return {
+            "dept": dept_key,
+            "dqg_status": "SKIP",
+            "description": dept_data.get("description", dept_key),
+            "row_count": 0,
+            "fail_count": 0,
+            "warn_count": 0,
+            "missing_columns": [],
+            "issues": [f"Tab accessible but contains no data rows yet — waiting for input"],
             "validated_at": datetime.datetime.utcnow().isoformat() + "Z",
         }
 

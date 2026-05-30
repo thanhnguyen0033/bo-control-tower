@@ -28,11 +28,16 @@ def build_csv_url(sheet_id: str, tab_name: str) -> str:
     )
 
 
-def fetch_csv(url: str, timeout: int = 30) -> list[dict]:
+def fetch_csv(url: str, timeout: int = 30) -> tuple[list[dict], str]:
     """
     Fetch CSV from URL, skip rows 0-1 (title + instructions),
     use row index 2 as headers (header_row=3 in config), rows 3+ as data.
-    Returns list of dicts.
+
+    Returns: (records, fetch_status)
+        fetch_status = "OK"           — accessible + has data rows
+                     = "EMPTY"        — accessible but 0 data rows (tab not filled yet)
+                     = "ACCESS_ERROR" — HTTP error (401/403/404 — permission or wrong ID)
+                     = "NETWORK_ERROR"— network/DNS/timeout issues
     """
     try:
         req = urllib.request.Request(
@@ -47,7 +52,8 @@ def fetch_csv(url: str, timeout: int = 30) -> list[dict]:
         all_rows = list(reader)
 
         if len(all_rows) < 3:
-            return []
+            # Sheet accessible but even header rows are missing
+            return [], "EMPTY"
 
         # Row 0 = sheet title (skip)
         # Row 1 = instructions/notes (skip)
@@ -66,22 +72,32 @@ def fetch_csv(url: str, timeout: int = 30) -> list[dict]:
             record = {headers[i]: padded[i].strip() for i in range(len(headers))}
             records.append(record)
 
-        return records
+        if not records:
+            return [], "EMPTY"
+
+        return records, "OK"
 
     except urllib.error.HTTPError as e:
         print(f"    HTTP Error {e.code}: {e.reason}")
-        return []
+        return [], "ACCESS_ERROR"
     except urllib.error.URLError as e:
         print(f"    URL Error: {e.reason}")
-        return []
+        return [], "NETWORK_ERROR"
     except Exception as e:
         print(f"    Unexpected error: {e}")
-        return []
+        return [], "NETWORK_ERROR"
 
 
 def is_placeholder(sheet_id: str) -> bool:
     """Check if sheet_id is still a placeholder (not yet configured)."""
-    return "REPLACE_WITH" in sheet_id or sheet_id.strip() == ""
+    s = sheet_id.strip().upper()
+    return (
+        not s
+        or s == "PENDING"
+        or "REPLACE_WITH" in s
+        or "TODO" in s
+        or "TBD" in s
+    )
 
 
 def fetch_all_sheets() -> dict:
@@ -127,10 +143,10 @@ def fetch_all_sheets() -> dict:
         url = build_csv_url(sheet_id, tab_name)
         print(f"    URL: {url[:80]}...")
 
-        records = fetch_csv(url)
+        records, fetch_status = fetch_csv(url)
 
-        if records:
-            columns = list(records[0].keys()) if records else []
+        if fetch_status == "OK":
+            columns = list(records[0].keys())
             print(f"    ✅ OK — {len(records)} data rows, {len(columns)} columns")
             results[dept_key] = {
                 "status":      "OK",
@@ -143,10 +159,11 @@ def fetch_all_sheets() -> dict:
                 "fetched_at":  datetime.datetime.utcnow().isoformat() + "Z",
                 "note":        "",
             }
-        else:
-            print(f"    ❌ FETCH FAILED — 0 rows returned (check share permissions or Sheet ID)")
+
+        elif fetch_status == "EMPTY":
+            print(f"    ⚠️  EMPTY — Sheet accessible but no data rows yet (tab: {tab_name})")
             results[dept_key] = {
-                "status":      "FETCH_ERROR",
+                "status":      "EMPTY",
                 "description": desc,
                 "tab_name":    tab_name,
                 "sheet_id":    sheet_id,
@@ -154,17 +171,47 @@ def fetch_all_sheets() -> dict:
                 "columns":     [],
                 "row_count":   0,
                 "fetched_at":  datetime.datetime.utcnow().isoformat() + "Z",
-                "note":        "Fetch failed — verify sheet is shared 'Anyone with link can view'",
+                "note":        f"Tab '{tab_name}' is accessible but contains no data rows — please enter data",
+            }
+
+        elif fetch_status == "ACCESS_ERROR":
+            print(f"    ❌ ACCESS ERROR — HTTP 401/403/404. Verify sheet is public AND Sheet ID is correct.")
+            results[dept_key] = {
+                "status":      "ACCESS_ERROR",
+                "description": desc,
+                "tab_name":    tab_name,
+                "sheet_id":    sheet_id,
+                "records":     [],
+                "columns":     [],
+                "row_count":   0,
+                "fetched_at":  datetime.datetime.utcnow().isoformat() + "Z",
+                "note":        "Access denied — set sheet sharing to 'Anyone with link can view', or verify Sheet ID",
+            }
+
+        else:  # NETWORK_ERROR
+            print(f"    ❌ NETWORK ERROR — DNS/timeout issue. Will retry on next run.")
+            results[dept_key] = {
+                "status":      "NETWORK_ERROR",
+                "description": desc,
+                "tab_name":    tab_name,
+                "sheet_id":    sheet_id,
+                "records":     [],
+                "columns":     [],
+                "row_count":   0,
+                "fetched_at":  datetime.datetime.utcnow().isoformat() + "Z",
+                "note":        "Network/DNS error — transient issue, retry on next scheduled run",
             }
 
     # Save raw data log
     output = {
         "generated_at": datetime.datetime.utcnow().isoformat() + "Z",
         "summary": {
-            "total_depts":  total,
-            "ok":           sum(1 for v in results.values() if v["status"] == "OK"),
-            "pending":      sum(1 for v in results.values() if v["status"] == "PENDING"),
-            "fetch_error":  sum(1 for v in results.values() if v["status"] == "FETCH_ERROR"),
+            "total_depts":   total,
+            "ok":            sum(1 for v in results.values() if v["status"] == "OK"),
+            "empty":         sum(1 for v in results.values() if v["status"] == "EMPTY"),
+            "pending":       sum(1 for v in results.values() if v["status"] == "PENDING"),
+            "access_error":  sum(1 for v in results.values() if v["status"] == "ACCESS_ERROR"),
+            "network_error": sum(1 for v in results.values() if v["status"] == "NETWORK_ERROR"),
         },
         "departments": results,
     }
@@ -174,7 +221,8 @@ def fetch_all_sheets() -> dict:
 
     print(f"\n{'='*60}")
     print(f"Raw data saved → logs/raw_data.json")
-    print(f"Summary: OK={output['summary']['ok']} | PENDING={output['summary']['pending']} | ERROR={output['summary']['fetch_error']}")
+    s = output['summary']
+    print(f"Summary: OK={s['ok']} | EMPTY={s['empty']} | PENDING={s['pending']} | ACCESS_ERR={s['access_error']} | NET_ERR={s['network_error']}")
     print(f"{'='*60}\n")
 
     return results

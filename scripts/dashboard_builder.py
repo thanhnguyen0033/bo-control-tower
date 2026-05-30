@@ -11,13 +11,18 @@ OUTPUT_FILE = os.path.join(OUTPUT_DIR, "index.html")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 STATUS_COLOR = {
-    "PASS":    ("#22c55e", "#f0fdf4", "✅"),
-    "WARN":    ("#f59e0b", "#fffbeb", "⚠️"),
-    "FAIL":    ("#ef4444", "#fef2f2", "❌"),
-    "DEMO":    ("#6366f1", "#eef2ff", "🔵"),
-    "NO_DATA": ("#94a3b8", "#f8fafc", "⬜"),
-    "ERROR":   ("#dc2626", "#fef2f2", "🔴"),
-    "PENDING": ("#64748b", "#f8fafc", "⏳"),
+    "PASS":         ("#22c55e", "#f0fdf4", "✅"),
+    "WARN":         ("#f59e0b", "#fffbeb", "⚠️"),
+    "FAIL":         ("#ef4444", "#fef2f2", "❌"),
+    "DEMO":         ("#6366f1", "#eef2ff", "🔵"),
+    "NO_DATA":      ("#94a3b8", "#f8fafc", "⬜"),
+    "ERROR":        ("#dc2626", "#fef2f2", "🔴"),
+    "PENDING":      ("#64748b", "#f8fafc", "⏳"),
+    "SKIP":         ("#64748b", "#f8fafc", "⏳"),
+    # New statuses from data_fetcher v2
+    "EMPTY":        ("#f59e0b", "#fffbeb", "📭"),   # Accessible, no data yet
+    "ACCESS_ERROR": ("#ef4444", "#fef2f2", "🔒"),   # 401/403/404
+    "NETWORK_ERROR":("#94a3b8", "#f8fafc", "🌐"),   # DNS/timeout
 }
 
 DEPT_LABEL = {
@@ -41,6 +46,9 @@ def build_html(dqg: dict) -> str:
     pass_n    = summary.get("PASS", 0)
     warn_n    = summary.get("WARN", 0)
     fail_n    = summary.get("FAIL", 0)
+    skip_n    = summary.get("SKIP", 0)
+    empty_n   = sum(1 for d in departments.values() if d.get("dqg_status") == "SKIP"
+                    and "no data rows" in " ".join(d.get("issues", [])))
     total_n   = len(departments)
     demo_mode = summary.get("DEMO", 0) == total_n
 
@@ -50,24 +58,42 @@ def build_html(dqg: dict) -> str:
         overall_color = "#ef4444"; overall_label = "DATA ISSUES DETECTED"
     elif warn_n > 0:
         overall_color = "#f59e0b"; overall_label = "WARNINGS PRESENT"
+    elif pass_n == 0 and fail_n == 0:
+        overall_color = "#f59e0b"; overall_label = "AWAITING DATA INPUT"
     if demo_mode:
         overall_color = "#6366f1"; overall_label = "DEMO MODE"
+
+    # Status → human-readable sub-label
+    STATUS_SUBLABEL = {
+        "PASS":         "Dữ liệu đạt DQG — sẵn sàng tính KPI",
+        "WARN":         "Có cảnh báo — xem xét trước khi dùng KPI",
+        "FAIL":         "DQG thất bại — không dùng làm KPI chính thức",
+        "SKIP":         "Bỏ qua DQG — chờ dữ liệu hoặc cấu hình",
+        "EMPTY":        "Tab đã kết nối — chưa có dữ liệu, vui lòng nhập dữ liệu vào sheet",
+        "ACCESS_ERROR": "Lỗi truy cập — kiểm tra sheet đã public chưa / Sheet ID đúng chưa",
+        "NETWORK_ERROR":"Lỗi mạng tạm thời — sẽ retry lần chạy tiếp theo",
+        "PENDING":      "Chưa cấu hình Sheet ID",
+    }
 
     # ── dept cards ──────────────────────────────────────────────────────────
     cards_html = ""
     for dept_key, res in departments.items():
-        s = res.get("dqg_status", "PENDING")
+        s         = res.get("dqg_status", "PENDING")
         color, bg, icon = STATUS_COLOR.get(s, ("#64748b", "#f8fafc", "?"))
-        label    = DEPT_LABEL.get(dept_key, dept_key)
-        message  = res.get("message", "")
+        label     = DEPT_LABEL.get(dept_key, dept_key)
+        sublabel  = STATUS_SUBLABEL.get(s, "")
         row_count = res.get("row_count", 0)
-        bad_rows  = res.get("bad_rows", 0)
-        issues   = res.get("issues_sample", [])
+        fail_count = res.get("fail_count", 0)
+        issues    = res.get("issues", [])
 
         issues_html = ""
         if issues:
             li_items = "".join(f"<li>{i}</li>" for i in issues[:5])
             issues_html = f"<ul style='margin:6px 0 0 16px;font-size:11px;color:#475569'>{li_items}</ul>"
+
+        row_info = f"Rows: {row_count}"
+        if fail_count and s in ("FAIL", "WARN"):
+            row_info += f' &nbsp;|&nbsp; Lỗi: <b style="color:{color}">{fail_count}</b>'
 
         cards_html += f"""
         <div style="border:1px solid {color};border-left:5px solid {color};
@@ -77,11 +103,8 @@ def build_html(dqg: dict) -> str:
             <span style="background:{color};color:#fff;padding:2px 10px;
                          border-radius:20px;font-size:12px;font-weight:700">{s}</span>
           </div>
-          <div style="font-size:12px;color:#475569;margin-top:5px">{message}</div>
-          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
-            Rows fetched: {row_count}
-            {f'&nbsp;|&nbsp; Bad rows: <b style="color:{color}">{bad_rows}</b>' if bad_rows else ''}
-          </div>
+          <div style="font-size:12px;color:#475569;margin-top:5px">{sublabel}</div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">{row_info}</div>
           {issues_html}
         </div>"""
 
@@ -105,7 +128,7 @@ def build_html(dqg: dict) -> str:
             background:#fff;border:2px solid {overall_color}}}
   .overall .label{{font-size:22px;font-weight:800;color:{overall_color}}}
   .overall .sub{{font-size:13px;color:#64748b;margin-top:4px}}
-  .kpi-row{{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}}
+  .kpi-row{{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:20px}}
   .kpi-box{{background:#fff;border-radius:10px;padding:14px;text-align:center;
             box-shadow:0 1px 4px rgba(0,0,0,.07)}}
   .kpi-box .num{{font-size:28px;font-weight:800}}
@@ -114,7 +137,7 @@ def build_html(dqg: dict) -> str:
                   margin-bottom:12px;padding-left:4px;
                   border-left:4px solid #3b82f6;padding-left:10px}}
   .footer{{text-align:center;font-size:11px;color:#94a3b8;margin-top:24px}}
-  @media(max-width:500px){{.kpi-row{{grid-template-columns:repeat(2,1fr)}}}}
+  @media(max-width:600px){{.kpi-row{{grid-template-columns:repeat(2,1fr)}}}}
 </style>
 </head>
 <body>
@@ -143,7 +166,15 @@ def build_html(dqg: dict) -> str:
     </div>
     <div class="kpi-box">
       <div class="num" style="color:#ef4444">{fail_n}</div>
-      <div class="lbl">❌ FAIL / ERROR</div>
+      <div class="lbl">❌ FAIL / ACCESS ERR</div>
+    </div>
+    <div class="kpi-box">
+      <div class="num" style="color:#f59e0b">{empty_n}</div>
+      <div class="lbl">📭 Chưa có data</div>
+    </div>
+    <div class="kpi-box">
+      <div class="num" style="color:#64748b">{skip_n - empty_n if skip_n > empty_n else 0}</div>
+      <div class="lbl">⏳ PENDING/SKIP</div>
     </div>
   </div>
 

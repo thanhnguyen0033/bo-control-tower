@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T02:45:51.087665Z",
+  "generated_at": "2026-05-30T03:40:32.604373Z",
   "summary": {
     "total_depts": 9,
     "ok": 1,
@@ -47,7 +47,7 @@
         ""
       ],
       "row_count": 1,
-      "fetched_at": "2026-05-30T02:45:46.345963Z",
+      "fetched_at": "2026-05-30T03:40:28.528751Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -58,7 +58,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T02:45:46.345978Z",
+      "fetched_at": "2026-05-30T03:40:28.528767Z",
       "note": "Sheet ID not yet configured — replace REPLACE_WITH_ACTUAL_SHEET_ID"
     },
     "03_QLCL": {
@@ -69,7 +69,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T02:45:47.393595Z",
+      "fetched_at": "2026-05-30T03:40:28.962095Z",
       "note": "Tab '03_QLCL_NCR_CAR' is accessible but contains no data rows — please enter data"
     },
     "04_QLTB_CD": {
@@ -80,7 +80,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T02:45:48.147801Z",
+      "fetched_at": "2026-05-30T03:40:29.430922Z",
       "note": "Tab '04_MACHINE_DOWNTIME' is accessible but contains no data rows — please enter data"
     },
     "05_KHO": {
@@ -91,7 +91,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T02:45:48.953273Z",
+      "fetched_at": "2026-05-30T03:40:30.380460Z",
       "note": "Tab '05_WIP_FIFO_KHO' is accessible but contains no data rows — please enter data"
     },
     "05_KHO_GS1": {
@@ -102,7 +102,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T02:45:49.591073Z",
+      "fetched_at": "2026-05-30T03:40:31.406192Z",
       "note": "Tab '05_WIP_FIFO_KHO' is accessible but contains no data rows — please enter data"
     },
     "06_GSTT": {
@@ -113,7 +113,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T02:45:50.071184Z",
+      "fetched_at": "2026-05-30T03:40:31.751778Z",
       "note": "Tab '06_GSTT_FIELD_LOG' is accessible but contains no data rows — please enter data"
     },
     "07_CONG_NGHE_SPM": {
@@ -124,7 +124,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T02:45:50.649859Z",
+      "fetched_at": "2026-05-30T03:40:32.306813Z",
       "note": "Tab '08_SPM_TECH' is accessible but contains no data rows — please enter data"
     },
     "08_BO_CONTROL": {
@@ -135,7 +135,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-05-30T02:45:51.087654Z",
+      "fetched_at": "2026-05-30T03:40:32.604360Z",
       "note": "Tab '09_ISSUE_ACTION' is accessible but contains no data rows — please enter data"
     }
   }

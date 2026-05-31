@@ -189,141 +189,188 @@ def mini_kpi_row(kpis_by_site, dept_key, site, label, fmt_fn):
 # CSS
 # ─────────────────────────────────────────────────────────────
 
+def bl(vi, en=""):
+    """Bilingual label: Tiếng Việt (English) — theo quy ước dự án."""
+    if en:
+        return f'{vi} <span class="bi-en">({en})</span>'
+    return vi
+
+
 CSS = """
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;background:#eef2f7;color:#1e293b;font-size:13px}
+body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;background:#f0f4f8;color:#1e293b;font-size:13px;line-height:1.5}
+.bi-en{color:#94a3b8;font-size:10px;font-weight:400}
 
 /* Warning banner */
-.warn-banner{position:sticky;top:0;z-index:60;background:#991b1b;color:#fff;text-align:center;
-             font-size:11px;font-weight:700;padding:7px 14px;line-height:1.4}
+.warn-banner{position:sticky;top:0;z-index:60;
+             background:linear-gradient(90deg,#7f1d1d,#991b1b,#7f1d1d);
+             color:#fff;text-align:center;font-size:11px;font-weight:700;
+             padding:8px 14px;letter-spacing:.3px}
 
 /* Header */
-.hdr{background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 100%);color:#fff;padding:16px 20px}
-.hdr h1{font-size:17px;font-weight:800;letter-spacing:.3px}
-.hdr .sub{font-size:11px;color:#93c5fd;margin-top:5px}
-.badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
-.bdg{font-size:10px;font-weight:800;border-radius:4px;padding:3px 8px}
-.bdg-warn{background:#92400e;color:#fef3c7}
-.bdg-ok{background:#14532d;color:#d1fae5}
-.bdg-info{background:#1e40af;color:#dbeafe}
+.hdr{background:linear-gradient(135deg,#0c1445 0%,#0f2d87 55%,#1a4fba 100%);
+     color:#fff;padding:18px 22px;box-shadow:0 3px 14px rgba(0,0,0,.35)}
+.hdr h1{font-size:18px;font-weight:800;letter-spacing:.5px;text-shadow:0 1px 3px rgba(0,0,0,.3)}
+.hdr .sub{font-size:11px;color:#93c5fd;margin-top:5px;line-height:1.55}
+.badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}
+.bdg{font-size:10px;font-weight:800;border-radius:5px;padding:3px 9px;letter-spacing:.3px}
+.bdg-warn{background:rgba(146,64,14,.9);color:#fef3c7;border:1px solid rgba(255,255,255,.15)}
+.bdg-ok{background:rgba(20,83,45,.9);color:#d1fae5;border:1px solid rgba(255,255,255,.15)}
+.bdg-info{background:rgba(30,64,175,.9);color:#dbeafe;border:1px solid rgba(255,255,255,.15)}
 
 /* Tab nav */
 input[name=tab]{display:none}
-.nav{display:flex;background:#1e3a8a;overflow-x:auto;position:sticky;top:34px;z-index:50;border-bottom:2px solid #1e40af}
-.nav label{padding:11px 16px;color:rgba(255,255,255,.7);font-weight:700;font-size:12px;
-           white-space:nowrap;cursor:pointer;border-bottom:3px solid transparent;transition:.15s}
+.nav{display:flex;background:#152a7a;overflow-x:auto;position:sticky;top:34px;z-index:50;
+     border-bottom:3px solid #0f2266;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.nav label{padding:12px 18px;color:rgba(255,255,255,.65);font-weight:700;font-size:12px;
+           white-space:nowrap;cursor:pointer;border-bottom:3px solid transparent;
+           transition:.2s;letter-spacing:.2px;margin-bottom:-3px}
 .nav label:hover{background:rgba(255,255,255,.1);color:#fff}
 #t1:checked~.nav label[for=t1],#t2:checked~.nav label[for=t2],
 #t3:checked~.nav label[for=t3],#t4:checked~.nav label[for=t4],
 #t5:checked~.nav label[for=t5],#t6:checked~.nav label[for=t6]{
-  color:#fff;background:rgba(255,255,255,.12);border-bottom-color:#fbbf24}
-.panel{display:none;padding:16px 18px 36px;max-width:1200px;margin:0 auto}
+  color:#fff;background:rgba(255,255,255,.13);border-bottom-color:#fbbf24}
+.panel{display:none;padding:18px 20px 40px;max-width:1200px;margin:0 auto}
 #t1:checked~#c1,#t2:checked~#c2,#t3:checked~#c3,
 #t4:checked~#c4,#t5:checked~#c5,#t6:checked~#c6{display:block}
 
 /* Section title */
-.section-title{font-size:14px;font-weight:800;color:#1e3a8a;margin:16px 0 10px;
-               display:flex;align-items:center;gap:8px}
-.section-title::before{content:'';width:4px;height:18px;background:#2563eb;border-radius:2px;flex-shrink:0}
+.section-title{font-size:14px;font-weight:800;color:#0f2d87;margin:18px 0 11px;
+               display:flex;align-items:center;gap:9px;letter-spacing:.2px}
+.section-title::before{content:'';width:4px;height:20px;
+                       background:linear-gradient(180deg,#2563eb,#1d4ed8);
+                       border-radius:2px;flex-shrink:0;
+                       box-shadow:0 2px 5px rgba(37,99,235,.35)}
 
 /* Cards */
-.card{background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.1);padding:14px;margin-bottom:12px}
-.card-title{font-size:13px;font-weight:700;color:#1e3a8a;border-bottom:2px solid #e2e8f0;padding-bottom:8px;margin-bottom:10px}
+.card{background:#fff;border-radius:12px;
+      box-shadow:0 2px 10px rgba(0,0,0,.08),0 0 1px rgba(0,0,0,.05);
+      padding:16px;margin-bottom:13px}
+.card:hover{box-shadow:0 4px 16px rgba(0,0,0,.11)}
+.card-title{font-size:13px;font-weight:700;color:#0f2d87;
+            border-bottom:2px solid #e2e8f0;padding-bottom:9px;margin-bottom:11px;
+            display:flex;align-items:center;gap:6px}
 
 /* KPI cards */
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-bottom:14px}
-.kpi-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:14px}
-.kpi-card{background:#fff;border-radius:10px;padding:14px 12px;text-align:center;
-          box-shadow:0 1px 4px rgba(0,0,0,.1);border-top:4px solid #2563eb}
-.kpi-card.rag-green{border-top-color:#16a34a}
-.kpi-card.rag-amber{border-top-color:#d97706}
-.kpi-card.rag-red{border-top-color:#dc2626}
-.kpi-card.rag-gray{border-top-color:#9ca3af}
-.kpi-card.rag-blue{border-top-color:#2563eb}
-.kpi-card.rag-purple{border-top-color:#7c3aed}
-.kpi-val{font-size:24px;font-weight:900;line-height:1.1;color:#1e293b}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:11px;margin-bottom:14px}
+.kpi-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:11px;margin-bottom:14px}
+.kpi-card{background:#fff;border-radius:12px;padding:15px 13px;text-align:center;
+          box-shadow:0 2px 8px rgba(0,0,0,.08),0 0 1px rgba(0,0,0,.04);
+          border-top:4px solid #2563eb;transition:transform .15s,box-shadow .15s}
+.kpi-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.kpi-card.rag-green{border-top-color:#16a34a;background:linear-gradient(180deg,#f0fdf4 0%,#fff 35%)}
+.kpi-card.rag-amber{border-top-color:#d97706;background:linear-gradient(180deg,#fffbeb 0%,#fff 35%)}
+.kpi-card.rag-red{border-top-color:#dc2626;background:linear-gradient(180deg,#fef2f2 0%,#fff 35%)}
+.kpi-card.rag-gray{border-top-color:#9ca3af;background:#fff}
+.kpi-card.rag-blue{border-top-color:#2563eb;background:linear-gradient(180deg,#eff6ff 0%,#fff 35%)}
+.kpi-card.rag-purple{border-top-color:#7c3aed;background:linear-gradient(180deg,#f5f3ff 0%,#fff 35%)}
+.kpi-val{font-size:26px;font-weight:900;line-height:1.1;color:#1e293b}
 .kpi-val.red{color:#dc2626}.kpi-val.green{color:#16a34a}.kpi-val.amber{color:#d97706}
 .kpi-val.blue{color:#2563eb}.kpi-val.gray{color:#6b7280}
-.kpi-lbl{font-size:11px;font-weight:700;color:#374151;margin-top:5px}
+.kpi-lbl{font-size:11px;font-weight:700;color:#374151;margin-top:5px;line-height:1.35}
 .kpi-sub{font-size:10px;color:#9ca3af;margin-top:3px;line-height:1.3}
 
 /* Factory heatmap */
-.heat-grid{display:grid;grid-template-columns:150px repeat(6,1fr);border:1px solid #e2e8f0;
-           border-radius:8px;overflow:hidden;background:#fff;overflow-x:auto;min-width:800px}
-.heat-hdr{background:#1e3a8a;color:#fff;font-size:11px;font-weight:700;padding:9px 10px}
-.heat-cell{font-size:11px;padding:9px 10px;border-right:1px solid #e8ecf0;border-bottom:1px solid #e8ecf0;min-height:50px}
-.heat-cell strong{display:block;font-size:12px;margin-bottom:2px}
-.bg-green{background:#f0fdf4;color:#15803d}
-.bg-amber{background:#fffbeb;color:#92400e}
-.bg-red{background:#fef2f2;color:#b91c1c}
-.bg-pend{background:#f5f3ff;color:#6d28d9}
+.heat-grid{display:grid;grid-template-columns:155px repeat(6,1fr);
+           border:1px solid #e2e8f0;border-radius:11px;overflow:hidden;
+           background:#fff;overflow-x:auto;min-width:800px;
+           box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.heat-hdr{background:linear-gradient(180deg,#1a3a8f,#0f2266);
+          color:#fff;font-size:11px;font-weight:700;padding:10px 11px;letter-spacing:.3px}
+.heat-cell{font-size:11px;padding:10px 11px;border-right:1px solid #e8ecf0;
+           border-bottom:1px solid #e8ecf0;min-height:52px}
+.heat-cell strong{display:block;font-size:12px;margin-bottom:2px;font-weight:700}
+.bg-green{background:linear-gradient(135deg,#f0fdf4,#dcfce7);color:#15803d}
+.bg-amber{background:linear-gradient(135deg,#fffbeb,#fef9c3);color:#92400e}
+.bg-red{background:linear-gradient(135deg,#fef2f2,#fee2e2);color:#b91c1c}
+.bg-pend{background:linear-gradient(135deg,#f5f3ff,#ede9fe);color:#6d28d9}
 .bg-gray{background:#f8fafc;color:#334155}
 
-/* Badges / RAG */
-.badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;white-space:nowrap}
+/* Badges */
+.badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:10px;
+       font-weight:700;white-space:nowrap;letter-spacing:.2px}
 
 /* Info boxes */
-.info-box{border-left:4px solid #2563eb;background:#eff6ff;border-radius:0 6px 6px 0;
-          padding:10px 13px;margin:8px 0;font-size:12px;line-height:1.5}
-.warn-box{border-left:4px solid #dc2626;background:#fef2f2;border-radius:0 6px 6px 0;
-          padding:10px 13px;margin:8px 0;font-size:12px;line-height:1.5}
+.info-box{border-left:4px solid #2563eb;
+          background:linear-gradient(135deg,#eff6ff,#f8faff);
+          border-radius:0 8px 8px 0;padding:11px 14px;margin:8px 0;
+          font-size:12px;line-height:1.55}
+.warn-box{border-left:4px solid #dc2626;
+          background:linear-gradient(135deg,#fef2f2,#fff5f5);
+          border-radius:0 8px 8px 0;padding:11px 14px;margin:8px 0;
+          font-size:12px;line-height:1.55}
 
 /* Tables */
-.tbl-wrap{overflow-x:auto}
+.tbl-wrap{overflow-x:auto;border-radius:8px;
+          box-shadow:0 1px 5px rgba(0,0,0,.07)}
 table{width:100%;border-collapse:collapse;font-size:12px}
-th{background:#1e3a8a;color:#fff;text-align:left;padding:8px 10px;font-size:11px;white-space:nowrap}
-td{padding:7px 10px;border-bottom:1px solid #f1f5f9;vertical-align:top;line-height:1.4}
+th{background:linear-gradient(180deg,#1a3a8f,#0f2266);color:#fff;text-align:left;
+   padding:9px 11px;font-size:11px;white-space:nowrap;letter-spacing:.2px}
+td{padding:8px 11px;border-bottom:1px solid #f1f5f9;vertical-align:top;line-height:1.5}
 tr:nth-child(even) td{background:#fafbfc}
+tr:hover td{background:#f0f7ff;transition:.1s}
 
 /* Progress bars */
-.pbar-bg{height:14px;background:#e2e8f0;border-radius:99px;overflow:hidden;min-width:100px}
-.pbar-fill{height:100%;border-radius:99px}
+.pbar-bg{height:15px;background:#e2e8f0;border-radius:99px;overflow:hidden;min-width:100px}
+.pbar-fill{height:100%;border-radius:99px;transition:width .3s}
 
 /* Pareto */
-.pareto-row{display:grid;grid-template-columns:130px 1fr 44px;align-items:center;gap:8px;margin:7px 0;font-size:12px}
+.pareto-row{display:grid;grid-template-columns:140px 1fr 46px;align-items:center;
+            gap:9px;margin:8px 0;font-size:12px}
 .pareto-lbl{font-weight:600;color:#374151}
-.pareto-bg{height:14px;background:#e2e8f0;border-radius:99px;overflow:hidden}
+.pareto-bg{height:16px;background:#e2e8f0;border-radius:99px;overflow:hidden}
 .pareto-fill{height:100%;border-radius:99px}
 
 /* Drill-down */
-details.drill{margin-top:8px;border-radius:6px;overflow:hidden;border:1px solid #e2e8f0}
-details.drill>summary{list-style:none;cursor:pointer;background:#f1f5f9;color:#1e3a8a;
-                       font-weight:700;font-size:11px;padding:8px 12px;
-                       border-bottom:1px solid #e2e8f0;user-select:none}
+details.drill{margin-top:9px;border-radius:8px;overflow:hidden;
+              border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+details.drill>summary{list-style:none;cursor:pointer;
+                       background:linear-gradient(180deg,#f8fafc,#f0f4f9);
+                       color:#0f2d87;font-weight:700;font-size:11px;padding:9px 13px;
+                       border-bottom:1px solid #e2e8f0;user-select:none;letter-spacing:.2px}
 details.drill>summary::before{content:"🔍 "}
 details.drill>summary::-webkit-details-marker{display:none}
-details.drill[open]>summary::after{content:" ▲";float:right}
-details.drill:not([open])>summary::after{content:" ▼";float:right}
-.drill-body{padding:12px;background:#fff}
+details.drill[open]>summary::after{content:" ▲";float:right;color:#94a3b8}
+details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b8}
+.drill-body{padding:13px;background:#fff}
 
 /* GSTT heatmap */
-.gstt-grid{display:grid;grid-template-columns:140px repeat(5,1fr);border:1px solid #e2e8f0;
-           border-radius:8px;overflow:hidden;background:#fff;min-width:720px;overflow-x:auto}
-.gstt-hdr{background:#1e3a8a;color:#fff;font-size:11px;font-weight:700;padding:9px 10px}
-.gstt-cell{font-size:11px;padding:9px 10px;border-right:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0}
+.gstt-grid{display:grid;grid-template-columns:140px repeat(5,1fr);
+           border:1px solid #e2e8f0;border-radius:11px;overflow:hidden;
+           background:#fff;min-width:720px;overflow-x:auto;
+           box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.gstt-hdr{background:linear-gradient(180deg,#1a3a8f,#0f2266);
+          color:#fff;font-size:11px;font-weight:700;padding:9px 10px;letter-spacing:.3px}
+.gstt-cell{font-size:11px;padding:9px 10px;border-right:1px solid #e2e8f0;
+           border-bottom:1px solid #e2e8f0}
 .gstt-cell strong{display:block;font-size:12px;margin-bottom:2px}
 
 /* Score bars */
-.score-bg{height:14px;background:#e2e8f0;border-radius:99px;overflow:hidden;min-width:100px;display:inline-block;width:80px;vertical-align:middle}
+.score-bg{height:14px;background:#e2e8f0;border-radius:99px;overflow:hidden;
+          min-width:100px;display:inline-block;width:80px;vertical-align:middle}
 .score-fill{height:100%;border-radius:99px}
 
 /* SVG chart */
-.svg-box{width:100%;background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:8px;overflow-x:auto}
+.svg-box{width:100%;background:#fff;border:1px solid #e2e8f0;border-radius:10px;
+         padding:10px;overflow-x:auto;box-shadow:0 1px 4px rgba(0,0,0,.05)}
 .svg-box svg{min-width:500px;width:100%;height:auto;display:block}
 
 /* Grid layouts */
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:12px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px}
-.note{background:#fffbeb;border:1px dashed #d97706;border-radius:6px;padding:10px 13px;
-      font-size:12px;font-weight:700;color:#92400e;margin:8px 0 14px;line-height:1.5}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-bottom:13px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-bottom:13px}
+.note{background:linear-gradient(135deg,#fffbeb,#fef9c3);
+      border:1px dashed #d97706;border-radius:8px;padding:11px 14px;
+      font-size:12px;font-weight:600;color:#92400e;margin:9px 0 15px;line-height:1.55}
 
 /* Footer */
-.footer{background:#0f172a;color:rgba(255,255,255,.5);text-align:center;font-size:10px;padding:12px}
+.footer{background:linear-gradient(135deg,#0c1445,#0f2d87);
+        color:rgba(255,255,255,.5);text-align:center;font-size:10px;padding:14px;letter-spacing:.3px}
 
 @media(max-width:900px){
   .kpi-grid-5,.grid-2,.grid-3{grid-template-columns:1fr}
   .heat-grid,.gstt-grid{min-width:700px}
   .panel{padding:12px 12px 30px}
+  .nav label{padding:10px 12px;font-size:11px}
 }
 """
 
@@ -363,12 +410,12 @@ def build_tab_tong_bo(kpi, dqg, build_time):
     <div style="overflow-x:auto">
     <div class="heat-grid">
       <div class="heat-hdr">Nhà máy</div>
-      <div class="heat-hdr">Plan/DO</div>
-      <div class="heat-hdr">OTIF</div>
-      <div class="heat-hdr">OEE/Downtime</div>
-      <div class="heat-hdr">Quality/NCR</div>
-      <div class="heat-hdr">WIP/FIFO</div>
-      <div class="heat-hdr">Overall</div>
+      <div class="heat-hdr">Tuân thủ KH<br><span style="font-weight:400;opacity:.8">(Plan/DO)</span></div>
+      <div class="heat-hdr">Giao đúng hạn<br><span style="font-weight:400;opacity:.8">(OTIF)</span></div>
+      <div class="heat-hdr">Hiệu suất máy<br><span style="font-weight:400;opacity:.8">(OEE/Downtime)</span></div>
+      <div class="heat-hdr">Chất lượng<br><span style="font-weight:400;opacity:.8">(Quality/NCR)</span></div>
+      <div class="heat-hdr">Tồn kho BTP<br><span style="font-weight:400;opacity:.8">(WIP/FIFO)</span></div>
+      <div class="heat-hdr">Tổng thể<br><span style="font-weight:400;opacity:.8">(Overall)</span></div>
 
       <div class="heat-cell bg-gray"><strong>GSHN / GS1</strong>Mr Hào</div>
       {heat_cell(plan_do_txt, "bg-pend")}
@@ -423,20 +470,20 @@ def build_tab_tong_bo(kpi, dqg, build_time):
 
     exec_cards = f"""
     <div class="kpi-grid">
-      {kpi_card("Plan/DO", f'<span class="{pd_rag.replace("rag-","")}">{pd_val}</span>',
+      {kpi_card("Tuân thủ kế hoạch (Plan/DO)", f'<span class="{pd_rag.replace("rag-","")}">{pd_val}</span>',
                 "Trung bình toàn nhà máy", pd_rag,
                 "<table><tr><th>Site</th><th>Actual</th><th>Target</th><th>Owner</th></tr>"
                 "<tr><td>GS1</td><td>Trial DQG</td><td>≥95%</td><td>Mr Hào</td></tr>"
                 "<tr><td>GS5</td><td>Pending</td><td>≥95%</td><td>Mr Lam</td></tr>"
                 "<tr><td>GS6</td><td>Pending</td><td>≥95%</td><td>Mr Mạnh</td></tr></table>")}
-      {kpi_card("OTIF", f'<span class="{otif_rag.replace("rag-","")}">{otif_val}</span>',
+      {kpi_card("Giao đúng hàng đúng hạn (OTIF)", f'<span class="{otif_rag.replace("rag-","")}">{otif_val}</span>',
                 "On-Time In-Full", otif_rag,
                 "<div class='warn-box'>Operational Owner theo site: GS1–Mr Hào, GS5–Mr Lam, GS6–Mr Mạnh.<br>External Data Provider: Mr Hưng (KHSX-Điều độ). Escalation: Ms Ly.</div>")}
-      {kpi_card("OEE / Downtime", f'<span class="{dt_rag.replace("rag-","")}">{dt_val}</span>',
-                "Downtime tổng", dt_rag,
+      {kpi_card("Hiệu suất máy / Dừng máy (OEE/Downtime)", f'<span class="{dt_rag.replace("rag-","")}">{dt_val}</span>',
+                "Tổng thời gian dừng (Downtime)", dt_rag,
                 "<div class='warn-box'>OEE cần Machine Log có planned time / run time / downtime start-end / reason code. Owner: Mr Thập (GS1), Mr Nam (GSQV).</div>")}
-      {kpi_card("Quality / NCR", f'<span class="{ncr_rag.replace("rag-","")}">{ncr_val}</span>',
-                "Tổng NCR", ncr_rag,
+      {kpi_card("Chất lượng / Phiếu NC (Quality/NCR)", f'<span class="{ncr_rag.replace("rag-","")}">{ncr_val}</span>',
+                "Tổng phiếu không phù hợp (NCR)", ncr_rag,
                 f"<table><tr><th>Metric</th><th>Giá trị</th><th>Owner</th></tr>"
                 f"<tr><td>NCR Total</td><td>{ncr_val}</td><td>Mr Đức / Mr Giang</td></tr>"
                 f"<tr><td>Open</td><td>{d_qlcl.get('open','—')}</td><td>Owner theo NCR</td></tr>"
@@ -515,26 +562,26 @@ def build_tab_tong_bo(kpi, dqg, build_time):
     </table></div>"""
 
     return f"""
-    {section_title("1. Factory Health Heatmap — CEO/Lead BO nhìn 10 giây")}
+    {section_title("1. Bản đồ sức khỏe nhà máy — CEO/Lead BO nhìn 10 giây (Factory Health Heatmap)")}
     {heatmap}
     <div class="card" style="margin-top:12px">
-      <div class="card-title">Phân công Owner / Data Provider / Escalation</div>
+      <div class="card-title">Phân công Owner / Người cung cấp dữ liệu / Báo leo (Data Provider / Escalation)</div>
       {raci_table}
     </div>
 
-    {section_title("2. Executive KPI Cards")}
+    {section_title("2. Chỉ số KPI cấp điều hành (Executive KPI Cards)")}
     {exec_cards}
 
-    {section_title("3. Inventory Flow & Warehouse Capacity Risk")}
+    {section_title("3. Dòng chảy tồn kho & Rủi ro quá tải kho (Inventory Flow & Warehouse Capacity Risk)")}
     <div class="card">{inv_cards}</div>
 
-    {section_title("4. Key Customer & Customer Risk")}
+    {section_title("4. Rủi ro khách hàng trọng điểm (Key Customer Risk)")}
     <div class="card">{cust_table}</div>
 
-    {section_title("5. Aging / ECN / RMA / Recovery Before Scrap")}
+    {section_title("5. Hàng tồn lâu / Thay đổi KT / Hàng hoàn trả (Aging / ECN / RMA / Recovery Before Scrap)")}
     <div class="card">{aging_cards}</div>
 
-    {section_title("6. GSTT Independent Compliance Check — kiểm chứng độc lập")}
+    {section_title("6. Kiểm chứng độc lập hiện trường — GSTT (Independent Compliance Check)")}
     <div class="note">GSTT hiện trường thuộc BG/Ban kiểm soát, PIC: Mr Lâm. Vai trò: kiểm chứng độc lập việc Owner/PIC trục BO đã làm thật, đúng, đủ, có bằng chứng và có hiệu quả tại hiện trường.</div>
     <div class="card">{gstt_sum}</div>
     """
@@ -597,8 +644,8 @@ def build_tab_site(kpi, site, site_name, giam_doc, issue_rows):
     issue_tbl = issue_table(issue_rows) if issue_rows else '<div class="info-box">Chưa có issue — sẽ tự cập nhật từ 08_BO_CONTROL sheet khi có dữ liệu.</div>'
 
     return f"""
-    {section_title(f"{site_name} — Mini Control Tower")}
-    <div class="note">📊 KPI theo site sẽ hiển thị đầy đủ khi PROD_LOG {site} đã qua DQG. Hiện đang dùng dữ liệu aggregate + Pending DQG cho các KPI chưa có nguồn tách site.</div>
+    {section_title(f"{site_name} — Tháp điều hành mini (Mini Control Tower)")}
+    <div class="note">📊 KPI theo site sẽ hiển thị đầy đủ khi PROD_LOG {site} đã qua Cổng kiểm soát dữ liệu (DQG). Hiện đang dùng dữ liệu tổng hợp (aggregate) + Pending DQG.</div>
     {kpi_cards}
 
     <div class="card">
@@ -660,7 +707,7 @@ def build_tab_kpi_pic(kpi):
         bo_trs += f"<tr><td><strong>{grp}</strong></td><td>{kpi_desc}</td><td>{target}</td><td>{actual}</td><td>{rag_badge(actual,'rpend')}</td></tr>"
 
     return f"""
-    {section_title("KPI / PIC Performance — BO Owner Structure")}
+    {section_title("Chỉ số hiệu suất / Owner vận hành — Cơ cấu BO (KPI/PIC Performance)")}
     <div class="warn-box"><strong>Nguyên tắc:</strong> Tab này phục vụ review Mentor 3 tháng/6 tháng. Không dùng kết luận nhân sự chính thức nếu chưa có dữ liệu qua DQG và evidence.</div>
     <div class="info-box"><strong>Role fix V34:</strong> Operational Owner: GĐNM theo site. Mr Hưng (KHSX-Điều độ): External Data Provider cho OTIF. Ms Ly: External Escalation. Mr Thành: BO Lead Governance Review — không đưa vào operational ranking.</div>
 
@@ -725,9 +772,12 @@ def build_tab_gstt(kpi):
     gstt_heatmap = f"""
     <div style="overflow-x:auto">
     <div class="gstt-grid">
-      <div class="gstt-hdr">Site</div><div class="gstt-hdr">Action/Deadline</div>
-      <div class="gstt-hdr">Evidence</div><div class="gstt-hdr">Field/SOP</div>
-      <div class="gstt-hdr">Tái diễn</div><div class="gstt-hdr">Overall</div>
+      <div class="gstt-hdr">Site</div>
+      <div class="gstt-hdr">Thực hiện/Đúng hạn<br><span style="font-weight:400;opacity:.8">(Action/Deadline)</span></div>
+      <div class="gstt-hdr">Bằng chứng<br><span style="font-weight:400;opacity:.8">(Evidence)</span></div>
+      <div class="gstt-hdr">Hiện trường/Quy trình<br><span style="font-weight:400;opacity:.8">(Field/SOP)</span></div>
+      <div class="gstt-hdr">Tái diễn<br><span style="font-weight:400;opacity:.8">(Recurrence)</span></div>
+      <div class="gstt-hdr">Tổng thể<br><span style="font-weight:400;opacity:.8">(Overall)</span></div>
 
       <div class="gstt-cell bg-gray"><strong>GS1</strong>Mr Hào</div>
       <div class="gstt-cell bg-amber"><strong>62</strong>Need evidence</div>
@@ -792,7 +842,7 @@ def build_tab_gstt(kpi):
         check_trs += f"<tr><td>{item}</td><td>{std}</td><td style='color:#2563eb'>Chưa kiểm tra</td><td>—</td><td>{rag_badge('Pending','rpend')}</td><td>Chờ data</td></tr>"
 
     return f"""
-    {section_title("GSTT / Compliance — Kiểm chứng độc lập")}
+    {section_title("Giám sát thực tế / Tuân thủ — Kiểm chứng độc lập (GSTT / Compliance)")}
     <div class="note">Tab này dành riêng cho GSTT hiện trường do Mr Lâm phụ trách. GSTT không thay Owner/PIC xử lý, chỉ xác minh độc lập: action có làm thật không, evidence có đủ không, hiện trường có tuân thủ không, issue có tái diễn không.</div>
     {gstt_cards}
 
@@ -943,7 +993,7 @@ def build_html(kpi_full, dqg_data, build_time):
 
     warn = ""
     if official < total:
-        warn = f'<div class="warn-banner">⚠️ {total - official}/{total} bộ phận chưa đạt DQG — KPI đang hiển thị Pending/Trial. Chỉ dùng KPI chính thức khi DQG PASS.</div>'
+        warn = f'<div class="warn-banner">⚠️ {total - official}/{total} bộ phận chưa đạt Cổng DL (DQG). Chỉ dùng KPI chính thức khi DQG PASS.</div>'
 
     return f"""<!DOCTYPE html>
 <html lang="vi">
@@ -954,23 +1004,21 @@ def build_html(kpi_full, dqg_data, build_time):
 <style>{CSS}</style>
 </head>
 <body>
-
 {warn}
-
 <div class="hdr">
   <h1>🏭 BO Control Tower Dashboard – GSBB</h1>
   <div class="sub">
-    KPI chính thức: {official}/{total} bộ phận đạt DQG &nbsp;|&nbsp;
-    Cập nhật: {build_time} &nbsp;|&nbsp;
-    Nguồn: Google Sheets → DQG → KPI &nbsp;|&nbsp;
+    KPI chính thức: {official}/{total} bộ phận đạt Cổng DL (DQG)&nbsp;|&nbsp;
+    Cập nhật: {build_time}&nbsp;|&nbsp;
+    Nguồn: Google Sheets → DQG → KPI&nbsp;|&nbsp;
     Auto-build: GitHub Actions
   </div>
   <div class="badges">
     <span class="bdg bdg-ok" style="background:{'#14532d' if official == total else '#92400e'};color:{'#d1fae5' if official == total else '#fef3c7'}">
       {overall_label} — {official}/{total} PASS
     </span>
-    <span class="bdg bdg-info">DQG: {dqg_pass} PASS | {dqg_skip} SKIP</span>
-    <span class="bdg bdg-warn">Trial data — qua DQG mới là KPI chính thức</span>
+    <span class="bdg bdg-info">Cổng DL (DQG): {dqg_pass} PASS | {dqg_skip} SKIP</span>
+    <span class="bdg bdg-warn">Dữ liệu thử nghiệm (Trial) — qua DQG mới là KPI chính thức</span>
   </div>
 </div>
 
@@ -986,8 +1034,8 @@ def build_html(kpi_full, dqg_data, build_time):
   <label for="t2">🏭 GSHN / GS1</label>
   <label for="t3">🏗 GSQV / GS5</label>
   <label for="t4">🏗 GSQV / GS6</label>
-  <label for="t5">📊 KPI / PIC</label>
-  <label for="t6">🛡️ GSTT / Compliance</label>
+  <label for="t5">📊 Chỉ số / Owner (KPI/PIC)</label>
+  <label for="t6">🛡️ Giám sát TT / Tuân thủ (GSTT)</label>
 </nav>
 
 <div id="c1" class="panel">{t1}</div>
@@ -998,34 +1046,28 @@ def build_html(kpi_full, dqg_data, build_time):
 <div id="c6" class="panel">{t6}</div>
 
 <div class="footer">
-  GSBB BO Control Tower &nbsp;·&nbsp;
-  Auto-built by GitHub Actions &nbsp;·&nbsp;
-  Dữ liệu: Google Sheets → DQG → KPI &nbsp;·&nbsp;
+  GSBB BO Control Tower&nbsp;·&nbsp;
+  Auto-built by GitHub Actions&nbsp;·&nbsp;
+  Dữ liệu: Google Sheets → DQG → KPI&nbsp;·&nbsp;
   {build_time}
 </div>
-
 </body>
 </html>"""
 
 
-# ─────────────────────────────────────────────────────────────
-# Main
-# ─────────────────────────────────────────────────────────────
-
 def main():
-    print("=== BO Control Tower – Dashboard Builder (V36 Rebuild) ===")
-    build_time = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    import datetime, json, os as _os
+    print("=== BO Control Tower Dashboard Builder ===")
+    build_time = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
 
-    if not os.path.exists(KPI_FILE):
-        print(f"⚠  {KPI_FILE} not found — building placeholder page")
-        kpi_full = {"summary": {}, "departments": {}}
-    else:
+    kpi_full = {"summary": {}, "departments": {}}
+    dqg_data = {"summary": {}, "departments": {}}
+
+    if _os.path.exists(KPI_FILE):
         with open(KPI_FILE, encoding="utf-8") as f:
             kpi_full = json.load(f)
 
-    if not os.path.exists(DQG_FILE):
-        dqg_data = {"summary": {}, "departments": {}}
-    else:
+    if _os.path.exists(DQG_FILE):
         with open(DQG_FILE, encoding="utf-8") as f:
             dqg_data = json.load(f)
 
@@ -1035,7 +1077,7 @@ def main():
         f.write(html)
 
     print(f"✅ Dashboard built → {OUTPUT_FILE}  ({len(html):,} chars)")
-    print(f"   Tabs: Tổng BO | GS1 | GS5 | GS6 | KPI/PIC | GSTT/Compliance")
+    print(f"   Tabs: Tổng BO | GS1 | GS5 | GS6 | KPI/PIC | GSTT")
 
 
 if __name__ == "__main__":

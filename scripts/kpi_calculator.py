@@ -366,6 +366,37 @@ KPI_CALC = {
 
 
 # ─────────────────────────────────────────────────────────────
+# Site breakdown helper
+# ─────────────────────────────────────────────────────────────
+
+VALID_SITES = ["GS1", "GS5", "GS6", "GSQV"]
+
+
+def calc_site_breakdown(dept_key: str, records: list) -> dict:
+    """
+    Compute per-site KPIs by filtering records on the 'Site' column.
+    Returns { "GS1": {...}, "GS5": {...}, "GS6": {...}, "GSQV": {...} }
+    Only includes sites that have at least 1 record.
+    """
+    calc_fn = KPI_CALC.get(dept_key)
+    if not calc_fn:
+        return {}
+
+    result = {}
+    for site in VALID_SITES:
+        site_recs = [r for r in records
+                     if r.get("Site", r.get("site", "")).strip() == site]
+        if site_recs:
+            try:
+                result[site] = {"kpis": calc_fn(site_recs), "row_count": len(site_recs)}
+            except Exception as e:
+                result[site] = {"kpis": {}, "row_count": len(site_recs), "error": str(e)}
+        else:
+            result[site] = {"kpis": None, "row_count": 0, "note": "No data for this site"}
+    return result
+
+
+# ─────────────────────────────────────────────────────────────
 # Main
 # ─────────────────────────────────────────────────────────────
 
@@ -408,14 +439,16 @@ def run_kpi():
         if dqg_status == "PASS":
             calc_fn = KPI_CALC.get(dept_key)
             if calc_fn:
-                kpis = calc_fn(records)
+                kpis           = calc_fn(records)
+                site_breakdown = calc_site_breakdown(dept_key, records)
                 kpi_results[dept_key] = {
-                    "dept":         dept_key,
-                    "description":  description,
-                    "dqg_status":   dqg_status,
-                    "official":     True,
-                    "kpis":         kpis,
-                    "calculated_at": datetime.datetime.utcnow().isoformat() + "Z",
+                    "dept":           dept_key,
+                    "description":    description,
+                    "dqg_status":     dqg_status,
+                    "official":       True,
+                    "kpis":           kpis,
+                    "site_breakdown": site_breakdown,
+                    "calculated_at":  datetime.datetime.utcnow().isoformat() + "Z",
                 }
                 print(f"  {icon} [{dept_key}] PASS — KPI calculated: {list(kpis.keys())[:4]}...")
             else:

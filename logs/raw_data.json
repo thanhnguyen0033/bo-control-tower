@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-31T04:58:38.992894Z",
+  "generated_at": "2026-05-31T05:20:23.274883Z",
   "summary": {
     "total_depts": 8,
-    "ok": 7,
+    "ok": 8,
     "empty": 0,
-    "pending": 1,
+    "pending": 0,
     "access_error": 0,
     "network_error": 0
   },
@@ -81,19 +81,70 @@
         "Data_Checker"
       ],
       "row_count": 3,
-      "fetched_at": "2026-05-31T04:58:34.143529Z",
+      "fetched_at": "2026-05-31T05:20:18.966485Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
-      "status": "PENDING",
+      "status": "OK",
       "description": "KHSX – OTIF Delivery",
       "tab_name": "02_OTIF_DELIVERY",
-      "sheet_id": "PENDING",
-      "records": [],
-      "columns": [],
-      "row_count": 0,
-      "fetched_at": "2026-05-31T04:58:34.143544Z",
-      "note": "Sheet ID not yet configured — replace REPLACE_WITH_ACTUAL_SHEET_ID"
+      "sheet_id": "1YWmcZlXqZ8fRKpw-L0R-ERcofeWUjo68dKwwNc113AQ",
+      "records": [
+        {
+          "Commit_Date": "2026-05-13",
+          "Actual_Delivery_Date": "2026-05-13",
+          "Site": "GS1",
+          "Customer": "Cannon",
+          "Work_Order": "GS1234",
+          "Committed_Qty": "3.800",
+          "Delivered_Qty": "3.800",
+          "OTIF?": "Yes",
+          "Delay_Days": "0",
+          "Delivery_Risk": "Low",
+          "GĐNM Owner vận hành": "Mr Hào",
+          "Người nhập liệu site": "Nguyễn văn A",
+          "Nguồn dữ liệu KHSX/Điều độ": "Mr Hưng / KHSX-Điều độ",
+          "Remark": "",
+          "Data_Checker": ""
+        },
+        {
+          "Commit_Date": "2026-05-14",
+          "Actual_Delivery_Date": "2026-05-15",
+          "Site": "GS1",
+          "Customer": "Brother",
+          "Work_Order": "GS12345",
+          "Committed_Qty": "5.600",
+          "Delivered_Qty": "5.500",
+          "OTIF?": "No",
+          "Delay_Days": "1",
+          "Delivery_Risk": "High",
+          "GĐNM Owner vận hành": "Mr Hào",
+          "Người nhập liệu site": "Nguyễn Văn B",
+          "Nguồn dữ liệu KHSX/Điều độ": "Mr Hưng / KHSX-Điều độ",
+          "Remark": "",
+          "Data_Checker": ""
+        }
+      ],
+      "columns": [
+        "Commit_Date",
+        "Actual_Delivery_Date",
+        "Site",
+        "Customer",
+        "Work_Order",
+        "Committed_Qty",
+        "Delivered_Qty",
+        "OTIF?",
+        "Delay_Days",
+        "Delivery_Risk",
+        "GĐNM Owner vận hành",
+        "Người nhập liệu site",
+        "Nguồn dữ liệu KHSX/Điều độ",
+        "Remark",
+        "Data_Checker"
+      ],
+      "row_count": 2,
+      "fetched_at": "2026-05-31T05:20:19.285529Z",
+      "note": ""
     },
     "03_QLCL": {
       "status": "OK",
@@ -169,7 +220,7 @@
         "Data_Check_Note"
       ],
       "row_count": 2,
-      "fetched_at": "2026-05-31T04:58:34.785523Z",
+      "fetched_at": "2026-05-31T05:20:19.872021Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -222,7 +273,7 @@
         "Evidence_Link"
       ],
       "row_count": 2,
-      "fetched_at": "2026-05-31T04:58:35.622316Z",
+      "fetched_at": "2026-05-31T05:20:20.786565Z",
       "note": ""
     },
     "05_KHO": {
@@ -293,7 +344,7 @@
         "Data_Check_Note"
       ],
       "row_count": 2,
-      "fetched_at": "2026-05-31T04:58:36.637105Z",
+      "fetched_at": "2026-05-31T05:20:21.148645Z",
       "note": ""
     },
     "06_GSTT": {
@@ -352,7 +403,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-05-31T04:58:37.653572Z",
+      "fetched_at": "2026-05-31T05:20:21.936761Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -411,7 +462,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-05-31T04:58:38.104465Z",
+      "fetched_at": "2026-05-31T05:20:22.455593Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -456,7 +507,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-05-31T04:58:38.992882Z",
+      "fetched_at": "2026-05-31T05:20:23.274871Z",
       "note": ""
     }
   }

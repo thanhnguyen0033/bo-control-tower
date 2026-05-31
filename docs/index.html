@@ -14,8 +14,8 @@
   .header h1{font-size:18px;font-weight:700}
   .header .sub{font-size:12px;color:#94a3b8;margin-top:3px}
   .overall{text-align:center;padding:12px;border-radius:8px;margin-bottom:12px;
-            background:#fff;border:2px solid #f59e0b}
-  .overall .lbl{font-size:20px;font-weight:800;color:#f59e0b}
+            background:#fff;border:2px solid #22c55e}
+  .overall .lbl{font-size:20px;font-weight:800;color:#22c55e}
   .overall .sub{font-size:12px;color:#64748b;margin-top:2px}
   /* Tabs */
   .tbar{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:0;background:#e2e8f0;
@@ -90,15 +90,15 @@
   <div class="header">
     <h1>🏭 BO Control Tower – GSBB</h1>
     <div class="sub">
-      KPI Dashboard &nbsp;|&nbsp; Cập nhật: 2026-05-31 04:58 UTC &nbsp;|&nbsp;
+      KPI Dashboard &nbsp;|&nbsp; Cập nhật: 2026-05-31 05:20 UTC &nbsp;|&nbsp;
       Nguồn: Google Sheets → DQG → KPI &nbsp;|&nbsp;
       Auto-build: GitHub Actions
     </div>
   </div>
 
   <div class="overall">
-    <div class="lbl">NEAR OPERATIONAL</div>
-    <div class="sub">KPI chính thức: 7/8 bộ phận đạt DQG</div>
+    <div class="lbl">OPERATIONAL</div>
+    <div class="sub">KPI chính thức: 8/8 bộ phận đạt DQG</div>
   </div>
 
   <input type="radio" name="tab" id="t0" checked style="display:none">
@@ -131,12 +131,12 @@
           <div class="hmetric">Plan/DO%</div>
           <div class="hstatus" style="color:#22c55e">PASS</div>
         </div>
-        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+        <div class="hcell" style="background:#dcfce7;border:2px solid #22c55e">
           <div class="hicon">📦</div>
           <div class="hname">KHSX/OTIF</div>
-          <div class="hval" style="color:#ef4444">—</div>
+          <div class="hval" style="color:#22c55e">50.0%</div>
           <div class="hmetric">OTIF%</div>
-          <div class="hstatus" style="color:#ef4444">SKIP</div>
+          <div class="hstatus" style="color:#22c55e">PASS</div>
         </div>
         <div class="hcell" style="background:#dcfce7;border:2px solid #22c55e">
           <div class="hicon">🔍</div>
@@ -203,7 +203,7 @@
       <div class='ksub'>BO Control</div>
     </div></div>
     <div style="font-size:11px;color:#94a3b8;margin-top:16px">
-      Cập nhật: 2026-05-31 04:58 UTC &nbsp;|&nbsp;
+      Cập nhật: 2026-05-31 05:20 UTC &nbsp;|&nbsp;
       Chỉ hiển thị KPI từ nguồn đạt DQG (Data Quality Gate PASS)
     </div></div>
 <div class="tcontent" id="tc_t1"><div class="stitle">📋 Plan / DO — Sản Xuất</div><div class="qrow">
@@ -231,7 +231,22 @@
       <div class="knum" style="color:#ef4444">2982.95%</div>
       <div class="klbl">NG Rate</div>
       <div class='ksub'>Tỷ lệ lỗi</div>
-    </div></div><div class="stitle">🚦 Phân bổ RAG (Work Orders)</div><table class="mtable"><thead><tr><th>Màu</th><th>Số WO</th><th>Tỷ lệ</th></tr></thead><tbody><tr><td><span style="color:#ef4444;font-weight:700">🔴 RED</span></td><td>1</td><td>33%</td></tr><tr><td><span style="color:#f59e0b;font-weight:700">🟡 AMBER</span></td><td>0</td><td>0%</td></tr><tr><td><span style="color:#22c55e;font-weight:700">🟢 GREEN</span></td><td>2</td><td>67%</td></tr></tbody></table><div class="stitle">📦 OTIF — Delivery</div><div class="pending-box">⏳ OTIF data đang chờ: Sheet ID not configured yet — Pending DQG</div></div>
+    </div></div><div class="stitle">🚦 Phân bổ RAG (Work Orders)</div><table class="mtable"><thead><tr><th>Màu</th><th>Số WO</th><th>Tỷ lệ</th></tr></thead><tbody><tr><td><span style="color:#ef4444;font-weight:700">🔴 RED</span></td><td>1</td><td>33%</td></tr><tr><td><span style="color:#f59e0b;font-weight:700">🟡 AMBER</span></td><td>0</td><td>0%</td></tr><tr><td><span style="color:#22c55e;font-weight:700">🟢 GREEN</span></td><td>2</td><td>67%</td></tr></tbody></table><div class="stitle">📦 OTIF — Delivery</div><div class="qrow">
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">50.0%</div>
+      <div class="klbl">OTIF%</div>
+      <div class='ksub'>On-Time In-Full</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">1</div>
+      <div class="klbl">On Time</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">1</div>
+      <div class="klbl">Late</div>
+      
+    </div></div></div>
 <div class="tcontent" id="tc_t2"><div class="stitle">🏭 Sản Xuất — Plan/DO Chi tiết</div><div class="qrow">
     <div class="kcard" style="border-top:4px solid #3b82f6">
       <div class="knum" style="color:#3b82f6">15</div>
@@ -429,7 +444,7 @@
         </div></div>
 <div class="tcontent" id="tc_t8"><div class="stitle">🔒 Data Quality Gate — Trạng thái nguồn dữ liệu</div><div class="qrow">
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">7</div>
+      <div class="knum" style="color:#22c55e">8</div>
       <div class="klbl">PASS</div>
       
     </div>
@@ -444,7 +459,7 @@
       
     </div>
     <div class="kcard" style="border-top:4px solid #64748b">
-      <div class="knum" style="color:#64748b">1</div>
+      <div class="knum" style="color:#64748b">0</div>
       <div class="klbl">SKIP</div>
       
     </div></div>
@@ -459,16 +474,16 @@
           </div>
           
         </div>
-        <div style="border:1px solid #64748b;border-left:5px solid #64748b;
-                    background:#f8fafc;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="border:1px solid #22c55e;border-left:5px solid #22c55e;
+                    background:#f0fdf4;border-radius:8px;padding:12px 14px;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-weight:600;font-size:13px">⏳ KHSX – OTIF Delivery</span>
-            <span style="background:#64748b;color:#fff;padding:1px 8px;border-radius:20px;font-size:11px;font-weight:700">SKIP</span>
+            <span style="font-weight:600;font-size:13px">✅ KHSX – OTIF Delivery</span>
+            <span style="background:#22c55e;color:#fff;padding:1px 8px;border-radius:20px;font-size:11px;font-weight:700">PASS</span>
           </div>
           <div style="font-size:11px;color:#94a3b8;margin-top:3px">
-            Rows: 0 &nbsp;|&nbsp; Failures: 0
+            Rows: 2 &nbsp;|&nbsp; Failures: 0
           </div>
-          <ul style='margin:6px 0 0 16px'><li style='font-size:11px;color:#475569'>Sheet ID not configured yet — Pending DQG</li></ul>
+          
         </div>
         <div style="border:1px solid #22c55e;border-left:5px solid #22c55e;
                     background:#f0fdf4;border-radius:8px;padding:12px 14px;margin-bottom:8px">
@@ -535,12 +550,12 @@
             Rows: 1 &nbsp;|&nbsp; Failures: 0
           </div>
           
-        </div><p style="font-size:11px;color:#94a3b8;margin-top:12px">DQG Run: 2026-05-31 04:58 UTC &nbsp;|&nbsp; Build: 2026-05-31 04:58 UTC</p></div>
+        </div><p style="font-size:11px;color:#94a3b8;margin-top:12px">DQG Run: 2026-05-31 05:20 UTC &nbsp;|&nbsp; Build: 2026-05-31 05:20 UTC</p></div>
 </div>
 
   <div class="footer">
     GSBB BO Control Tower &nbsp;·&nbsp; Auto-built by GitHub Actions
-    &nbsp;·&nbsp; Dữ liệu: Google Sheets &nbsp;·&nbsp; 2026-05-31 04:58 UTC
+    &nbsp;·&nbsp; Dữ liệu: Google Sheets &nbsp;·&nbsp; 2026-05-31 05:20 UTC
   </div>
 
 </div>

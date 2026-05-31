@@ -7,160 +7,535 @@
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-       background:#f1f5f9;color:#1e293b;padding:16px}
-  .container{max-width:860px;margin:0 auto}
+       background:#f1f5f9;color:#1e293b;font-size:14px}
+  .wrap{max-width:960px;margin:0 auto;padding:12px}
   .header{background:linear-gradient(135deg,#1e293b 0%,#334155 100%);
-           color:#fff;padding:20px 24px;border-radius:12px;margin-bottom:20px}
-  .header h1{font-size:20px;font-weight:700;letter-spacing:.3px}
-  .header .sub{font-size:13px;color:#94a3b8;margin-top:4px}
-  .overall{text-align:center;padding:16px;border-radius:10px;margin-bottom:20px;
-            background:#fff;border:2px solid #22c55e}
-  .overall .label{font-size:22px;font-weight:800;color:#22c55e}
-  .overall .sub{font-size:13px;color:#64748b;margin-top:4px}
-  .kpi-row{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:20px}
-  .kpi-box{background:#fff;border-radius:10px;padding:14px;text-align:center;
-            box-shadow:0 1px 4px rgba(0,0,0,.07)}
-  .kpi-box .num{font-size:28px;font-weight:800}
-  .kpi-box .lbl{font-size:12px;color:#64748b;margin-top:2px}
-  .section-title{font-size:15px;font-weight:700;color:#334155;
-                  margin-bottom:12px;padding-left:4px;
-                  border-left:4px solid #3b82f6;padding-left:10px}
-  .footer{text-align:center;font-size:11px;color:#94a3b8;margin-top:24px}
-  @media(max-width:600px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
+           color:#fff;padding:16px 20px;border-radius:10px;margin-bottom:12px}
+  .header h1{font-size:18px;font-weight:700}
+  .header .sub{font-size:12px;color:#94a3b8;margin-top:3px}
+  .overall{text-align:center;padding:12px;border-radius:8px;margin-bottom:12px;
+            background:#fff;border:2px solid #ef4444}
+  .overall .lbl{font-size:20px;font-weight:800;color:#ef4444}
+  .overall .sub{font-size:12px;color:#64748b;margin-top:2px}
+  /* Tabs */
+  .tbar{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:0;background:#e2e8f0;
+         padding:6px;border-radius:8px 8px 0 0}
+  .tlabel{padding:7px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600;
+           border:1px solid transparent;color:#64748b;transition:.15s}
+  .tlabel:hover{background:#cbd5e1}
+  .tabs{background:#fff;border-radius:0 0 8px 8px;padding:16px;
+         box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  .tcontent{display:none}
+  #t0:checked ~ .tbar label[for='t0'] { background:#3b82f6;color:#fff;border-color:#3b82f6; }
+#t0:checked ~ .tabs #tc_t0 { display:block; }
+#t1:checked ~ .tbar label[for='t1'] { background:#3b82f6;color:#fff;border-color:#3b82f6; }
+#t1:checked ~ .tabs #tc_t1 { display:block; }
+#t2:checked ~ .tbar label[for='t2'] { background:#3b82f6;color:#fff;border-color:#3b82f6; }
+#t2:checked ~ .tabs #tc_t2 { display:block; }
+#t3:checked ~ .tbar label[for='t3'] { background:#3b82f6;color:#fff;border-color:#3b82f6; }
+#t3:checked ~ .tabs #tc_t3 { display:block; }
+#t4:checked ~ .tbar label[for='t4'] { background:#3b82f6;color:#fff;border-color:#3b82f6; }
+#t4:checked ~ .tabs #tc_t4 { display:block; }
+#t5:checked ~ .tbar label[for='t5'] { background:#3b82f6;color:#fff;border-color:#3b82f6; }
+#t5:checked ~ .tabs #tc_t5 { display:block; }
+#t6:checked ~ .tbar label[for='t6'] { background:#3b82f6;color:#fff;border-color:#3b82f6; }
+#t6:checked ~ .tabs #tc_t6 { display:block; }
+#t7:checked ~ .tbar label[for='t7'] { background:#3b82f6;color:#fff;border-color:#3b82f6; }
+#t7:checked ~ .tabs #tc_t7 { display:block; }
+#t8:checked ~ .tbar label[for='t8'] { background:#3b82f6;color:#fff;border-color:#3b82f6; }
+#t8:checked ~ .tabs #tc_t8 { display:block; }
+
+  /* KPI cards */
+  .qrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));
+         gap:10px;margin-bottom:16px}
+  .kcard{background:#f8fafc;border-radius:8px;padding:12px;text-align:center;
+          border:1px solid #e2e8f0}
+  .knum{font-size:24px;font-weight:800}
+  .klbl{font-size:11px;color:#64748b;margin-top:2px;line-height:1.3}
+  .ksub{font-size:10px;color:#94a3b8;margin-top:1px}
+  /* Section title */
+  .stitle{font-size:14px;font-weight:700;color:#334155;
+           border-left:4px solid #3b82f6;padding-left:10px;
+           margin:16px 0 10px}
+  /* Heatmap */
+  .heatmap{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));
+            gap:8px;margin-bottom:16px}
+  .hcell{border-radius:8px;padding:10px;text-align:center}
+  .hicon{font-size:20px}
+  .hname{font-size:11px;font-weight:600;color:#334155;margin-top:4px}
+  .hval{font-size:20px;font-weight:800;margin-top:4px}
+  .hmetric{font-size:10px;color:#94a3b8}
+  .hstatus{font-size:10px;font-weight:700;margin-top:2px}
+  /* RAG boxes */
+  .rag-box{padding:12px 20px;border-radius:8px;text-align:center;font-size:13px;font-weight:600}
+  /* Table */
+  .mtable{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:12px}
+  .mtable th{background:#f1f5f9;padding:7px 10px;text-align:left;font-weight:600;color:#475569}
+  .mtable td{padding:6px 10px;border-bottom:1px solid #f1f5f9;color:#334155}
+  .mtable tr:hover td{background:#f8fafc}
+  /* Pending box */
+  .pending-box{background:#f8fafc;border:1px dashed #94a3b8;border-radius:6px;
+                padding:12px;font-size:12px;color:#64748b;margin-bottom:12px}
+  .footer{text-align:center;font-size:11px;color:#94a3b8;margin-top:16px;padding:8px}
+  @media(max-width:600px){
+    .qrow{grid-template-columns:repeat(2,1fr)}
+    .heatmap{grid-template-columns:repeat(2,1fr)}
+    .tlabel{font-size:11px;padding:6px 8px}
+  }
 </style>
 </head>
 <body>
-<div class="container">
+<div class="wrap">
 
   <div class="header">
     <h1>🏭 BO Control Tower – GSBB</h1>
-    <div class="sub">Data Quality Gate Dashboard &nbsp;|&nbsp;
-      Cập nhật: 2026-05-31 04:06 UTC &nbsp;|&nbsp;
-      DQG Run: N/A UTC</div>
+    <div class="sub">
+      KPI Dashboard &nbsp;|&nbsp; Cập nhật: 2026-05-31 04:23 UTC &nbsp;|&nbsp;
+      Nguồn: Google Sheets → DQG → KPI &nbsp;|&nbsp;
+      Auto-build: GitHub Actions
+    </div>
   </div>
 
   <div class="overall">
-    <div class="label">OPERATIONAL</div>
-    <div class="sub">Tình trạng dữ liệu tổng quan 8 bộ phận</div>
+    <div class="lbl">PARTIAL DATA</div>
+    <div class="sub">KPI chính thức: 0/8 bộ phận đạt DQG</div>
   </div>
 
-  <div class="kpi-row">
-    <div class="kpi-box">
-      <div class="num" style="color:#22c55e">7</div>
-      <div class="lbl">✅ PASS</div>
-    </div>
-    <div class="kpi-box">
-      <div class="num" style="color:#f59e0b">0</div>
-      <div class="lbl">⚠️ WARN</div>
-    </div>
-    <div class="kpi-box">
-      <div class="num" style="color:#ef4444">0</div>
-      <div class="lbl">❌ FAIL / ACCESS ERR</div>
-    </div>
-    <div class="kpi-box">
-      <div class="num" style="color:#f59e0b">0</div>
-      <div class="lbl">📭 Chưa có data</div>
-    </div>
-    <div class="kpi-box">
-      <div class="num" style="color:#64748b">1</div>
-      <div class="lbl">⏳ PENDING/SKIP</div>
-    </div>
-  </div>
+  <input type="radio" name="tab" id="t0" checked style="display:none">
+<input type="radio" name="tab" id="t1"  style="display:none">
+<input type="radio" name="tab" id="t2"  style="display:none">
+<input type="radio" name="tab" id="t3"  style="display:none">
+<input type="radio" name="tab" id="t4"  style="display:none">
+<input type="radio" name="tab" id="t5"  style="display:none">
+<input type="radio" name="tab" id="t6"  style="display:none">
+<input type="radio" name="tab" id="t7"  style="display:none">
+<input type="radio" name="tab" id="t8"  style="display:none">
 
-  <div class="section-title">Chi tiết DQG từng bộ phận</div>
-  
+  <div class="tbar"><label for="t0" class="tlabel">🏠 Tổng quan</label>
+<label for="t1" class="tlabel">📋 Plan/OTIF</label>
+<label for="t2" class="tlabel">🏭 Sản Xuất</label>
+<label for="t3" class="tlabel">🔍 Chất Lượng</label>
+<label for="t4" class="tlabel">⚙️ Thiết Bị</label>
+<label for="t5" class="tlabel">🗄️ Kho/WIP</label>
+<label for="t6" class="tlabel">🧪 Kỹ Thuật</label>
+<label for="t7" class="tlabel">🚨 Action</label>
+<label for="t8" class="tlabel">🔒 DQG Status</label>
+</div>
+  <div class="tabs"><div class="tcontent" id="tc_t0">
+    <div class="stitle">🏭 Factory Health Heatmap — Tổng quan 8 bộ phận</div>
+    <div class="heatmap">
+        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+          <div class="hicon">🏭</div>
+          <div class="hname">Sản Xuất</div>
+          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hmetric">Plan/DO%</div>
+          <div class="hstatus" style="color:#ef4444">SKIP</div>
+        </div>
+        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+          <div class="hicon">📦</div>
+          <div class="hname">KHSX/OTIF</div>
+          <div class="hval" style="color:#ef4444">—</div>
+          <div class="hmetric">OTIF%</div>
+          <div class="hstatus" style="color:#ef4444">SKIP</div>
+        </div>
+        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+          <div class="hicon">🔍</div>
+          <div class="hname">Chất Lượng</div>
+          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hmetric">NCR Open</div>
+          <div class="hstatus" style="color:#ef4444">SKIP</div>
+        </div>
+        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+          <div class="hicon">⚙️</div>
+          <div class="hname">Thiết Bị</div>
+          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hmetric">Downtime (h)</div>
+          <div class="hstatus" style="color:#ef4444">SKIP</div>
+        </div>
+        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+          <div class="hicon">🗄️</div>
+          <div class="hname">Kho/WIP</div>
+          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hmetric">WIP Qty</div>
+          <div class="hstatus" style="color:#ef4444">SKIP</div>
+        </div>
+        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+          <div class="hicon">✅</div>
+          <div class="hname">GSTT</div>
+          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hmetric">Issues Open</div>
+          <div class="hstatus" style="color:#ef4444">SKIP</div>
+        </div>
+        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+          <div class="hicon">🧪</div>
+          <div class="hname">Kỹ Thuật</div>
+          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hmetric">Samples Active</div>
+          <div class="hstatus" style="color:#ef4444">SKIP</div>
+        </div>
+        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+          <div class="hicon">🚨</div>
+          <div class="hname">BO Control</div>
+          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hmetric">Issues Open</div>
+          <div class="hstatus" style="color:#ef4444">SKIP</div>
+        </div></div>
+    <div class="stitle">📊 KPI Chốt nhanh</div>
+    <div class="qrow">
+    <div class="kcard" style="border-top:4px solid #94a3b8">
+      <div class="knum" style="color:#94a3b8">N/A</div>
+      <div class="klbl">Plan/DO% Trung bình</div>
+      <div class='ksub'>Sản xuất</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">NCR Đang mở</div>
+      <div class='ksub'>Chất lượng</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Downtime</div>
+      <div class='ksub'>Thiết bị</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Issues Overdue</div>
+      <div class='ksub'>BO Control</div>
+    </div></div>
+    <div style="font-size:11px;color:#94a3b8;margin-top:16px">
+      Cập nhật: 2026-05-31 04:23 UTC &nbsp;|&nbsp;
+      Chỉ hiển thị KPI từ nguồn đạt DQG (Data Quality Gate PASS)
+    </div></div>
+<div class="tcontent" id="tc_t1"><div class="stitle">📋 Plan / DO — Sản Xuất</div><div class="qrow">
+    <div class="kcard" style="border-top:4px solid #3b82f6">
+      <div class="knum" style="color:#3b82f6">N/A</div>
+      <div class="klbl">Plan_Qty</div>
+      <div class='ksub'>Tổng kế hoạch</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Actual_Qty</div>
+      <div class='ksub'>Thực tế</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">N/A</div>
+      <div class="klbl">NG_Qty</div>
+      <div class='ksub'>Lỗi/NG</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #94a3b8">
+      <div class="knum" style="color:#94a3b8">N/A</div>
+      <div class="klbl">Plan/DO%</div>
+      <div class='ksub'>Trung bình</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">NG Rate</div>
+      <div class='ksub'>Tỷ lệ lỗi</div>
+    </div></div><div class="stitle">🚦 Phân bổ RAG (Work Orders)</div><table class="mtable"><thead><tr><th>Màu</th><th>Số WO</th><th>Tỷ lệ</th></tr></thead><tbody><tr><td><span style="color:#ef4444;font-weight:700">🔴 RED</span></td><td>0</td><td>0%</td></tr><tr><td><span style="color:#f59e0b;font-weight:700">🟡 AMBER</span></td><td>0</td><td>0%</td></tr><tr><td><span style="color:#22c55e;font-weight:700">🟢 GREEN</span></td><td>0</td><td>0%</td></tr></tbody></table><div class="stitle">📦 OTIF — Delivery</div><div class="pending-box">⏳ OTIF data đang chờ: Sheet ID chưa được cấu hình — liên hệ Mr Hưng / KHSX</div></div>
+<div class="tcontent" id="tc_t2"><div class="stitle">🏭 Sản Xuất — Plan/DO Chi tiết</div><div class="qrow">
+    <div class="kcard" style="border-top:4px solid #3b82f6">
+      <div class="knum" style="color:#3b82f6">N/A</div>
+      <div class="klbl">Plan Qty</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Actual Qty</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">N/A</div>
+      <div class="klbl">NG Qty</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #94a3b8">
+      <div class="knum" style="color:#94a3b8">N/A</div>
+      <div class="klbl">Plan/DO%</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">NG%</div>
+      
+    </div></div><div class="stitle">🚦 RAG Distribution</div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px">
+      <div class="rag-box" style="background:#fef2f2;border:2px solid #ef4444">
+        <div style="font-size:24px;font-weight:800;color:#ef4444">0</div>
+        <div>🔴 RED</div><div style="font-size:11px;color:#94a3b8">0%</div>
+      </div>
+      <div class="rag-box" style="background:#fffbeb;border:2px solid #f59e0b">
+        <div style="font-size:24px;font-weight:800;color:#f59e0b">0</div>
+        <div>🟡 AMBER</div><div style="font-size:11px;color:#94a3b8">0%</div>
+      </div>
+      <div class="rag-box" style="background:#f0fdf4;border:2px solid #22c55e">
+        <div style="font-size:24px;font-weight:800;color:#22c55e">0</div>
+        <div>🟢 GREEN</div><div style="font-size:11px;color:#94a3b8">0%</div>
+      </div>
+    </div><p style="font-size:12px;color:#64748b">Tổng Work Orders phân tích: 0</p></div>
+<div class="tcontent" id="tc_t3"><div class="stitle">🔍 Chất Lượng — NCR / CAR</div><div class="qrow">
+    <div class="kcard" style="border-top:4px solid #6366f1">
+      <div class="knum" style="color:#6366f1">N/A</div>
+      <div class="klbl">Tổng NCR</div>
+      <div class='ksub'>Toàn bộ</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Đang mở</div>
+      <div class='ksub'>Open</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Đã đóng</div>
+      <div class='ksub'>Closed</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Quá hạn</div>
+      <div class='ksub'>Overdue</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">COPQ ước tính</div>
+      <div class='ksub'>VNĐ hoặc USD</div>
+    </div></div><div class="stitle">⚠️ Phân loại Severity</div><table class="mtable"><thead><tr><th>Mức độ</th><th>Số lượng</th></tr></thead><tbody><tr><td>🔴 Critical</td><td>0</td></tr><tr><td>🟡 Major</td><td>0</td></tr><tr><td>🟢 Minor</td><td>0</td></tr></tbody></table></div>
+<div class="tcontent" id="tc_t4"><div class="stitle">⚙️ Thiết Bị — Machine Downtime</div><div class="qrow">
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Tổng Downtime</div>
+      <div class='ksub'>Tổng</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Downtime (giờ)</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Sự cố (Breakdown)</div>
+      <div class='ksub'>events</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">PM thực hiện</div>
+      <div class='ksub'>Bảo trì phòng ngừa</div>
+    </div></div></div>
+<div class="tcontent" id="tc_t5"><div class="stitle">🗄️ Kho — WIP / FIFO / Age Control</div><div class="qrow">
+    <div class="kcard" style="border-top:4px solid #3b82f6">
+      <div class="knum" style="color:#3b82f6">N/A</div>
+      <div class="klbl">Tổng WIP</div>
+      <div class='ksub'>Bán thành phẩm</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">FIFO OK</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">FIFO Risk</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">FIFO Breach</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Age TB (ngày)</div>
+      
+    </div></div><div class="stitle">🚨 Rủi ro tồn kho</div><table class="mtable"><thead><tr><th>Mức rủi ro</th><th>Số lô</th></tr></thead><tbody><tr><td>🔴 High</td><td>0</td></tr><tr><td>🟡 Medium</td><td>0</td></tr><tr><td>🟢 Low</td><td>0</td></tr></tbody></table></div>
+<div class="tcontent" id="tc_t6"><div class="stitle">🧪 Kỹ Thuật Công Nghệ — SPM</div><div class="qrow">
+    <div class="kcard" style="border-top:4px solid #6366f1">
+      <div class="knum" style="color:#6366f1">N/A</div>
+      <div class="klbl">Tổng mẫu</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Đang xử lý</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Hoàn thành</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Lead time TB</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Redo Count</div>
+      <div class='ksub'>Số lần làm lại</div>
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Risk High</div>
+      
+    </div></div><div class="stitle">✅ GSTT — Field Verification</div><div class="qrow">
+    <div class="kcard" style="border-top:4px solid #6366f1">
+      <div class="knum" style="color:#6366f1">N/A</div>
+      <div class="klbl">Tổng issues</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Đang mở</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Đã đóng</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Escalated</div>
+      
+    </div></div></div>
+<div class="tcontent" id="tc_t7"><div class="stitle">🚨 BO Control — Issue / Action / Escalation</div><div class="qrow">
+    <div class="kcard" style="border-top:4px solid #6366f1">
+      <div class="knum" style="color:#6366f1">N/A</div>
+      <div class="klbl">Tổng Issues</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Đang mở</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Đã đóng</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Quá hạn</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="klbl">Đã escalate</div>
+      
+    </div></div><div class="stitle">⚠️ Severity Issues</div><table class="mtable"><thead><tr><th>Mức độ</th><th>Số lượng</th></tr></thead><tbody><tr><td>🔴 Critical</td><td>0</td></tr><tr><td>🟠 High</td><td>0</td></tr><tr><td>🟡 Medium</td><td>0</td></tr></tbody></table></div>
+<div class="tcontent" id="tc_t8"><div class="stitle">🔒 Data Quality Gate — Trạng thái nguồn dữ liệu</div><div class="qrow">
+    <div class="kcard" style="border-top:4px solid #22c55e">
+      <div class="knum" style="color:#22c55e">7</div>
+      <div class="klbl">PASS</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #f59e0b">
+      <div class="knum" style="color:#f59e0b">0</div>
+      <div class="klbl">WARN</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">0</div>
+      <div class="klbl">FAIL</div>
+      
+    </div>
+    <div class="kcard" style="border-top:4px solid #64748b">
+      <div class="knum" style="color:#64748b">1</div>
+      <div class="klbl">SKIP</div>
+      
+    </div></div>
         <div style="border:1px solid #22c55e;border-left:5px solid #22c55e;
-                    background:#f0fdf4;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+                    background:#f0fdf4;border-radius:8px;padding:12px 14px;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-weight:600;font-size:14px;color:#1e293b">✅ 01 | Sản Xuất – Plan/DO</span>
-            <span style="background:#22c55e;color:#fff;padding:2px 10px;
-                         border-radius:20px;font-size:12px;font-weight:700">PASS</span>
+            <span style="font-weight:600;font-size:13px">✅ Sản Xuất – Plan/DO</span>
+            <span style="background:#22c55e;color:#fff;padding:1px 8px;border-radius:20px;font-size:11px;font-weight:700">PASS</span>
           </div>
-          <div style="font-size:12px;color:#475569;margin-top:5px">Dữ liệu đạt DQG — sẵn sàng tính KPI</div>
-          <div style="font-size:11px;color:#94a3b8;margin-top:3px">Rows: 3</div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows: 3 &nbsp;|&nbsp; Failures: 0
+          </div>
           
         </div>
         <div style="border:1px solid #64748b;border-left:5px solid #64748b;
-                    background:#f8fafc;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+                    background:#f8fafc;border-radius:8px;padding:12px 14px;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-weight:600;font-size:14px;color:#1e293b">⏳ 02 | KHSX – OTIF Delivery</span>
-            <span style="background:#64748b;color:#fff;padding:2px 10px;
-                         border-radius:20px;font-size:12px;font-weight:700">SKIP</span>
+            <span style="font-weight:600;font-size:13px">⏳ KHSX – OTIF Delivery</span>
+            <span style="background:#64748b;color:#fff;padding:1px 8px;border-radius:20px;font-size:11px;font-weight:700">SKIP</span>
           </div>
-          <div style="font-size:12px;color:#475569;margin-top:5px">Bỏ qua DQG — chờ dữ liệu hoặc cấu hình</div>
-          <div style="font-size:11px;color:#94a3b8;margin-top:3px">Rows: 0</div>
-          <ul style='margin:6px 0 0 16px;font-size:11px;color:#475569'><li>Sheet ID not configured yet — Pending DQG</li></ul>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows: 0 &nbsp;|&nbsp; Failures: 0
+          </div>
+          <ul style='margin:6px 0 0 16px'><li style='font-size:11px;color:#475569'>Sheet ID not configured yet — Pending DQG</li></ul>
         </div>
         <div style="border:1px solid #22c55e;border-left:5px solid #22c55e;
-                    background:#f0fdf4;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+                    background:#f0fdf4;border-radius:8px;padding:12px 14px;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-weight:600;font-size:14px;color:#1e293b">✅ 03 | Chất Lượng – NCR/CAR</span>
-            <span style="background:#22c55e;color:#fff;padding:2px 10px;
-                         border-radius:20px;font-size:12px;font-weight:700">PASS</span>
+            <span style="font-weight:600;font-size:13px">✅ Chất Lượng – NCR/CAR</span>
+            <span style="background:#22c55e;color:#fff;padding:1px 8px;border-radius:20px;font-size:11px;font-weight:700">PASS</span>
           </div>
-          <div style="font-size:12px;color:#475569;margin-top:5px">Dữ liệu đạt DQG — sẵn sàng tính KPI</div>
-          <div style="font-size:11px;color:#94a3b8;margin-top:3px">Rows: 2</div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows: 2 &nbsp;|&nbsp; Failures: 0
+          </div>
           
         </div>
         <div style="border:1px solid #22c55e;border-left:5px solid #22c55e;
-                    background:#f0fdf4;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+                    background:#f0fdf4;border-radius:8px;padding:12px 14px;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-weight:600;font-size:14px;color:#1e293b">✅ 04 | Thiết Bị – Downtime</span>
-            <span style="background:#22c55e;color:#fff;padding:2px 10px;
-                         border-radius:20px;font-size:12px;font-weight:700">PASS</span>
+            <span style="font-weight:600;font-size:13px">✅ Thiết Bị – Machine Downtime</span>
+            <span style="background:#22c55e;color:#fff;padding:1px 8px;border-radius:20px;font-size:11px;font-weight:700">PASS</span>
           </div>
-          <div style="font-size:12px;color:#475569;margin-top:5px">Dữ liệu đạt DQG — sẵn sàng tính KPI</div>
-          <div style="font-size:11px;color:#94a3b8;margin-top:3px">Rows: 2</div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows: 2 &nbsp;|&nbsp; Failures: 0
+          </div>
           
         </div>
         <div style="border:1px solid #22c55e;border-left:5px solid #22c55e;
-                    background:#f0fdf4;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+                    background:#f0fdf4;border-radius:8px;padding:12px 14px;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-weight:600;font-size:14px;color:#1e293b">✅ 05 | Kho – WIP/FIFO</span>
-            <span style="background:#22c55e;color:#fff;padding:2px 10px;
-                         border-radius:20px;font-size:12px;font-weight:700">PASS</span>
+            <span style="font-weight:600;font-size:13px">✅ Kho GS5 – WIP/FIFO</span>
+            <span style="background:#22c55e;color:#fff;padding:1px 8px;border-radius:20px;font-size:11px;font-weight:700">PASS</span>
           </div>
-          <div style="font-size:12px;color:#475569;margin-top:5px">Dữ liệu đạt DQG — sẵn sàng tính KPI</div>
-          <div style="font-size:11px;color:#94a3b8;margin-top:3px">Rows: 2</div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows: 2 &nbsp;|&nbsp; Failures: 0
+          </div>
           
         </div>
         <div style="border:1px solid #22c55e;border-left:5px solid #22c55e;
-                    background:#f0fdf4;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+                    background:#f0fdf4;border-radius:8px;padding:12px 14px;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-weight:600;font-size:14px;color:#1e293b">✅ 06 | GSTT – Field Verify</span>
-            <span style="background:#22c55e;color:#fff;padding:2px 10px;
-                         border-radius:20px;font-size:12px;font-weight:700">PASS</span>
+            <span style="font-weight:600;font-size:13px">✅ GSTT – Field Verification</span>
+            <span style="background:#22c55e;color:#fff;padding:1px 8px;border-radius:20px;font-size:11px;font-weight:700">PASS</span>
           </div>
-          <div style="font-size:12px;color:#475569;margin-top:5px">Dữ liệu đạt DQG — sẵn sàng tính KPI</div>
-          <div style="font-size:11px;color:#94a3b8;margin-top:3px">Rows: 2</div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows: 2 &nbsp;|&nbsp; Failures: 0
+          </div>
           
         </div>
         <div style="border:1px solid #22c55e;border-left:5px solid #22c55e;
-                    background:#f0fdf4;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+                    background:#f0fdf4;border-radius:8px;padding:12px 14px;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-weight:600;font-size:14px;color:#1e293b">✅ 07 | Công Nghệ – SPM</span>
-            <span style="background:#22c55e;color:#fff;padding:2px 10px;
-                         border-radius:20px;font-size:12px;font-weight:700">PASS</span>
+            <span style="font-weight:600;font-size:13px">✅ Công Nghệ – SPM Technology</span>
+            <span style="background:#22c55e;color:#fff;padding:1px 8px;border-radius:20px;font-size:11px;font-weight:700">PASS</span>
           </div>
-          <div style="font-size:12px;color:#475569;margin-top:5px">Dữ liệu đạt DQG — sẵn sàng tính KPI</div>
-          <div style="font-size:11px;color:#94a3b8;margin-top:3px">Rows: 2</div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows: 2 &nbsp;|&nbsp; Failures: 0
+          </div>
           
         </div>
         <div style="border:1px solid #22c55e;border-left:5px solid #22c55e;
-                    background:#f0fdf4;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+                    background:#f0fdf4;border-radius:8px;padding:12px 14px;margin-bottom:8px">
           <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-weight:600;font-size:14px;color:#1e293b">✅ 08 | BO Control – Issue/Action</span>
-            <span style="background:#22c55e;color:#fff;padding:2px 10px;
-                         border-radius:20px;font-size:12px;font-weight:700">PASS</span>
+            <span style="font-weight:600;font-size:13px">✅ BO Control – Issue/Action</span>
+            <span style="background:#22c55e;color:#fff;padding:1px 8px;border-radius:20px;font-size:11px;font-weight:700">PASS</span>
           </div>
-          <div style="font-size:12px;color:#475569;margin-top:5px">Dữ liệu đạt DQG — sẵn sàng tính KPI</div>
-          <div style="font-size:11px;color:#94a3b8;margin-top:3px">Rows: 1</div>
+          <div style="font-size:11px;color:#94a3b8;margin-top:3px">
+            Rows: 1 &nbsp;|&nbsp; Failures: 0
+          </div>
           
-        </div>
+        </div><p style="font-size:11px;color:#94a3b8;margin-top:12px">DQG Run: 2026-05-31 04:23 UTC &nbsp;|&nbsp; Build: 2026-05-31 04:23 UTC</p></div>
+</div>
 
   <div class="footer">
-    GSBB BO Control Tower &nbsp;·&nbsp; Auto-built by GitHub Actions &nbsp;·&nbsp;
-    Dữ liệu nguồn: Google Sheets &nbsp;·&nbsp; 2026-05-31 04:06 UTC
+    GSBB BO Control Tower &nbsp;·&nbsp; Auto-built by GitHub Actions
+    &nbsp;·&nbsp; Dữ liệu: Google Sheets &nbsp;·&nbsp; 2026-05-31 04:23 UTC
   </div>
 
 </div>

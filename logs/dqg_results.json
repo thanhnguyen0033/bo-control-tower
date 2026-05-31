@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-31T04:58:39.035489Z",
-  "raw_data_from": "2026-05-31T04:58:38.992894Z",
+  "generated_at": "2026-05-31T05:20:23.318642Z",
+  "raw_data_from": "2026-05-31T05:20:23.274883Z",
   "summary": {
-    "PASS": 7,
+    "PASS": 8,
     "WARN": 0,
     "FAIL": 0,
-    "SKIP": 1
+    "SKIP": 0
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -18,20 +18,19 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-05-31T04:58:39.035378Z"
+      "validated_at": "2026-05-31T05:20:23.318525Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
-      "dqg_status": "SKIP",
+      "dqg_status": "PASS",
       "description": "KHSX – OTIF Delivery",
-      "row_count": 0,
+      "row_count": 2,
       "fail_count": 0,
       "warn_count": 0,
+      "fail_pct": 0.0,
       "missing_columns": [],
-      "issues": [
-        "Sheet ID not configured yet — Pending DQG"
-      ],
-      "validated_at": "2026-05-31T04:58:39.035386Z"
+      "issues": [],
+      "validated_at": "2026-05-31T05:20:23.318551Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -43,7 +42,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-05-31T04:58:39.035406Z"
+      "validated_at": "2026-05-31T05:20:23.318568Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -55,7 +54,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-05-31T04:58:39.035420Z"
+      "validated_at": "2026-05-31T05:20:23.318581Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -67,7 +66,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-05-31T04:58:39.035437Z"
+      "validated_at": "2026-05-31T05:20:23.318595Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -79,7 +78,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-05-31T04:58:39.035450Z"
+      "validated_at": "2026-05-31T05:20:23.318607Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -91,7 +90,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-05-31T04:58:39.035465Z"
+      "validated_at": "2026-05-31T05:20:23.318617Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -103,7 +102,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-05-31T04:58:39.035479Z"
+      "validated_at": "2026-05-31T05:20:23.318631Z"
     }
   }
 }

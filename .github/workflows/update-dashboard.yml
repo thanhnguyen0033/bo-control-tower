@@ -2,6 +2,7 @@ name: Update BO Control Tower Dashboard
 
 on:
   schedule:
+    # Chạy mỗi 2 tiếng — có thể điều chỉnh xuống 1h khi dữ liệu sẵn sàng hơn
     - cron: '0 */2 * * *'
   workflow_dispatch:
   repository_dispatch:
@@ -23,6 +24,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
+        # pandas/requests kept for future use; core pipeline uses stdlib only
         run: pip install pandas requests
 
       - name: Fetch data from Google Sheets (CSV export)
@@ -30,12 +32,17 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}
 
-      - name: Run Data Quality Gate
+      - name: Run Data Quality Gate (DQG)
         run: python scripts/dqg_validator.py
         env:
           PYTHONPATH: ${{ github.workspace }}
 
-      - name: Build dashboard HTML
+      - name: Calculate KPIs from validated data
+        run: python scripts/kpi_calculator.py
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+
+      - name: Build KPI dashboard HTML
         run: python scripts/dashboard_builder.py
         env:
           PYTHONPATH: ${{ github.workspace }}

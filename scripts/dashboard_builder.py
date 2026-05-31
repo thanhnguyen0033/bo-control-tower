@@ -462,7 +462,12 @@ def build_tab_dqg(dqg_data, kpi_data, build_time):
 # Full HTML assembler
 # ─────────────────────────────────────────────────────────────
 
-def build_html(kpi_data, dqg_data, build_time):
+def build_html(kpi_full, dqg_data, build_time):
+    # kpi_full = full kpi_output.json dict (has "summary" + "departments")
+    # kpi_data = departments dict passed to tab builders
+    kpi_data    = kpi_full.get("departments", kpi_full)
+    kpi_summary = kpi_full.get("summary", {})
+
     tabs = [
         ("t0", "🏠 Tổng quan",    build_tab_overview(kpi_data, build_time)),
         ("t1", "📋 Plan/OTIF",    build_tab_plan_do(kpi_data)),
@@ -492,8 +497,7 @@ def build_html(kpi_data, dqg_data, build_time):
         tab_css += f"#{tid}:checked ~ .tbar label[for='{tid}'] {{ background:#3b82f6;color:#fff;border-color:#3b82f6; }}\n"
         tab_css += f"#{tid}:checked ~ .tabs #tc_{tid} {{ display:block; }}\n"
 
-    # Overall health indicator
-    kpi_summary = kpi_data.get("summary", {})
+    # Overall health indicator (use kpi_summary extracted above)
     official = kpi_summary.get("kpi_official", 0)
     total    = kpi_summary.get("total_depts", 8)
     if official == total:
@@ -626,11 +630,7 @@ def main():
         with open(DQG_FILE, encoding="utf-8") as f:
             dqg_data = json.load(f)
 
-    html = build_html(
-        kpi_data.get("departments", kpi_data),
-        dqg_data,
-        build_time
-    )
+    html = build_html(kpi_data, dqg_data, build_time)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(html)

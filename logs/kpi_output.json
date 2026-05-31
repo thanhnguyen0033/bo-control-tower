@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-05-31T04:58:39.073609Z",
+  "summary": {
+    "total_depts": 8,
+    "kpi_official": 7,
+    "kpi_skipped": 1,
+    "kpi_excluded": 0,
+    "generated_at": "2026-05-31T04:58:39.073608Z"
+  },
+  "departments": {
+    "01_SAN_XUAT": {
+      "dept": "01_SAN_XUAT",
+      "description": "Sản Xuất – Plan/DO",
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_plan_qty": 15,
+        "total_actual_qty": 14,
+        "total_ng_qty": 420,
+        "plan_do_pct_avg": 89.1,
+        "ng_pct": 2982.95,
+        "rag_R": 1,
+        "rag_A": 0,
+        "rag_G": 2,
+        "rag_unknown": 0,
+        "row_count": 3
+      },
+      "calculated_at": "2026-05-31T04:58:39.073495Z"
+    },
+    "02_KHSX_OTIF": {
+      "dept": "02_KHSX_OTIF",
+      "description": "KHSX – OTIF Delivery",
+      "dqg_status": "SKIP",
+      "official": false,
+      "kpis": null,
+      "note": "Sheet ID not configured yet — Pending DQG",
+      "calculated_at": "2026-05-31T04:58:39.073508Z"
+    },
+    "03_QLCL": {
+      "dept": "03_QLCL",
+      "description": "Chất Lượng – NCR/CAR",
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_ncr": 2,
+        "open": 1,
+        "closed": 0,
+        "severity_critical": 1,
+        "severity_major": 0,
+        "severity_minor": 0,
+        "overdue_count": 0,
+        "copq_estimated": 0.0,
+        "row_count": 2
+      },
+      "calculated_at": "2026-05-31T04:58:39.073523Z"
+    },
+    "04_QLTB_CD": {
+      "dept": "04_QLTB_CD",
+      "description": "Thiết Bị – Machine Downtime",
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_downtime_min": 125.0,
+        "total_downtime_hrs": 2.08,
+        "breakdown_events": 2,
+        "pm_events": 0,
+        "top_machines": [
+          {
+            "machine": "R906",
+            "downtime_min": 95.0
+          },
+          {
+            "machine": "R900",
+            "downtime_min": 30.0
+          }
+        ],
+        "row_count": 2
+      },
+      "calculated_at": "2026-05-31T04:58:39.073542Z"
+    },
+    "05_KHO": {
+      "dept": "05_KHO",
+      "description": "Kho GS5 – WIP/FIFO",
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_wip_qty": 8.0,
+        "fifo_ok": 0,
+        "fifo_risk": 2,
+        "fifo_breach": 0,
+        "age_days_avg": 4.5,
+        "risk_high": 2,
+        "risk_medium": 0,
+        "risk_low": 0,
+        "high_risk_wos": [
+          "Cannon_hộp 01",
+          "Cannon_Hộp mực"
+        ],
+        "row_count": 2
+      },
+      "calculated_at": "2026-05-31T04:58:39.073560Z"
+    },
+    "06_GSTT": {
+      "dept": "06_GSTT",
+      "description": "GSTT – Field Verification",
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_issues": 2,
+        "open": 2,
+        "closed": 0,
+        "severity_critical": 0,
+        "severity_major": 0,
+        "severity_minor": 0,
+        "escalated": 2,
+        "row_count": 2
+      },
+      "calculated_at": "2026-05-31T04:58:39.073569Z"
+    },
+    "07_CONG_NGHE_SPM": {
+      "dept": "07_CONG_NGHE_SPM",
+      "description": "Công Nghệ – SPM Technology",
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_samples": 2,
+        "in_progress": 1,
+        "completed": 0,
+        "leadtime_avg_days": 1.5,
+        "redo_count_total": 0,
+        "risk_high": 0,
+        "row_count": 2
+      },
+      "calculated_at": "2026-05-31T04:58:39.073581Z"
+    },
+    "08_BO_CONTROL": {
+      "dept": "08_BO_CONTROL",
+      "description": "BO Control – Issue/Action",
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_issues": 1,
+        "open": 0,
+        "closed": 1,
+        "overdue": 0,
+        "severity_critical": 1,
+        "severity_high": 0,
+        "severity_medium": 0,
+        "escalated": 1,
+        "row_count": 1
+      },
+      "calculated_at": "2026-05-31T04:58:39.073596Z"
+    }
+  }
+}

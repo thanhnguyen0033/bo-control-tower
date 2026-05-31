@@ -14,8 +14,8 @@
   .header h1{font-size:18px;font-weight:700}
   .header .sub{font-size:12px;color:#94a3b8;margin-top:3px}
   .overall{text-align:center;padding:12px;border-radius:8px;margin-bottom:12px;
-            background:#fff;border:2px solid #ef4444}
-  .overall .lbl{font-size:20px;font-weight:800;color:#ef4444}
+            background:#fff;border:2px solid #f59e0b}
+  .overall .lbl{font-size:20px;font-weight:800;color:#f59e0b}
   .overall .sub{font-size:12px;color:#64748b;margin-top:2px}
   /* Tabs */
   .tbar{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:0;background:#e2e8f0;
@@ -90,15 +90,15 @@
   <div class="header">
     <h1>🏭 BO Control Tower – GSBB</h1>
     <div class="sub">
-      KPI Dashboard &nbsp;|&nbsp; Cập nhật: 2026-05-31 04:32 UTC &nbsp;|&nbsp;
+      KPI Dashboard &nbsp;|&nbsp; Cập nhật: 2026-05-31 04:58 UTC &nbsp;|&nbsp;
       Nguồn: Google Sheets → DQG → KPI &nbsp;|&nbsp;
       Auto-build: GitHub Actions
     </div>
   </div>
 
   <div class="overall">
-    <div class="lbl">PARTIAL DATA</div>
-    <div class="sub">KPI chính thức: 0/8 bộ phận đạt DQG</div>
+    <div class="lbl">NEAR OPERATIONAL</div>
+    <div class="sub">KPI chính thức: 7/8 bộ phận đạt DQG</div>
   </div>
 
   <input type="radio" name="tab" id="t0" checked style="display:none">
@@ -124,12 +124,12 @@
   <div class="tabs"><div class="tcontent" id="tc_t0">
     <div class="stitle">🏭 Factory Health Heatmap — Tổng quan 8 bộ phận</div>
     <div class="heatmap">
-        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+        <div class="hcell" style="background:#dcfce7;border:2px solid #22c55e">
           <div class="hicon">🏭</div>
           <div class="hname">Sản Xuất</div>
-          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hval" style="color:#22c55e">89.1%</div>
           <div class="hmetric">Plan/DO%</div>
-          <div class="hstatus" style="color:#ef4444">SKIP</div>
+          <div class="hstatus" style="color:#22c55e">PASS</div>
         </div>
         <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
           <div class="hicon">📦</div>
@@ -138,290 +138,295 @@
           <div class="hmetric">OTIF%</div>
           <div class="hstatus" style="color:#ef4444">SKIP</div>
         </div>
-        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+        <div class="hcell" style="background:#dcfce7;border:2px solid #22c55e">
           <div class="hicon">🔍</div>
           <div class="hname">Chất Lượng</div>
-          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hval" style="color:#22c55e">1</div>
           <div class="hmetric">NCR Open</div>
-          <div class="hstatus" style="color:#ef4444">SKIP</div>
+          <div class="hstatus" style="color:#22c55e">PASS</div>
         </div>
-        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+        <div class="hcell" style="background:#dcfce7;border:2px solid #22c55e">
           <div class="hicon">⚙️</div>
           <div class="hname">Thiết Bị</div>
-          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hval" style="color:#22c55e">2.08h</div>
           <div class="hmetric">Downtime (h)</div>
-          <div class="hstatus" style="color:#ef4444">SKIP</div>
+          <div class="hstatus" style="color:#22c55e">PASS</div>
         </div>
-        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+        <div class="hcell" style="background:#dcfce7;border:2px solid #22c55e">
           <div class="hicon">🗄️</div>
           <div class="hname">Kho/WIP</div>
-          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hval" style="color:#22c55e">8</div>
           <div class="hmetric">WIP Qty</div>
-          <div class="hstatus" style="color:#ef4444">SKIP</div>
+          <div class="hstatus" style="color:#22c55e">PASS</div>
         </div>
-        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+        <div class="hcell" style="background:#dcfce7;border:2px solid #22c55e">
           <div class="hicon">✅</div>
           <div class="hname">GSTT</div>
-          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hval" style="color:#22c55e">2</div>
           <div class="hmetric">Issues Open</div>
-          <div class="hstatus" style="color:#ef4444">SKIP</div>
+          <div class="hstatus" style="color:#22c55e">PASS</div>
         </div>
-        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+        <div class="hcell" style="background:#dcfce7;border:2px solid #22c55e">
           <div class="hicon">🧪</div>
           <div class="hname">Kỹ Thuật</div>
-          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hval" style="color:#22c55e">1</div>
           <div class="hmetric">Samples Active</div>
-          <div class="hstatus" style="color:#ef4444">SKIP</div>
+          <div class="hstatus" style="color:#22c55e">PASS</div>
         </div>
-        <div class="hcell" style="background:#fef2f2;border:2px solid #ef4444">
+        <div class="hcell" style="background:#dcfce7;border:2px solid #22c55e">
           <div class="hicon">🚨</div>
           <div class="hname">BO Control</div>
-          <div class="hval" style="color:#ef4444">N/A</div>
+          <div class="hval" style="color:#22c55e">0</div>
           <div class="hmetric">Issues Open</div>
-          <div class="hstatus" style="color:#ef4444">SKIP</div>
+          <div class="hstatus" style="color:#22c55e">PASS</div>
         </div></div>
     <div class="stitle">📊 KPI Chốt nhanh</div>
     <div class="qrow">
-    <div class="kcard" style="border-top:4px solid #94a3b8">
-      <div class="knum" style="color:#94a3b8">N/A</div>
+    <div class="kcard" style="border-top:4px solid #f59e0b">
+      <div class="knum" style="color:#f59e0b">89.1%</div>
       <div class="klbl">Plan/DO% Trung bình</div>
       <div class='ksub'>Sản xuất</div>
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #f59e0b">
+      <div class="knum" style="color:#f59e0b">1</div>
       <div class="klbl">NCR Đang mở</div>
       <div class='ksub'>Chất lượng</div>
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #f59e0b">
+      <div class="knum" style="color:#f59e0b">2.08h</div>
       <div class="klbl">Downtime</div>
       <div class='ksub'>Thiết bị</div>
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">0</div>
       <div class="klbl">Issues Overdue</div>
       <div class='ksub'>BO Control</div>
     </div></div>
     <div style="font-size:11px;color:#94a3b8;margin-top:16px">
-      Cập nhật: 2026-05-31 04:32 UTC &nbsp;|&nbsp;
+      Cập nhật: 2026-05-31 04:58 UTC &nbsp;|&nbsp;
       Chỉ hiển thị KPI từ nguồn đạt DQG (Data Quality Gate PASS)
     </div></div>
 <div class="tcontent" id="tc_t1"><div class="stitle">📋 Plan / DO — Sản Xuất</div><div class="qrow">
     <div class="kcard" style="border-top:4px solid #3b82f6">
-      <div class="knum" style="color:#3b82f6">N/A</div>
+      <div class="knum" style="color:#3b82f6">15</div>
       <div class="klbl">Plan_Qty</div>
       <div class='ksub'>Tổng kế hoạch</div>
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">14</div>
       <div class="klbl">Actual_Qty</div>
       <div class='ksub'>Thực tế</div>
     </div>
     <div class="kcard" style="border-top:4px solid #ef4444">
-      <div class="knum" style="color:#ef4444">N/A</div>
+      <div class="knum" style="color:#ef4444">420</div>
       <div class="klbl">NG_Qty</div>
       <div class='ksub'>Lỗi/NG</div>
     </div>
-    <div class="kcard" style="border-top:4px solid #94a3b8">
-      <div class="knum" style="color:#94a3b8">N/A</div>
+    <div class="kcard" style="border-top:4px solid #f59e0b">
+      <div class="knum" style="color:#f59e0b">89.1%</div>
       <div class="klbl">Plan/DO%</div>
       <div class='ksub'>Trung bình</div>
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">2982.95%</div>
       <div class="klbl">NG Rate</div>
       <div class='ksub'>Tỷ lệ lỗi</div>
-    </div></div><div class="stitle">🚦 Phân bổ RAG (Work Orders)</div><table class="mtable"><thead><tr><th>Màu</th><th>Số WO</th><th>Tỷ lệ</th></tr></thead><tbody><tr><td><span style="color:#ef4444;font-weight:700">🔴 RED</span></td><td>0</td><td>0%</td></tr><tr><td><span style="color:#f59e0b;font-weight:700">🟡 AMBER</span></td><td>0</td><td>0%</td></tr><tr><td><span style="color:#22c55e;font-weight:700">🟢 GREEN</span></td><td>0</td><td>0%</td></tr></tbody></table><div class="stitle">📦 OTIF — Delivery</div><div class="pending-box">⏳ OTIF data đang chờ: Sheet ID chưa được cấu hình — liên hệ Mr Hưng / KHSX</div></div>
+    </div></div><div class="stitle">🚦 Phân bổ RAG (Work Orders)</div><table class="mtable"><thead><tr><th>Màu</th><th>Số WO</th><th>Tỷ lệ</th></tr></thead><tbody><tr><td><span style="color:#ef4444;font-weight:700">🔴 RED</span></td><td>1</td><td>33%</td></tr><tr><td><span style="color:#f59e0b;font-weight:700">🟡 AMBER</span></td><td>0</td><td>0%</td></tr><tr><td><span style="color:#22c55e;font-weight:700">🟢 GREEN</span></td><td>2</td><td>67%</td></tr></tbody></table><div class="stitle">📦 OTIF — Delivery</div><div class="pending-box">⏳ OTIF data đang chờ: Sheet ID not configured yet — Pending DQG</div></div>
 <div class="tcontent" id="tc_t2"><div class="stitle">🏭 Sản Xuất — Plan/DO Chi tiết</div><div class="qrow">
     <div class="kcard" style="border-top:4px solid #3b82f6">
-      <div class="knum" style="color:#3b82f6">N/A</div>
+      <div class="knum" style="color:#3b82f6">15</div>
       <div class="klbl">Plan Qty</div>
       
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">14</div>
       <div class="klbl">Actual Qty</div>
       
     </div>
     <div class="kcard" style="border-top:4px solid #ef4444">
-      <div class="knum" style="color:#ef4444">N/A</div>
+      <div class="knum" style="color:#ef4444">420</div>
       <div class="klbl">NG Qty</div>
       
     </div>
-    <div class="kcard" style="border-top:4px solid #94a3b8">
-      <div class="knum" style="color:#94a3b8">N/A</div>
+    <div class="kcard" style="border-top:4px solid #f59e0b">
+      <div class="knum" style="color:#f59e0b">89.1%</div>
       <div class="klbl">Plan/DO%</div>
       
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">2982.95%</div>
       <div class="klbl">NG%</div>
       
     </div></div><div class="stitle">🚦 RAG Distribution</div>
     <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px">
       <div class="rag-box" style="background:#fef2f2;border:2px solid #ef4444">
-        <div style="font-size:24px;font-weight:800;color:#ef4444">0</div>
-        <div>🔴 RED</div><div style="font-size:11px;color:#94a3b8">0%</div>
+        <div style="font-size:24px;font-weight:800;color:#ef4444">1</div>
+        <div>🔴 RED</div><div style="font-size:11px;color:#94a3b8">33%</div>
       </div>
       <div class="rag-box" style="background:#fffbeb;border:2px solid #f59e0b">
         <div style="font-size:24px;font-weight:800;color:#f59e0b">0</div>
         <div>🟡 AMBER</div><div style="font-size:11px;color:#94a3b8">0%</div>
       </div>
       <div class="rag-box" style="background:#f0fdf4;border:2px solid #22c55e">
-        <div style="font-size:24px;font-weight:800;color:#22c55e">0</div>
-        <div>🟢 GREEN</div><div style="font-size:11px;color:#94a3b8">0%</div>
+        <div style="font-size:24px;font-weight:800;color:#22c55e">2</div>
+        <div>🟢 GREEN</div><div style="font-size:11px;color:#94a3b8">67%</div>
       </div>
-    </div><p style="font-size:12px;color:#64748b">Tổng Work Orders phân tích: 0</p></div>
+    </div><p style="font-size:12px;color:#64748b">Tổng Work Orders phân tích: 3</p></div>
 <div class="tcontent" id="tc_t3"><div class="stitle">🔍 Chất Lượng — NCR / CAR</div><div class="qrow">
     <div class="kcard" style="border-top:4px solid #6366f1">
-      <div class="knum" style="color:#6366f1">N/A</div>
+      <div class="knum" style="color:#6366f1">2</div>
       <div class="klbl">Tổng NCR</div>
       <div class='ksub'>Toàn bộ</div>
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #f59e0b">
+      <div class="knum" style="color:#f59e0b">1</div>
       <div class="klbl">Đang mở</div>
       <div class='ksub'>Open</div>
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">0</div>
       <div class="klbl">Đã đóng</div>
       <div class='ksub'>Closed</div>
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">0</div>
       <div class="klbl">Quá hạn</div>
       <div class='ksub'>Overdue</div>
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">0.0</div>
       <div class="klbl">COPQ ước tính</div>
       <div class='ksub'>VNĐ hoặc USD</div>
-    </div></div><div class="stitle">⚠️ Phân loại Severity</div><table class="mtable"><thead><tr><th>Mức độ</th><th>Số lượng</th></tr></thead><tbody><tr><td>🔴 Critical</td><td>0</td></tr><tr><td>🟡 Major</td><td>0</td></tr><tr><td>🟢 Minor</td><td>0</td></tr></tbody></table></div>
+    </div></div><div class="stitle">⚠️ Phân loại Severity</div><table class="mtable"><thead><tr><th>Mức độ</th><th>Số lượng</th></tr></thead><tbody><tr><td>🔴 Critical</td><td>1</td></tr><tr><td>🟡 Major</td><td>0</td></tr><tr><td>🟢 Minor</td><td>0</td></tr></tbody></table></div>
 <div class="tcontent" id="tc_t4"><div class="stitle">⚙️ Thiết Bị — Machine Downtime</div><div class="qrow">
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">125.0 min</div>
       <div class="klbl">Tổng Downtime</div>
       <div class='ksub'>Tổng</div>
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">2.08h</div>
       <div class="klbl">Downtime (giờ)</div>
       
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">2</div>
       <div class="klbl">Sự cố (Breakdown)</div>
       <div class='ksub'>events</div>
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">0</div>
       <div class="klbl">PM thực hiện</div>
       <div class='ksub'>Bảo trì phòng ngừa</div>
-    </div></div></div>
+    </div></div><div class="stitle">📊 Top máy theo downtime</div><table class="mtable"><thead><tr><th>Máy</th><th>Downtime (min)</th></tr></thead><tbody><tr><td>R906</td><td>95.0</td></tr><tr><td>R900</td><td>30.0</td></tr></tbody></table></div>
 <div class="tcontent" id="tc_t5"><div class="stitle">🗄️ Kho — WIP / FIFO / Age Control</div><div class="qrow">
     <div class="kcard" style="border-top:4px solid #3b82f6">
-      <div class="knum" style="color:#3b82f6">N/A</div>
+      <div class="knum" style="color:#3b82f6">8.0</div>
       <div class="klbl">Tổng WIP</div>
       <div class='ksub'>Bán thành phẩm</div>
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">0</div>
       <div class="klbl">FIFO OK</div>
       
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">2</div>
       <div class="klbl">FIFO Risk</div>
       
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">0</div>
       <div class="klbl">FIFO Breach</div>
       
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">4.5</div>
       <div class="klbl">Age TB (ngày)</div>
       
-    </div></div><div class="stitle">🚨 Rủi ro tồn kho</div><table class="mtable"><thead><tr><th>Mức rủi ro</th><th>Số lô</th></tr></thead><tbody><tr><td>🔴 High</td><td>0</td></tr><tr><td>🟡 Medium</td><td>0</td></tr><tr><td>🟢 Low</td><td>0</td></tr></tbody></table></div>
+    </div></div><div class="stitle">🚨 Rủi ro tồn kho</div><table class="mtable"><thead><tr><th>Mức rủi ro</th><th>Số lô</th></tr></thead><tbody><tr><td>🔴 High</td><td>2</td></tr><tr><td>🟡 Medium</td><td>0</td></tr><tr><td>🟢 Low</td><td>0</td></tr></tbody></table><p style="font-size:12px;color:#ef4444;margin-top:8px">⚠️ Work Orders rủi ro cao: Cannon_hộp 01, Cannon_Hộp mực</p></div>
 <div class="tcontent" id="tc_t6"><div class="stitle">🧪 Kỹ Thuật Công Nghệ — SPM</div><div class="qrow">
     <div class="kcard" style="border-top:4px solid #6366f1">
-      <div class="knum" style="color:#6366f1">N/A</div>
+      <div class="knum" style="color:#6366f1">2</div>
       <div class="klbl">Tổng mẫu</div>
       
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #f59e0b">
+      <div class="knum" style="color:#f59e0b">1</div>
       <div class="klbl">Đang xử lý</div>
       
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">0</div>
       <div class="klbl">Hoàn thành</div>
       
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #f59e0b">
+      <div class="knum" style="color:#f59e0b">1.5 ngày</div>
       <div class="klbl">Lead time TB</div>
       
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">0</div>
       <div class="klbl">Redo Count</div>
       <div class='ksub'>Số lần làm lại</div>
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">0</div>
       <div class="klbl">Risk High</div>
       
     </div></div><div class="stitle">✅ GSTT — Field Verification</div><div class="qrow">
     <div class="kcard" style="border-top:4px solid #6366f1">
-      <div class="knum" style="color:#6366f1">N/A</div>
+      <div class="knum" style="color:#6366f1">2</div>
       <div class="klbl">Tổng issues</div>
       
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #f59e0b">
+      <div class="knum" style="color:#f59e0b">2</div>
       <div class="klbl">Đang mở</div>
       
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">0</div>
       <div class="klbl">Đã đóng</div>
       
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">2</div>
       <div class="klbl">Escalated</div>
       
     </div></div></div>
 <div class="tcontent" id="tc_t7"><div class="stitle">🚨 BO Control — Issue / Action / Escalation</div><div class="qrow">
     <div class="kcard" style="border-top:4px solid #6366f1">
-      <div class="knum" style="color:#6366f1">N/A</div>
+      <div class="knum" style="color:#6366f1">1</div>
       <div class="klbl">Tổng Issues</div>
       
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">0</div>
       <div class="klbl">Đang mở</div>
       
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">1</div>
       <div class="klbl">Đã đóng</div>
       
     </div>
     <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+      <div class="knum" style="color:#22c55e">0</div>
       <div class="klbl">Quá hạn</div>
       
     </div>
-    <div class="kcard" style="border-top:4px solid #22c55e">
-      <div class="knum" style="color:#22c55e">N/A</div>
+    <div class="kcard" style="border-top:4px solid #ef4444">
+      <div class="knum" style="color:#ef4444">1</div>
       <div class="klbl">Đã escalate</div>
       
-    </div></div><div class="stitle">⚠️ Severity Issues</div><table class="mtable"><thead><tr><th>Mức độ</th><th>Số lượng</th></tr></thead><tbody><tr><td>🔴 Critical</td><td>0</td></tr><tr><td>🟠 High</td><td>0</td></tr><tr><td>🟡 Medium</td><td>0</td></tr></tbody></table></div>
+    </div></div><div class="stitle">⚠️ Severity Issues</div><table class="mtable"><thead><tr><th>Mức độ</th><th>Số lượng</th></tr></thead><tbody><tr><td>🔴 Critical</td><td>1</td></tr><tr><td>🟠 High</td><td>0</td></tr><tr><td>🟡 Medium</td><td>0</td></tr></tbody></table>
+        <div style="background:#fef2f2;border-left:4px solid #ef4444;padding:12px;
+                    border-radius:6px;margin-top:16px">
+          <strong style="color:#ef4444">⚠️ GSTT Escalation cần xử lý:</strong>
+          2 vấn đề đã được escalate từ GSTT Field Verification
+        </div></div>
 <div class="tcontent" id="tc_t8"><div class="stitle">🔒 Data Quality Gate — Trạng thái nguồn dữ liệu</div><div class="qrow">
     <div class="kcard" style="border-top:4px solid #22c55e">
       <div class="knum" style="color:#22c55e">7</div>
@@ -530,12 +535,12 @@
             Rows: 1 &nbsp;|&nbsp; Failures: 0
           </div>
           
-        </div><p style="font-size:11px;color:#94a3b8;margin-top:12px">DQG Run: 2026-05-31 04:32 UTC &nbsp;|&nbsp; Build: 2026-05-31 04:32 UTC</p></div>
+        </div><p style="font-size:11px;color:#94a3b8;margin-top:12px">DQG Run: 2026-05-31 04:58 UTC &nbsp;|&nbsp; Build: 2026-05-31 04:58 UTC</p></div>
 </div>
 
   <div class="footer">
     GSBB BO Control Tower &nbsp;·&nbsp; Auto-built by GitHub Actions
-    &nbsp;·&nbsp; Dữ liệu: Google Sheets &nbsp;·&nbsp; 2026-05-31 04:32 UTC
+    &nbsp;·&nbsp; Dữ liệu: Google Sheets &nbsp;·&nbsp; 2026-05-31 04:58 UTC
   </div>
 
 </div>

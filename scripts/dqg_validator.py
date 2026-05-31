@@ -38,10 +38,13 @@ DQG_RULES = {
     },
 
     "02_KHSX_OTIF": {
-        # PENDING — Sheet ID not yet provided; rules are placeholder
-        "required_columns": ["Date", "Site", "Order_No", "Plan_Delivery", "Actual_Delivery", "OTIF_Status"],
-        "numeric_columns": [],
+        # Confirmed 2026-05-31 — actual columns from BO_Input_OTIF_Delivery_BySite_GSBB_V2
+        "required_columns": [
+            "Commit_Date", "Site", "Work_Order", "OTIF?", "Delivery_Risk",
+        ],
+        "numeric_columns": ["Committed_Qty", "Delivered_Qty", "Delay_Days"],
         "site_column": "Site",
+        "date_column": "Commit_Date",
     },
 
     "03_QLCL": {

@@ -14,9 +14,9 @@ SHEET_CONFIG = {
         "description": "Sản Xuất – Plan/DO",
     },
     "02_KHSX_OTIF": {
-        # PENDING — Link Register ID 1Yj0b_Dr0D6ZWC... returns KHO content, not OTIF
-        # Need correct OTIF sheet ID from Mr Hưng / KHSX team
-        "sheet_id":   "PENDING",
+        # Confirmed 2026-05-31 — BO_Input_OTIF_Delivery_BySite_GSBB_V2
+        # Tab: 02_OTIF_DELIVERY | 2 data rows | cols: Commit_Date, Site, Work_Order, OTIF?, Delay_Days
+        "sheet_id":   "1YWmcZlXqZ8fRKpw-L0R-ERcofeWUjo68dKwwNc113AQ",
         "tab_name":   "02_OTIF_DELIVERY",
         "header_row": 3,
         "description": "KHSX – OTIF Delivery",

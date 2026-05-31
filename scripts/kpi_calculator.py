@@ -319,20 +319,32 @@ def calc_bo_control(records):
 
 
 def calc_khsx_otif(records):
-    """02_KHSX_OTIF — OTIF rate, late count. (placeholder until Sheet ID is provided)"""
+    """02_KHSX_OTIF — OTIF rate, late count.
+    Actual columns: Commit_Date, Actual_Delivery_Date, Site, Customer, Work_Order,
+    Committed_Qty, Delivered_Qty, OTIF?, Delay_Days, Delivery_Risk, ...
+    """
     if not records:
-        return {"note": "No data — PENDING Sheet ID from KHSX/Mr Hưng", "row_count": 0}
+        return {"note": "No data", "row_count": 0}
 
-    on_time = sum(1 for r in records
-                  if str(r.get("OTIF_Status", "")).strip().upper() in ("ON TIME", "OTIF", "OK", "PASS"))
-    late    = len(records) - on_time
-    otif_pct = round(on_time / len(records) * 100, 1) if records else None
+    on_time   = sum(1 for r in records
+                    if str(r.get("OTIF?", "")).strip().upper() in ("YES", "Y", "ON TIME", "OK", "PASS"))
+    late      = len(records) - on_time
+    otif_pct  = round(on_time / len(records) * 100, 1) if records else None
+
+    delay_vals = [safe_float(r.get("Delay_Days", 0)) for r in records
+                  if r.get("Delay_Days", "").strip()]
+    avg_delay  = round(sum(delay_vals) / len(delay_vals), 1) if delay_vals else 0.0
+
+    risk_high = sum(1 for r in records
+                    if str(r.get("Delivery_Risk", "")).strip().upper() in ("HIGH", "CAO"))
 
     return {
         "total_orders":  len(records),
         "on_time":       on_time,
         "late":          late,
         "otif_pct":      otif_pct,
+        "avg_delay_days": avg_delay,
+        "risk_high":     risk_high,
         "row_count":     len(records),
     }
 

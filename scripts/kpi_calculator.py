@@ -13,7 +13,10 @@ import json
 import os
 import datetime
 
-LOGS_DIR       = os.path.join(os.path.dirname(__file__), "logs")
+# Absolute path: scripts/ → parent = repo root → logs/
+_SCRIPT_DIR    = os.path.dirname(os.path.abspath(__file__))
+_REPO_ROOT     = os.path.dirname(_SCRIPT_DIR)
+LOGS_DIR       = os.path.join(_REPO_ROOT, "logs")
 RAW_DATA_FILE  = os.path.join(LOGS_DIR, "raw_data.json")
 DQG_FILE       = os.path.join(LOGS_DIR, "dqg_results.json")
 KPI_FILE       = os.path.join(LOGS_DIR, "kpi_output.json")

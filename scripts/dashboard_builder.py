@@ -20,10 +20,16 @@ import json
 import os
 from datetime import datetime
 
-LOGS_DIR    = os.path.join(os.path.dirname(__file__), "logs")
+# Repo root = parent of scripts/ directory
+# Works whether called as: python scripts/dashboard_builder.py  (from repo root)
+#                       or: python dashboard_builder.py          (from scripts/)
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+_REPO_ROOT  = os.path.dirname(_SCRIPT_DIR)   # go up from scripts/ to repo root
+
+LOGS_DIR    = os.path.join(_REPO_ROOT, "logs")
 KPI_FILE    = os.path.join(LOGS_DIR, "kpi_output.json")
 DQG_FILE    = os.path.join(LOGS_DIR, "dqg_results.json")
-OUTPUT_DIR  = os.path.join(os.path.dirname(__file__), "docs")
+OUTPUT_DIR  = os.path.join(_REPO_ROOT, "docs")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "index.html")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 

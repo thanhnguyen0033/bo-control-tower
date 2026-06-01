@@ -17,6 +17,13 @@ import os
 from datetime import datetime
 
 # ─────────────────────────────────────────────────────────────
+# Config — cập nhật khi PIC nhập đủ data
+# ─────────────────────────────────────────────────────────────
+EXPECTED_DATE      = "03/06"        # Ngày dự kiến PIC nhập đủ data
+EXPECTED_DATE_FULL = "03/06/2026"   # Dùng trong ghi chú / báo cáo
+PEND_TXT           = f"Chờ DQG · {EXPECTED_DATE}"  # Text thay thế PEND_TXT
+
+# ─────────────────────────────────────────────────────────────
 # Paths
 # ─────────────────────────────────────────────────────────────
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -79,9 +86,9 @@ def rag_color(val, g_min=None, a_min=None, reverse=False):
 
 
 def pending_or(val, unit="", decimals=1):
-    """Return formatted value or 'Pending DQG' if None."""
+    """Return formatted value or expected-date placeholder if None."""
     if val is None:
-        return "Pending DQG"
+        return f"Chờ DQG · {EXPECTED_DATE}"
     return fmt(val, unit, decimals)
 
 
@@ -181,7 +188,7 @@ def mini_kpi_row(kpis_by_site, dept_key, site, label, fmt_fn):
     """Get a KPI value for a specific site from site_breakdown."""
     site_data = get(kpis_by_site, dept_key, "site_breakdown", site, "kpis")
     if site_data is None:
-        return "Pending DQG"
+        return PEND_TXT
     return fmt_fn(site_data)
 
 
@@ -252,11 +259,11 @@ input[name=tab]{display:none}
             display:flex;align-items:center;gap:6px}
 
 /* KPI cards */
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:11px;margin-bottom:14px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:11px;margin-bottom:14px}
 .kpi-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:11px;margin-bottom:14px}
 .kpi-card{background:#fff;border-radius:12px;padding:15px 13px;text-align:center;
           box-shadow:0 2px 8px rgba(0,0,0,.08),0 0 1px rgba(0,0,0,.04);
-          border-top:4px solid #2563eb;transition:transform .15s,box-shadow .15s}
+          border-top:4px solid #2563eb;transition:transform .15s,box-shadow .15s;min-width:0}
 .kpi-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.12)}
 .kpi-card.rag-green{border-top-color:#16a34a;background:linear-gradient(180deg,#f0fdf4 0%,#fff 35%)}
 .kpi-card.rag-amber{border-top-color:#d97706;background:linear-gradient(180deg,#fffbeb 0%,#fff 35%)}
@@ -366,17 +373,107 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
 .footer{background:linear-gradient(135deg,#0c1445,#0f2d87);
         color:rgba(255,255,255,.5);text-align:center;font-size:10px;padding:14px;letter-spacing:.3px}
 
+/* Section fold — accordion cho sections phụ */
+.sec-fold{border-radius:10px;overflow:visible;margin-bottom:13px}
+.sec-fold>summary{list-style:none;cursor:pointer;
+                   background:linear-gradient(135deg,#f8fafc,#eef2ff);
+                   color:#0f2d87;font-weight:800;font-size:12px;padding:11px 16px;
+                   border:1px solid #c7d2fe;border-radius:10px;user-select:none;
+                   display:flex;align-items:center;gap:8px;letter-spacing:.2px}
+.sec-fold>summary::-webkit-details-marker{display:none}
+.sec-fold[open]>summary{border-radius:10px 10px 0 0;border-bottom:none}
+.sec-fold[open]>summary::after{content:"▲";margin-left:auto;color:#94a3b8;font-size:10px}
+.sec-fold:not([open])>summary::after{content:"▼";margin-left:auto;color:#94a3b8;font-size:10px}
+.sec-fold-body{padding:15px;border:1px solid #c7d2fe;border-top:none;
+               border-radius:0 0 10px 10px;background:#fff}
+
 @media(max-width:900px){
   .kpi-grid-5,.grid-2,.grid-3{grid-template-columns:1fr}
   .heat-grid,.gstt-grid{min-width:700px}
   .panel{padding:12px 12px 30px}
   .nav label{padding:10px 12px;font-size:11px}
+  .sec-fold>summary{font-size:11px;padding:9px 12px}
 }
 """
 
 # ─────────────────────────────────────────────────────────────
 # TAB BUILDERS
 # ─────────────────────────────────────────────────────────────
+
+def build_alert_bar(d_bo):
+    """Top 3 Issues + Action count — hiển thị đầu Tab Tổng BO, trước Heatmap."""
+    open_count    = d_bo.get("open",      "—") if d_bo else "—"
+    overdue_count = d_bo.get("overdue",   "—") if d_bo else "—"
+    escalated     = d_bo.get("escalated", "—") if d_bo else "—"
+
+    # Top 3 issues — static critical items (sẽ tự động từ 08_BO_CONTROL khi có data)
+    top3 = [
+        {"issue": "Machine Log GS1 chưa đủ trường: thiếu reason code, start/end time",
+         "rag": "Red",    "owner": "Mr Thập",             "deadline": "03/06", "site": "GS1"},
+        {"issue": "PROD_LOG GS5/GS6 thiếu ORDER_ID — không map được OTIF",
+         "rag": "Red",    "owner": "Mr Lam / Mr Mạnh",    "deadline": "03/06", "site": "GS5/GS6"},
+        {"issue": "OTIF GS1 = 50.0% — cần xác nhận root cause với Mr Hào",
+         "rag": "Yellow", "owner": "Mr Hào",               "deadline": "05/06", "site": "GS1"},
+    ]
+
+    rag_border = {"Red": "#dc2626", "Yellow": "#d97706", "Green": "#16a34a"}
+    rag_icon   = {"Red": "🔴", "Yellow": "🟡", "Green": "🟢"}
+
+    cards_html = ""
+    for i, item in enumerate(top3, 1):
+        border_c = rag_border.get(item["rag"], "#9ca3af")
+        icon     = rag_icon.get(item["rag"], "⚪")
+        cards_html += f"""
+        <div style="flex:1;min-width:190px;max-width:380px;background:#fff;border-radius:10px;
+                    padding:13px 15px;border-left:4px solid {border_c};
+                    box-shadow:0 2px 10px rgba(0,0,0,.1)">
+          <div style="font-size:10px;font-weight:800;color:#64748b;margin-bottom:5px;letter-spacing:.4px">
+            {icon}&nbsp;VẤN ĐỀ #{i}&nbsp;·&nbsp;{item['site']}
+          </div>
+          <div style="font-size:12px;font-weight:700;color:#1e293b;line-height:1.45;margin-bottom:8px">
+            {item['issue']}
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <span style="background:#f1f5f9;color:#374151;padding:2px 8px;border-radius:5px;
+                         font-size:10px;font-weight:600">👤 {item['owner']}</span>
+            <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:5px;
+                         font-size:10px;font-weight:600">📅 {item['deadline']}</span>
+          </div>
+        </div>"""
+
+    return f"""
+    <div style="background:linear-gradient(135deg,#0c1445 0%,#0f2d87 55%,#1a4fba 100%);
+                border-radius:14px;padding:16px 18px;margin-bottom:18px;
+                box-shadow:0 4px 20px rgba(15,45,135,.3)">
+      <div style="display:flex;align-items:center;justify-content:space-between;
+                  margin-bottom:13px;flex-wrap:wrap;gap:8px">
+        <div style="font-size:14px;font-weight:900;color:#fff;letter-spacing:.3px">
+          🚨 Top 3 Vấn đề cần xử lý ngay
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span style="background:rgba(220,38,38,.3);color:#fca5a5;padding:4px 12px;
+                       border-radius:6px;font-size:11px;font-weight:700;border:1px solid rgba(220,38,38,.4)">
+            🔴 Đang mở: {open_count}
+          </span>
+          <span style="background:rgba(239,68,68,.3);color:#fecaca;padding:4px 12px;
+                       border-radius:6px;font-size:11px;font-weight:700;border:1px solid rgba(239,68,68,.4)">
+            ⏰ Quá hạn: {overdue_count}
+          </span>
+          <span style="background:rgba(251,191,36,.2);color:#fde68a;padding:4px 12px;
+                       border-radius:6px;font-size:11px;font-weight:700;border:1px solid rgba(251,191,36,.3)">
+            🔺 Escalated: {escalated}
+          </span>
+        </div>
+      </div>
+      <div style="display:flex;gap:11px;flex-wrap:wrap">
+        {cards_html}
+      </div>
+      <div style="font-size:10px;color:rgba(255,255,255,.45);margin-top:11px;
+                  border-top:1px solid rgba(255,255,255,.12);padding-top:9px">
+        ⚠️ Issues từ Action Register — Dữ liệu thử nghiệm (Trial). KPI chính thức sau DQG PASS ≥ 5/8 bộ phận · Dự kiến: {EXPECTED_DATE_FULL}
+      </div>
+    </div>"""
+
 
 def build_tab_tong_bo(kpi, dqg, build_time):
     """Tab 1 — Tổng BO: Factory Health Heatmap + Executive KPI + Inventory + Customer + GSTT."""
@@ -397,11 +494,11 @@ def build_tab_tong_bo(kpi, dqg, build_time):
         return f'<div class="heat-cell {bg}"><strong>{val}</strong>{status}</div>'
 
     # ── 1. Factory Health Heatmap ──────────────────────────────
-    plan_do_txt  = fmt(d_sx.get("plan_do_pct_avg"),  "%") if d_sx else "Pending DQG"
-    otif_txt     = fmt(d_otif.get("otif_pct"),       "%") if d_otif else "Pending DQG"
+    plan_do_txt  = fmt(d_sx.get("plan_do_pct_avg"),  "%") if d_sx else PEND_TXT
+    otif_txt     = fmt(d_otif.get("otif_pct"),       "%") if d_otif else PEND_TXT
     dt_txt       = fmt(d_tb.get("total_downtime_hrs"), "h") if d_tb else "Blocked"
-    ncr_txt      = str(d_qlcl.get("total_ncr", "—")) if d_qlcl else "Pending DQG"
-    wip_txt      = str(int(d_kho.get("total_wip_qty", 0))) if d_kho else "Pending DQG"
+    ncr_txt      = str(d_qlcl.get("total_ncr", "—")) if d_qlcl else PEND_TXT
+    wip_txt      = str(int(d_kho.get("total_wip_qty", 0))) if d_kho else PEND_TXT
 
     def heat_cell(value, rag_class):
         return f'<div class="heat-cell {rag_class}"><strong>{value}</strong></div>'
@@ -426,20 +523,20 @@ def build_tab_tong_bo(kpi, dqg, build_time):
       <div class="heat-cell bg-amber"><strong>Yellow</strong>Cần theo dõi</div>
 
       <div class="heat-cell bg-gray"><strong>GSQV / GS5</strong>Mr Lam</div>
-      {heat_cell("Pending DQG", "bg-pend")}
-      {heat_cell("Pending DQG", "bg-pend")}
-      {heat_cell("Pending DQG", "bg-pend")}
-      {heat_cell("Pending DQG", "bg-pend")}
-      {heat_cell("Pending DQG", "bg-pend")}
-      <div class="heat-cell bg-red"><strong>Red</strong>Cần data</div>
+      {heat_cell(f"Chờ · {EXPECTED_DATE}", "bg-pend")}
+      {heat_cell(f"Chờ · {EXPECTED_DATE}", "bg-pend")}
+      {heat_cell(f"Chờ · {EXPECTED_DATE}", "bg-pend")}
+      {heat_cell(f"Chờ · {EXPECTED_DATE}", "bg-pend")}
+      {heat_cell(f"Chờ · {EXPECTED_DATE}", "bg-pend")}
+      <div class="heat-cell bg-red"><strong>🔴 Chờ data</strong>Dự kiến {EXPECTED_DATE}</div>
 
       <div class="heat-cell bg-gray"><strong>GSQV / GS6</strong>Mr Mạnh</div>
-      {heat_cell("Pending DQG", "bg-pend")}
-      {heat_cell("Pending DQG", "bg-pend")}
-      {heat_cell("Pending DQG", "bg-pend")}
-      {heat_cell("Pending DQG", "bg-pend")}
-      {heat_cell("Pending DQG", "bg-pend")}
-      <div class="heat-cell bg-red"><strong>Red</strong>Cần data</div>
+      {heat_cell(f"Chờ · {EXPECTED_DATE}", "bg-pend")}
+      {heat_cell(f"Chờ · {EXPECTED_DATE}", "bg-pend")}
+      {heat_cell(f"Chờ · {EXPECTED_DATE}", "bg-pend")}
+      {heat_cell(f"Chờ · {EXPECTED_DATE}", "bg-pend")}
+      {heat_cell(f"Chờ · {EXPECTED_DATE}", "bg-pend")}
+      <div class="heat-cell bg-red"><strong>🔴 Chờ data</strong>Dự kiến {EXPECTED_DATE}</div>
     </div>
     </div>"""
 
@@ -469,7 +566,7 @@ def build_tab_tong_bo(kpi, dqg, build_time):
     ncr_rag  = rag_color(d_qlcl.get("total_ncr",  999), 0, 3, reverse=True) if d_qlcl else "rag-gray"
 
     exec_cards = f"""
-    <div class="kpi-grid">
+    <div class="kpi-grid-5">
       {kpi_card("Tuân thủ kế hoạch (Plan/DO)", f'<span class="{pd_rag.replace("rag-","")}">{pd_val}</span>',
                 "Trung bình toàn nhà máy", pd_rag,
                 "<table><tr><th>Site</th><th>Actual</th><th>Target</th><th>Owner</th></tr>"
@@ -504,19 +601,19 @@ def build_tab_tong_bo(kpi, dqg, build_time):
 
     inv_cards = f"""
     <div class="note">📦 Block theo dõi kho, dòng chảy WIP/BTP, rủi ro quá tải công suất kho theo site.
-    {'KPI từ nguồn 05_KHO đã qua DQG.' if d_kho else 'Đang Pending DQG — chờ kết nối dữ liệu từ INP-KHO-001.'}</div>
+    {'KPI từ nguồn 05_KHO đã qua DQG.' if d_kho else f'Đang {PEND_TXT} — chờ kết nối dữ liệu từ INP-KHO-001.'}</div>
     <div class="kpi-grid">
-      {kpi_card("WIP / BTP tổng kho", f'<span class="blue">{fmt(wip_total, "", 0) if wip_total else "Pending DQG"}</span>', "Tổng bán thành phẩm", "rag-blue")}
-      {kpi_card("FIFO OK", f'<span class="green">{fifo_ok}</span>' if d_kho else '<span class="gray">Pending DQG</span>', "Lot FIFO đúng", "rag-green" if d_kho else "rag-gray")}
-      {kpi_card("FIFO Breach", f'<span class="red">{fifo_breach}</span>' if d_kho else '<span class="gray">Pending DQG</span>', "Vi phạm FIFO", "rag-red" if fifo_breach else "rag-green")}
-      {kpi_card("Risk High", f'<span class="red">{risk_high}</span>' if d_kho else '<span class="gray">Pending DQG</span>', "Rủi ro cao", "rag-red" if risk_high else "rag-green")}
+      {kpi_card("WIP / BTP tổng kho", f'<span class="blue">{fmt(wip_total, "", 0) if wip_total else PEND_TXT}</span>', "Tổng bán thành phẩm", "rag-blue")}
+      {kpi_card("FIFO OK", f'<span class="green">{fifo_ok}</span>' if d_kho else '<span class="gray">{PEND_TXT}</span>', "Lot FIFO đúng", "rag-green" if d_kho else "rag-gray")}
+      {kpi_card("FIFO Breach", f'<span class="red">{fifo_breach}</span>' if d_kho else '<span class="gray">{PEND_TXT}</span>', "Vi phạm FIFO", "rag-red" if fifo_breach else "rag-green")}
+      {kpi_card("Risk High", f'<span class="red">{risk_high}</span>' if d_kho else '<span class="gray">{PEND_TXT}</span>', "Rủi ro cao", "rag-red" if risk_high else "rag-green")}
     </div>
     <div class="tbl-wrap"><table>
       <thead><tr><th>Site</th><th>Sức chứa (m²)</th><th>Đang dùng</th><th>% Lấp đầy</th><th>Overflow</th><th>WIP Cap</th><th>FIFO OK?</th><th>RAG</th></tr></thead>
       <tbody>
-        <tr><td>GS1</td><td>—</td><td>—</td><td>Pending DQG</td><td>Pending</td><td>Pending</td><td>Pending</td><td>{rag_badge("Pending","rpend")}</td></tr>
-        <tr><td>GS5</td><td>—</td><td>—</td><td>Pending DQG</td><td>Pending</td><td>Pending</td><td>Pending</td><td>{rag_badge("Pending","rpend")}</td></tr>
-        <tr><td>GS6</td><td>—</td><td>—</td><td>Pending DQG</td><td>Pending</td><td>Pending</td><td>Pending</td><td>{rag_badge("Pending","rpend")}</td></tr>
+        <tr><td>GS1</td><td>—</td><td>—</td><td>{PEND_TXT}</td><td>Pending</td><td>Pending</td><td>Pending</td><td>{rag_badge("Pending","rpend")}</td></tr>
+        <tr><td>GS5</td><td>—</td><td>—</td><td>{PEND_TXT}</td><td>Pending</td><td>Pending</td><td>Pending</td><td>{rag_badge("Pending","rpend")}</td></tr>
+        <tr><td>GS6</td><td>—</td><td>—</td><td>{PEND_TXT}</td><td>Pending</td><td>Pending</td><td>Pending</td><td>{rag_badge("Pending","rpend")}</td></tr>
       </tbody>
     </table></div>"""
 
@@ -535,10 +632,10 @@ def build_tab_tong_bo(kpi, dqg, build_time):
     # ── 6. Aging / ECN / RMA ──────────────────────────────────
     aging_cards = f"""
     <div class="kpi-grid">
-      {kpi_card("Hàng Aging >30 ngày", '<span class="gray">Pending DQG</span>', "INP-QLCL-001 / INP-KHO-001", "rag-gray")}
-      {kpi_card("ECN đang xử lý",      '<span class="gray">Pending DQG</span>', "INP-QLCL-001", "rag-gray")}
-      {kpi_card("RMA / Hàng hoàn trả", '<span class="gray">Pending DQG</span>', "INP-QLCL-001", "rag-gray")}
-      {kpi_card("Recovery before Scrap",'<span class="gray">Pending DQG</span>', "INP-QLCL-001", "rag-gray")}
+      {kpi_card("Hàng Aging >30 ngày", '<span class="gray">{PEND_TXT}</span>', "INP-QLCL-001 / INP-KHO-001", "rag-gray")}
+      {kpi_card("ECN đang xử lý",      '<span class="gray">{PEND_TXT}</span>', "INP-QLCL-001", "rag-gray")}
+      {kpi_card("RMA / Hàng hoàn trả", '<span class="gray">{PEND_TXT}</span>', "INP-QLCL-001", "rag-gray")}
+      {kpi_card("Recovery before Scrap",'<span class="gray">{PEND_TXT}</span>', "INP-QLCL-001", "rag-gray")}
     </div>"""
 
     # ── 7. GSTT Summary ───────────────────────────────────────
@@ -562,28 +659,40 @@ def build_tab_tong_bo(kpi, dqg, build_time):
     </table></div>"""
 
     return f"""
+    {build_alert_bar(d_bo)}
+
     {section_title("1. Bản đồ sức khỏe nhà máy — CEO/Lead BO nhìn 10 giây (Factory Health Heatmap)")}
     {heatmap}
-    <div class="card" style="margin-top:12px">
-      <div class="card-title">Phân công Owner / Người cung cấp dữ liệu / Báo leo (Data Provider / Escalation)</div>
-      {raci_table}
-    </div>
+    <details class="sec-fold">
+      <summary>👥 Phân công Owner / Data Provider / Escalation — xem chi tiết</summary>
+      <div class="sec-fold-body">{raci_table}</div>
+    </details>
 
     {section_title("2. Chỉ số KPI cấp điều hành (Executive KPI Cards)")}
     {exec_cards}
 
-    {section_title("3. Dòng chảy tồn kho & Rủi ro quá tải kho (Inventory Flow & Warehouse Capacity Risk)")}
-    <div class="card">{inv_cards}</div>
+    <details class="sec-fold">
+      <summary>📦 3. Dòng chảy tồn kho & WIP / FIFO — chi tiết</summary>
+      <div class="sec-fold-body">{inv_cards}</div>
+    </details>
 
-    {section_title("4. Rủi ro khách hàng trọng điểm (Key Customer Risk)")}
-    <div class="card">{cust_table}</div>
+    <details class="sec-fold">
+      <summary>🏢 4. Rủi ro khách hàng trọng điểm — Samsung / Canon / Brother</summary>
+      <div class="sec-fold-body">{cust_table}</div>
+    </details>
 
-    {section_title("5. Hàng tồn lâu / Thay đổi KT / Hàng hoàn trả (Aging / ECN / RMA / Recovery Before Scrap)")}
-    <div class="card">{aging_cards}</div>
+    <details class="sec-fold">
+      <summary>📋 5. Hàng tồn lâu / ECN / RMA / Recovery Before Scrap — chi tiết</summary>
+      <div class="sec-fold-body">{aging_cards}</div>
+    </details>
 
-    {section_title("6. Kiểm chứng độc lập hiện trường — GSTT (Independent Compliance Check)")}
-    <div class="note">GSTT hiện trường thuộc BG/Ban kiểm soát, PIC: Mr Lâm. Vai trò: kiểm chứng độc lập việc Owner/PIC trục BO đã làm thật, đúng, đủ, có bằng chứng và có hiệu quả tại hiện trường.</div>
-    <div class="card">{gstt_sum}</div>
+    <details class="sec-fold">
+      <summary>🛡️ 6. Kiểm chứng độc lập hiện trường — GSTT (Independent Compliance Check)</summary>
+      <div class="sec-fold-body">
+        <div class="note">GSTT hiện trường thuộc BG/Ban kiểm soát, PIC: Mr Lâm. Vai trò: kiểm chứng độc lập việc Owner/PIC trục BO đã làm thật, đúng, đủ, có bằng chứng và có hiệu quả tại hiện trường.</div>
+        {gstt_sum}
+      </div>
+    </details>
     """
 
 
@@ -596,16 +705,16 @@ def build_tab_site(kpi, site, site_name, giam_doc, issue_rows):
     d_tb   = get(kpi, "04_QLTB_CD",    "kpis") or {}
     d_kho  = get(kpi, "05_KHO",        "kpis") or {}
 
-    # Try site breakdown first, fallback to "Pending DQG"
+    # Try site breakdown first, fallback to PEND_TXT
     def site_kpi(dept, *keys, unit="", decimals=1):
         sb = get(kpi, dept, "site_breakdown", site, "kpis")
         if sb is None:
-            return "Pending DQG"
+            return PEND_TXT
         val = sb
         for k in keys:
             val = val.get(k) if isinstance(val, dict) else None
             if val is None:
-                return "Pending DQG"
+                return PEND_TXT
         return fmt(val, unit, decimals)
 
     pd_val   = site_kpi("01_SAN_XUAT",  "plan_do_pct_avg", unit="%")
@@ -615,29 +724,29 @@ def build_tab_site(kpi, site, site_name, giam_doc, issue_rows):
     wip_val  = site_kpi("05_KHO",       "total_wip_qty",    decimals=0)
     otif_val = site_kpi("02_KHSX_OTIF", "otif_pct",         unit="%")
 
-    rag_pd  = rag_color(None) if pd_val == "Pending DQG" else rag_color(float(pd_val.replace("%","")) if pd_val != "Pending DQG" else None, 95, 85)
+    rag_pd  = rag_color(None) if pd_val == PEND_TXT else rag_color(float(pd_val.replace("%","")) if pd_val != PEND_TXT else None, 95, 85)
 
     kpi_cards = f"""
     <div class="kpi-grid-5">
       {kpi_card("Plan/DO",
-                f'<span class="{"gray" if pd_val == "Pending DQG" else "blue"}">{pd_val}</span>',
-                f"Target ≥95% | {giam_doc}", "rag-gray" if pd_val == "Pending DQG" else "rag-blue",
+                f'<span class="{"gray" if pd_val == PEND_TXT else "blue"}">{pd_val}</span>',
+                f"Target ≥95% | {giam_doc}", "rag-gray" if pd_val == PEND_TXT else "rag-blue",
                 f"<div class='warn-box'>Cần PROD_LOG {site} đúng template. Target ≥95% Plan/DO Adherence.</div>")}
       {kpi_card("OTIF",
-                f'<span class="{"gray" if otif_val == "Pending DQG" else "blue"}">{otif_val}</span>',
+                f'<span class="{"gray" if otif_val == PEND_TXT else "blue"}">{otif_val}</span>',
                 f"Delivery Risk | {giam_doc}", "rag-gray",
                 f"<div class='info-box'>Operational Owner {site}: {giam_doc}. External Data Provider: Mr Hưng (KHSX-Điều độ).</div>")}
       {kpi_card("OEE/Downtime",
-                f'<span class="{"gray" if dt_val == "Pending DQG" else "amber"}">{dt_val}</span>',
-                "Cần Machine Log", "rag-gray" if dt_val == "Pending DQG" else "rag-amber",
+                f'<span class="{"gray" if dt_val == PEND_TXT else "amber"}">{dt_val}</span>',
+                "Cần Machine Log", "rag-gray" if dt_val == PEND_TXT else "rag-amber",
                 "<div class='warn-box'>Cần Machine Log có start/end, reason code, machine mapping.</div>")}
       {kpi_card("Quality/NCR",
-                f'<span class="{"gray" if ncr_val == "Pending DQG" else "blue"}">{ncr_val}</span>',
-                "Tổng NCR", "rag-gray" if ncr_val == "Pending DQG" else "rag-blue",
+                f'<span class="{"gray" if ncr_val == PEND_TXT else "blue"}">{ncr_val}</span>',
+                "Tổng NCR", "rag-gray" if ncr_val == PEND_TXT else "rag-blue",
                 f"<div class='info-box'>NCR/CAR {site} cần map được với PROD_LOG. Owner: Mr Đức / Mr Giang.</div>")}
       {kpi_card("Kho/WIP/FIFO",
-                f'<span class="{"gray" if wip_val == "Pending DQG" else "blue"}">{wip_val}</span>',
-                "WIP Qty", "rag-gray" if wip_val == "Pending DQG" else "rag-blue",
+                f'<span class="{"gray" if wip_val == PEND_TXT else "blue"}">{wip_val}</span>',
+                "WIP Qty", "rag-gray" if wip_val == PEND_TXT else "rag-blue",
                 f"<div class='warn-box'>Cần WIP/FIFO {site}: WO, Customer, Location, Qty, Age, FIFO_Status.</div>")}
     </div>"""
 
@@ -645,7 +754,7 @@ def build_tab_site(kpi, site, site_name, giam_doc, issue_rows):
 
     return f"""
     {section_title(f"{site_name} — Tháp điều hành mini (Mini Control Tower)")}
-    <div class="note">📊 KPI theo site sẽ hiển thị đầy đủ khi PROD_LOG {site} đã qua Cổng kiểm soát dữ liệu (DQG). Hiện đang dùng dữ liệu tổng hợp (aggregate) + Pending DQG.</div>
+    <div class="note">📊 KPI theo site sẽ hiển thị đầy đủ khi PROD_LOG {site} đã qua Cổng kiểm soát dữ liệu (DQG). Hiện đang dùng dữ liệu tổng hợp (aggregate) + {PEND_TXT}.</div>
     {kpi_cards}
 
     <div class="card">
@@ -938,22 +1047,21 @@ def extract_issue_rows(kpi, site=None):
     d_bo = get(kpi, "08_BO_CONTROL")
     if not d_bo:
         return []
-    # In future: parse records by site. For now return static rows per site.
     default_rows = {
         "GS1": [
-            ("Plan/DO GS1 cần xác nhận",           "Yellow", "Mr Hào",   "Review WO/máy/ca", "D+3", "Có root cause"),
-            ("Machine Log GS1 chưa đủ",             "Red",    "Mr Thập",  "Gửi downtime log",  "D+5", "Đủ start/end/reason"),
-            ("Kho/WIP/FIFO GS1 chưa có dữ liệu",   "Pending","Mr Dũng",  "Gửi WIP/FIFO file", "D+5", "Map OTIF/Customer"),
+            ("Plan/DO GS1 can xac nhan",           "Yellow", "Mr Hao",   "Review WO/may/ca", "D+3", "Co root cause"),
+            ("Machine Log GS1 chua du",             "Red",    "Mr Thap",  "Gui downtime log",  "D+5", "Du start/end/reason"),
+            ("Kho/WIP/FIFO GS1 chua co du lieu",   "Pending","Mr Dung",  "Gui WIP/FIFO file", "D+5", "Map OTIF/Customer"),
         ],
         "GS5": [
-            ("PROD_LOG GS5 thiếu ORDER_ID",         "Red",    "Mr Lam",   "Gửi file đúng template","D+5","Qua DQG"),
-            ("Kho/WIP/FIFO GS5 chưa có dữ liệu",   "Red",    "Mr Luân",  "Gửi WIP/FIFO file", "D+5", "Map OTIF/Customer"),
-            ("Machine Log GS5 chưa có",             "Red",    "Mr Nam",   "Gửi downtime log",  "D+5", "start/end/reason"),
+            ("PROD_LOG GS5 thieu ORDER_ID",         "Red",    "Mr Lam",   "Gui file dung template","D+5","Qua DQG"),
+            ("Kho/WIP/FIFO GS5 chua co du lieu",   "Red",    "Mr Luan",  "Gui WIP/FIFO file", "D+5", "Map OTIF/Customer"),
+            ("Machine Log GS5 chua co",             "Red",    "Mr Nam",   "Gui downtime log",  "D+5", "start/end/reason"),
         ],
         "GS6": [
-            ("PROD_LOG GS6 cần tách khỏi GS5",      "Red",    "Mr Mạnh",  "Gửi file GS6 riêng","D+5","Qua DQG"),
-            ("Machine Log GS6 chưa có",              "Red",    "Mr Nam",   "Gửi downtime log",  "D+5", "start/end/reason"),
-            ("Kho/WIP/FIFO GS6 chưa có dữ liệu",    "Pending","Mr Luân",  "Gửi WIP/FIFO file", "D+5", "Map OTIF/Customer"),
+            ("PROD_LOG GS6 can tach khoi GS5",      "Red",    "Mr Manh",  "Gui file GS6 rieng","D+5","Qua DQG"),
+            ("Machine Log GS6 chua co",              "Red",    "Mr Nam",   "Gui downtime log",  "D+5", "start/end/reason"),
+            ("Kho/WIP/FIFO GS6 chua co du lieu",    "Pending","Mr Luan",  "Gui WIP/FIFO file", "D+5", "Map OTIF/Customer"),
         ],
     }
     return default_rows.get(site, [])
@@ -971,54 +1079,50 @@ def build_html(kpi_full, dqg_data, build_time):
 
     if official >= total:
         overall_color = "#16a34a"; overall_label = "OPERATIONAL"
-        banner_class  = ""
     elif official >= total - 1:
         overall_color = "#d97706"; overall_label = "NEAR OPERATIONAL"
-        banner_class  = ""
     else:
         overall_color = "#dc2626"; overall_label = "PARTIAL DATA"
-        banner_class  = ""
 
     dqg_summary = dqg_data.get("summary", {})
     dqg_pass    = dqg_summary.get("PASS", 0)
     dqg_skip    = dqg_summary.get("SKIP", 0)
 
-    # Build tab contents
     t1 = build_tab_tong_bo(kpi, dqg_data, build_time)
-    t2 = build_tab_site(kpi, "GS1", "GSHN / GS1", "Mr Hào",  extract_issue_rows(kpi, "GS1"))
+    t2 = build_tab_site(kpi, "GS1", "GSHN / GS1", "Mr Hao",  extract_issue_rows(kpi, "GS1"))
     t3 = build_tab_site(kpi, "GS5", "GSQV / GS5", "Mr Lam",  extract_issue_rows(kpi, "GS5"))
-    t4 = build_tab_site(kpi, "GS6", "GSQV / GS6", "Mr Mạnh", extract_issue_rows(kpi, "GS6"))
+    t4 = build_tab_site(kpi, "GS6", "GSQV / GS6", "Mr Manh", extract_issue_rows(kpi, "GS6"))
     t5 = build_tab_kpi_pic(kpi)
     t6 = build_tab_gstt(kpi)
 
     warn = ""
     if official < total:
-        warn = f'<div class="warn-banner">⚠️ {total - official}/{total} bộ phận chưa đạt Cổng DL (DQG). Chỉ dùng KPI chính thức khi DQG PASS.</div>'
+        warn = f'<div class="warn-banner">\u26a0\ufe0f {total - official}/{total} bo phan chua dat Cong DL (DQG). Chi dung KPI chinh thuc khi DQG PASS.</div>'
 
     return f"""<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BO Control Tower – GSBB</title>
+<title>BO Control Tower - GSBB</title>
 <style>{CSS}</style>
 </head>
 <body>
 {warn}
 <div class="hdr">
-  <h1>🏭 BO Control Tower Dashboard – GSBB</h1>
+  <h1>&#127981; BO Control Tower Dashboard - GSBB</h1>
   <div class="sub">
-    KPI chính thức: {official}/{total} bộ phận đạt Cổng DL (DQG)&nbsp;|&nbsp;
-    Cập nhật: {build_time}&nbsp;|&nbsp;
-    Nguồn: Google Sheets → DQG → KPI&nbsp;|&nbsp;
+    KPI chinh thuc: {official}/{total} bo phan dat Cong DL (DQG)&nbsp;|&nbsp;
+    Cap nhat: {build_time}&nbsp;|&nbsp;
+    Nguon: Google Sheets &rarr; DQG &rarr; KPI&nbsp;|&nbsp;
     Auto-build: GitHub Actions
   </div>
   <div class="badges">
-    <span class="bdg bdg-ok" style="background:{'#14532d' if official == total else '#92400e'};color:{'#d1fae5' if official == total else '#fef3c7'}">
-      {overall_label} — {official}/{total} PASS
+    <span class="bdg" style="background:{'#14532d' if official == total else '#92400e'};color:{'#d1fae5' if official == total else '#fef3c7'}">
+      {overall_label} &mdash; {official}/{total} PASS
     </span>
-    <span class="bdg bdg-info">Cổng DL (DQG): {dqg_pass} PASS | {dqg_skip} SKIP</span>
-    <span class="bdg bdg-warn">Dữ liệu thử nghiệm (Trial) — qua DQG mới là KPI chính thức</span>
+    <span class="bdg bdg-info">Cong DL (DQG): {dqg_pass} PASS | {dqg_skip} SKIP</span>
+    <span class="bdg bdg-warn">Du lieu thu nghiem (Trial) &mdash; qua DQG moi la KPI chinh thuc</span>
   </div>
 </div>
 
@@ -1030,12 +1134,12 @@ def build_html(kpi_full, dqg_data, build_time):
 <input type="radio" name="tab" id="t6">
 
 <nav class="nav">
-  <label for="t1">🏠 Tổng BO</label>
-  <label for="t2">🏭 GSHN / GS1</label>
-  <label for="t3">🏗 GSQV / GS5</label>
-  <label for="t4">🏗 GSQV / GS6</label>
-  <label for="t5">📊 Chỉ số / Owner (KPI/PIC)</label>
-  <label for="t6">🛡️ Giám sát TT / Tuân thủ (GSTT)</label>
+  <label for="t1">&#127968; Tong BO</label>
+  <label for="t2">&#127981; GSHN / GS1</label>
+  <label for="t3">&#127959; GSQV / GS5</label>
+  <label for="t4">&#127959; GSQV / GS6</label>
+  <label for="t5">&#128202; Chi so / Owner (KPI/PIC)</label>
+  <label for="t6">&#128737;&#65039; Giam sat TT / Tuan thu (GSTT)</label>
 </nav>
 
 <div id="c1" class="panel">{t1}</div>
@@ -1046,9 +1150,9 @@ def build_html(kpi_full, dqg_data, build_time):
 <div id="c6" class="panel">{t6}</div>
 
 <div class="footer">
-  GSBB BO Control Tower&nbsp;·&nbsp;
-  Auto-built by GitHub Actions&nbsp;·&nbsp;
-  Dữ liệu: Google Sheets → DQG → KPI&nbsp;·&nbsp;
+  GSBB BO Control Tower&nbsp;&middot;&nbsp;
+  Auto-built by GitHub Actions&nbsp;&middot;&nbsp;
+  Du lieu: Google Sheets &rarr; DQG &rarr; KPI&nbsp;&middot;&nbsp;
   {build_time}
 </div>
 </body>
@@ -1056,18 +1160,18 @@ def build_html(kpi_full, dqg_data, build_time):
 
 
 def main():
-    import datetime, json, os as _os
+    import datetime
     print("=== BO Control Tower Dashboard Builder ===")
     build_time = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
 
     kpi_full = {"summary": {}, "departments": {}}
     dqg_data = {"summary": {}, "departments": {}}
 
-    if _os.path.exists(KPI_FILE):
+    if os.path.exists(KPI_FILE):
         with open(KPI_FILE, encoding="utf-8") as f:
             kpi_full = json.load(f)
 
-    if _os.path.exists(DQG_FILE):
+    if os.path.exists(DQG_FILE):
         with open(DQG_FILE, encoding="utf-8") as f:
             dqg_data = json.load(f)
 
@@ -1076,8 +1180,8 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(html)
 
-    print(f"✅ Dashboard built → {OUTPUT_FILE}  ({len(html):,} chars)")
-    print(f"   Tabs: Tổng BO | GS1 | GS5 | GS6 | KPI/PIC | GSTT")
+    print(f"Dashboard built -> {OUTPUT_FILE}  ({len(html):,} chars)")
+    print(f"   Tabs: Tong BO | GS1 | GS5 | GS6 | KPI/PIC | GSTT")
 
 
 if __name__ == "__main__":

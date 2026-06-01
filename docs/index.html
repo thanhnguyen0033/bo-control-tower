@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BO Control Tower – GSBB</title>
+<title>BO Control Tower - GSBB</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;background:#f0f4f8;color:#1e293b;font-size:13px;line-height:1.5}
@@ -60,11 +60,11 @@ input[name=tab]{display:none}
             display:flex;align-items:center;gap:6px}
 
 /* KPI cards */
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:11px;margin-bottom:14px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:11px;margin-bottom:14px}
 .kpi-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:11px;margin-bottom:14px}
 .kpi-card{background:#fff;border-radius:12px;padding:15px 13px;text-align:center;
           box-shadow:0 2px 8px rgba(0,0,0,.08),0 0 1px rgba(0,0,0,.04);
-          border-top:4px solid #2563eb;transition:transform .15s,box-shadow .15s}
+          border-top:4px solid #2563eb;transition:transform .15s,box-shadow .15s;min-width:0}
 .kpi-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.12)}
 .kpi-card.rag-green{border-top-color:#16a34a;background:linear-gradient(180deg,#f0fdf4 0%,#fff 35%)}
 .kpi-card.rag-amber{border-top-color:#d97706;background:linear-gradient(180deg,#fffbeb 0%,#fff 35%)}
@@ -174,30 +174,45 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
 .footer{background:linear-gradient(135deg,#0c1445,#0f2d87);
         color:rgba(255,255,255,.5);text-align:center;font-size:10px;padding:14px;letter-spacing:.3px}
 
+/* Section fold — accordion cho sections phụ */
+.sec-fold{border-radius:10px;overflow:visible;margin-bottom:13px}
+.sec-fold>summary{list-style:none;cursor:pointer;
+                   background:linear-gradient(135deg,#f8fafc,#eef2ff);
+                   color:#0f2d87;font-weight:800;font-size:12px;padding:11px 16px;
+                   border:1px solid #c7d2fe;border-radius:10px;user-select:none;
+                   display:flex;align-items:center;gap:8px;letter-spacing:.2px}
+.sec-fold>summary::-webkit-details-marker{display:none}
+.sec-fold[open]>summary{border-radius:10px 10px 0 0;border-bottom:none}
+.sec-fold[open]>summary::after{content:"▲";margin-left:auto;color:#94a3b8;font-size:10px}
+.sec-fold:not([open])>summary::after{content:"▼";margin-left:auto;color:#94a3b8;font-size:10px}
+.sec-fold-body{padding:15px;border:1px solid #c7d2fe;border-top:none;
+               border-radius:0 0 10px 10px;background:#fff}
+
 @media(max-width:900px){
   .kpi-grid-5,.grid-2,.grid-3{grid-template-columns:1fr}
   .heat-grid,.gstt-grid{min-width:700px}
   .panel{padding:12px 12px 30px}
   .nav label{padding:10px 12px;font-size:11px}
+  .sec-fold>summary{font-size:11px;padding:9px 12px}
 }
 </style>
 </head>
 <body>
 
 <div class="hdr">
-  <h1>🏭 BO Control Tower Dashboard – GSBB</h1>
+  <h1>&#127981; BO Control Tower Dashboard - GSBB</h1>
   <div class="sub">
-    KPI chính thức: 8/8 bộ phận đạt Cổng DL (DQG)&nbsp;|&nbsp;
-    Cập nhật: 2026-06-01 04:21 UTC&nbsp;|&nbsp;
-    Nguồn: Google Sheets → DQG → KPI&nbsp;|&nbsp;
+    KPI chinh thuc: 8/8 bo phan dat Cong DL (DQG)&nbsp;|&nbsp;
+    Cap nhat: 2026-06-01 10:27 UTC&nbsp;|&nbsp;
+    Nguon: Google Sheets &rarr; DQG &rarr; KPI&nbsp;|&nbsp;
     Auto-build: GitHub Actions
   </div>
   <div class="badges">
-    <span class="bdg bdg-ok" style="background:#14532d;color:#d1fae5">
-      OPERATIONAL — 8/8 PASS
+    <span class="bdg" style="background:#14532d;color:#d1fae5">
+      OPERATIONAL &mdash; 8/8 PASS
     </span>
-    <span class="bdg bdg-info">Cổng DL (DQG): 8 PASS | 0 SKIP</span>
-    <span class="bdg bdg-warn">Dữ liệu thử nghiệm (Trial) — qua DQG mới là KPI chính thức</span>
+    <span class="bdg bdg-info">Cong DL (DQG): 8 PASS | 0 SKIP</span>
+    <span class="bdg bdg-warn">Du lieu thu nghiem (Trial) &mdash; qua DQG moi la KPI chinh thuc</span>
   </div>
 </div>
 
@@ -209,15 +224,96 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
 <input type="radio" name="tab" id="t6">
 
 <nav class="nav">
-  <label for="t1">🏠 Tổng BO</label>
-  <label for="t2">🏭 GSHN / GS1</label>
-  <label for="t3">🏗 GSQV / GS5</label>
-  <label for="t4">🏗 GSQV / GS6</label>
-  <label for="t5">📊 Chỉ số / Owner (KPI/PIC)</label>
-  <label for="t6">🛡️ Giám sát TT / Tuân thủ (GSTT)</label>
+  <label for="t1">&#127968; Tong BO</label>
+  <label for="t2">&#127981; GSHN / GS1</label>
+  <label for="t3">&#127959; GSQV / GS5</label>
+  <label for="t4">&#127959; GSQV / GS6</label>
+  <label for="t5">&#128202; Chi so / Owner (KPI/PIC)</label>
+  <label for="t6">&#128737;&#65039; Giam sat TT / Tuan thu (GSTT)</label>
 </nav>
 
 <div id="c1" class="panel">
+    
+    <div style="background:linear-gradient(135deg,#0c1445 0%,#0f2d87 55%,#1a4fba 100%);
+                border-radius:14px;padding:16px 18px;margin-bottom:18px;
+                box-shadow:0 4px 20px rgba(15,45,135,.3)">
+      <div style="display:flex;align-items:center;justify-content:space-between;
+                  margin-bottom:13px;flex-wrap:wrap;gap:8px">
+        <div style="font-size:14px;font-weight:900;color:#fff;letter-spacing:.3px">
+          🚨 Top 3 Vấn đề cần xử lý ngay
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span style="background:rgba(220,38,38,.3);color:#fca5a5;padding:4px 12px;
+                       border-radius:6px;font-size:11px;font-weight:700;border:1px solid rgba(220,38,38,.4)">
+            🔴 Đang mở: 0
+          </span>
+          <span style="background:rgba(239,68,68,.3);color:#fecaca;padding:4px 12px;
+                       border-radius:6px;font-size:11px;font-weight:700;border:1px solid rgba(239,68,68,.4)">
+            ⏰ Quá hạn: 0
+          </span>
+          <span style="background:rgba(251,191,36,.2);color:#fde68a;padding:4px 12px;
+                       border-radius:6px;font-size:11px;font-weight:700;border:1px solid rgba(251,191,36,.3)">
+            🔺 Escalated: 1
+          </span>
+        </div>
+      </div>
+      <div style="display:flex;gap:11px;flex-wrap:wrap">
+        
+        <div style="flex:1;min-width:190px;max-width:380px;background:#fff;border-radius:10px;
+                    padding:13px 15px;border-left:4px solid #dc2626;
+                    box-shadow:0 2px 10px rgba(0,0,0,.1)">
+          <div style="font-size:10px;font-weight:800;color:#64748b;margin-bottom:5px;letter-spacing:.4px">
+            🔴&nbsp;VẤN ĐỀ #1&nbsp;·&nbsp;GS1
+          </div>
+          <div style="font-size:12px;font-weight:700;color:#1e293b;line-height:1.45;margin-bottom:8px">
+            Machine Log GS1 chưa đủ trường: thiếu reason code, start/end time
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <span style="background:#f1f5f9;color:#374151;padding:2px 8px;border-radius:5px;
+                         font-size:10px;font-weight:600">👤 Mr Thập</span>
+            <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:5px;
+                         font-size:10px;font-weight:600">📅 03/06</span>
+          </div>
+        </div>
+        <div style="flex:1;min-width:190px;max-width:380px;background:#fff;border-radius:10px;
+                    padding:13px 15px;border-left:4px solid #dc2626;
+                    box-shadow:0 2px 10px rgba(0,0,0,.1)">
+          <div style="font-size:10px;font-weight:800;color:#64748b;margin-bottom:5px;letter-spacing:.4px">
+            🔴&nbsp;VẤN ĐỀ #2&nbsp;·&nbsp;GS5/GS6
+          </div>
+          <div style="font-size:12px;font-weight:700;color:#1e293b;line-height:1.45;margin-bottom:8px">
+            PROD_LOG GS5/GS6 thiếu ORDER_ID — không map được OTIF
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <span style="background:#f1f5f9;color:#374151;padding:2px 8px;border-radius:5px;
+                         font-size:10px;font-weight:600">👤 Mr Lam / Mr Mạnh</span>
+            <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:5px;
+                         font-size:10px;font-weight:600">📅 03/06</span>
+          </div>
+        </div>
+        <div style="flex:1;min-width:190px;max-width:380px;background:#fff;border-radius:10px;
+                    padding:13px 15px;border-left:4px solid #d97706;
+                    box-shadow:0 2px 10px rgba(0,0,0,.1)">
+          <div style="font-size:10px;font-weight:800;color:#64748b;margin-bottom:5px;letter-spacing:.4px">
+            🟡&nbsp;VẤN ĐỀ #3&nbsp;·&nbsp;GS1
+          </div>
+          <div style="font-size:12px;font-weight:700;color:#1e293b;line-height:1.45;margin-bottom:8px">
+            OTIF GS1 = 50.0% — cần xác nhận root cause với Mr Hào
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <span style="background:#f1f5f9;color:#374151;padding:2px 8px;border-radius:5px;
+                         font-size:10px;font-weight:600">👤 Mr Hào</span>
+            <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:5px;
+                         font-size:10px;font-weight:600">📅 05/06</span>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:10px;color:rgba(255,255,255,.45);margin-top:11px;
+                  border-top:1px solid rgba(255,255,255,.12);padding-top:9px">
+        ⚠️ Issues từ Action Register — Dữ liệu thử nghiệm (Trial). KPI chính thức sau DQG PASS ≥ 5/8 bộ phận · Dự kiến: 03/06/2026
+      </div>
+    </div>
+
     <div class="section-title">1. Bản đồ sức khỏe nhà máy — CEO/Lead BO nhìn 10 giây (Factory Health Heatmap)</div>
     
     <div style="overflow-x:auto">
@@ -239,25 +335,25 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
       <div class="heat-cell bg-amber"><strong>Yellow</strong>Cần theo dõi</div>
 
       <div class="heat-cell bg-gray"><strong>GSQV / GS5</strong>Mr Lam</div>
-      <div class="heat-cell bg-pend"><strong>Pending DQG</strong></div>
-      <div class="heat-cell bg-pend"><strong>Pending DQG</strong></div>
-      <div class="heat-cell bg-pend"><strong>Pending DQG</strong></div>
-      <div class="heat-cell bg-pend"><strong>Pending DQG</strong></div>
-      <div class="heat-cell bg-pend"><strong>Pending DQG</strong></div>
-      <div class="heat-cell bg-red"><strong>Red</strong>Cần data</div>
+      <div class="heat-cell bg-pend"><strong>Chờ · 03/06</strong></div>
+      <div class="heat-cell bg-pend"><strong>Chờ · 03/06</strong></div>
+      <div class="heat-cell bg-pend"><strong>Chờ · 03/06</strong></div>
+      <div class="heat-cell bg-pend"><strong>Chờ · 03/06</strong></div>
+      <div class="heat-cell bg-pend"><strong>Chờ · 03/06</strong></div>
+      <div class="heat-cell bg-red"><strong>🔴 Chờ data</strong>Dự kiến 03/06</div>
 
       <div class="heat-cell bg-gray"><strong>GSQV / GS6</strong>Mr Mạnh</div>
-      <div class="heat-cell bg-pend"><strong>Pending DQG</strong></div>
-      <div class="heat-cell bg-pend"><strong>Pending DQG</strong></div>
-      <div class="heat-cell bg-pend"><strong>Pending DQG</strong></div>
-      <div class="heat-cell bg-pend"><strong>Pending DQG</strong></div>
-      <div class="heat-cell bg-pend"><strong>Pending DQG</strong></div>
-      <div class="heat-cell bg-red"><strong>Red</strong>Cần data</div>
+      <div class="heat-cell bg-pend"><strong>Chờ · 03/06</strong></div>
+      <div class="heat-cell bg-pend"><strong>Chờ · 03/06</strong></div>
+      <div class="heat-cell bg-pend"><strong>Chờ · 03/06</strong></div>
+      <div class="heat-cell bg-pend"><strong>Chờ · 03/06</strong></div>
+      <div class="heat-cell bg-pend"><strong>Chờ · 03/06</strong></div>
+      <div class="heat-cell bg-red"><strong>🔴 Chờ data</strong>Dự kiến 03/06</div>
     </div>
     </div>
-    <div class="card" style="margin-top:12px">
-      <div class="card-title">Phân công Owner / Người cung cấp dữ liệu / Báo leo (Data Provider / Escalation)</div>
-      
+    <details class="sec-fold">
+      <summary>👥 Phân công Owner / Data Provider / Escalation — xem chi tiết</summary>
+      <div class="sec-fold-body">
     <div class="tbl-wrap"><table>
       <thead><tr><th>KPI</th><th>Operational Owner</th><th>Data Provider</th><th>Escalation</th></tr></thead>
       <tbody>
@@ -268,12 +364,12 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
         <tr><td>WIP/FIFO/Kho</td><td>Mr Dũng (GS1) / Mr Luân (GSQV)</td><td>Kho Log</td><td>BO Lead</td></tr>
         <tr><td>GSTT</td><td>Mr Lâm / GSTT</td><td>Field Check Log</td><td>BO Lead / CEO</td></tr>
       </tbody>
-    </table></div>
-    </div>
+    </table></div></div>
+    </details>
 
     <div class="section-title">2. Chỉ số KPI cấp điều hành (Executive KPI Cards)</div>
     
-    <div class="kpi-grid">
+    <div class="kpi-grid-5">
       
     <div class="kpi-card rag-amber">
       <div class="kpi-val"><span class="amber">89.1%</span></div>
@@ -311,8 +407,9 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
     </div>
     </div>
 
-    <div class="section-title">3. Dòng chảy tồn kho & Rủi ro quá tải kho (Inventory Flow & Warehouse Capacity Risk)</div>
-    <div class="card">
+    <details class="sec-fold">
+      <summary>📦 3. Dòng chảy tồn kho & WIP / FIFO — chi tiết</summary>
+      <div class="sec-fold-body">
     <div class="note">📦 Block theo dõi kho, dòng chảy WIP/BTP, rủi ro quá tải công suất kho theo site.
     KPI từ nguồn 05_KHO đã qua DQG.</div>
     <div class="kpi-grid">
@@ -348,14 +445,16 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
     <div class="tbl-wrap"><table>
       <thead><tr><th>Site</th><th>Sức chứa (m²)</th><th>Đang dùng</th><th>% Lấp đầy</th><th>Overflow</th><th>WIP Cap</th><th>FIFO OK?</th><th>RAG</th></tr></thead>
       <tbody>
-        <tr><td>GS1</td><td>—</td><td>—</td><td>Pending DQG</td><td>Pending</td><td>Pending</td><td>Pending</td><td><span class="badge" style="background:#f5f3ff;color:#7c3aed">Pending</span></td></tr>
-        <tr><td>GS5</td><td>—</td><td>—</td><td>Pending DQG</td><td>Pending</td><td>Pending</td><td>Pending</td><td><span class="badge" style="background:#f5f3ff;color:#7c3aed">Pending</span></td></tr>
-        <tr><td>GS6</td><td>—</td><td>—</td><td>Pending DQG</td><td>Pending</td><td>Pending</td><td>Pending</td><td><span class="badge" style="background:#f5f3ff;color:#7c3aed">Pending</span></td></tr>
+        <tr><td>GS1</td><td>—</td><td>—</td><td>Chờ DQG · 03/06</td><td>Pending</td><td>Pending</td><td>Pending</td><td><span class="badge" style="background:#f5f3ff;color:#7c3aed">Pending</span></td></tr>
+        <tr><td>GS5</td><td>—</td><td>—</td><td>Chờ DQG · 03/06</td><td>Pending</td><td>Pending</td><td>Pending</td><td><span class="badge" style="background:#f5f3ff;color:#7c3aed">Pending</span></td></tr>
+        <tr><td>GS6</td><td>—</td><td>—</td><td>Chờ DQG · 03/06</td><td>Pending</td><td>Pending</td><td>Pending</td><td><span class="badge" style="background:#f5f3ff;color:#7c3aed">Pending</span></td></tr>
       </tbody>
     </table></div></div>
+    </details>
 
-    <div class="section-title">4. Rủi ro khách hàng trọng điểm (Key Customer Risk)</div>
-    <div class="card">
+    <details class="sec-fold">
+      <summary>🏢 4. Rủi ro khách hàng trọng điểm — Samsung / Canon / Brother</summary>
+      <div class="sec-fold-body">
     <div class="tbl-wrap"><table>
       <thead><tr><th>Khách hàng</th><th>Nhà máy</th><th>Nhóm hàng</th><th>Claim</th><th>OTIF Risk</th><th>Quality Risk</th><th>Owner</th><th>RAG</th></tr></thead>
       <tbody>
@@ -365,43 +464,48 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
       </tbody>
     </table></div>
     <div class="info-box" style="background:#eff6ff;border-left-color:#2563eb">Issue nhà máy chỉ được nâng priority khi có impact tới khách hàng: claim, trễ giao, hold/release, thiếu WIP, bottleneck công đoạn hoặc rủi ro chất lượng.</div></div>
+    </details>
 
-    <div class="section-title">5. Hàng tồn lâu / Thay đổi KT / Hàng hoàn trả (Aging / ECN / RMA / Recovery Before Scrap)</div>
-    <div class="card">
+    <details class="sec-fold">
+      <summary>📋 5. Hàng tồn lâu / ECN / RMA / Recovery Before Scrap — chi tiết</summary>
+      <div class="sec-fold-body">
     <div class="kpi-grid">
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">{PEND_TXT}</span></div>
       <div class="kpi-lbl">Hàng Aging >30 ngày</div>
       <div class='kpi-sub'>INP-QLCL-001 / INP-KHO-001</div>
       
     </div>
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">{PEND_TXT}</span></div>
       <div class="kpi-lbl">ECN đang xử lý</div>
       <div class='kpi-sub'>INP-QLCL-001</div>
       
     </div>
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">{PEND_TXT}</span></div>
       <div class="kpi-lbl">RMA / Hàng hoàn trả</div>
       <div class='kpi-sub'>INP-QLCL-001</div>
       
     </div>
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">{PEND_TXT}</span></div>
       <div class="kpi-lbl">Recovery before Scrap</div>
       <div class='kpi-sub'>INP-QLCL-001</div>
       
     </div>
     </div></div>
+    </details>
 
-    <div class="section-title">6. Kiểm chứng độc lập hiện trường — GSTT (Independent Compliance Check)</div>
-    <div class="note">GSTT hiện trường thuộc BG/Ban kiểm soát, PIC: Mr Lâm. Vai trò: kiểm chứng độc lập việc Owner/PIC trục BO đã làm thật, đúng, đủ, có bằng chứng và có hiệu quả tại hiện trường.</div>
-    <div class="card">
+    <details class="sec-fold">
+      <summary>🛡️ 6. Kiểm chứng độc lập hiện trường — GSTT (Independent Compliance Check)</summary>
+      <div class="sec-fold-body">
+        <div class="note">GSTT hiện trường thuộc BG/Ban kiểm soát, PIC: Mr Lâm. Vai trò: kiểm chứng độc lập việc Owner/PIC trục BO đã làm thật, đúng, đủ, có bằng chứng và có hiệu quả tại hiện trường.</div>
+        
     <div class="kpi-grid">
       
     <div class="kpi-card rag-red">
@@ -432,26 +536,28 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
         <tr><td>GS5</td><td>PROD_LOG / WIP / NCR</td><td>Mr Lam / Mr Luân / Mr Đức</td><td>Field + Data</td><td>Mr Lâm</td><td>D+5</td><td><span class="badge" style="background:#f5f3ff;color:#7c3aed">Pending</span></td></tr>
         <tr><td>GS6</td><td>PROD_LOG / OEE / WIP</td><td>Mr Mạnh / Mr Nam / Mr Luân</td><td>Field + Data</td><td>Mr Lâm</td><td>D+5</td><td><span class="badge" style="background:#f5f3ff;color:#7c3aed">Pending</span></td></tr>
       </tbody>
-    </table></div></div>
+    </table></div>
+      </div>
+    </details>
     </div>
 <div id="c2" class="panel">
     <div class="section-title">GSHN / GS1 — Tháp điều hành mini (Mini Control Tower)</div>
-    <div class="note">📊 KPI theo site sẽ hiển thị đầy đủ khi PROD_LOG GS1 đã qua Cổng kiểm soát dữ liệu (DQG). Hiện đang dùng dữ liệu tổng hợp (aggregate) + Pending DQG.</div>
+    <div class="note">📊 KPI theo site sẽ hiển thị đầy đủ khi PROD_LOG GS1 đã qua Cổng kiểm soát dữ liệu (DQG). Hiện đang dùng dữ liệu tổng hợp (aggregate) + Chờ DQG · 03/06.</div>
     
     <div class="kpi-grid-5">
       
     <div class="kpi-card rag-blue">
       <div class="kpi-val"><span class="blue">89.1%</span></div>
       <div class="kpi-lbl">Plan/DO</div>
-      <div class='kpi-sub'>Target ≥95% | Mr Hào</div>
+      <div class='kpi-sub'>Target ≥95% | Mr Hao</div>
       <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='warn-box'>Cần PROD_LOG GS1 đúng template. Target ≥95% Plan/DO Adherence.</div></div></details>
     </div>
       
     <div class="kpi-card rag-gray">
       <div class="kpi-val"><span class="blue">50.0%</span></div>
       <div class="kpi-lbl">OTIF</div>
-      <div class='kpi-sub'>Delivery Risk | Mr Hào</div>
-      <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='info-box'>Operational Owner GS1: Mr Hào. External Data Provider: Mr Hưng (KHSX-Điều độ).</div></div></details>
+      <div class='kpi-sub'>Delivery Risk | Mr Hao</div>
+      <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='info-box'>Operational Owner GS1: Mr Hao. External Data Provider: Mr Hưng (KHSX-Điều độ).</div></div></details>
     </div>
       
     <div class="kpi-card rag-amber">
@@ -469,7 +575,7 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
     </div>
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">Chờ DQG · 03/06</span></div>
       <div class="kpi-lbl">Kho/WIP/FIFO</div>
       <div class='kpi-sub'>WIP Qty</div>
       <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='warn-box'>Cần WIP/FIFO GS1: WO, Customer, Location, Qty, Age, FIFO_Status.</div></div></details>
@@ -481,7 +587,7 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
       
     <div class="tbl-wrap"><table>
       <thead><tr><th>Issue</th><th>RAG</th><th>Owner/PIC</th><th>Action</th><th>Deadline</th><th>Close condition</th></tr></thead>
-      <tbody><tr><td>Plan/DO GS1 cần xác nhận</td><td><span class="badge" style="background:#f8fafc;color:#64748b">Yellow</span></td><td>Mr Hào</td><td>Review WO/máy/ca</td><td>D+3</td><td>Có root cause</td></tr><tr><td>Machine Log GS1 chưa đủ</td><td><span class="badge" style="background:#fef2f2;color:#dc2626">Red</span></td><td>Mr Thập</td><td>Gửi downtime log</td><td>D+5</td><td>Đủ start/end/reason</td></tr><tr><td>Kho/WIP/FIFO GS1 chưa có dữ liệu</td><td><span class="badge" style="background:#f5f3ff;color:#7c3aed">Pending</span></td><td>Mr Dũng</td><td>Gửi WIP/FIFO file</td><td>D+5</td><td>Map OTIF/Customer</td></tr></tbody>
+      <tbody><tr><td>Plan/DO GS1 can xac nhan</td><td><span class="badge" style="background:#f8fafc;color:#64748b">Yellow</span></td><td>Mr Hao</td><td>Review WO/may/ca</td><td>D+3</td><td>Co root cause</td></tr><tr><td>Machine Log GS1 chua du</td><td><span class="badge" style="background:#fef2f2;color:#dc2626">Red</span></td><td>Mr Thap</td><td>Gui downtime log</td><td>D+5</td><td>Du start/end/reason</td></tr><tr><td>Kho/WIP/FIFO GS1 chua co du lieu</td><td><span class="badge" style="background:#f5f3ff;color:#7c3aed">Pending</span></td><td>Mr Dung</td><td>Gui WIP/FIFO file</td><td>D+5</td><td>Map OTIF/Customer</td></tr></tbody>
     </table></div>
     </div>
 
@@ -529,33 +635,33 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
     </div></div>
 <div id="c3" class="panel">
     <div class="section-title">GSQV / GS5 — Tháp điều hành mini (Mini Control Tower)</div>
-    <div class="note">📊 KPI theo site sẽ hiển thị đầy đủ khi PROD_LOG GS5 đã qua Cổng kiểm soát dữ liệu (DQG). Hiện đang dùng dữ liệu tổng hợp (aggregate) + Pending DQG.</div>
+    <div class="note">📊 KPI theo site sẽ hiển thị đầy đủ khi PROD_LOG GS5 đã qua Cổng kiểm soát dữ liệu (DQG). Hiện đang dùng dữ liệu tổng hợp (aggregate) + Chờ DQG · 03/06.</div>
     
     <div class="kpi-grid-5">
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">Chờ DQG · 03/06</span></div>
       <div class="kpi-lbl">Plan/DO</div>
       <div class='kpi-sub'>Target ≥95% | Mr Lam</div>
       <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='warn-box'>Cần PROD_LOG GS5 đúng template. Target ≥95% Plan/DO Adherence.</div></div></details>
     </div>
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">Chờ DQG · 03/06</span></div>
       <div class="kpi-lbl">OTIF</div>
       <div class='kpi-sub'>Delivery Risk | Mr Lam</div>
       <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='info-box'>Operational Owner GS5: Mr Lam. External Data Provider: Mr Hưng (KHSX-Điều độ).</div></div></details>
     </div>
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">Chờ DQG · 03/06</span></div>
       <div class="kpi-lbl">OEE/Downtime</div>
       <div class='kpi-sub'>Cần Machine Log</div>
       <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='warn-box'>Cần Machine Log có start/end, reason code, machine mapping.</div></div></details>
     </div>
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">Chờ DQG · 03/06</span></div>
       <div class="kpi-lbl">Quality/NCR</div>
       <div class='kpi-sub'>Tổng NCR</div>
       <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='info-box'>NCR/CAR GS5 cần map được với PROD_LOG. Owner: Mr Đức / Mr Giang.</div></div></details>
@@ -574,7 +680,7 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
       
     <div class="tbl-wrap"><table>
       <thead><tr><th>Issue</th><th>RAG</th><th>Owner/PIC</th><th>Action</th><th>Deadline</th><th>Close condition</th></tr></thead>
-      <tbody><tr><td>PROD_LOG GS5 thiếu ORDER_ID</td><td><span class="badge" style="background:#fef2f2;color:#dc2626">Red</span></td><td>Mr Lam</td><td>Gửi file đúng template</td><td>D+5</td><td>Qua DQG</td></tr><tr><td>Kho/WIP/FIFO GS5 chưa có dữ liệu</td><td><span class="badge" style="background:#fef2f2;color:#dc2626">Red</span></td><td>Mr Luân</td><td>Gửi WIP/FIFO file</td><td>D+5</td><td>Map OTIF/Customer</td></tr><tr><td>Machine Log GS5 chưa có</td><td><span class="badge" style="background:#fef2f2;color:#dc2626">Red</span></td><td>Mr Nam</td><td>Gửi downtime log</td><td>D+5</td><td>start/end/reason</td></tr></tbody>
+      <tbody><tr><td>PROD_LOG GS5 thieu ORDER_ID</td><td><span class="badge" style="background:#fef2f2;color:#dc2626">Red</span></td><td>Mr Lam</td><td>Gui file dung template</td><td>D+5</td><td>Qua DQG</td></tr><tr><td>Kho/WIP/FIFO GS5 chua co du lieu</td><td><span class="badge" style="background:#fef2f2;color:#dc2626">Red</span></td><td>Mr Luan</td><td>Gui WIP/FIFO file</td><td>D+5</td><td>Map OTIF/Customer</td></tr><tr><td>Machine Log GS5 chua co</td><td><span class="badge" style="background:#fef2f2;color:#dc2626">Red</span></td><td>Mr Nam</td><td>Gui downtime log</td><td>D+5</td><td>start/end/reason</td></tr></tbody>
     </table></div>
     </div>
 
@@ -622,40 +728,40 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
     </div></div>
 <div id="c4" class="panel">
     <div class="section-title">GSQV / GS6 — Tháp điều hành mini (Mini Control Tower)</div>
-    <div class="note">📊 KPI theo site sẽ hiển thị đầy đủ khi PROD_LOG GS6 đã qua Cổng kiểm soát dữ liệu (DQG). Hiện đang dùng dữ liệu tổng hợp (aggregate) + Pending DQG.</div>
+    <div class="note">📊 KPI theo site sẽ hiển thị đầy đủ khi PROD_LOG GS6 đã qua Cổng kiểm soát dữ liệu (DQG). Hiện đang dùng dữ liệu tổng hợp (aggregate) + Chờ DQG · 03/06.</div>
     
     <div class="kpi-grid-5">
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">Chờ DQG · 03/06</span></div>
       <div class="kpi-lbl">Plan/DO</div>
-      <div class='kpi-sub'>Target ≥95% | Mr Mạnh</div>
+      <div class='kpi-sub'>Target ≥95% | Mr Manh</div>
       <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='warn-box'>Cần PROD_LOG GS6 đúng template. Target ≥95% Plan/DO Adherence.</div></div></details>
     </div>
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">Chờ DQG · 03/06</span></div>
       <div class="kpi-lbl">OTIF</div>
-      <div class='kpi-sub'>Delivery Risk | Mr Mạnh</div>
-      <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='info-box'>Operational Owner GS6: Mr Mạnh. External Data Provider: Mr Hưng (KHSX-Điều độ).</div></div></details>
+      <div class='kpi-sub'>Delivery Risk | Mr Manh</div>
+      <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='info-box'>Operational Owner GS6: Mr Manh. External Data Provider: Mr Hưng (KHSX-Điều độ).</div></div></details>
     </div>
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">Chờ DQG · 03/06</span></div>
       <div class="kpi-lbl">OEE/Downtime</div>
       <div class='kpi-sub'>Cần Machine Log</div>
       <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='warn-box'>Cần Machine Log có start/end, reason code, machine mapping.</div></div></details>
     </div>
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">Chờ DQG · 03/06</span></div>
       <div class="kpi-lbl">Quality/NCR</div>
       <div class='kpi-sub'>Tổng NCR</div>
       <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='info-box'>NCR/CAR GS6 cần map được với PROD_LOG. Owner: Mr Đức / Mr Giang.</div></div></details>
     </div>
       
     <div class="kpi-card rag-gray">
-      <div class="kpi-val"><span class="gray">Pending DQG</span></div>
+      <div class="kpi-val"><span class="gray">Chờ DQG · 03/06</span></div>
       <div class="kpi-lbl">Kho/WIP/FIFO</div>
       <div class='kpi-sub'>WIP Qty</div>
       <details class="drill"><summary>Xem chi tiết</summary><div class="drill-body"><div class='warn-box'>Cần WIP/FIFO GS6: WO, Customer, Location, Qty, Age, FIFO_Status.</div></div></details>
@@ -667,7 +773,7 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
       
     <div class="tbl-wrap"><table>
       <thead><tr><th>Issue</th><th>RAG</th><th>Owner/PIC</th><th>Action</th><th>Deadline</th><th>Close condition</th></tr></thead>
-      <tbody><tr><td>PROD_LOG GS6 cần tách khỏi GS5</td><td><span class="badge" style="background:#fef2f2;color:#dc2626">Red</span></td><td>Mr Mạnh</td><td>Gửi file GS6 riêng</td><td>D+5</td><td>Qua DQG</td></tr><tr><td>Machine Log GS6 chưa có</td><td><span class="badge" style="background:#fef2f2;color:#dc2626">Red</span></td><td>Mr Nam</td><td>Gửi downtime log</td><td>D+5</td><td>start/end/reason</td></tr><tr><td>Kho/WIP/FIFO GS6 chưa có dữ liệu</td><td><span class="badge" style="background:#f5f3ff;color:#7c3aed">Pending</span></td><td>Mr Luân</td><td>Gửi WIP/FIFO file</td><td>D+5</td><td>Map OTIF/Customer</td></tr></tbody>
+      <tbody><tr><td>PROD_LOG GS6 can tach khoi GS5</td><td><span class="badge" style="background:#fef2f2;color:#dc2626">Red</span></td><td>Mr Manh</td><td>Gui file GS6 rieng</td><td>D+5</td><td>Qua DQG</td></tr><tr><td>Machine Log GS6 chua co</td><td><span class="badge" style="background:#fef2f2;color:#dc2626">Red</span></td><td>Mr Nam</td><td>Gui downtime log</td><td>D+5</td><td>start/end/reason</td></tr><tr><td>Kho/WIP/FIFO GS6 chua co du lieu</td><td><span class="badge" style="background:#f5f3ff;color:#7c3aed">Pending</span></td><td>Mr Luan</td><td>Gui WIP/FIFO file</td><td>D+5</td><td>Map OTIF/Customer</td></tr></tbody>
     </table></div>
     </div>
 
@@ -1079,10 +1185,10 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
     </div></div>
 
 <div class="footer">
-  GSBB BO Control Tower&nbsp;·&nbsp;
-  Auto-built by GitHub Actions&nbsp;·&nbsp;
-  Dữ liệu: Google Sheets → DQG → KPI&nbsp;·&nbsp;
-  2026-06-01 04:21 UTC
+  GSBB BO Control Tower&nbsp;&middot;&nbsp;
+  Auto-built by GitHub Actions&nbsp;&middot;&nbsp;
+  Du lieu: Google Sheets &rarr; DQG &rarr; KPI&nbsp;&middot;&nbsp;
+  2026-06-01 10:27 UTC
 </div>
 </body>
 </html>

@@ -215,15 +215,40 @@ body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
              padding:8px 14px;letter-spacing:.3px}
 
 /* Header */
-.hdr{background:linear-gradient(135deg,#0c1445 0%,#0f2d87 55%,#1a4fba 100%);
-     color:#fff;padding:18px 22px;box-shadow:0 3px 14px rgba(0,0,0,.35)}
-.hdr h1{font-size:18px;font-weight:800;letter-spacing:.5px;text-shadow:0 1px 3px rgba(0,0,0,.3)}
-.hdr .sub{font-size:11px;color:#93c5fd;margin-top:5px;line-height:1.55}
-.badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}
+.hdr{background:linear-gradient(160deg,#0a2e12 0%,#145522 45%,#0a2e12 100%);
+     color:#fff;padding:14px 18px 12px;box-shadow:0 4px 20px rgba(0,0,0,.5);
+     border-bottom:3px solid #d4a017}
+/* Brand row */
+.hdr-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.gs-brand{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.gs-svg{width:44px;height:44px;flex-shrink:0}
+.gs-txt{display:flex;flex-direction:column;gap:1px}
+.gs-name{font-size:15px;font-weight:900;color:#f0c040;letter-spacing:1.8px;line-height:1}
+.gs-sub{font-size:8px;color:#86efac;letter-spacing:.7px;font-weight:700;text-transform:uppercase}
+.hdr-vline{width:1px;height:36px;background:rgba(255,255,255,.2);flex-shrink:0;
+           margin:0 4px}
+.hdr-titles{flex:1;min-width:0}
+.gsp-pill{display:inline-flex;align-items:center;gap:4px;
+          background:linear-gradient(90deg,#b8860b,#f0c040,#b8860b);
+          color:#0a2e12;font-size:9px;font-weight:900;padding:2px 10px;
+          border-radius:20px;letter-spacing:.8px;margin-bottom:5px;
+          text-shadow:none;border:none}
+.hdr-titles h1{font-size:16px;font-weight:800;letter-spacing:.3px;
+               text-shadow:0 1px 4px rgba(0,0,0,.4);margin:0 0 2px;color:#fff}
+.hdr .sub{font-size:10px;color:#86efac;line-height:1.5}
+.hdr-tagline{font-size:9px;color:rgba(240,192,64,.7);letter-spacing:1.2px;
+             font-weight:700;margin-top:6px;text-transform:uppercase}
+.badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
 .bdg{font-size:10px;font-weight:800;border-radius:5px;padding:3px 9px;letter-spacing:.3px}
 .bdg-warn{background:rgba(146,64,14,.9);color:#fef3c7;border:1px solid rgba(255,255,255,.15)}
 .bdg-ok{background:rgba(20,83,45,.9);color:#d1fae5;border:1px solid rgba(255,255,255,.15)}
-.bdg-info{background:rgba(30,64,175,.9);color:#dbeafe;border:1px solid rgba(255,255,255,.15)}
+.bdg-info{background:rgba(6,78,59,.9);color:#d1fae5;border:1px solid rgba(255,255,255,.15)}
+@media(max-width:600px){
+  .hdr-vline{display:none}
+  .hdr-row{gap:8px}
+  .gs-name{font-size:13px}
+  .hdr-titles h1{font-size:14px}
+}
 
 /* Tab nav */
 input[name=tab]{display:none}
@@ -1263,18 +1288,31 @@ def build_html(kpi_full, dqg_data, build_time):
         '</head>\n<body>\n'
         + warn +
         f'<div class="hdr">\n'
-        f'  <h1>&#127981; BO Control Tower Dashboard - GSBB</h1>\n'
-        f'  <div class="sub">'
-        f'KPI chinh thuc: {official}/{total} bo phan dat Cong DL (DQG)&nbsp;|&nbsp;'
-        f'Cap nhat: {build_time}&nbsp;|&nbsp;'
-        f'Nguon: Google Sheets &rarr; DQG &rarr; KPI&nbsp;|&nbsp;'
-        f'Auto-build: GitHub Actions</div>\n'
+        f'  <div class="hdr-row">\n'
+        f'    <div class="gs-brand">\n'
+        '      <svg class=\"gs-svg\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M58,7 A43,43 0 0,0 58,93\" fill=\"none\" stroke=\"#6ee7b7\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M58,21 A29,29 0 0,0 58,79\" fill=\"none\" stroke=\"#86efac\" stroke-width=\"8\" stroke-linecap=\"round\"/><path d=\"M58,35 A15,15 0 0,0 58,65\" fill=\"none\" stroke=\"#a7f3d0\" stroke-width=\"7\" stroke-linecap=\"round\"/><circle cx=\"73\" cy=\"50\" r=\"21\" fill=\"#d4a017\"/><circle cx=\"73\" cy=\"50\" r=\"12\" fill=\"#f5c518\"/><line x1=\"73\" y1=\"28\" x2=\"73\" y2=\"38\" stroke=\"white\" stroke-width=\"2.5\" stroke-linecap=\"round\" opacity=\"0.95\"/><line x1=\"73\" y1=\"62\" x2=\"73\" y2=\"72\" stroke=\"white\" stroke-width=\"2.5\" stroke-linecap=\"round\" opacity=\"0.95\"/><line x1=\"51\" y1=\"50\" x2=\"61\" y2=\"50\" stroke=\"white\" stroke-width=\"2.5\" stroke-linecap=\"round\" opacity=\"0.95\"/><line x1=\"85\" y1=\"50\" x2=\"95\" y2=\"50\" stroke=\"white\" stroke-width=\"2.5\" stroke-linecap=\"round\" opacity=\"0.95\"/><line x1=\"58\" y1=\"35\" x2=\"65\" y2=\"42\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\"0.8\"/><line x1=\"81\" y1=\"35\" x2=\"88\" y2=\"28\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\"0.8\"/><line x1=\"58\" y1=\"65\" x2=\"65\" y2=\"58\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\"0.8\"/><line x1=\"81\" y1=\"65\" x2=\"88\" y2=\"72\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\"0.8\"/></svg>\n'
+        f'      <div class="gs-txt"><div class="gs-name">GOLDSUN</div>'
+        f'      <div class="gs-sub">GSP NEXT 30</div></div>\n'
+        f'    </div>\n'
+        f'    <div class="hdr-vline"></div>\n'
+        f'    <div class="hdr-titles">\n'
+        f'      <div class="gsp-pill">&#11088; GSP NEXT 30 &mdash; BO Control Tower</div>\n'
+        f'      <h1>Dashboard &#272;i&#7873;u h&#224;nh v&#7853;n h&#224;nh GSBB</h1>\n'
+        f'      <div class="sub">'
+        f'KPI ch&#237;nh th&#7913;c: {official}/{total} b&#7897; ph&#7853;n &#273;&#7841;t C&#7893;ng DL (DQG)&nbsp;|&nbsp;'
+        f'C&#7853;p nh&#7853;t: {build_time}&nbsp;|&nbsp;'
+        f'Ngu&#7891;n: Google Sheets &rarr; DQG &rarr; KPI&nbsp;|&nbsp;Auto-build: GitHub Actions'
+        f'      </div>\n'
+        f'    </div>\n'
+        f'  </div>\n'
         f'  <div class="badges">\n'
         f'    <span class="bdg" style="background:{badge_bg};color:{badge_clr}">'
         f'      {overall_label} &mdash; {official}/{total} PASS</span>\n'
         f'    <span class="bdg bdg-info">Cong DL (DQG): {dqg_pass} PASS | {dqg_skip} SKIP</span>\n'
         f'    <span class="bdg bdg-warn">Du lieu thu nghiem (Trial) &mdash; qua DQG moi la KPI chinh thuc</span>\n'
-        f'  </div>\n</div>\n'
+        f'  </div>\n'
+        f'  <div class="hdr-tagline">TH&#431;&#416;NG HI&#7878;U M&#7�;I &middot; H&#7878; TH&#7888;NG M&#7882;I &middot; T&#431; DUY M&#7882;I</div>\n'
+        f'</div>\n'
         '<input type="radio" name="tab" id="t1" checked>\n'
         '<input type="radio" name="tab" id="t2">\n'
         '<input type="radio" name="tab" id="t3">\n'

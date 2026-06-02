@@ -1296,8 +1296,8 @@ def main():
     logs = os.path.join(base, '..', 'logs')
     docs = os.path.join(base, '..', 'docs')
 
-    kpi_path = os.path.join(logs, 'kpi_latest.json')
-    dqg_path = os.path.join(logs, 'dqg_latest.json')
+    kpi_path = os.path.join(logs, 'kpi_output.json')
+    dqg_path = os.path.join(logs, 'dqg_results.json')
     out_path = os.path.join(docs, 'index.html')
 
     with open(kpi_path, 'r', encoding='utf-8') as f:

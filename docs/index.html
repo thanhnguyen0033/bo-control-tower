@@ -219,25 +219,32 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
 .sb-link:hover{color:#1d4ed8;padding-left:3px;transition:.15s}
 .main-col{flex:1;min-width:0;overflow:hidden;padding:16px 20px 40px}
 
+/* ── Mobile responsive ── */
+.tab-short{display:none}
 @media(max-width:960px){
   .kpi-grid-5,.grid-2,.grid-3{grid-template-columns:1fr}
   .heat-grid,.gstt-grid{min-width:700px}
   .panel{padding:12px 12px 30px}
   .nav label{padding:8px 12px;font-size:12px;margin:4px 2px 0;border-radius:5px 5px 0 0}
   .sec-fold>summary{font-size:11px;padding:9px 12px}
-  .tong-bo-layout{flex-direction:column}.sb-col{width:100%;min-height:auto;border-right:none;border-bottom:1px solid #e2e8f0}
-  .sb-col{position:static;width:100%;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .tong-bo-layout{flex-direction:column}
+  .main-col{order:1}
+  .sb-col{order:2;position:static;width:100%;min-height:auto;border-right:none;
+          border-top:2px solid #e2e8f0;display:grid;
+          grid-template-columns:repeat(2,1fr);gap:8px;padding:12px}
   .sb-card{border-top-width:2px}
+  .tab-full{display:none}.tab-short{display:inline}
 }
 @media(max-width:600px){
   .sb-col{grid-template-columns:1fr}
+  .nav label{padding:6px 7px;font-size:11px}
 }
 </style>
 </head>
 <body>
 <div class="hdr">
   <h1>&#127981; BO Control Tower Dashboard - GSBB</h1>
-  <div class="sub">KPI chinh thuc: 8/8 bo phan dat Cong DL (DQG)&nbsp;|&nbsp;Cap nhat: 2026-06-02 08:36 UTC&nbsp;|&nbsp;Nguon: Google Sheets &rarr; DQG &rarr; KPI&nbsp;|&nbsp;Auto-build: GitHub Actions</div>
+  <div class="sub">KPI chinh thuc: 8/8 bo phan dat Cong DL (DQG)&nbsp;|&nbsp;Cap nhat: 2026-06-02 16:21 UTC&nbsp;|&nbsp;Nguon: Google Sheets &rarr; DQG &rarr; KPI&nbsp;|&nbsp;Auto-build: GitHub Actions</div>
   <div class="badges">
     <span class="bdg" style="background:#14532d;color:#d1fae5">      OPERATIONAL &mdash; 8/8 PASS</span>
     <span class="bdg bdg-info">Cong DL (DQG): 8 PASS | 0 SKIP</span>
@@ -251,14 +258,14 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
 <input type="radio" name="tab" id="t5">
 <input type="radio" name="tab" id="t6">
 <nav class="nav">
-  <label for="t1">&#127968; T&#7893;ng BO</label>
-  <label for="t2">&#127981; GSHN / GS1</label>
-  <label for="t3">&#127959; GSQV / GS5</label>
-  <label for="t4">&#127959; GSQV / GS6</label>
-  <label for="t5">&#128202; Ch&#7881; s&#7889; / Owner (KPI/PIC)</label>
-  <label for="t6">&#128737;&#65039; Gi&#225;m s&#225;t tu&#226;n th&#7911; (GSTT)</label>
+  <label for="t1">&#127968; <span class="tab-full">T&#7893;ng BO</span><span class="tab-short">BO</span></label>
+  <label for="t2">&#127981; <span class="tab-full">GSHN / GS1</span><span class="tab-short">GS1</span></label>
+  <label for="t3">&#127959; <span class="tab-full">GSQV / GS5</span><span class="tab-short">GS5</span></label>
+  <label for="t4">&#127959; <span class="tab-full">GSQV / GS6</span><span class="tab-short">GS6</span></label>
+  <label for="t5">&#128202; <span class="tab-full">Ch&#7881; s&#7889; / Owner (KPI/PIC)</span><span class="tab-short">KPI/PIC</span></label>
+  <label for="t6">&#128737;&#65039; <span class="tab-full">Gi&#225;m s&#225;t tu&#226;n th&#7911; (GSTT)</span><span class="tab-short">GSTT</span></label>
 </nav>
-<div id="c1" class="panel"><div class="tong-bo-layout"><aside class="sb-col"><div class="sb-card"><div class="sb-title">📊 KPI Tổng hợp</div><div class="sb-kpi" style="background:#fef2f2;border-left-color:#dc2626"><div class="sb-kpi-lbl">Tuân thủ KH (Plan/DO)</div><div class="sb-kpi-val" style="color:#dc2626">82.3%</div></div><div class="sb-kpi" style="background:#fef2f2;border-left-color:#dc2626"><div class="sb-kpi-lbl">Giao đúng hạn (OTIF)</div><div class="sb-kpi-val" style="color:#dc2626">50.0%</div></div><div class="sb-kpi" style="background:#fef2f2;border-left-color:#dc2626"><div class="sb-kpi-lbl">Dừng máy (Downtime)</div><div class="sb-kpi-val" style="color:#dc2626">2.1h</div></div><div class="sb-kpi" style="background:#fffbeb;border-left-color:#d97706"><div class="sb-kpi-lbl">Phiếu NC (NCR)</div><div class="sb-kpi-val" style="color:#d97706">2</div></div></div><div class="sb-card" style="border-top:3px solid #16a34a"><div class="sb-title" style="color:#16a34a">🚨 BO Issues</div><div style="text-align:center;padding:6px 0"><div style="font-size:36px;font-weight:900;color:#16a34a;line-height:1">0</div><div style="font-size:10px;color:#6b7280;margin-top:3px">Đang mở</div></div><div style="display:flex;justify-content:space-around;margin-top:8px;padding-top:8px;border-top:1px solid #f1f5f9"><div style="text-align:center"><div style="font-size:14px;font-weight:800;color:#dc2626">0</div><div style="font-size:9px;color:#6b7280">Quá hạn</div></div><div style="text-align:center"><div style="font-size:14px;font-weight:800;color:#d97706">1</div><div style="font-size:9px;color:#6b7280">Escalated</div></div></div></div><div class="sb-card"><div class="sb-title">📡 Data Status</div><div style="font-size:11px;color:#374151;padding:4px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#d97706;margin-right:5px;flex-shrink:0"></span><span style="flex:1">GS1 / GSHN</span><span style="font-size:10px;color:#d97706;font-weight:600">Trial data</span></div><div style="font-size:11px;color:#374151;padding:4px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#9ca3af;margin-right:5px;flex-shrink:0"></span><span style="flex:1">GS5 / GSQV</span><span style="font-size:10px;color:#9ca3af;font-weight:600">Chờ 03/06</span></div><div style="font-size:11px;color:#374151;padding:4px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#9ca3af;margin-right:5px;flex-shrink:0"></span><span style="flex:1">GS6 / GSQV</span><span style="font-size:10px;color:#9ca3af;font-weight:600">Chờ 03/06</span></div><div style="font-size:10px;color:#9ca3af;margin-top:8px;padding-top:6px;border-top:1px solid #f1f5f9">🕐 2026-06-02 08:36 UTC</div></div><div class="sb-card"><div class="sb-title">⚡ Nội dung</div><a class="sb-link" href="#sec1">🗺️ Heatmap sức khỏe NM</a><a class="sb-link" href="#sec2">📊 KPI Cards điều hành</a><a class="sb-link" href="#sec3">📦 Kho / WIP / FIFO</a><a class="sb-link" href="#sec4">🏢 Rủi ro khách hàng</a><a class="sb-link" href="#sec5">📋 Aging / ECN / RMA</a><a class="sb-link" href="#sec6">🛡️ GSTT Compliance</a></div></aside><div class="main-col">
+<div id="c1" class="panel"><div class="tong-bo-layout"><aside class="sb-col"><div class="sb-card"><div class="sb-title">📊 KPI Tổng hợp</div><div class="sb-kpi" style="background:#fef2f2;border-left-color:#dc2626"><div class="sb-kpi-lbl">Tuân thủ KH (Plan/DO)</div><div class="sb-kpi-val" style="color:#dc2626">82.3%</div></div><div class="sb-kpi" style="background:#fef2f2;border-left-color:#dc2626"><div class="sb-kpi-lbl">Giao đúng hạn (OTIF)</div><div class="sb-kpi-val" style="color:#dc2626">50.0%</div></div><div class="sb-kpi" style="background:#fef2f2;border-left-color:#dc2626"><div class="sb-kpi-lbl">Dừng máy (Downtime)</div><div class="sb-kpi-val" style="color:#dc2626">2.1h</div></div><div class="sb-kpi" style="background:#fffbeb;border-left-color:#d97706"><div class="sb-kpi-lbl">Phiếu NC (NCR)</div><div class="sb-kpi-val" style="color:#d97706">2</div></div></div><div class="sb-card" style="border-top:3px solid #16a34a"><div class="sb-title" style="color:#16a34a">🚨 BO Issues</div><div style="text-align:center;padding:6px 0"><div style="font-size:36px;font-weight:900;color:#16a34a;line-height:1">0</div><div style="font-size:10px;color:#6b7280;margin-top:3px">Đang mở</div></div><div style="display:flex;justify-content:space-around;margin-top:8px;padding-top:8px;border-top:1px solid #f1f5f9"><div style="text-align:center"><div style="font-size:14px;font-weight:800;color:#dc2626">0</div><div style="font-size:9px;color:#6b7280">Quá hạn</div></div><div style="text-align:center"><div style="font-size:14px;font-weight:800;color:#d97706">1</div><div style="font-size:9px;color:#6b7280">Escalated</div></div></div></div><div class="sb-card"><div class="sb-title">📡 Data Status</div><div style="font-size:11px;color:#374151;padding:4px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#d97706;margin-right:5px;flex-shrink:0"></span><span style="flex:1">GS1 / GSHN</span><span style="font-size:10px;color:#d97706;font-weight:600">Trial data</span></div><div style="font-size:11px;color:#374151;padding:4px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#9ca3af;margin-right:5px;flex-shrink:0"></span><span style="flex:1">GS5 / GSQV</span><span style="font-size:10px;color:#9ca3af;font-weight:600">Chờ 03/06</span></div><div style="font-size:11px;color:#374151;padding:4px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#9ca3af;margin-right:5px;flex-shrink:0"></span><span style="flex:1">GS6 / GSQV</span><span style="font-size:10px;color:#9ca3af;font-weight:600">Chờ 03/06</span></div><div style="font-size:10px;color:#9ca3af;margin-top:8px;padding-top:6px;border-top:1px solid #f1f5f9">🕐 2026-06-02 16:21 UTC</div></div><div class="sb-card"><div class="sb-title">⚡ Nội dung</div><a class="sb-link" href="#sec1">🗺️ Heatmap sức khỏe NM</a><a class="sb-link" href="#sec2">📊 KPI Cards điều hành</a><a class="sb-link" href="#sec3">📦 Kho / WIP / FIFO</a><a class="sb-link" href="#sec4">🏢 Rủi ro khách hàng</a><a class="sb-link" href="#sec5">📋 Aging / ECN / RMA</a><a class="sb-link" href="#sec6">🛡️ GSTT Compliance</a></div></aside><div class="main-col">
     
     <div style="background:linear-gradient(135deg,#0c1445 0%,#0f2d87 55%,#1a4fba 100%);
                 border-radius:14px;padding:16px 18px;margin-bottom:18px;

@@ -229,14 +229,17 @@ body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
 input[name=tab]{display:none}
 .nav{display:flex;background:#152a7a;overflow-x:auto;position:sticky;top:34px;z-index:50;
      border-bottom:3px solid #0f2266;box-shadow:0 2px 8px rgba(0,0,0,.25)}
-.nav label{padding:14px 20px;color:rgba(255,255,255,.85);font-weight:700;font-size:13.5px;
-           white-space:nowrap;cursor:pointer;border-bottom:3px solid transparent;
+.nav label{padding:10px 18px;color:rgba(255,255,255,.80);font-weight:700;font-size:13px;
+           white-space:nowrap;cursor:pointer;border-radius:6px 6px 0 0;
+           background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);
+           border-bottom:3px solid transparent;margin:6px 3px 0;
            transition:.2s;letter-spacing:.2px;margin-bottom:-3px}
-.nav label:hover{background:rgba(255,255,255,.1);color:#fff}
+.nav label:hover{background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.30)}
 #t1:checked~.nav label[for=t1],#t2:checked~.nav label[for=t2],
 #t3:checked~.nav label[for=t3],#t4:checked~.nav label[for=t4],
 #t5:checked~.nav label[for=t5],#t6:checked~.nav label[for=t6]{
-  color:#fff;background:rgba(255,255,255,.22);border-bottom:4px solid #fbbf24}
+  color:#0f2d87 !important;background:#ffffff;border-color:rgba(255,255,255,.3);
+  border-bottom:3px solid #ffffff;font-weight:800}
 .panel{display:none;padding:0;max-width:100%;margin:0}
 #t1:checked~#c1,#t2:checked~#c2,#t3:checked~#c3,
 #t4:checked~#c4,#t5:checked~#c5,#t6:checked~#c6{display:block}
@@ -419,7 +422,7 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
   .kpi-grid-5,.grid-2,.grid-3{grid-template-columns:1fr}
   .heat-grid,.gstt-grid{min-width:700px}
   .panel{padding:12px 12px 30px}
-  .nav label{padding:11px 14px;font-size:12.5px}
+  .nav label{padding:8px 12px;font-size:12px;margin:4px 2px 0;border-radius:5px 5px 0 0}
   .sec-fold>summary{font-size:11px;padding:9px 12px}
   .tong-bo-layout{flex-direction:column}.sb-col{width:100%;min-height:auto;border-right:none;border-bottom:1px solid #e2e8f0}
   .sb-col{position:static;width:100%;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}

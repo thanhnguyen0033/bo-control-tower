@@ -237,7 +237,7 @@ input[name=tab]{display:none}
 #t3:checked~.nav label[for=t3],#t4:checked~.nav label[for=t4],
 #t5:checked~.nav label[for=t5],#t6:checked~.nav label[for=t6]{
   color:#fff;background:rgba(255,255,255,.13);border-bottom-color:#fbbf24}
-.panel{display:none;padding:0;max-width:1440px;margin:0 auto}
+.panel{display:none;padding:0;max-width:100%;margin:0}
 #t1:checked~#c1,#t2:checked~#c2,#t3:checked~#c3,
 #t4:checked~#c4,#t5:checked~#c5,#t6:checked~#c6{display:block}
 

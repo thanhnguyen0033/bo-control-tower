@@ -205,7 +205,7 @@ def bl(vi, en=""):
 
 CSS = """
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;background:#f0f4f8;color:#1e293b;font-size:13px;line-height:1.5}
+body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;background:#f0f4f8;color:#1e293b;font-size:13px;line-height:1.5;margin:0;padding:0}
 .bi-en{color:#94a3b8;font-size:10px;font-weight:400}
 
 /* Warning banner */
@@ -1272,12 +1272,12 @@ def build_html(kpi_full, dqg_data, build_time):
         '<input type="radio" name="tab" id="t5">\n'
         '<input type="radio" name="tab" id="t6">\n'
         '<nav class="nav">\n'
-        '  <label for="t1">&#127968; Tong BO</label>\n'
+        '  <label for="t1">&#127968; T&#7893;ng BO</label>\n'
                 '  <label for="t2">&#127981; GSHN / GS1</label>\n'
         '  <label for="t3">&#127959; GSQV / GS5</label>\n'
         '  <label for="t4">&#127959; GSQV / GS6</label>\n'
-        '  <label for="t5">&#128202; Chi so / Owner (KPI/PIC)</label>\n'
-        '  <label for="t6">&#128737;&#65039; Giam sat TT / Tuan thu (GSTT)</label>\n'
+        '  <label for="t5">&#128202; Ch&#7881; s&#7889; / Owner (KPI/PIC)</label>\n'
+        '  <label for="t6">&#128737;&#65039; Gi&#225;m s&#225;t / Tu&#226;n th&#7911; (GSTT)</label>\n'
         '</nav>\n'
         # Tab 1: #c1 IS the grid container (panel-sb layout)
         # t1 is a tuple: (sidebar_html, main_col_html)

@@ -418,18 +418,25 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
 .sb-link:hover{color:#1d4ed8;padding-left:3px;transition:.15s}
 .main-col{flex:1;min-width:0;overflow:hidden;padding:16px 20px 40px}
 
+/* ── Mobile responsive ── */
+.tab-short{display:none}
 @media(max-width:960px){
   .kpi-grid-5,.grid-2,.grid-3{grid-template-columns:1fr}
   .heat-grid,.gstt-grid{min-width:700px}
   .panel{padding:12px 12px 30px}
   .nav label{padding:8px 12px;font-size:12px;margin:4px 2px 0;border-radius:5px 5px 0 0}
   .sec-fold>summary{font-size:11px;padding:9px 12px}
-  .tong-bo-layout{flex-direction:column}.sb-col{width:100%;min-height:auto;border-right:none;border-bottom:1px solid #e2e8f0}
-  .sb-col{position:static;width:100%;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .tong-bo-layout{flex-direction:column}
+  .main-col{order:1}
+  .sb-col{order:2;position:static;width:100%;min-height:auto;border-right:none;
+          border-top:2px solid #e2e8f0;display:grid;
+          grid-template-columns:repeat(2,1fr);gap:8px;padding:12px}
   .sb-card{border-top-width:2px}
+  .tab-full{display:none}.tab-short{display:inline}
 }
 @media(max-width:600px){
   .sb-col{grid-template-columns:1fr}
+  .nav label{padding:6px 7px;font-size:11px}
 }
 """
 
@@ -1275,12 +1282,12 @@ def build_html(kpi_full, dqg_data, build_time):
         '<input type="radio" name="tab" id="t5">\n'
         '<input type="radio" name="tab" id="t6">\n'
         '<nav class="nav">\n'
-        '  <label for="t1">&#127968; T&#7893;ng BO</label>\n'
-                '  <label for="t2">&#127981; GSHN / GS1</label>\n'
-        '  <label for="t3">&#127959; GSQV / GS5</label>\n'
-        '  <label for="t4">&#127959; GSQV / GS6</label>\n'
-        '  <label for="t5">&#128202; Ch&#7881; s&#7889; / Owner (KPI/PIC)</label>\n'
-        '  <label for="t6">&#128737;&#65039; Gi&#225;m s&#225;t tu&#226;n th&#7911; (GSTT)</label>\n'
+        '  <label for="t1">&#127968; <span class=\"tab-full\">T&#7893;ng BO</span><span class=\"tab-short\">BO</span></label>\n'
+                '  <label for="t2">&#127981; <span class=\"tab-full\">GSHN / GS1</span><span class=\"tab-short\">GS1</span></label>\n'
+        '  <label for="t3">&#127959; <span class=\"tab-full\">GSQV / GS5</span><span class=\"tab-short\">GS5</span></label>\n'
+        '  <label for="t4">&#127959; <span class=\"tab-full\">GSQV / GS6</span><span class=\"tab-short\">GS6</span></label>\n'
+        '  <label for="t5">&#128202; <span class=\"tab-full\">Ch&#7881; s&#7889; / Owner (KPI/PIC)</span><span class=\"tab-short\">KPI/PIC</span></label>\n'
+        '  <label for="t6">&#128737;&#65039; <span class=\"tab-full\">Gi&#225;m s&#225;t tu&#226;n th&#7911; (GSTT)</span><span class=\"tab-short\">GSTT</span></label>\n'
         '</nav>\n'
         # Tab 1: #c1 IS the grid container (panel-sb layout)
         # t1 is a tuple: (sidebar_html, main_col_html)

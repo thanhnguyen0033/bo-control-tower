@@ -229,14 +229,14 @@ body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
 input[name=tab]{display:none}
 .nav{display:flex;background:#152a7a;overflow-x:auto;position:sticky;top:34px;z-index:50;
      border-bottom:3px solid #0f2266;box-shadow:0 2px 8px rgba(0,0,0,.25)}
-.nav label{padding:12px 18px;color:rgba(255,255,255,.65);font-weight:700;font-size:12px;
+.nav label{padding:14px 20px;color:rgba(255,255,255,.85);font-weight:700;font-size:13.5px;
            white-space:nowrap;cursor:pointer;border-bottom:3px solid transparent;
            transition:.2s;letter-spacing:.2px;margin-bottom:-3px}
 .nav label:hover{background:rgba(255,255,255,.1);color:#fff}
 #t1:checked~.nav label[for=t1],#t2:checked~.nav label[for=t2],
 #t3:checked~.nav label[for=t3],#t4:checked~.nav label[for=t4],
 #t5:checked~.nav label[for=t5],#t6:checked~.nav label[for=t6]{
-  color:#fff;background:rgba(255,255,255,.13);border-bottom-color:#fbbf24}
+  color:#fff;background:rgba(255,255,255,.22);border-bottom:4px solid #fbbf24}
 .panel{display:none;padding:0;max-width:100%;margin:0}
 #t1:checked~#c1,#t2:checked~#c2,#t3:checked~#c3,
 #t4:checked~#c4,#t5:checked~#c5,#t6:checked~#c6{display:block}
@@ -419,7 +419,7 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
   .kpi-grid-5,.grid-2,.grid-3{grid-template-columns:1fr}
   .heat-grid,.gstt-grid{min-width:700px}
   .panel{padding:12px 12px 30px}
-  .nav label{padding:10px 12px;font-size:11px}
+  .nav label{padding:11px 14px;font-size:12.5px}
   .sec-fold>summary{font-size:11px;padding:9px 12px}
   .tong-bo-layout{flex-direction:column}.sb-col{width:100%;min-height:auto;border-right:none;border-bottom:1px solid #e2e8f0}
   .sb-col{position:static;width:100%;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}

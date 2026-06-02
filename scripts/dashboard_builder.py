@@ -205,7 +205,7 @@ def bl(vi, en=""):
 
 CSS = """
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;background:#f0f4f8;color:#1e293b;font-size:13px;line-height:1.5;margin:0;padding:0;overflow-x:clip}
+body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;background:#f0f4f8;color:#1e293b;font-size:13px;line-height:1.5;margin:0;padding:0}
 .bi-en{color:#94a3b8;font-size:10px;font-weight:400}
 
 /* Warning banner */
@@ -426,8 +426,8 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
   .panel{padding:12px 12px 30px}
   .nav label{padding:8px 12px;font-size:12px;margin:4px 2px 0;border-radius:5px 5px 0 0}
   .sec-fold>summary{font-size:11px;padding:9px 12px}
-  .tong-bo-layout{flex-direction:column}
-  .main-col{order:1}
+  .tong-bo-layout{flex-direction:column;align-items:stretch}
+  .main-col{order:1;width:100%}
   .sb-col{order:2;position:static;width:100%;min-height:auto;border-right:none;
           border-top:2px solid #e2e8f0;display:grid;
           grid-template-columns:repeat(2,1fr);gap:8px;padding:12px}

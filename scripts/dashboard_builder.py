@@ -394,7 +394,7 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
 .sb-col{width:240px;flex-shrink:0;position:sticky;top:80px;
         display:flex;flex-direction:column;gap:10px;align-self:flex-start;
         background:#f8fafc;border-right:1px solid #e2e8f0;
-        padding:16px 12px 40px;min-height:calc(100vh - 80px)}
+        padding:16px 12px 40px}
 .sb-card{background:#fff;border-radius:8px;padding:12px;
          border:1px solid #e2e8f0;border-top:3px solid #0f2d87;
          margin-bottom:0}
@@ -1277,7 +1277,7 @@ def build_html(kpi_full, dqg_data, build_time):
         '  <label for="t3">&#127959; GSQV / GS5</label>\n'
         '  <label for="t4">&#127959; GSQV / GS6</label>\n'
         '  <label for="t5">&#128202; Ch&#7881; s&#7889; / Owner (KPI/PIC)</label>\n'
-        '  <label for="t6">&#128737;&#65039; Gi&#225;m s&#225;t / Tu&#226;n th&#7911; (GSTT)</label>\n'
+        '  <label for="t6">&#128737;&#65039; Gi&#225;m s&#225;t tu&#226;n th&#7911; (GSTT)</label>\n'
         '</nav>\n'
         # Tab 1: #c1 IS the grid container (panel-sb layout)
         # t1 is a tuple: (sidebar_html, main_col_html)

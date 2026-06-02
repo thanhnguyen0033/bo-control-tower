@@ -205,8 +205,7 @@ def bl(vi, en=""):
 
 CSS = """
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{max-width:100vw;overflow-x:hidden}
-body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;background:#f0f4f8;color:#1e293b;font-size:13px;line-height:1.5;margin:0;padding:0}
+body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;background:#f0f4f8;color:#1e293b;font-size:13px;line-height:1.5;margin:0;padding:0;overflow-x:hidden;width:100%}
 .bi-en{color:#94a3b8;font-size:10px;font-weight:400}
 
 /* Warning banner */

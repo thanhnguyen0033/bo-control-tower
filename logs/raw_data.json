@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T06:53:15.606413Z",
+  "generated_at": "2026-06-02T08:20:57.842216Z",
   "summary": {
     "total_depts": 8,
     "ok": 8,
@@ -62,6 +62,182 @@
           "Main_Issue_Category": "Plan/DO",
           "Remark": "",
           "Data_Checker": ""
+        },
+        {
+          "Date": "2026-06-01",
+          "Shift": "Ca 2",
+          "Site": "GS5",
+          "Work_Order": "70002644-L (NG014D ) - BOX",
+          "Machine_Line": "Máy in",
+          "Product_Group": "",
+          "Plan_Qty": "350",
+          "Actual_Qty": "200",
+          "NG_Qty": "150",
+          "Plan_Do_%": "57,1%",
+          "RAG": "Red",
+          "Main_Issue_Category": "",
+          "Remark": "",
+          "Data_Checker": ""
+        },
+        {
+          "Date": "2026-06-01",
+          "Shift": "Ca 2",
+          "Site": "GS5",
+          "Work_Order": "70002977-XL (NG014D ) - BOX",
+          "Machine_Line": "Máy in",
+          "Product_Group": "",
+          "Plan_Qty": "350",
+          "Actual_Qty": "200",
+          "NG_Qty": "150",
+          "Plan_Do_%": "57,1%",
+          "RAG": "Red",
+          "Main_Issue_Category": "",
+          "Remark": "",
+          "Data_Checker": ""
+        },
+        {
+          "Date": "2026-06-01",
+          "Shift": "Ca 2",
+          "Site": "GS5",
+          "Work_Order": "70002977-S (NG014D ) - BOX",
+          "Machine_Line": "Máy in",
+          "Product_Group": "",
+          "Plan_Qty": "750",
+          "Actual_Qty": "600",
+          "NG_Qty": "150",
+          "Plan_Do_%": "80,0%",
+          "RAG": "Red",
+          "Main_Issue_Category": "",
+          "Remark": "",
+          "Data_Checker": ""
+        },
+        {
+          "Date": "2026-06-01",
+          "Shift": "Ca 2",
+          "Site": "GS5",
+          "Work_Order": "70002978-S (NG014D ) - BOX",
+          "Machine_Line": "Máy in",
+          "Product_Group": "",
+          "Plan_Qty": "750",
+          "Actual_Qty": "600",
+          "NG_Qty": "150",
+          "Plan_Do_%": "80,0%",
+          "RAG": "Red",
+          "Main_Issue_Category": "",
+          "Remark": "",
+          "Data_Checker": ""
+        },
+        {
+          "Date": "2026-06-01",
+          "Shift": "Ca 2",
+          "Site": "GS5",
+          "Work_Order": "70001503-S (NG014D ) - BOX",
+          "Machine_Line": "Máy in",
+          "Product_Group": "",
+          "Plan_Qty": "1.250",
+          "Actual_Qty": "1.100",
+          "NG_Qty": "150",
+          "Plan_Do_%": "88,0%",
+          "RAG": "Yellow",
+          "Main_Issue_Category": "",
+          "Remark": "",
+          "Data_Checker": ""
+        },
+        {
+          "Date": "2026-06-01",
+          "Shift": "Ca 2",
+          "Site": "GS5",
+          "Work_Order": "70003178-L (NG033A ) - BOX",
+          "Machine_Line": "Máy in",
+          "Product_Group": "",
+          "Plan_Qty": "1.750",
+          "Actual_Qty": "1.600",
+          "NG_Qty": "150",
+          "Plan_Do_%": "91,4%",
+          "RAG": "Yellow",
+          "Main_Issue_Category": "",
+          "Remark": "",
+          "Data_Checker": ""
+        },
+        {
+          "Date": "2026-06-01",
+          "Shift": "Ca 2",
+          "Site": "GS5",
+          "Work_Order": "70003198-M (NG033A ) - BOX",
+          "Machine_Line": "Máy in",
+          "Product_Group": "",
+          "Plan_Qty": "290",
+          "Actual_Qty": "140",
+          "NG_Qty": "150",
+          "Plan_Do_%": "48,3%",
+          "RAG": "Red",
+          "Main_Issue_Category": "",
+          "Remark": "",
+          "Data_Checker": ""
+        },
+        {
+          "Date": "2026-06-01",
+          "Shift": "Ca 2",
+          "Site": "GS5",
+          "Work_Order": "RX1-7245-001-001-01-01 MẶT A",
+          "Machine_Line": "Máy in",
+          "Product_Group": "",
+          "Plan_Qty": "3.700",
+          "Actual_Qty": "3.550",
+          "NG_Qty": "150",
+          "Plan_Do_%": "95,9%",
+          "RAG": "Green",
+          "Main_Issue_Category": "",
+          "Remark": "",
+          "Data_Checker": ""
+        },
+        {
+          "Date": "2026-06-01",
+          "Shift": "Ca 2",
+          "Site": "GS5",
+          "Work_Order": "RX1-7245-001-001-01-01 MẶT B",
+          "Machine_Line": "Máy in",
+          "Product_Group": "",
+          "Plan_Qty": "3.700",
+          "Actual_Qty": "3.550",
+          "NG_Qty": "150",
+          "Plan_Do_%": "95,9%",
+          "RAG": "Green",
+          "Main_Issue_Category": "",
+          "Remark": "",
+          "Data_Checker": ""
+        },
+        {
+          "Date": "2026-06-01",
+          "Shift": "Ca 2",
+          "Site": "GS5",
+          "Work_Order": "RX1-7248-001-001-01-01 MẶT A",
+          "Machine_Line": "Máy in",
+          "Product_Group": "",
+          "Plan_Qty": "3.300",
+          "Actual_Qty": "3.150",
+          "NG_Qty": "150",
+          "Plan_Do_%": "95,5%",
+          "RAG": "Green",
+          "Main_Issue_Category": "",
+          "Remark": "",
+          "Data_Checker": ""
+        },
+        {
+          "Date": "2026-06-01",
+          "Shift": "Ca 2",
+          "Site": "GS5",
+          "Work_Order": "RX1-7248-001-001-01-01 MẶT B",
+          "Machine_Line": "Máy in",
+          "Product_Group": "",
+          "Plan_Qty": "3.300",
+          "Actual_Qty": "3.150",
+          "NG_Qty": "150",
+          "Plan_Do_%": "95,5%",
+          "RAG": "Green",
+          "Main_Issue_Category": "",
+          "Remark": "",
+          "Data_Checker": ""
         }
       ],
       "columns": [
@@ -80,8 +256,8 @@
         "Remark",
         "Data_Checker"
       ],
-      "row_count": 3,
-      "fetched_at": "2026-06-02T06:53:10.479741Z",
+      "row_count": 14,
+      "fetched_at": "2026-06-02T08:20:50.979155Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -143,7 +319,7 @@
         "Data_Checker"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-02T06:53:11.624100Z",
+      "fetched_at": "2026-06-02T08:20:52.332783Z",
       "note": ""
     },
     "03_QLCL": {
@@ -220,7 +396,7 @@
         "Data_Check_Note"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-02T06:53:12.473024Z",
+      "fetched_at": "2026-06-02T08:20:53.051096Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -273,7 +449,7 @@
         "Evidence_Link"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-02T06:53:13.397891Z",
+      "fetched_at": "2026-06-02T08:20:53.987761Z",
       "note": ""
     },
     "05_KHO": {
@@ -344,7 +520,7 @@
         "Data_Check_Note"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-02T06:53:13.755868Z",
+      "fetched_at": "2026-06-02T08:20:54.324354Z",
       "note": ""
     },
     "06_GSTT": {
@@ -403,7 +579,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-02T06:53:14.663042Z",
+      "fetched_at": "2026-06-02T08:20:54.800146Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -462,7 +638,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-02T06:53:15.206743Z",
+      "fetched_at": "2026-06-02T08:20:56.807796Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -507,7 +683,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-06-02T06:53:15.606398Z",
+      "fetched_at": "2026-06-02T08:20:57.842203Z",
       "note": ""
     }
   }

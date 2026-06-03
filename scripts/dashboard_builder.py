@@ -239,9 +239,9 @@ body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
 .hdr-tagline{font-size:9px;color:rgba(240,192,64,.7);letter-spacing:1.2px;
              font-weight:700;margin-top:6px;text-transform:uppercase}
 /* GSP NEXT 30 badge — right side of header */
-.gsp-badge-30{flex-shrink:0;opacity:.93;align-self:center}
-.gsp-badge-30 svg{width:200px;height:70px;border-radius:10px;
-                  filter:drop-shadow(0 2px 8px rgba(0,0,0,.45))}
+.gsp-badge-30{flex-shrink:0;align-self:center}
+.gsp-badge-30 img{height:76px;width:auto;border-radius:10px;
+                  filter:drop-shadow(0 2px 8px rgba(0,0,0,.45));display:block}
 @media(max-width:960px){.gsp-badge-30{display:none}}
 .badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
 .bdg{font-size:10px;font-weight:800;border-radius:5px;padding:3px 9px;letter-spacing:.3px}
@@ -1232,17 +1232,17 @@ def extract_issue_rows(kpi, site=None):
         "GS1": [
             ("Plan/DO GS1 can xac nhan", "Yellow", "Mr Hao",  "Review WO/may/ca",   "D+3", "Co root cause"),
             ("Machine Log GS1 chua du",  "Red",    "Mr Thap", "Gui downtime log",   "D+5", "Du start/end/reason"),
-            ("WIP/FIFO GS1 chua co DL",  "Pending","Mr Dung", "Gui WIP/FIFO file",  "D+5", "Map OTIF/Customer"),
+            ("WIP/FIFO GS1 chưa có DL",  "Pending","Mr Dung", "Gửi WIP/FIFO file",  "D+5", "Map OTIF/Customer"),
         ],
         "GS5": [
             ("PROD_LOG GS5 thieu ORDER_ID", "Red",    "Mr Lam",  "Gui dung template","D+5", "Qua DQG"),
-            ("WIP/FIFO GS5 chua co DL",     "Red",    "Mr Luan", "Gui WIP/FIFO",    "D+5", "Map OTIF"),
+            ("WIP/FIFO GS5 chưa có DL",     "Red",    "Mr Luan", "Gửi WIP/FIFO",    "D+5", "Map OTIF"),
             ("Machine Log GS5 chua co",     "Red",    "Mr Nam",  "Gui downtime log", "D+5", "start/end/reason"),
         ],
         "GS6": [
             ("PROD_LOG GS6 tach khoi GS5",  "Red",    "Mr Manh", "Gui file GS6",    "D+5", "Qua DQG"),
             ("Machine Log GS6 chua co",     "Red",    "Mr Nam",  "Gui downtime log", "D+5", "start/end/reason"),
-            ("WIP/FIFO GS6 chua co DL",     "Pending","Mr Luan", "Gui WIP/FIFO",    "D+5", "Map OTIF"),
+            ("WIP/FIFO GS6 chưa có DL",     "Pending","Mr Luan", "Gửi WIP/FIFO",    "D+5", "Map OTIF"),
         ],
     }
     return rows.get(site, [])
@@ -1276,8 +1276,8 @@ def build_html(kpi_full, dqg_data, build_time):
     if official < total:
         n = total - official
         warn = (f'<div class="warn-banner">'
-                f'\u26a0\ufe0f {n}/{total} bo phan chua dat Cong DL (DQG). '
-                f'KPI chinh thuc sau DQG PASS.</div>')
+                f'\u26a0\ufe0f {n}/{total} b&#7897; ph&#7853;n ch&#432;a &#273;&#7841;t C&#7893;ng DL (DQG). '
+                f'KPI ch&#237;nh th&#7913;c sau DQG PASS.</div>')
 
     badge_bg  = "#14532d" if official == total else "#92400e"
     badge_clr = "#d1fae5" if official == total else "#fef3c7"
@@ -1309,13 +1309,13 @@ def build_html(kpi_full, dqg_data, build_time):
         f'Ngu&#7891;n: Google Sheets &rarr; DQG &rarr; KPI&nbsp;|&nbsp;Auto-build: GitHub Actions'
         f'      </div>\n'
         f'    </div>\n'
-        f'    <div class="gsp-badge-30"><svg viewBox="0 0 200 70" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="70" rx="10" fill="#061a0d" stroke="rgba(212,160,23,.55)" stroke-width="1.5"/><circle cx="38" cy="34" r="26" fill="none" stroke="#d4a017" stroke-width="1.5" opacity=".5"/><circle cx="38" cy="34" r="19" fill="rgba(212,160,23,.12)"/><text x="38" y="41" text-anchor="middle" font-size="24" font-weight="900" fill="#f0c040" font-family="Segoe UI,Arial,sans-serif">30</text><line x1="72" y1="10" x2="72" y2="58" stroke="rgba(255,255,255,.15)" stroke-width="1"/><text x="82" y="26" font-size="13" font-weight="900" fill="#f0c040" font-family="Segoe UI,Arial,sans-serif" letter-spacing="1.5">GSP NEXT 30</text><text x="82" y="40" font-size="8.5" font-weight="600" fill="#86efac" font-family="Segoe UI,Arial,sans-serif">M&#7897;t cu&#7897;c chuy&#7875;n &#273;&#7893;i</text><text x="82" y="51" font-size="8.5" font-weight="600" fill="#86efac" font-family="Segoe UI,Arial,sans-serif">l&#7899;n &#273;&#227; b&#7855;t &#273;&#7847;u</text><rect x="0" y="58" width="200" height="12" fill="rgba(212,160,23,.13)"/><rect x="0" y="58" width="200" height="2" fill="rgba(212,160,23,.3)"/><text x="100" y="67" text-anchor="middle" font-size="6.5" font-weight="800" fill="rgba(240,192,64,.85)" font-family="Segoe UI,Arial,sans-serif" letter-spacing="1.2">TH&#431;&#416;NG HI&#7878;U M&#7898;I &#183; H&#7878; TH&#7888;NG M&#7898;I &#183; T&#431; DUY M&#7898;I</text></svg></div>\n'
+        f'    <div class="gsp-badge-30"><img src="data:image/jpeg;base64,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" alt="GSP NEXT 30 – Một cuộc chuyển đổi lớn đã bắt đầu" title="GSP NEXT 30 · THƯƠNG HIỆU MỚI · HỆ THỐNG MỚI · TƯ DUY MỚI"></div>\n'
         f'  </div>\n'
         f'  <div class="badges">\n'
         f'    <span class="bdg" style="background:{badge_bg};color:{badge_clr}">'
         f'      {overall_label} &mdash; {official}/{total} PASS</span>\n'
-        f'    <span class="bdg bdg-info">Cong DL (DQG): {dqg_pass} PASS | {dqg_skip} SKIP</span>\n'
-        f'    <span class="bdg bdg-warn">Du lieu thu nghiem (Trial) &mdash; qua DQG moi la KPI chinh thuc</span>\n'
+        f'    <span class="bdg bdg-info">C&#7893;ng DL (DQG): {dqg_pass} PASS | {dqg_skip} SKIP</span>\n'
+        f'    <span class="bdg bdg-warn">D&#7919; li&#7879;u th&#7917; nghi&#7879;m (Trial) &mdash; qua DQG m&#7899;i l&#224; KPI ch&#237;nh th&#7913;c</span>\n'
         f'  </div>\n'
         f'  <div class="hdr-tagline">TH&#431;&#416;NG HI&#7878;U M&#7898;I &middot; H&#7878; TH&#7888;NG M&#7898;I &middot; T&#431; DUY M&#7898;I</div>\n'
         f'</div>\n'

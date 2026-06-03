@@ -79,6 +79,32 @@ COLUMN_MAP = {
     "Ngày phát sinh":       "Issue_Date",
     "Nguồn":                "Source_Module",
     "PIC chịu trách nhiệm": "Owner",
+
+    # ── 03_QLCL V3 — cột bổ sung ────────────────────────────
+    "Khách hàng":            "Customer",
+    "Nhóm lỗi":              "Defect_Group",
+    "Ngày hạn xử lý":        "Due_Date",
+    "Nhóm nguyên nhân gốc":  "Root_Cause_Category",
+    "Tóm tắt hành động":     "Action_Summary",
+
+    # ── 04_QLTB_CD V2 — cột bổ sung ─────────────────────────
+    "Loại dừng máy":         "Downtime_Type",
+    "Mã nguyên nhân":        "Reason_Code",
+    "Hành động cần làm":     "Action_Required",
+
+    # ── Cột phụ chung (ghi chú, kiểm tra) ──────────────────
+    "Hạng mục vấn đề":      "Main_Issue_Category",
+    "Ghi chú":              "Remark",
+    "Người kiểm tra DL":    "Data_Checker",
+    "Khu vực":              "Area",
+    "Công đoạn":            "Stage",
+    "Khu vực lưu trữ":      "Storage_Area",
+    "Mã vị trí":            "Location_Code",
+    "Loại tồn kho":         "Inventory_Type",
+    "Nhóm tuổi tồn":        "Aging_Bucket",
+    "Mã Issue liên quan":   "Linked_Issue_ID",
+    "Link bằng chứng":      "Evidence_Link",
+    "Ghi chú kiểm tra DL":  "Data_Check_Note",
 }
 
 

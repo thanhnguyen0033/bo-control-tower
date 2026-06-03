@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-03T07:11:32.227298Z",
-  "raw_data_from": "2026-06-03T07:11:32.171302Z",
+  "generated_at": "2026-06-03T07:31:47.932090Z",
+  "raw_data_from": "2026-06-03T07:31:47.877500Z",
   "summary": {
     "PASS": 7,
     "WARN": 0,
@@ -13,33 +13,15 @@
       "dqg_status": "FAIL",
       "description": "Sản Xuất – Plan/DO",
       "row_count": 513,
-      "fail_count": 296,
+      "fail_count": 513,
       "warn_count": 0,
-      "fail_pct": 57.7,
-      "missing_columns": [],
-      "issues": [
-        "Row 50 col 'Plan_Qty' = '4,194.00' is not numeric",
-        "Row 50 col 'Actual_Qty' = '4,194.00' is not numeric",
-        "Row 51 col 'Plan_Qty' = '4,194.00' is not numeric",
-        "Row 51 col 'Actual_Qty' = '4,194.00' is not numeric",
-        "Row 54 col 'Plan_Qty' = '28,800.00' is not numeric",
-        "Row 54 col 'Actual_Qty' = '28,800.00' is not numeric",
-        "Row 56 col 'Plan_Qty' = '24,000.00' is not numeric",
-        "Row 56 col 'Actual_Qty' = '24,000.00' is not numeric",
-        "Row 58 col 'Plan_Qty' = '28,800.00' is not numeric",
-        "Row 58 col 'Actual_Qty' = '28,800.00' is not numeric",
-        "Row 59 col 'Plan_Qty' = '24,000.00' is not numeric",
-        "Row 59 col 'Actual_Qty' = '24,000.00' is not numeric",
-        "Row 60 col 'Plan_Qty' = '24,000.00' is not numeric",
-        "Row 60 col 'Actual_Qty' = '24,000.00' is not numeric",
-        "Row 62 col 'Plan_Qty' = '1,260.00' is not numeric",
-        "Row 62 col 'Actual_Qty' = '1,260.00' is not numeric",
-        "Row 64 col 'Plan_Qty' = '1,500.00' is not numeric",
-        "Row 64 col 'Actual_Qty' = '1,500.00' is not numeric",
-        "Row 68 col 'Plan_Qty' = '19,806.00' is not numeric",
-        "Row 68 col 'Actual_Qty' = '19,806.00' is not numeric"
+      "missing_columns": [
+        "Site"
       ],
-      "validated_at": "2026-06-03T07:11:32.227151Z"
+      "issues": [
+        "Missing required columns: ['Site']"
+      ],
+      "validated_at": "2026-06-03T07:31:47.931925Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -51,7 +33,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-03T07:11:32.227184Z"
+      "validated_at": "2026-06-03T07:31:47.931964Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -63,7 +45,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-03T07:11:32.227200Z"
+      "validated_at": "2026-06-03T07:31:47.931989Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -75,7 +57,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-03T07:11:32.227215Z"
+      "validated_at": "2026-06-03T07:31:47.932005Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -87,7 +69,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-03T07:11:32.227231Z"
+      "validated_at": "2026-06-03T07:31:47.932019Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -99,7 +81,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-03T07:11:32.227242Z"
+      "validated_at": "2026-06-03T07:31:47.932029Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -111,7 +93,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-03T07:11:32.227253Z"
+      "validated_at": "2026-06-03T07:31:47.932043Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -123,7 +105,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-03T07:11:32.227286Z"
+      "validated_at": "2026-06-03T07:31:47.932079Z"
     }
   }
 }

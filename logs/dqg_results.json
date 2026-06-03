@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-03T09:19:37.513139Z",
-  "raw_data_from": "2026-06-03T09:19:37.448922Z",
+  "generated_at": "2026-06-03T11:05:02.142822Z",
+  "raw_data_from": "2026-06-03T11:05:02.097430Z",
   "summary": {
-    "PASS": 7,
+    "PASS": 0,
     "WARN": 0,
-    "FAIL": 1,
+    "FAIL": 8,
     "SKIP": 0
   },
   "departments": {
@@ -39,91 +39,106 @@
         "Row 70 col 'Plan_Qty' = '4,177.00' is not numeric",
         "Row 70 col 'Actual_Qty' = '4,177.00' is not numeric"
       ],
-      "validated_at": "2026-06-03T09:19:37.512972Z"
+      "validated_at": "2026-06-03T11:05:02.142731Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
-      "dqg_status": "PASS",
+      "dqg_status": "FAIL",
       "description": "KHSX – OTIF Delivery",
       "row_count": 2,
-      "fail_count": 0,
+      "fail_count": 2,
       "warn_count": 0,
-      "fail_pct": 0.0,
-      "missing_columns": [],
-      "issues": [],
-      "validated_at": "2026-06-03T09:19:37.513009Z"
+      "missing_columns": [
+        "Commit_Date"
+      ],
+      "issues": [
+        "Missing required columns: ['Commit_Date']"
+      ],
+      "validated_at": "2026-06-03T11:05:02.142759Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
-      "dqg_status": "PASS",
+      "dqg_status": "FAIL",
       "description": "Chất Lượng – NCR/CAR",
-      "row_count": 2,
+      "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
-      "fail_pct": 0.0,
       "missing_columns": [],
-      "issues": [],
-      "validated_at": "2026-06-03T09:19:37.513026Z"
+      "issues": [
+        "Access denied — verify sheet is set to 'Anyone with link can view' AND Sheet ID is correct"
+      ],
+      "validated_at": "2026-06-03T11:05:02.142765Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
-      "dqg_status": "PASS",
+      "dqg_status": "FAIL",
       "description": "Thiết Bị – Machine Downtime",
-      "row_count": 2,
+      "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
-      "fail_pct": 0.0,
       "missing_columns": [],
-      "issues": [],
-      "validated_at": "2026-06-03T09:19:37.513041Z"
+      "issues": [
+        "Access denied — verify sheet is set to 'Anyone with link can view' AND Sheet ID is correct"
+      ],
+      "validated_at": "2026-06-03T11:05:02.142774Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
-      "dqg_status": "PASS",
+      "dqg_status": "FAIL",
       "description": "Kho GS5 – WIP/FIFO",
-      "row_count": 2,
+      "row_count": 0,
       "fail_count": 0,
       "warn_count": 0,
-      "fail_pct": 0.0,
       "missing_columns": [],
-      "issues": [],
-      "validated_at": "2026-06-03T09:19:37.513057Z"
+      "issues": [
+        "Access denied — verify sheet is set to 'Anyone with link can view' AND Sheet ID is correct"
+      ],
+      "validated_at": "2026-06-03T11:05:02.142779Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
-      "dqg_status": "PASS",
+      "dqg_status": "FAIL",
       "description": "GSTT – Field Verification",
       "row_count": 2,
-      "fail_count": 0,
+      "fail_count": 2,
       "warn_count": 0,
-      "fail_pct": 0.0,
-      "missing_columns": [],
-      "issues": [],
-      "validated_at": "2026-06-03T09:19:37.513068Z"
+      "missing_columns": [
+        "Check_Date"
+      ],
+      "issues": [
+        "Missing required columns: ['Check_Date']"
+      ],
+      "validated_at": "2026-06-03T11:05:02.142790Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
-      "dqg_status": "PASS",
+      "dqg_status": "FAIL",
       "description": "Công Nghệ – SPM Technology",
       "row_count": 2,
-      "fail_count": 0,
+      "fail_count": 2,
       "warn_count": 0,
-      "fail_pct": 0.0,
-      "missing_columns": [],
-      "issues": [],
-      "validated_at": "2026-06-03T09:19:37.513079Z"
+      "missing_columns": [
+        "Request_Date"
+      ],
+      "issues": [
+        "Missing required columns: ['Request_Date']"
+      ],
+      "validated_at": "2026-06-03T11:05:02.142801Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
-      "dqg_status": "PASS",
+      "dqg_status": "FAIL",
       "description": "BO Control – Issue/Action",
       "row_count": 1,
-      "fail_count": 0,
+      "fail_count": 1,
       "warn_count": 0,
-      "fail_pct": 0.0,
-      "missing_columns": [],
-      "issues": [],
-      "validated_at": "2026-06-03T09:19:37.513123Z"
+      "missing_columns": [
+        "Issue_Date"
+      ],
+      "issues": [
+        "Missing required columns: ['Issue_Date']"
+      ],
+      "validated_at": "2026-06-03T11:05:02.142812Z"
     }
   }
 }

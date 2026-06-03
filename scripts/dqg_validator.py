@@ -27,15 +27,15 @@ DQG_RULES = {
 
     "01_SAN_XUAT": {
         # Tab: 01_SX_PLAN_DO — BO_Input_SX_PlanDO_GSBB_V2
-        # NOTE: Sheet dùng cột "Nhà máy" thay vì "Site" (confirmed 2026-06-03)
+        # Column names normalized VI→EN by data_fetcher.normalize_columns()
         "required_columns": [
-            "Date", "Shift", "Nhà máy", "Work_Order",
+            "Date", "Shift", "Site", "Work_Order",
             "Machine_Line", "Product_Group",
             "Plan_Qty", "Actual_Qty", "NG_Qty",
             "Plan_Do_%", "RAG",
         ],
         "numeric_columns": ["Plan_Qty", "Actual_Qty", "NG_Qty", "Plan_Do_%"],
-        "site_column": "Nhà máy",
+        "site_column": "Site",
     },
 
     "02_KHSX_OTIF": {

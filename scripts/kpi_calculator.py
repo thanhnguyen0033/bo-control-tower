@@ -384,9 +384,9 @@ def calc_site_breakdown(dept_key: str, records: list) -> dict:
 
     result = {}
     for site in VALID_SITES:
-        # "Site" chuẩn hoặc "Nhà máy" (01_SAN_XUAT dùng tên cột tiếng Việt)
+        # Column names already normalized to "Site" by data_fetcher.normalize_columns()
         site_recs = [r for r in records
-                     if r.get("Site", r.get("site", r.get("Nhà máy", ""))).strip() == site]
+                     if r.get("Site", r.get("site", "")).strip() == site]
         if site_recs:
             try:
                 result[site] = {"kpis": calc_fn(site_recs), "row_count": len(site_recs)}

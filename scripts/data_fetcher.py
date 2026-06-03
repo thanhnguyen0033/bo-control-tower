@@ -18,6 +18,84 @@ from scripts.sheets_config import SHEET_CONFIG
 LOGS_DIR = os.path.join(os.path.dirname(__file__), "..", "logs")
 RAW_DATA_FILE = os.path.join(LOGS_DIR, "raw_data.json")
 
+# ─────────────────────────────────────────────────────────────
+# Column Normalizer — Việt hóa tiêu đề Google Sheet
+# PIC nhập liệu dùng tên tiếng Việt, pipeline nội bộ dùng tên chuẩn EN
+# Thêm alias mới tại đây khi sheet thay đổi header
+# ─────────────────────────────────────────────────────────────
+COLUMN_MAP = {
+    # ── Chung (dùng trong nhiều sheet) ──────────────────────
+    "Nhà máy":              "Site",
+    "Ngày":                 "Date",
+    "Ca":                   "Shift",
+    "Lệnh SX":              "Work_Order",
+    "Máy / Dây chuyền":     "Machine_Line",
+    "Nhóm sản phẩm":        "Product_Group",
+    "SL Kế hoạch":          "Plan_Qty",
+    "SL Thực tế":           "Actual_Qty",
+    "SL Lỗi (NG)":          "NG_Qty",
+    "% Tuân thủ KH":        "Plan_Do_%",
+    "Mức độ":               "Severity",
+    "Trạng thái":           "Status",
+    "Quá hạn?":             "Overdue?",
+    "Mức rủi ro":           "Risk_Level",
+    "Cấp độ leo thang":     "Escalation_Level",
+
+    # ── 02_KHSX_OTIF ────────────────────────────────────────
+    "Ngày cam kết":         "Commit_Date",
+    "Đúng hạn?":            "OTIF?",
+    "Rủi ro giao hàng":     "Delivery_Risk",
+    "SL cam kết":           "Committed_Qty",
+    "SL thực giao":         "Delivered_Qty",
+    "Số ngày trễ":          "Delay_Days",
+
+    # ── 03_QLCL ─────────────────────────────────────────────
+    "Mã NCR/CAR":           "NCR_CAR_ID",
+    "PIC trực tiếp":        "Owner_Direct",
+    "SL bị ảnh hưởng":      "Qty_Affected",
+    "COPQ ước tính (VNĐ)":  "COPQ_Estimated",
+
+    # ── 04_QLTB_CD ──────────────────────────────────────────
+    "Mã máy":               "Machine",
+    "Thời gian dừng (phút)": "Downtime_Min",
+    "Loại sự cố":           "Breakdown_PM",
+
+    # ── 05_KHO ──────────────────────────────────────────────
+    "SL bán thành phẩm":    "WIP_Qty",
+    "Trạng thái FIFO":      "FIFO_Status",
+    "Số ngày tồn":          "Age_Days",
+
+    # ── 06_GSTT ─────────────────────────────────────────────
+    "Ngày kiểm tra":        "Check_Date",
+    "Hạng mục":             "Category",
+
+    # ── 07_CONG_NGHE_SPM ────────────────────────────────────
+    "Ngày yêu cầu":         "Request_Date",
+    "Mã mẫu":               "Sample_ID",
+    "Lead time (ngày)":     "Leadtime_Days",
+    "Số lần làm lại":       "Redo_Count",
+
+    # ── 08_BO_CONTROL ───────────────────────────────────────
+    "Ngày phát sinh":       "Issue_Date",
+    "Nguồn":                "Source_Module",
+    "PIC chịu trách nhiệm": "Owner",
+}
+
+
+def normalize_columns(records: list[dict]) -> list[dict]:
+    """
+    Đổi tên cột tiếng Việt → tên chuẩn nội bộ (EN) theo COLUMN_MAP.
+    Cột không có trong map → giữ nguyên (backward compatible).
+    Chạy 1 lần ngay sau khi fetch CSV, trước khi lưu raw_data.json.
+    """
+    if not records:
+        return records
+    normalized = []
+    for row in records:
+        new_row = {COLUMN_MAP.get(k, k): v for k, v in row.items()}
+        normalized.append(new_row)
+    return normalized
+
 
 def build_csv_url(sheet_id: str, tab_name: str) -> str:
     """Build the public CSV export URL for a Google Sheet tab."""
@@ -156,9 +234,10 @@ def fetch_all_sheets() -> dict:
         records, fetch_status = fetch_csv(url)
 
         if fetch_status == "OK":
+            records = normalize_columns(records)   # VI → EN column names
             columns = list(records[0].keys())
             print(f"    ✅ OK — {len(records)} data rows, {len(columns)} columns")
-            print(f"    🔍 DEBUG columns: {columns}")
+            print(f"    🔍 DEBUG columns (normalized): {columns}")
             results[dept_key] = {
                 "status":      "OK",
                 "description": desc,

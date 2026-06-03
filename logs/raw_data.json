@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T07:38:58.788774Z",
+  "generated_at": "2026-06-03T07:44:10.225634Z",
   "summary": {
     "total_depts": 8,
     "ok": 8,
@@ -8241,7 +8241,7 @@
         "Data_Checker"
       ],
       "row_count": 513,
-      "fetched_at": "2026-06-03T07:38:52.820514Z",
+      "fetched_at": "2026-06-03T07:44:07.100277Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -8303,7 +8303,7 @@
         "Data_Checker"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T07:38:53.865943Z",
+      "fetched_at": "2026-06-03T07:44:07.469250Z",
       "note": ""
     },
     "03_QLCL": {
@@ -8380,7 +8380,7 @@
         "Data_Check_Note"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T07:38:54.498961Z",
+      "fetched_at": "2026-06-03T07:44:07.755893Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -8433,7 +8433,7 @@
         "Evidence_Link"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T07:38:55.324968Z",
+      "fetched_at": "2026-06-03T07:44:08.624516Z",
       "note": ""
     },
     "05_KHO": {
@@ -8504,7 +8504,7 @@
         "Data_Check_Note"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T07:38:56.048018Z",
+      "fetched_at": "2026-06-03T07:44:09.080458Z",
       "note": ""
     },
     "06_GSTT": {
@@ -8563,7 +8563,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T07:38:57.370004Z",
+      "fetched_at": "2026-06-03T07:44:09.388263Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -8622,7 +8622,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T07:38:57.871115Z",
+      "fetched_at": "2026-06-03T07:44:09.853101Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -8667,7 +8667,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-06-03T07:38:58.788764Z",
+      "fetched_at": "2026-06-03T07:44:10.225625Z",
       "note": ""
     }
   }

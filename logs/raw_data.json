@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T09:05:55.770087Z",
+  "generated_at": "2026-06-03T09:19:37.448922Z",
   "summary": {
     "total_depts": 8,
     "ok": 8,
@@ -18,7 +18,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "70002644-L (NG014D ) - BOX",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -34,7 +34,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "70002977-XL (NG014D ) - BOX",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -50,7 +50,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "70002977-S (NG014D ) - BOX",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -66,7 +66,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "70002978-S (NG014D ) - BOX",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -82,7 +82,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "70001503-S (NG014D ) - BOX",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -98,7 +98,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "70003178-L (NG033A ) - BOX",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -114,7 +114,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "70003198-M (NG033A ) - BOX",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -130,7 +130,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7245-001-001-01-01 MẶT A",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -146,7 +146,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7245-001-001-01-01 MẶT B",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -162,7 +162,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7248-001-001-01-01 MẶT A",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -178,7 +178,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7248-001-001-01-01 MẶT B",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -194,7 +194,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7246-001-001-01-01 MẶT A",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -210,7 +210,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7246-001-001-01-01 MẶT B",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -226,7 +226,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "70003175-S (NG033A ) - BOX",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -242,7 +242,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "70002978-S (NG014D ) - BOX",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -258,7 +258,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "OUTER BOX _147020300702J R03 YFYV-MẢNH 2-TOIN",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -274,7 +274,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "ESSENTIAL_SB-CARD WATERPUMP PLIERS-1011455-TỜ IN MẶT TRƯỚC",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -290,7 +290,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "ESSENTIAL_SB-CARD WATERPUMP PLIERS-1011455-TỜ IN MẶT SAU",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -306,7 +306,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "ESSENTIAL_SB-CARD SCREWDRIVER 1/4X100 (46846)-1011889-TỜ IN MẶT TRƯỚC",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -322,7 +322,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "ESSENTIAL_SB-CARD SCREWDRIVER 1/4X100 (46846)-1011889-TỜ IN MẶT SAU",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -338,7 +338,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "ESSENTIAL_SB-CARD SCREWDRIVER - SL5,5-1011801-TỜ IN MẶT TRƯỚC",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -354,7 +354,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "ESSENTIAL_SB-CARD SCREWDRIVER - SL5,5-1011801-TỜ IN MẶT SAU",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -370,7 +370,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "ESSENTIAL_SB-CARD SCREWDRIVER - PH1-1011802-TỜ IN MẶT TRƯỚC",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -386,7 +386,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "ESSENTIAL_SB-CARD SCREWDRIVER - PH1-1011802-TỜ IN MẶT SAU",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -402,7 +402,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "ESSENTIAL_SB-CARD SCREWDRIVER - PH2-1011803-TỜ IN MẶT TRƯỚC",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -418,7 +418,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "ESSENTIAL_SB-CARD SCREWDRIVER - PH2-1011803-TỜ IN MẶT SAU",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -434,7 +434,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "1011822_VP_ESSENTIAL_PLIERS_SB-CARD_MECH-TỜ IN MẶT TRƯỚC",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -450,7 +450,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "1011822_VP_ESSENTIAL_PLIERS_SB-CARD_MECH-TỜ IN MẶT SAU",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -466,7 +466,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "ML69A030612A",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -482,7 +482,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46584C (GSN)",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -498,7 +498,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46584C (GSN)",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -514,7 +514,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92889 (FSC mix 70%)-01",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -530,7 +530,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92891 (FSC mix 70%)-01",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -546,7 +546,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Thẻ 94116 (FSC mix 70%)-01",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -562,7 +562,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "6K67701284-03-BOX",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -578,7 +578,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "6K67701284-03-BOX",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -594,7 +594,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "OUTER BOX _147020300702J R03 YFYV-MẢNH 1-TOIN",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -610,7 +610,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46560A",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -626,7 +626,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-006161G",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -642,7 +642,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Canon - QX2-5964-002-02-01 - Gia công GS5",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -658,7 +658,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7223-001-001-01-01 MẶT A",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -674,7 +674,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hanger Pad_MGBAA0007173",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -690,7 +690,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 2",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "EP-P2900TBEGAU_MIDDLE BOX",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -706,7 +706,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46056A",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -722,7 +722,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46056A",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -738,7 +738,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45377AN",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -754,7 +754,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "Máy in Offset",
           "Product_Group": "Duplex",
@@ -770,7 +770,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -786,7 +786,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-6711-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -802,7 +802,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "VQX1A2401Z",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -818,7 +818,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0004810",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -834,7 +834,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "VQX1A2401Z",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -850,7 +850,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -866,7 +866,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-6711-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -882,7 +882,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0004810",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -898,7 +898,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -914,7 +914,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -930,7 +930,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94193 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -946,7 +946,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 63699 (FSC mix 70%)-02",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -962,7 +962,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-6711-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -978,7 +978,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Thẻ 94797 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -994,7 +994,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-0613-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1010,7 +1010,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 63699 (FSC mix 70%)-02",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1026,7 +1026,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 63699 (FSC mix 70%)-02",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1042,7 +1042,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1058,7 +1058,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0004810",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1074,7 +1074,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46584A (GSN)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1090,7 +1090,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94193 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1106,7 +1106,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1122,7 +1122,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-0614-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1138,7 +1138,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0007540",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1154,7 +1154,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "6E.5Y009.064-INSERT 3",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1170,7 +1170,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09209-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1186,7 +1186,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-X626-X620_COMMON-CTL-NẮP",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1202,7 +1202,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7271-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1218,7 +1218,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0007540",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1234,7 +1234,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7271-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1250,7 +1250,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "5501568A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1266,7 +1266,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7271-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1282,7 +1282,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "6E.5Y009.064-INSERT 3",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1298,7 +1298,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7271-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1314,7 +1314,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7271-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1330,7 +1330,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672E-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1346,7 +1346,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-70728C",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1362,7 +1362,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672E-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1378,7 +1378,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7247-001-001-01-01 MẶT A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1394,7 +1394,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672E-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1410,7 +1410,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46043A-Nắp (Cải tiến màu sắc CTL)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1426,7 +1426,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-70728C",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1442,7 +1442,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71158B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1458,7 +1458,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7246-001-001-01-01 MẶT A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1474,7 +1474,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672E-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1490,7 +1490,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "440040162800-CARTON BOX AN3 30 RS SIN(OFFSET)-02",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1506,7 +1506,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672E-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1522,7 +1522,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-43282A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1538,7 +1538,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-43282A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1554,7 +1554,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-43282A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1570,7 +1570,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-6287-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1586,7 +1586,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-6287-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1602,7 +1602,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "D00NPA001",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1618,7 +1618,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "D00NPA001",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1634,7 +1634,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "D00LLM001",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1650,7 +1650,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "1011822_VP_ESSENTIAL_PLIERS_SB-CARD_MECH",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1666,7 +1666,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "D00NPA001",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1682,7 +1682,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46584B (GSN)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1698,7 +1698,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "1011822_VP_ESSENTIAL_PLIERS_SB-CARD_MECH",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1714,7 +1714,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7617-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1730,7 +1730,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46584B (GSN)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1746,7 +1746,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7617-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1762,7 +1762,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "1011822_VP_ESSENTIAL_PLIERS_SB-CARD_MECH",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1778,7 +1778,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "FX2-9435-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1794,7 +1794,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5868-006-004-03-01- Mặt B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1810,7 +1810,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1826,7 +1826,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57274A-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1842,7 +1842,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1858,7 +1858,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1874,7 +1874,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-70728A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1890,7 +1890,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-72669A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1906,7 +1906,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57274A-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1922,7 +1922,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57274A-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1938,7 +1938,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5868-006-004-03-01- Mặt B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1954,7 +1954,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1043-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1970,7 +1970,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1043-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -1986,7 +1986,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57274A-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2002,7 +2002,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46043A-nắp",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2018,7 +2018,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5877-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2034,7 +2034,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "WW BLACK_MGBAD0005804",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2050,7 +2050,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 80695 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2066,7 +2066,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7245-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2082,7 +2082,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7245-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2098,7 +2098,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2114,7 +2114,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "440040162800-CARTON BOX AN3 30 RS SIN(OFFSET)-MẶT B-02",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2130,7 +2130,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "WW BLACK_MGBAD0005804",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2146,7 +2146,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "WW BLACK_MGBAD0005804",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2162,7 +2162,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "D034U5001-A-01 BOX",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2178,7 +2178,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94796 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2194,7 +2194,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 80695 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2210,7 +2210,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-01710G",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2226,7 +2226,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "D034U5001-A-01 BOX",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2242,7 +2242,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PKMP5450ONTA",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2258,7 +2258,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "WW BLACK_MGBAD0005804",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2274,7 +2274,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-ĐÁY",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2290,7 +2290,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2306,7 +2306,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46043A-nắp",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2322,7 +2322,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PKMP5450ONTA",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2338,7 +2338,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "WW BLACK_MGBAD0005804",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2354,7 +2354,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94193 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2370,7 +2370,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94193 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2386,7 +2386,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PKSP3271ONTA",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2402,7 +2402,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58151A-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2418,7 +2418,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2434,7 +2434,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94193 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2450,7 +2450,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-69666B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2466,7 +2466,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92897 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2482,7 +2482,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92897 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2498,7 +2498,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92897 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2514,7 +2514,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0007540",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2530,7 +2530,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-69603A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2546,7 +2546,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09207-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2562,7 +2562,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09209-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2578,7 +2578,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0-2",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2594,7 +2594,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "D0304G001-00-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2610,7 +2610,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1280-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2626,7 +2626,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09207-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2642,7 +2642,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-X626-X620_COMMON-CTL-NẮP",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2658,7 +2658,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-X626-X620_COMMON-CTL-NẮP",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2674,7 +2674,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09207-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2690,7 +2690,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "J01G040405NA00 275*248*216MM(BC/F)(VP-1004 100-628)(VOLTIVE)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2706,7 +2706,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09207-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2722,7 +2722,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1283-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2738,7 +2738,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-69569M",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2754,7 +2754,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09209-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2770,7 +2770,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09209-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2786,7 +2786,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "6E.5Y009.064-INSERT 3",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2802,7 +2802,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1280-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2818,7 +2818,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0-2",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2834,7 +2834,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-69601H",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2850,7 +2850,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-X626-X620_COMMON-CTL-NẮP",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2866,7 +2866,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1283-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2882,7 +2882,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09207-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2898,7 +2898,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57709A-1.1-2",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2914,7 +2914,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0007561",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2930,7 +2930,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "J01G040407NA00 353*258*343MM(BC/F)(VP-1002 100-518)(VOLTIVE)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2946,7 +2946,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "J01G040407NA00 353*258*343MM(BC/F)(VP-1002 100-518)(VOLTIVE)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2962,7 +2962,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-NẮP (Cải tiến màu sắc)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2978,7 +2978,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -2994,7 +2994,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "FX2-6158-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3010,7 +3010,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09206-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3026,7 +3026,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0005080",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3042,7 +3042,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "J01G040407NA00 353*258*343MM(BC/F)(VP-1002 100-518)(VOLTIVE)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3058,7 +3058,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "J01G040407NA00 353*258*343MM(BC/F)(VP-1002 100-518)(VOLTIVE)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3074,7 +3074,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PKMP1247ONTA",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3090,7 +3090,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3106,7 +3106,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-NẮP (Cải tiến màu sắc)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3122,7 +3122,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "FX2-6158-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3138,7 +3138,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "J01G040407NA00 353*258*343MM(BC/F)(VP-1002 100-518)(VOLTIVE)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3154,7 +3154,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "J01G040407NA00 353*258*343MM(BC/F)(VP-1002 100-518)(VOLTIVE)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3170,7 +3170,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-NẮP (Cải tiến màu sắc)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3186,7 +3186,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-NẮP (Cải tiến màu sắc)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3202,7 +3202,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09206-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3218,7 +3218,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3234,7 +3234,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3250,7 +3250,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92899 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3266,7 +3266,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "J01G040407NA00 353*258*343MM(BC/F)(VP-1002 100-518)(VOLTIVE)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3282,7 +3282,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0005080",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3298,7 +3298,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3314,7 +3314,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3330,7 +3330,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92899 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3346,7 +3346,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0-3",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3362,7 +3362,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "FX2-6158-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3378,7 +3378,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0007561",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3394,7 +3394,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0-3",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3410,7 +3410,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92899 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3426,7 +3426,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 63699 (FSC mix 70%)-02",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3442,7 +3442,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PKSP3271ONTA",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3458,7 +3458,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57709A-1.1-1",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3474,7 +3474,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3490,7 +3490,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-005468A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3506,7 +3506,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MGBAD0006984",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3522,7 +3522,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09208-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3538,7 +3538,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3554,7 +3554,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09208-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3570,7 +3570,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-4835-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3586,7 +3586,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S931-NẮP-CTL",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3602,7 +3602,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-005468A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3618,7 +3618,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57709A-1.1-3",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3634,7 +3634,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-005468A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3650,7 +3650,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-68633Q",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3666,7 +3666,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3682,7 +3682,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1332-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3698,7 +3698,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-F966-UNIT BOX_SIDE PAD",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3714,7 +3714,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-F966-UNIT BOX_SIDE PAD",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3730,7 +3730,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-F966-UNIT BOX_SIDE PAD",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3746,7 +3746,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S931-NẮP-CTL",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3762,7 +3762,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "440040162800-CARTON BOX AN3 30 RS SIN(OFFSET)-MẶT A-02",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3778,7 +3778,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71874A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3794,7 +3794,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S931-NẮP-CTL",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3810,7 +3810,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-005468A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3826,7 +3826,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-56744T-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3842,7 +3842,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57709A-1.1-1",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3858,7 +3858,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "440040162800-CARTON BOX AN3 30 RS SIN(OFFSET)-MẶT A-02",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3874,7 +3874,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71874A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3890,7 +3890,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57709A-1.1-3",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3906,7 +3906,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MGBAD0006984",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3922,7 +3922,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09208-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3938,7 +3938,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3954,7 +3954,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71874A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3970,7 +3970,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71874A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -3986,7 +3986,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1332-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4002,7 +4002,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46043A-Đáy",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4018,7 +4018,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1332-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4034,7 +4034,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-69569R",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4050,7 +4050,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57709A-1.1-1",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4066,7 +4066,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57709A-1.1-3",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4082,7 +4082,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4098,7 +4098,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-005468A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4114,7 +4114,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1332-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4130,7 +4130,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "440040162800-CARTON BOX AN3 30 RS SIN(OFFSET)-MẶT A-02",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4146,7 +4146,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1332-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4162,7 +4162,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1332-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4178,7 +4178,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57709A-1.1-1",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4194,7 +4194,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71158A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4210,7 +4210,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71158A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4226,7 +4226,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-56813F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4242,7 +4242,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 80695 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4258,7 +4258,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5877-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4274,7 +4274,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-01569N",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4290,7 +4290,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-56813F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4306,7 +4306,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5877-008-004-06-01 - MẶT A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4322,7 +4322,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7245-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4338,7 +4338,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5877-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4354,7 +4354,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5877-008-004-06-01 - MẶT A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4370,7 +4370,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4386,7 +4386,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4402,7 +4402,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5877-008-004-06-01 - MẶT A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4418,7 +4418,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7245-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4434,7 +4434,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7245-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4450,7 +4450,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5877-008-004-06-01 - MẶT A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4466,7 +4466,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4482,7 +4482,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46043A-nắp",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4498,7 +4498,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5877-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4514,7 +4514,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "440040162800-CARTON BOX AN3 30 RS SIN(OFFSET)-MẶT B-02",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4530,7 +4530,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "WW BLACK_MGBAD0005804",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4546,7 +4546,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4562,7 +4562,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4578,7 +4578,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46043A-nắp",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4594,7 +4594,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4610,7 +4610,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4626,7 +4626,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94796 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4642,7 +4642,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "440040162800-CARTON BOX AN3 30 RS SIN(OFFSET)-MẶT B-02",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4658,7 +4658,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46043A-nắp",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4674,7 +4674,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7257-001-001-01-01 MẶT A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4690,7 +4690,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4706,7 +4706,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94797 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4722,7 +4722,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "440040162800-CARTON BOX AN3 30 RS SIN(OFFSET)-MẶT B-02",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4738,7 +4738,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4754,7 +4754,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7271-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4770,7 +4770,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 95137 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4786,7 +4786,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92899 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4802,7 +4802,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0007561",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4818,7 +4818,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92899 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4834,7 +4834,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4850,7 +4850,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92899 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4866,7 +4866,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "FX2-6158-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4882,7 +4882,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-43282A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4898,7 +4898,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94797 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4914,7 +4914,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94797 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4930,7 +4930,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-0850-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4946,7 +4946,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672F-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4962,7 +4962,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7257-001-001-01-01 MẶT A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4978,7 +4978,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "WW BLACK_MGBAD0005804",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -4994,7 +4994,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0004870",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5010,7 +5010,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672E-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5026,7 +5026,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-01620D",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5042,7 +5042,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-6287-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5058,7 +5058,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-0879-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5074,7 +5074,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45657A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5090,7 +5090,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5106,7 +5106,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 95137 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5122,7 +5122,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-56813E-1.1",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5138,7 +5138,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PKSC0011ONTA",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5154,7 +5154,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PKSC0011ONTA",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5170,7 +5170,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 95137 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5186,7 +5186,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5202,7 +5202,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0-3",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5218,7 +5218,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09206-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5234,7 +5234,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7257-001-001-01-01 MẶT B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5250,7 +5250,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7257-001-001-01-01 MẶT B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5266,7 +5266,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-NẮP (Cải tiến màu sắc)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5282,7 +5282,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7252-001-001-01-01 MẶT B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5298,7 +5298,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45855A (GSN)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5314,7 +5314,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-56813E-1.1",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5330,7 +5330,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-NẮP (Cải tiến màu sắc)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5346,7 +5346,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7250-001-001-01-01 MẶT B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5362,7 +5362,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71896S",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5378,7 +5378,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-72743A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5394,7 +5394,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-NẮP (Cải tiến màu sắc)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5410,7 +5410,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57709A-1.1-2",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5426,7 +5426,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-NẮP (Cải tiến màu sắc)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5442,7 +5442,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7250-001-001-01-01 MẶT B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5458,7 +5458,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46560A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5474,7 +5474,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57709A-1.1-2",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5490,7 +5490,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "J01G040407NA00 353*258*343MM(BC/F)(VP-1002 100-518)(VOLTIVE)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5506,7 +5506,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0005080",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5522,7 +5522,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5538,7 +5538,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0-3",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5554,7 +5554,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45855A (GSN)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5570,7 +5570,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-56813E-1.1",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5586,7 +5586,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7252-001-001-01-01 MẶT B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5602,7 +5602,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0005080",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5618,7 +5618,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "J01G040407NA00 353*258*343MM(BC/F)(VP-1002 100-518)(VOLTIVE)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5634,7 +5634,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-NẮP (Cải tiến màu sắc)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5650,7 +5650,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0007561",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5666,7 +5666,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "J01G040407NA00 353*258*343MM(BC/F)(VP-1002 100-518)(VOLTIVE)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5682,7 +5682,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09206-00",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5698,7 +5698,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "J01G040407NA00 353*258*343MM(BC/F)(VP-1002 100-518)(VOLTIVE)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5714,7 +5714,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "J01G040407NA00 353*258*343MM(BC/F)(VP-1002 100-518)(VOLTIVE)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5730,7 +5730,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92899 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5746,7 +5746,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-NẮP (Cải tiến màu sắc)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5762,7 +5762,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-NẮP (Cải tiến màu sắc)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5778,7 +5778,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "FX2-6158-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5794,7 +5794,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0007561",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5810,7 +5810,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "FX2-6158-000",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5826,7 +5826,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-NẮP (Cải tiến màu sắc)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5842,7 +5842,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-43282A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5858,7 +5858,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-43282A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5874,7 +5874,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-43282A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5890,7 +5890,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-43282A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5906,7 +5906,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-43282A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5922,7 +5922,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92899 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5938,7 +5938,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-43282A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5954,7 +5954,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S942-CTL-NẮP (Cải tiến màu sắc)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5970,7 +5970,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-43282A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -5986,7 +5986,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-43282A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6002,7 +6002,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0007561",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6018,7 +6018,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92899 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6034,7 +6034,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-69666B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6050,7 +6050,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "D039DS001",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6066,7 +6066,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-3648-008-013-04-01-MẶT B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6082,7 +6082,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0004870",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6098,7 +6098,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-72669L",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6114,7 +6114,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "D039DS001",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6130,7 +6130,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7617-002-001-02-01 MẶT B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6146,7 +6146,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0004870",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6162,7 +6162,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "D00KUF001",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6178,7 +6178,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-72669L",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6194,7 +6194,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-3648-008-013-04-01-MẶT B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6210,7 +6210,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-01689M",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6226,7 +6226,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7617-002-001-02-01 MẶT B",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6242,7 +6242,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672E-1.0",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6258,7 +6258,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46043A-Nắp (Cải tiến màu sắc CTL)",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6274,7 +6274,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7247-001-001-01-01 MẶT A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6290,7 +6290,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "440040162800-CARTON BOX AN3 30 RS SIN(OFFSET)-02",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6306,7 +6306,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-01620D",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6322,7 +6322,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "D00KUF001",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6338,7 +6338,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "D00KUF001",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6354,7 +6354,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7246-001-001-01-01 MẶT A",
           "Machine_Line": "",
           "Product_Group": "Duplex",
@@ -6370,7 +6370,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46043A-Nắp (Cải tiến màu sắc CTL)",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6386,7 +6386,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-70728C",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6402,7 +6402,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0004870",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6418,7 +6418,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57672E-1.0",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6434,7 +6434,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7246-001-001-01-01 MẶT A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6450,7 +6450,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "440040162800-CARTON BOX AN3 30 RS SIN(OFFSET)-02",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6466,7 +6466,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46043A-Nắp (Cải tiến màu sắc CTL)",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6482,7 +6482,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94193 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6498,7 +6498,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6514,7 +6514,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6530,7 +6530,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6546,7 +6546,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-0613-000",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6562,7 +6562,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6578,7 +6578,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94193 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6594,7 +6594,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-6711-000",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6610,7 +6610,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92897 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6626,7 +6626,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Thẻ 94797 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6642,7 +6642,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "MHBAA0004810",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6658,7 +6658,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6674,7 +6674,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6690,7 +6690,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45660A-BTP",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6706,7 +6706,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92897 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6722,7 +6722,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-52964A-1.0",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6738,7 +6738,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 63699 (FSC mix 70%)-02",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6754,7 +6754,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 63699 (FSC mix 70%)-02",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6770,7 +6770,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1308-000",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6786,7 +6786,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hanger Pad_MGBAA0007203",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6802,7 +6802,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hanger Pad_MGBAA0007203",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6818,7 +6818,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hanger Pad_MGBAA0007173",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6834,7 +6834,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Thẻ 94796 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6850,7 +6850,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45855B (GSN)",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6866,7 +6866,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-45855B (GSN)",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6882,7 +6882,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hanger Pad_MGBAA0007173",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6898,7 +6898,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71803A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6914,7 +6914,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71803A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6930,7 +6930,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-72563A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6946,7 +6946,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-44598A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6962,7 +6962,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-44598A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6978,7 +6978,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Thẻ 94796 (FSC mix 70%)",
           "Machine_Line": "",
           "Product_Group": "",
@@ -6994,7 +6994,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hanger Pad_MGBAA0007173",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7010,7 +7010,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71803A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7026,7 +7026,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71803A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7042,7 +7042,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71803A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7058,7 +7058,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7617-002-001-02-01 MẶT A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7074,7 +7074,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7617-002-001-02-01 MẶT A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7090,7 +7090,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0-1",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7106,7 +7106,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-72563A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7122,7 +7122,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7245-001-001-01-01 MẶT B",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7138,7 +7138,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71803A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7154,7 +7154,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7247-001-001-01-01 MẶT B",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7170,7 +7170,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71803A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7186,7 +7186,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-3648-008-013-04-01-MẶT A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7202,7 +7202,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-3648-008-013-04-01-MẶT A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7218,7 +7218,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5868-006-004-03-01- Mặt A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7234,7 +7234,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7247-001-001-01-01 MẶT B",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7250,7 +7250,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71235C",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7266,7 +7266,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94086 (FSC mix 70%)-02",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7282,7 +7282,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0-1",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7298,7 +7298,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7246-001-001-01-01 MẶT B",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7314,7 +7314,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hanger Pad_MGBAA0007173",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7330,7 +7330,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hanger Pad_MGBAA0007173",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7346,7 +7346,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-7245-001-001-01-01 MẶT B",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7362,7 +7362,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-71803A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7378,7 +7378,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hanger Pad_MGBAA0007203",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7394,7 +7394,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5868-006-004-03-01- Mặt A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7410,7 +7410,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hanger Pad_MGBAA0007173",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7426,7 +7426,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57274A-1.0",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7442,7 +7442,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7458,7 +7458,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1043-000",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7474,7 +7474,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RT5-2403-000",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7490,7 +7490,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-46332A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7506,7 +7506,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "D00LLM001",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7522,7 +7522,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "1011822_VP_ESSENTIAL_PLIERS_SB-CARD_MECH",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7538,7 +7538,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "CVN-1043-000",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7554,7 +7554,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-69463A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7570,7 +7570,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-72864A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7586,7 +7586,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 94797 (FSC mix 70%)-01",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7602,7 +7602,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-57788A-1.0",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7618,7 +7618,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-72864A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7634,7 +7634,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-4835-000",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7650,7 +7650,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-005938A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7666,7 +7666,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-003225S",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7682,7 +7682,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S931-NẮP-CTL",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7698,7 +7698,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S931-NẮP-CTL",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7714,7 +7714,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-005938A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7730,7 +7730,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S931-NẮP-CTL",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7746,7 +7746,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-003225S",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7762,7 +7762,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-F966-UNIT BOX_SIDE PAD",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7778,7 +7778,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-F966-UNIT BOX_SIDE PAD",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7794,7 +7794,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-F966-UNIT BOX_SIDE PAD",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7810,7 +7810,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-003225S",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7826,7 +7826,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PKMP3181ONTA",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7842,7 +7842,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-70262G",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7858,7 +7858,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S931-NẮP-CTL",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7874,7 +7874,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S931-NẮP-CTL",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7890,7 +7890,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-005938A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7906,7 +7906,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PKMP3181ONTA",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7922,7 +7922,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S931-NẮP-CTL",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7938,7 +7938,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "Hộp 92890 (FSC mix 70%)-02",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7954,7 +7954,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5877-008-004-06-01 - MẶT B",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7970,7 +7970,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-70262G",
           "Machine_Line": "",
           "Product_Group": "",
@@ -7986,7 +7986,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-005938A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8002,7 +8002,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "RX1-5877-008-004-06-01 - MẶT B",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8018,7 +8018,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-003225S",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8034,7 +8034,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-58072C-1.0",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8050,7 +8050,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-003225S",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8066,7 +8066,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S931-NẮP-CTL",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8082,7 +8082,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-005468A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8098,7 +8098,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S931-NẮP-CTL",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8114,7 +8114,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "SM-S931-NẮP-CTL",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8130,7 +8130,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-005468A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8146,7 +8146,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "3103-09208-00",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8162,7 +8162,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "PM02-005468A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8178,7 +8178,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH68-56744T-1.0",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8194,7 +8194,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH69-44497A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8210,7 +8210,7 @@
         {
           "Date": "2026-06-01",
           "Shift": "Ca 1",
-          "Nhà máy": "GS5",
+          "Site": "GS5",
           "Work_Order": "GH90-72563A",
           "Machine_Line": "",
           "Product_Group": "",
@@ -8227,7 +8227,7 @@
       "columns": [
         "Date",
         "Shift",
-        "Nhà máy",
+        "Site",
         "Work_Order",
         "Machine_Line",
         "Product_Group",
@@ -8241,7 +8241,7 @@
         "Data_Checker"
       ],
       "row_count": 513,
-      "fetched_at": "2026-06-03T09:05:51.020036Z",
+      "fetched_at": "2026-06-03T09:19:33.290270Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -8303,7 +8303,7 @@
         "Data_Checker"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T09:05:51.792102Z",
+      "fetched_at": "2026-06-03T09:19:34.114573Z",
       "note": ""
     },
     "03_QLCL": {
@@ -8380,7 +8380,7 @@
         "Data_Check_Note"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T09:05:52.761526Z",
+      "fetched_at": "2026-06-03T09:19:34.836391Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -8433,7 +8433,7 @@
         "Evidence_Link"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T09:05:53.428742Z",
+      "fetched_at": "2026-06-03T09:19:35.438672Z",
       "note": ""
     },
     "05_KHO": {
@@ -8504,7 +8504,7 @@
         "Data_Check_Note"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T09:05:53.953798Z",
+      "fetched_at": "2026-06-03T09:19:35.856018Z",
       "note": ""
     },
     "06_GSTT": {
@@ -8563,7 +8563,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T09:05:54.430139Z",
+      "fetched_at": "2026-06-03T09:19:36.361300Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -8622,7 +8622,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T09:05:55.003257Z",
+      "fetched_at": "2026-06-03T09:19:36.843845Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -8667,7 +8667,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-06-03T09:05:55.770076Z",
+      "fetched_at": "2026-06-03T09:19:37.448909Z",
       "note": ""
     }
   }

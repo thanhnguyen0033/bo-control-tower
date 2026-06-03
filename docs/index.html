@@ -39,6 +39,11 @@ body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
 .hdr .sub{font-size:10px;color:#86efac;line-height:1.5}
 .hdr-tagline{font-size:9px;color:rgba(240,192,64,.7);letter-spacing:1.2px;
              font-weight:700;margin-top:6px;text-transform:uppercase}
+/* GSP NEXT 30 badge — right side of header */
+.gsp-badge-30{flex-shrink:0;opacity:.93;align-self:center}
+.gsp-badge-30 svg{width:200px;height:70px;border-radius:10px;
+                  filter:drop-shadow(0 2px 8px rgba(0,0,0,.45))}
+@media(max-width:960px){.gsp-badge-30{display:none}}
 .badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
 .bdg{font-size:10px;font-weight:800;border-radius:5px;padding:3px 9px;letter-spacing:.3px}
 .bdg-warn{background:rgba(146,64,14,.9);color:#fef3c7;border:1px solid rgba(255,255,255,.15)}
@@ -71,12 +76,12 @@ input[name=tab]{display:none}
 #t4:checked~#c4,#t5:checked~#c5,#t6:checked~#c6{display:block}
 
 /* Section title */
-.section-title{font-size:14px;font-weight:800;color:#0f2d87;margin:18px 0 11px;
+.section-title{font-size:14px;font-weight:800;color:#0a2e12;margin:18px 0 11px;
                display:flex;align-items:center;gap:9px;letter-spacing:.2px}
 .section-title::before{content:'';width:4px;height:20px;
-                       background:linear-gradient(180deg,#2563eb,#1d4ed8);
+                       background:linear-gradient(180deg,#22c55e,#145522);
                        border-radius:2px;flex-shrink:0;
-                       box-shadow:0 2px 5px rgba(37,99,235,.35)}
+                       box-shadow:0 2px 5px rgba(20,85,34,.4)}
 
 /* Cards */
 .card{background:#fff;border-radius:12px;
@@ -199,21 +204,21 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
       font-size:12px;font-weight:600;color:#92400e;margin:9px 0 15px;line-height:1.55}
 
 /* Footer */
-.footer{background:linear-gradient(135deg,#0c1445,#0f2d87);
+.footer{background:linear-gradient(135deg,#061a0d,#0a2e12);
         color:rgba(255,255,255,.5);text-align:center;font-size:10px;padding:14px;letter-spacing:.3px}
 
 /* Section fold — accordion cho sections phụ */
 .sec-fold{border-radius:10px;overflow:visible;margin-bottom:13px}
 .sec-fold>summary{list-style:none;cursor:pointer;
-                   background:linear-gradient(135deg,#f8fafc,#eef2ff);
-                   color:#0f2d87;font-weight:800;font-size:12px;padding:11px 16px;
-                   border:1px solid #c7d2fe;border-radius:10px;user-select:none;
+                   background:linear-gradient(135deg,#f8fafc,#ecfdf5);
+                   color:#0a2e12;font-weight:800;font-size:12px;padding:11px 16px;
+                   border:1px solid #86efac;border-radius:10px;user-select:none;
                    display:flex;align-items:center;gap:8px;letter-spacing:.2px}
 .sec-fold>summary::-webkit-details-marker{display:none}
 .sec-fold[open]>summary{border-radius:10px 10px 0 0;border-bottom:none}
 .sec-fold[open]>summary::after{content:"▲";margin-left:auto;color:#94a3b8;font-size:10px}
 .sec-fold:not([open])>summary::after{content:"▼";margin-left:auto;color:#94a3b8;font-size:10px}
-.sec-fold-body{padding:15px;border:1px solid #c7d2fe;border-top:none;
+.sec-fold-body{padding:15px;border:1px solid #86efac;border-top:none;
                border-radius:0 0 10px 10px;background:#fff}
 
 /* ── Sidebar layout ───────────────────────────────────────── */
@@ -225,9 +230,9 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
         background:#f8fafc;border-right:1px solid #e2e8f0;
         padding:16px 12px 40px}
 .sb-card{background:#fff;border-radius:8px;padding:12px;
-         border:1px solid #e2e8f0;border-top:3px solid #0f2d87;
+         border:1px solid #e2e8f0;border-top:3px solid #145522;
          margin-bottom:0}
-.sb-title{font-size:10px;font-weight:800;color:#0f2d87;margin-bottom:10px;
+.sb-title{font-size:10px;font-weight:800;color:#145522;margin-bottom:10px;
           letter-spacing:.5px;text-transform:uppercase;
           display:flex;align-items:center;gap:5px}
 .sb-kpi{border-radius:8px;padding:9px 11px;margin-bottom:7px;
@@ -236,12 +241,12 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
 .sb-kpi-lbl{font-size:10px;font-weight:700;color:#374151;margin-bottom:2px;
             white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sb-kpi-val{font-size:18px;font-weight:900;line-height:1.1}
-.sb-link{font-size:11px;color:#2563eb;padding:5px 0;
+.sb-link{font-size:11px;color:#166534;padding:5px 0;
          border-bottom:1px solid #f1f5f9;display:block;
          text-decoration:none;white-space:nowrap;
          overflow:hidden;text-overflow:ellipsis}
 .sb-link:last-child{border-bottom:none}
-.sb-link:hover{color:#1d4ed8;padding-left:3px;transition:.15s}
+.sb-link:hover{color:#14532d;padding-left:3px;transition:.15s}
 .main-col{flex:1;min-width:0;overflow:hidden;padding:16px 20px 40px}
 
 /* ── Mobile responsive ── */
@@ -277,15 +282,16 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
     <div class="hdr-titles">
       <div class="gsp-pill">&#11088; GSP NEXT 30 &mdash; BO Control Tower</div>
       <h1>Dashboard &#272;i&#7873;u h&#224;nh v&#7853;n h&#224;nh GSBB</h1>
-      <div class="sub">KPI ch&#237;nh th&#7913;c: 8/8 b&#7897; ph&#7853;n &#273;&#7841;t C&#7893;ng DL (DQG)&nbsp;|&nbsp;C&#7853;p nh&#7853;t: 2026-06-02 23:48 UTC&nbsp;|&nbsp;Ngu&#7891;n: Google Sheets &rarr; DQG &rarr; KPI&nbsp;|&nbsp;Auto-build: GitHub Actions      </div>
+      <div class="sub">KPI ch&#237;nh th&#7913;c: 8/8 b&#7897; ph&#7853;n &#273;&#7841;t C&#7893;ng DL (DQG)&nbsp;|&nbsp;C&#7853;p nh&#7853;t: 2026-06-03 01:39 UTC&nbsp;|&nbsp;Ngu&#7891;n: Google Sheets &rarr; DQG &rarr; KPI&nbsp;|&nbsp;Auto-build: GitHub Actions      </div>
     </div>
+    <div class="gsp-badge-30"><svg viewBox="0 0 200 70" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="70" rx="10" fill="#061a0d" stroke="rgba(212,160,23,.55)" stroke-width="1.5"/><circle cx="38" cy="34" r="26" fill="none" stroke="#d4a017" stroke-width="1.5" opacity=".5"/><circle cx="38" cy="34" r="19" fill="rgba(212,160,23,.12)"/><text x="38" y="41" text-anchor="middle" font-size="24" font-weight="900" fill="#f0c040" font-family="Segoe UI,Arial,sans-serif">30</text><line x1="72" y1="10" x2="72" y2="58" stroke="rgba(255,255,255,.15)" stroke-width="1"/><text x="82" y="26" font-size="13" font-weight="900" fill="#f0c040" font-family="Segoe UI,Arial,sans-serif" letter-spacing="1.5">GSP NEXT 30</text><text x="82" y="40" font-size="8.5" font-weight="600" fill="#86efac" font-family="Segoe UI,Arial,sans-serif">M&#7897;t cu&#7897;c chuy&#7875;n &#273;&#7893;i</text><text x="82" y="51" font-size="8.5" font-weight="600" fill="#86efac" font-family="Segoe UI,Arial,sans-serif">l&#7899;n &#273;&#227; b&#7855;t &#273;&#7847;u</text><rect x="0" y="58" width="200" height="12" fill="rgba(212,160,23,.13)"/><rect x="0" y="58" width="200" height="2" fill="rgba(212,160,23,.3)"/><text x="100" y="67" text-anchor="middle" font-size="6.5" font-weight="800" fill="rgba(240,192,64,.85)" font-family="Segoe UI,Arial,sans-serif" letter-spacing="1.2">TH&#431;&#416;NG HI&#7878;U M&#7898;I &#183; H&#7878; TH&#7888;NG M&#7898;I &#183; T&#431; DUY M&#7898;I</text></svg></div>
   </div>
   <div class="badges">
     <span class="bdg" style="background:#14532d;color:#d1fae5">      OPERATIONAL &mdash; 8/8 PASS</span>
     <span class="bdg bdg-info">Cong DL (DQG): 8 PASS | 0 SKIP</span>
     <span class="bdg bdg-warn">Du lieu thu nghiem (Trial) &mdash; qua DQG moi la KPI chinh thuc</span>
   </div>
-  <div class="hdr-tagline">TH&#431;&#416;NG HI&#7878;U M&#7�;I &middot; H&#7878; TH&#7888;NG M&#7882;I &middot; T&#431; DUY M&#7882;I</div>
+  <div class="hdr-tagline">TH&#431;&#416;NG HI&#7878;U M&#7898;I &middot; H&#7878; TH&#7888;NG M&#7898;I &middot; T&#431; DUY M&#7898;I</div>
 </div>
 <input type="radio" name="tab" id="t1" checked>
 <input type="radio" name="tab" id="t2">
@@ -301,7 +307,7 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
   <label for="t5">&#128202; <span class="tab-full">Ch&#7881; s&#7889; / Owner (KPI/PIC)</span><span class="tab-short">KPI/PIC</span></label>
   <label for="t6">&#128737;&#65039; <span class="tab-full">Gi&#225;m s&#225;t tu&#226;n th&#7911; (GSTT)</span><span class="tab-short">GSTT</span></label>
 </nav>
-<div id="c1" class="panel"><div class="tong-bo-layout"><aside class="sb-col"><div class="sb-card"><div class="sb-title">📊 KPI Tổng hợp</div><div class="sb-kpi" style="background:#fef2f2;border-left-color:#dc2626"><div class="sb-kpi-lbl">Tuân thủ KH (Plan/DO)</div><div class="sb-kpi-val" style="color:#dc2626">82.3%</div></div><div class="sb-kpi" style="background:#fef2f2;border-left-color:#dc2626"><div class="sb-kpi-lbl">Giao đúng hạn (OTIF)</div><div class="sb-kpi-val" style="color:#dc2626">50.0%</div></div><div class="sb-kpi" style="background:#fef2f2;border-left-color:#dc2626"><div class="sb-kpi-lbl">Dừng máy (Downtime)</div><div class="sb-kpi-val" style="color:#dc2626">2.1h</div></div><div class="sb-kpi" style="background:#fffbeb;border-left-color:#d97706"><div class="sb-kpi-lbl">Phiếu NC (NCR)</div><div class="sb-kpi-val" style="color:#d97706">2</div></div></div><div class="sb-card" style="border-top:3px solid #16a34a"><div class="sb-title" style="color:#16a34a">🚨 BO Issues</div><div style="text-align:center;padding:6px 0"><div style="font-size:36px;font-weight:900;color:#16a34a;line-height:1">0</div><div style="font-size:10px;color:#6b7280;margin-top:3px">Đang mở</div></div><div style="display:flex;justify-content:space-around;margin-top:8px;padding-top:8px;border-top:1px solid #f1f5f9"><div style="text-align:center"><div style="font-size:14px;font-weight:800;color:#dc2626">0</div><div style="font-size:9px;color:#6b7280">Quá hạn</div></div><div style="text-align:center"><div style="font-size:14px;font-weight:800;color:#d97706">1</div><div style="font-size:9px;color:#6b7280">Escalated</div></div></div></div><div class="sb-card"><div class="sb-title">📡 Data Status</div><div style="font-size:11px;color:#374151;padding:4px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#d97706;margin-right:5px;flex-shrink:0"></span><span style="flex:1">GS1 / GSHN</span><span style="font-size:10px;color:#d97706;font-weight:600">Trial data</span></div><div style="font-size:11px;color:#374151;padding:4px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#9ca3af;margin-right:5px;flex-shrink:0"></span><span style="flex:1">GS5 / GSQV</span><span style="font-size:10px;color:#9ca3af;font-weight:600">Chờ 03/06</span></div><div style="font-size:11px;color:#374151;padding:4px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#9ca3af;margin-right:5px;flex-shrink:0"></span><span style="flex:1">GS6 / GSQV</span><span style="font-size:10px;color:#9ca3af;font-weight:600">Chờ 03/06</span></div><div style="font-size:10px;color:#9ca3af;margin-top:8px;padding-top:6px;border-top:1px solid #f1f5f9">🕐 2026-06-02 23:48 UTC</div></div><div class="sb-card"><div class="sb-title">⚡ Nội dung</div><a class="sb-link" href="#sec1">🗺️ Heatmap sức khỏe NM</a><a class="sb-link" href="#sec2">📊 KPI Cards điều hành</a><a class="sb-link" href="#sec3">📦 Kho / WIP / FIFO</a><a class="sb-link" href="#sec4">🏢 Rủi ro khách hàng</a><a class="sb-link" href="#sec5">📋 Aging / ECN / RMA</a><a class="sb-link" href="#sec6">🛡️ GSTT Compliance</a></div></aside><div class="main-col">
+<div id="c1" class="panel"><div class="tong-bo-layout"><aside class="sb-col"><div class="sb-card"><div class="sb-title">📊 KPI Tổng hợp</div><div class="sb-kpi" style="background:#fef2f2;border-left-color:#dc2626"><div class="sb-kpi-lbl">Tuân thủ KH (Plan/DO)</div><div class="sb-kpi-val" style="color:#dc2626">82.3%</div></div><div class="sb-kpi" style="background:#fef2f2;border-left-color:#dc2626"><div class="sb-kpi-lbl">Giao đúng hạn (OTIF)</div><div class="sb-kpi-val" style="color:#dc2626">50.0%</div></div><div class="sb-kpi" style="background:#fef2f2;border-left-color:#dc2626"><div class="sb-kpi-lbl">Dừng máy (Downtime)</div><div class="sb-kpi-val" style="color:#dc2626">2.1h</div></div><div class="sb-kpi" style="background:#fffbeb;border-left-color:#d97706"><div class="sb-kpi-lbl">Phiếu NC (NCR)</div><div class="sb-kpi-val" style="color:#d97706">2</div></div></div><div class="sb-card" style="border-top:3px solid #16a34a"><div class="sb-title" style="color:#16a34a">🚨 BO Issues</div><div style="text-align:center;padding:6px 0"><div style="font-size:36px;font-weight:900;color:#16a34a;line-height:1">0</div><div style="font-size:10px;color:#6b7280;margin-top:3px">Đang mở</div></div><div style="display:flex;justify-content:space-around;margin-top:8px;padding-top:8px;border-top:1px solid #f1f5f9"><div style="text-align:center"><div style="font-size:14px;font-weight:800;color:#dc2626">0</div><div style="font-size:9px;color:#6b7280">Quá hạn</div></div><div style="text-align:center"><div style="font-size:14px;font-weight:800;color:#d97706">1</div><div style="font-size:9px;color:#6b7280">Escalated</div></div></div></div><div class="sb-card"><div class="sb-title">📡 Data Status</div><div style="font-size:11px;color:#374151;padding:4px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#d97706;margin-right:5px;flex-shrink:0"></span><span style="flex:1">GS1 / GSHN</span><span style="font-size:10px;color:#d97706;font-weight:600">Trial data</span></div><div style="font-size:11px;color:#374151;padding:4px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#9ca3af;margin-right:5px;flex-shrink:0"></span><span style="flex:1">GS5 / GSQV</span><span style="font-size:10px;color:#9ca3af;font-weight:600">Chờ 03/06</span></div><div style="font-size:11px;color:#374151;padding:4px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#9ca3af;margin-right:5px;flex-shrink:0"></span><span style="flex:1">GS6 / GSQV</span><span style="font-size:10px;color:#9ca3af;font-weight:600">Chờ 03/06</span></div><div style="font-size:10px;color:#9ca3af;margin-top:8px;padding-top:6px;border-top:1px solid #f1f5f9">🕐 2026-06-03 01:39 UTC</div></div><div class="sb-card"><div class="sb-title">⚡ Nội dung</div><a class="sb-link" href="#sec1">🗺️ Heatmap sức khỏe NM</a><a class="sb-link" href="#sec2">📊 KPI Cards điều hành</a><a class="sb-link" href="#sec3">📦 Kho / WIP / FIFO</a><a class="sb-link" href="#sec4">🏢 Rủi ro khách hàng</a><a class="sb-link" href="#sec5">📋 Aging / ECN / RMA</a><a class="sb-link" href="#sec6">🛡️ GSTT Compliance</a></div></aside><div class="main-col">
     
     <div style="background:linear-gradient(135deg,#0c1445 0%,#0f2d87 55%,#1a4fba 100%);
                 border-radius:14px;padding:16px 18px;margin-bottom:18px;

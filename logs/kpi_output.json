@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-03T14:12:17.584202Z",
+  "generated_at": "2026-06-03T16:54:55.367306Z",
   "summary": {
     "total_depts": 8,
     "kpi_official": 3,
     "kpi_skipped": 0,
     "kpi_excluded": 5,
-    "generated_at": "2026-06-03T14:12:17.584201Z"
+    "generated_at": "2026-06-03T16:54:55.367304Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -15,7 +15,7 @@
       "official": false,
       "kpis": null,
       "note": "Row 54 col 'Plan_Qty' = '28,800.00' is not numeric",
-      "calculated_at": "2026-06-03T14:12:17.584056Z"
+      "calculated_at": "2026-06-03T16:54:55.367141Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -24,7 +24,7 @@
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['Commit_Date']",
-      "calculated_at": "2026-06-03T14:12:17.584061Z"
+      "calculated_at": "2026-06-03T16:54:55.367147Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -73,7 +73,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-03T14:12:17.584092Z"
+      "calculated_at": "2026-06-03T16:54:55.367181Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -134,7 +134,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-03T14:12:17.584143Z"
+      "calculated_at": "2026-06-03T16:54:55.367225Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -191,7 +191,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-03T14:12:17.584175Z"
+      "calculated_at": "2026-06-03T16:54:55.367258Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -200,7 +200,7 @@
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['Check_Date']",
-      "calculated_at": "2026-06-03T14:12:17.584180Z"
+      "calculated_at": "2026-06-03T16:54:55.367264Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -209,7 +209,7 @@
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['Request_Date']",
-      "calculated_at": "2026-06-03T14:12:17.584184Z"
+      "calculated_at": "2026-06-03T16:54:55.367283Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -218,7 +218,7 @@
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['Issue_Date']",
-      "calculated_at": "2026-06-03T14:12:17.584192Z"
+      "calculated_at": "2026-06-03T16:54:55.367293Z"
     }
   }
 }

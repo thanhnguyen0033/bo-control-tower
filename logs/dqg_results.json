@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-03T14:12:17.552440Z",
-  "raw_data_from": "2026-06-03T14:12:17.508168Z",
+  "generated_at": "2026-06-03T16:54:55.326307Z",
+  "raw_data_from": "2026-06-03T16:54:55.270452Z",
   "summary": {
     "PASS": 3,
     "WARN": 0,
@@ -39,7 +39,7 @@
         "Row 70 col 'Plan_Qty' = '4,177.00' is not numeric",
         "Row 70 col 'Actual_Qty' = '4,177.00' is not numeric"
       ],
-      "validated_at": "2026-06-03T14:12:17.552325Z"
+      "validated_at": "2026-06-03T16:54:55.326165Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -54,7 +54,7 @@
       "issues": [
         "Missing required columns: ['Commit_Date']"
       ],
-      "validated_at": "2026-06-03T14:12:17.552352Z"
+      "validated_at": "2026-06-03T16:54:55.326196Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -66,7 +66,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-03T14:12:17.552370Z"
+      "validated_at": "2026-06-03T16:54:55.326215Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -78,7 +78,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-03T14:12:17.552386Z"
+      "validated_at": "2026-06-03T16:54:55.326235Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -90,7 +90,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-03T14:12:17.552399Z"
+      "validated_at": "2026-06-03T16:54:55.326250Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -105,7 +105,7 @@
       "issues": [
         "Missing required columns: ['Check_Date']"
       ],
-      "validated_at": "2026-06-03T14:12:17.552409Z"
+      "validated_at": "2026-06-03T16:54:55.326261Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -120,7 +120,7 @@
       "issues": [
         "Missing required columns: ['Request_Date']"
       ],
-      "validated_at": "2026-06-03T14:12:17.552421Z"
+      "validated_at": "2026-06-03T16:54:55.326285Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -135,7 +135,7 @@
       "issues": [
         "Missing required columns: ['Issue_Date']"
       ],
-      "validated_at": "2026-06-03T14:12:17.552431Z"
+      "validated_at": "2026-06-03T16:54:55.326296Z"
     }
   }
 }

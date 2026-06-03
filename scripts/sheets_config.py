@@ -23,21 +23,21 @@ SHEET_CONFIG = {
     },
     "03_QLCL": {
         # Updated 2026-06-03 — V3 sheet: BO_Input_QLCL_NCR_CAR_GSBB_V3_RMA_ECN_Recovery
-        "sheet_id":   "1fK3UGw4BGpqX4zay7glyq9JP5MsLUGYf3ZsJMDSjzTY",
+        "sheet_id":   "1fK3UGw4BGpqX4zay7gIyq9JP5MsLUGYf3ZsJMDSjzTY",
         "tab_name":   "03_QLCL_NCR_CAR",
         "header_row": 3,
         "description": "Chất Lượng – NCR/CAR",
     },
     "04_QLTB_CD": {
         # Updated 2026-06-03 — V2 sheet: BO_Input_QLTB_Downtime_GSBB_V2
-        "sheet_id":   "1_HhUXOaX9MeqsJC2l-NeTyPaII12sayyvtXMPFaUk0E",
+        "sheet_id":   "1_HhUXOaX9MeqsJC2I-NeTyPaII12sayyvtXMPFaUk0E",
         "tab_name":   "04_MACHINE_DOWNTIME",
         "header_row": 3,
         "description": "Thiết Bị – Machine Downtime",
     },
     "05_KHO": {
         # Updated 2026-06-03 — V3 sheet: BO_Input_Kho_WIP_FIFO_GSBB_V3_Inventory_Capacity_Aging
-        "sheet_id":   "1yl8K7TVN5XQXcWT3IIRWptoEg7J4Lb127aBHWE8Ve1s",
+        "sheet_id":   "1yl8K7TVN5XQXcWT3IlRWptoEg7J4Lb127aBHWE8Ve1s",
         "tab_name":   "05_WIP_FIFO_KHO",
         "header_row": 3,
         "description": "Kho GS5 – WIP/FIFO",

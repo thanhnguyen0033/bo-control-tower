@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-03T09:19:37.448922Z",
+  "generated_at": "2026-06-03T11:05:02.097430Z",
   "summary": {
     "total_depts": 8,
-    "ok": 8,
+    "ok": 5,
     "empty": 0,
     "pending": 0,
-    "access_error": 0,
+    "access_error": 3,
     "network_error": 0
   },
   "departments": {
@@ -8241,7 +8241,7 @@
         "Data_Checker"
       ],
       "row_count": 513,
-      "fetched_at": "2026-06-03T09:19:33.290270Z",
+      "fetched_at": "2026-06-03T11:05:00.591468Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -8251,7 +8251,7 @@
       "sheet_id": "1YWmcZlXqZ8fRKpw-L0R-ERcofeWUjo68dKwwNc113AQ",
       "records": [
         {
-          "Commit_Date": "2026-05-13",
+          "kết": "2026-05-13",
           "Actual_Delivery_Date": "2026-05-13",
           "Site": "GS1",
           "Customer": "Cannon",
@@ -8268,7 +8268,7 @@
           "Data_Checker": ""
         },
         {
-          "Commit_Date": "2026-05-14",
+          "kết": "2026-05-14",
           "Actual_Delivery_Date": "2026-05-15",
           "Site": "GS1",
           "Customer": "Brother",
@@ -8286,7 +8286,7 @@
         }
       ],
       "columns": [
-        "Commit_Date",
+        "kết",
         "Actual_Delivery_Date",
         "Site",
         "Customer",
@@ -8303,209 +8303,41 @@
         "Data_Checker"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T09:19:34.114573Z",
+      "fetched_at": "2026-06-03T11:05:00.846003Z",
       "note": ""
     },
     "03_QLCL": {
-      "status": "OK",
+      "status": "ACCESS_ERROR",
       "description": "Chất Lượng – NCR/CAR",
       "tab_name": "03_QLCL_NCR_CAR",
-      "sheet_id": "164Ylw1FqWfnCUg92pVBJD_Z_Q6DUHZmLCIza8UcEonw",
-      "records": [
-        {
-          "Date": "2026-05-12",
-          "Site": "GS1",
-          "Customer": "Cannon",
-          "NCR_CAR_ID": "GS_NCR01",
-          "Defect_Group": "abc",
-          "Severity": "Critical",
-          "Qty_Affected": "550",
-          "Status": "Blocked",
-          "Owner_Direct": "Mr Giang",
-          "Due_Date": "",
-          "Overdue?": "",
-          "Root_Cause_Category": "Man",
-          "Action_Summary": "",
-          "Evidence_Link": "",
-          "Remark": "",
-          "Linked_RMA_ID": "",
-          "Linked_ECN_ID": "",
-          "COPQ_Estimated": "",
-          "Recovery_Status": "",
-          "Data_Check_Note": "Thiếu Owner/Deadline/Action cho lỗi nghiêm trọng"
-        },
-        {
-          "Date": "2026-05-14",
-          "Site": "GS1",
-          "Customer": "Brother",
-          "NCR_CAR_ID": "GS_NCR02",
-          "Defect_Group": "cdf",
-          "Severity": "Medium",
-          "Qty_Affected": "200",
-          "Status": "Pending",
-          "Owner_Direct": "Mr Giang",
-          "Due_Date": "",
-          "Overdue?": "",
-          "Root_Cause_Category": "Material",
-          "Action_Summary": "",
-          "Evidence_Link": "",
-          "Remark": "",
-          "Linked_RMA_ID": "",
-          "Linked_ECN_ID": "",
-          "COPQ_Estimated": "",
-          "Recovery_Status": "",
-          "Data_Check_Note": "OK"
-        }
-      ],
-      "columns": [
-        "Date",
-        "Site",
-        "Customer",
-        "NCR_CAR_ID",
-        "Defect_Group",
-        "Severity",
-        "Qty_Affected",
-        "Status",
-        "Owner_Direct",
-        "Due_Date",
-        "Overdue?",
-        "Root_Cause_Category",
-        "Action_Summary",
-        "Evidence_Link",
-        "Remark",
-        "Linked_RMA_ID",
-        "Linked_ECN_ID",
-        "COPQ_Estimated",
-        "Recovery_Status",
-        "Data_Check_Note"
-      ],
-      "row_count": 2,
-      "fetched_at": "2026-06-03T09:19:34.836391Z",
-      "note": ""
+      "sheet_id": "1fK3UGw4BGpqX4zay7glyq9JP5MsLUGYf3ZsJMDSjzTY",
+      "records": [],
+      "columns": [],
+      "row_count": 0,
+      "fetched_at": "2026-06-03T11:05:01.017363Z",
+      "note": "Access denied — set sheet sharing to 'Anyone with link can view', or verify Sheet ID"
     },
     "04_QLTB_CD": {
-      "status": "OK",
+      "status": "ACCESS_ERROR",
       "description": "Thiết Bị – Machine Downtime",
       "tab_name": "04_MACHINE_DOWNTIME",
-      "sheet_id": "1XJ4JkkQDyIzqbeyNmrf2pfhD_pK09lgv7YB7zvH9dLs",
-      "records": [
-        {
-          "Date": "2026-05-14",
-          "Shift": "Ca 1",
-          "Site": "GS1",
-          "Machine": "R906",
-          "Downtime_Min": "95",
-          "Downtime_Type": "Breakdown",
-          "Reason_Code": "QLTB_010",
-          "Breakdown_PM": "Breakdown",
-          "Owner_Direct": "Mr Thập",
-          "Action_Required": "",
-          "Status": "Pending",
-          "Evidence_Link": ""
-        },
-        {
-          "Date": "2026-05-15",
-          "Shift": "Ca 1",
-          "Site": "GS1",
-          "Machine": "R900",
-          "Downtime_Min": "30",
-          "Downtime_Type": "Breakdown",
-          "Reason_Code": "QLTB_012",
-          "Breakdown_PM": "Breakdown",
-          "Owner_Direct": "Mr Thập",
-          "Action_Required": "",
-          "Status": "Done",
-          "Evidence_Link": ""
-        }
-      ],
-      "columns": [
-        "Date",
-        "Shift",
-        "Site",
-        "Machine",
-        "Downtime_Min",
-        "Downtime_Type",
-        "Reason_Code",
-        "Breakdown_PM",
-        "Owner_Direct",
-        "Action_Required",
-        "Status",
-        "Evidence_Link"
-      ],
-      "row_count": 2,
-      "fetched_at": "2026-06-03T09:19:35.438672Z",
-      "note": ""
+      "sheet_id": "1_HhUXOaX9MeqsJC2l-NeTyPaII12sayyvtXMPFaUk0E",
+      "records": [],
+      "columns": [],
+      "row_count": 0,
+      "fetched_at": "2026-06-03T11:05:01.160255Z",
+      "note": "Access denied — set sheet sharing to 'Anyone with link can view', or verify Sheet ID"
     },
     "05_KHO": {
-      "status": "OK",
+      "status": "ACCESS_ERROR",
       "description": "Kho GS5 – WIP/FIFO",
       "tab_name": "05_WIP_FIFO_KHO",
-      "sheet_id": "1G7tWo8KwD91BecbSmlZWVmugeWUad2Hoa73eUtHfppY",
-      "records": [
-        {
-          "Date": "2026-05-14",
-          "Site": "GS5",
-          "Area": "Sau bế Eterna",
-          "Work_Order": "Cannon_hộp 01",
-          "Stage": "In Bế",
-          "WIP_Qty": "5.000",
-          "Age_Days": "3",
-          "FIFO_Status": "Risk",
-          "Owner_Direct": "Mr Luân",
-          "Risk_Level": "High",
-          "Remark": "Sale Thả sai lệnh giao hàng",
-          "Storage_Area": "",
-          "Location_Code": "",
-          "Inventory_Type": "",
-          "Aging_Bucket": "0-7",
-          "Linked_Issue_ID": "",
-          "Evidence_Link": "",
-          "Data_Check_Note": "Thiếu Owner/Evidence cho rủi ro cao"
-        },
-        {
-          "Date": "2026-05-15",
-          "Site": "GS5",
-          "Area": "Sau bế Eterna",
-          "Work_Order": "Cannon_Hộp mực",
-          "Stage": "In Bế",
-          "WIP_Qty": "3.500",
-          "Age_Days": "6",
-          "FIFO_Status": "Risk",
-          "Owner_Direct": "Mr Luân",
-          "Risk_Level": "High",
-          "Remark": "SX trước chưa  hoàn thiện",
-          "Storage_Area": "",
-          "Location_Code": "",
-          "Inventory_Type": "",
-          "Aging_Bucket": "0-7",
-          "Linked_Issue_ID": "",
-          "Evidence_Link": "",
-          "Data_Check_Note": "Thiếu Owner/Evidence cho rủi ro cao"
-        }
-      ],
-      "columns": [
-        "Date",
-        "Site",
-        "Area",
-        "Work_Order",
-        "Stage",
-        "WIP_Qty",
-        "Age_Days",
-        "FIFO_Status",
-        "Owner_Direct",
-        "Risk_Level",
-        "Remark",
-        "Storage_Area",
-        "Location_Code",
-        "Inventory_Type",
-        "Aging_Bucket",
-        "Linked_Issue_ID",
-        "Evidence_Link",
-        "Data_Check_Note"
-      ],
-      "row_count": 2,
-      "fetched_at": "2026-06-03T09:19:35.856018Z",
-      "note": ""
+      "sheet_id": "1yl8K7TVN5XQXcWT3IIRWptoEg7J4Lb127aBHWE8Ve1s",
+      "records": [],
+      "columns": [],
+      "row_count": 0,
+      "fetched_at": "2026-06-03T11:05:01.289587Z",
+      "note": "Access denied — set sheet sharing to 'Anyone with link can view', or verify Sheet ID"
     },
     "06_GSTT": {
       "status": "OK",
@@ -8514,7 +8346,7 @@
       "sheet_id": "1lgY4FTcZ2Un6A4YrHDI1kjSE0gtdnrZjcR81IYaN6Ns",
       "records": [
         {
-          "Check_Date": "2026-05-15",
+          "tra": "2026-05-15",
           "Shift": "Ca 1",
           "Site": "GS5",
           "Area": "TT IN",
@@ -8530,7 +8362,7 @@
           "Remark": "Gây hỏng lớp sơn nền"
         },
         {
-          "Check_Date": "2026-05-15",
+          "tra": "2026-05-15",
           "Shift": "Ca 2",
           "Site": "GS6",
           "Area": "Xưởng Khay giấy",
@@ -8547,7 +8379,7 @@
         }
       ],
       "columns": [
-        "Check_Date",
+        "tra",
         "Shift",
         "Site",
         "Area",
@@ -8563,7 +8395,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T09:19:36.361300Z",
+      "fetched_at": "2026-06-03T11:05:01.582704Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -8573,7 +8405,7 @@
       "sheet_id": "1VdkEFmfZnUXLda5KQJavEQWaGQrtJ31YkCqPRkvksig",
       "records": [
         {
-          "Request_Date": "2026-05-12",
+          "cầu": "2026-05-12",
           "Site": "GS5",
           "Customer": "Samsung",
           "Sample_ID": "A176",
@@ -8589,7 +8421,7 @@
           "Remark": ""
         },
         {
-          "Request_Date": "2026-05-15",
+          "cầu": "2026-05-15",
           "Site": "GS5",
           "Customer": "Cannon",
           "Sample_ID": "Hộp mực",
@@ -8606,7 +8438,7 @@
         }
       ],
       "columns": [
-        "Request_Date",
+        "cầu",
         "Site",
         "Customer",
         "Sample_ID",
@@ -8622,7 +8454,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-03T09:19:36.843845Z",
+      "fetched_at": "2026-06-03T11:05:01.837384Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -8632,7 +8464,7 @@
       "sheet_id": "1DzPrZ2Yw1Hyp3IaSG0r85J_A7GrALeQk1yHGNSRKzIE",
       "records": [
         {
-          "Issue_Date": "Hỏng máy R906",
+          "sinh": "Hỏng máy R906",
           "Source_Module": "QLTB",
           "Site": "GS1",
           "Issue_Description": "Hỏng dao mực",
@@ -8650,7 +8482,7 @@
         }
       ],
       "columns": [
-        "Issue_Date",
+        "sinh",
         "Source_Module",
         "Site",
         "Issue_Description",
@@ -8667,7 +8499,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-06-03T09:19:37.448909Z",
+      "fetched_at": "2026-06-03T11:05:02.097418Z",
       "note": ""
     }
   }

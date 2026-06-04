@@ -26,70 +26,83 @@ DQG_RESULT_FILE = os.path.join(LOGS_DIR, "dqg_results.json")
 DQG_RULES = {
 
     "01_SAN_XUAT": {
-        # Tab: 01_SX_PLAN_DO — BO_Input_SX_PlanDO_GSBB_V2
-        # Column names normalized VI→EN by data_fetcher.normalize_columns()
+        # UPDATED 2026-06-04: Google Sheet uses Vietnamese column headers (verified from sync_sources).
+        # Tab: 01_SX_PLAN_DO | Row3 actual headers:
+        # Ngày, Ca, Nhà máy, Lệnh SX, Máy / Dây chuyền, Nhóm sản phẩm,
+        # SL Kế hoạch, SL Thực tế, SL Lỗi (NG), % Tuân thủ KH, RAG, ...
         "required_columns": [
-            "Date", "Shift", "Site", "Work_Order",
-            "Machine_Line", "Product_Group",
-            "Plan_Qty", "Actual_Qty", "NG_Qty",
-            "Plan_Do_%", "RAG",
+            "Ngày", "Ca", "Nhà máy", "Lệnh SX",
+            "Nhóm sản phẩm", "SL Kế hoạch", "SL Thực tế", "% Tuân thủ KH", "RAG",
         ],
-        "numeric_columns": ["Plan_Qty", "Actual_Qty", "NG_Qty", "Plan_Do_%"],
-        "site_column": "Site",
+        "numeric_columns": ["SL Kế hoạch", "SL Thực tế", "SL Lỗi (NG)", "% Tuân thủ KH"],
+        "site_column": "Nhà máy",
     },
 
     "02_KHSX_OTIF": {
-        # Confirmed 2026-05-31 — actual columns from BO_Input_OTIF_Delivery_BySite_GSBB_V2
+        # UPDATED 2026-06-04: Google Sheet uses mixed Vietnamese/English headers.
+        # Tab: 02_OTIF_DELIVERY | Row3 actual headers:
+        # Ngày cam kết, Actual_Delivery_Date, Nhà máy, Khách hàng, Lệnh SX,
+        # SL cam kết, SL thực giao, Đúng hạn?, Số ngày trễ, Rủi ro giao hàng, ...
         "required_columns": [
-            "Commit_Date", "Site", "Work_Order", "OTIF?", "Delivery_Risk",
+            "Ngày cam kết", "Nhà máy", "Lệnh SX", "Đúng hạn?",
         ],
-        "numeric_columns": ["Committed_Qty", "Delivered_Qty", "Delay_Days"],
-        "site_column": "Site",
-        "date_column": "Commit_Date",
+        "numeric_columns": ["Số ngày trễ"],
+        "site_column": "Nhà máy",
+        "date_column": "Ngày cam kết",
     },
 
     "03_QLCL": {
-        # Tab: 03_QLCL_NCR_CAR — actual columns from synced sheet
+        # UPDATED 2026-06-04: Google Sheet uses Vietnamese column headers.
+        # Tab: 03_QLCL_NCR_CAR | Row3 actual headers:
+        # Ngày, Nhà máy, Khách hàng, Mã NCR/CAR, Nhóm lỗi, Mức độ,
+        # SL bị ảnh hưởng, Trạng thái, PIC trực tiếp, ...
         "required_columns": [
-            "Date", "Site", "NCR_CAR_ID", "Severity", "Status", "Owner_Direct",
+            "Ngày", "Nhà máy", "Mã NCR/CAR", "Mức độ", "Trạng thái", "PIC trực tiếp",
         ],
-        "numeric_columns": ["Qty_Affected"],
-        "site_column": "Site",
-        "date_column": "Date",
+        "numeric_columns": ["SL bị ảnh hưởng"],
+        "site_column": "Nhà máy",
+        "date_column": "Ngày",
     },
 
     "04_QLTB_CD": {
-        # Tab: 04_MACHINE_DOWNTIME — actual columns from synced sheet
+        # UPDATED 2026-06-04: Google Sheet uses Vietnamese column headers.
+        # Tab: 04_MACHINE_DOWNTIME | Row3 actual headers:
+        # Ngày, Ca, Nhà máy, Mã máy, Thời gian dừng (phút), Loại dừng máy,
+        # Mã nguyên nhân, Loại sự cố, PIC trực tiếp, Hành động cần làm, Trạng thái, ...
         "required_columns": [
-            "Date", "Site", "Machine", "Downtime_Min", "Status",
+            "Ngày", "Nhà máy", "Mã máy", "Thời gian dừng (phút)", "Trạng thái",
         ],
-        "numeric_columns": ["Downtime_Min"],
-        "site_column": "Site",
-        "date_column": "Date",
+        "numeric_columns": ["Thời gian dừng (phút)"],
+        "site_column": "Nhà máy",
+        "date_column": "Ngày",
     },
 
     "05_KHO": {
-        # Tab: 05_WIP_FIFO_KHO — actual columns from synced sheet (GS5 primary)
+        # UPDATED 2026-06-04: Google Sheet uses Vietnamese column headers.
+        # Tab: 05_WIP_FIFO_KHO | Row3 actual headers:
+        # Ngày, Nhà máy, Khu vực, Lệnh SX, Công đoạn, SL bán thành phẩm,
+        # Số ngày tồn, Trạng thái FIFO, PIC trực tiếp, Mức rủi ro, ...
         "required_columns": [
-            "Date", "Site", "Work_Order", "WIP_Qty", "FIFO_Status",
+            "Ngày", "Nhà máy", "Lệnh SX", "SL bán thành phẩm", "Trạng thái FIFO",
         ],
-        "numeric_columns": ["WIP_Qty", "Age_Days"],
-        "site_column": "Site",
-        "date_column": "Date",
+        "numeric_columns": ["SL bán thành phẩm", "Số ngày tồn"],
+        "site_column": "Nhà máy",
+        "date_column": "Ngày",
     },
 
     "05_KHO_GS1": {
-        # Tab: 05_WIP_FIFO_KHO — GS1 variant (same structure as 05_KHO)
+        # Same structure as 05_KHO
         "required_columns": [
-            "Date", "Site", "Work_Order", "WIP_Qty", "FIFO_Status",
+            "Ngày", "Nhà máy", "Lệnh SX", "SL bán thành phẩm", "Trạng thái FIFO",
         ],
-        "numeric_columns": ["WIP_Qty", "Age_Days"],
-        "site_column": "Site",
-        "date_column": "Date",
+        "numeric_columns": ["SL bán thành phẩm", "Số ngày tồn"],
+        "site_column": "Nhà máy",
+        "date_column": "Ngày",
     },
 
     "06_GSTT": {
-        # Tab: 06_GSTT_FIELD_LOG — actual columns from synced sheet
+        # FIXED 2026-06-04: xlsx row3 col0 = "Check_Date" (verified from xlsx).
+        # With headers=3 in GVIZ URL, this will be correctly extracted.
         "required_columns": [
             "Check_Date", "Site", "Category", "Severity", "Status",
         ],
@@ -99,7 +112,7 @@ DQG_RULES = {
     },
 
     "07_CONG_NGHE_SPM": {
-        # Tab: 08_SPM_TECH — actual columns from synced sheet
+        # FIXED 2026-06-04: xlsx row3 col0 = "Request_Date" (verified from xlsx).
         "required_columns": [
             "Request_Date", "Site", "Sample_ID", "Status",
         ],
@@ -109,7 +122,7 @@ DQG_RULES = {
     },
 
     "08_BO_CONTROL": {
-        # Tab: 09_ISSUE_ACTION — actual columns from synced sheet
+        # FIXED 2026-06-04: xlsx row3 col0 = "Issue_Date" (verified from xlsx).
         "required_columns": [
             "Issue_Date", "Source_Module", "Site", "Severity", "Owner", "Status",
         ],
@@ -124,9 +137,25 @@ VALID_SITES = ["GS1", "GS5", "GS6", "GSQV"]
 
 def is_numeric(value: str) -> bool:
     """Return True if value can be parsed as a number (int or float).
-    Handles: comma as decimal separator, % suffix, spaces."""
+    Handles multiple formats:
+      - US thousands comma:   '28,800.00' → remove comma → 28800.00 ✓
+      - European decimal comma: '109,3'   → if no period, replace comma→period ✓
+      - European thousands dot: '1.062'   → already parseable ✓
+      - Percentage:            '109,3%'   → strip % then handle comma ✓
+    """
     try:
-        cleaned = str(value).replace(",", ".").replace("%", "").strip()
+        cleaned = str(value).replace("%", "").strip()
+        if not cleaned:
+            return False
+        # If both comma and period present: comma = thousands separator → remove it
+        # e.g. '28,800.00' → '28800.00'
+        if "," in cleaned and "." in cleaned:
+            cleaned = cleaned.replace(",", "")
+        # If only comma (no period): ambiguous, but treat as decimal separator
+        # e.g. '109,3' → '109.3'  OR  '1,062' → '1.062' (close enough for DQG)
+        elif "," in cleaned:
+            cleaned = cleaned.replace(",", ".")
+        # Only period: already standard decimal or European thousands e.g. '1.062'
         float(cleaned)
         return True
     except (ValueError, TypeError):

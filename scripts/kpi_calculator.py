@@ -384,7 +384,6 @@ def calc_site_breakdown(dept_key: str, records: list) -> dict:
 
     result = {}
     for site in VALID_SITES:
-        # Column names already normalized to "Site" by data_fetcher.normalize_columns()
         site_recs = [r for r in records
                      if r.get("Site", r.get("site", "")).strip() == site]
         if site_recs:

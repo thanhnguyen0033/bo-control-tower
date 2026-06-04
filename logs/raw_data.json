@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T12:50:55.357272Z",
+  "generated_at": "2026-06-04T13:01:41.179585Z",
   "summary": {
     "total": 8,
     "configured": 8,
@@ -8242,7 +8242,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 513,
-      "fetched_at": "2026-06-04T12:50:49.462111Z",
+      "fetched_at": "2026-06-04T13:01:35.842531Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -8253,11 +8253,14 @@
       "records": [
         {
           "Ngày cam kết": "2026-05-13",
-          "": "0",
+          "Actual_Delivery_Date": "2026-05-13",
           "Nhà máy": "GS1",
           "Khách hàng": "Cannon",
           "Lệnh SX": "GS1234",
+          "SL cam kết": "3.800",
+          "SL thực giao": "3.800",
           "Đúng hạn?": "Yes",
+          "Số ngày trễ": "0",
           "Rủi ro giao hàng": "Low",
           "GĐNM Owner vận hành": "Mr Hào",
           "Người nhập liệu site": "Nguyễn văn A",
@@ -8267,11 +8270,14 @@
         },
         {
           "Ngày cam kết": "2026-05-14",
-          "": "1",
+          "Actual_Delivery_Date": "2026-05-15",
           "Nhà máy": "GS1",
           "Khách hàng": "Brother",
           "Lệnh SX": "GS12345",
+          "SL cam kết": "5.600",
+          "SL thực giao": "5.500",
           "Đúng hạn?": "No",
+          "Số ngày trễ": "1",
           "Rủi ro giao hàng": "High",
           "GĐNM Owner vận hành": "Mr Hào",
           "Người nhập liệu site": "Nguyễn Văn B",
@@ -8282,11 +8288,14 @@
       ],
       "columns": [
         "Ngày cam kết",
-        "",
+        "Actual_Delivery_Date",
         "Nhà máy",
         "Khách hàng",
         "Lệnh SX",
+        "SL cam kết",
+        "SL thực giao",
         "Đúng hạn?",
+        "Số ngày trễ",
         "Rủi ro giao hàng",
         "GĐNM Owner vận hành",
         "Người nhập liệu site",
@@ -8295,7 +8304,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-04T12:50:50.384618Z",
+      "fetched_at": "2026-06-04T13:01:36.734341Z",
       "note": ""
     },
     "03_QLCL": {
@@ -8372,7 +8381,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-04T12:50:50.892429Z",
+      "fetched_at": "2026-06-04T13:01:37.143657Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -8537,7 +8546,7 @@
         "Link bằng chứng"
       ],
       "row_count": 10,
-      "fetched_at": "2026-06-04T12:50:51.492947Z",
+      "fetched_at": "2026-06-04T13:01:38.473039Z",
       "note": ""
     },
     "05_KHO": {
@@ -8608,7 +8617,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-04T12:50:53.824474Z",
+      "fetched_at": "2026-06-04T13:01:39.283901Z",
       "note": ""
     },
     "06_GSTT": {
@@ -8667,7 +8676,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-04T12:50:54.259262Z",
+      "fetched_at": "2026-06-04T13:01:39.672520Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -10870,7 +10879,7 @@
         "Remark"
       ],
       "row_count": 136,
-      "fetched_at": "2026-06-04T12:50:54.889431Z",
+      "fetched_at": "2026-06-04T13:01:40.474461Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -10915,7 +10924,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-06-04T12:50:55.357244Z",
+      "fetched_at": "2026-06-04T13:01:41.179561Z",
       "note": ""
     }
   }

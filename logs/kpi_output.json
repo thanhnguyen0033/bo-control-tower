@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-03T23:46:57.712088Z",
+  "generated_at": "2026-06-04T04:19:06.274987Z",
   "summary": {
     "total_depts": 8,
-    "kpi_official": 3,
+    "kpi_official": 0,
     "kpi_skipped": 0,
-    "kpi_excluded": 5,
-    "generated_at": "2026-06-03T23:46:57.712087Z"
+    "kpi_excluded": 8,
+    "generated_at": "2026-06-04T04:19:06.274985Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -14,8 +14,8 @@
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
-      "note": "Row 54 col 'Plan_Qty' = '28,800.00' is not numeric",
-      "calculated_at": "2026-06-03T23:46:57.711939Z"
+      "note": "Missing required columns: ['Ngày']",
+      "calculated_at": "2026-06-04T04:19:06.274946Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -23,175 +23,35 @@
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
-      "note": "Missing required columns: ['Commit_Date']",
-      "calculated_at": "2026-06-03T23:46:57.711944Z"
+      "note": "Missing required columns: ['Ngày cam kết']",
+      "calculated_at": "2026-06-04T04:19:06.274951Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
-      "description": "Chất Lượng – NCR/CAR",
-      "dqg_status": "PASS",
-      "official": true,
-      "kpis": {
-        "total_ncr": 2,
-        "open": 1,
-        "closed": 0,
-        "severity_critical": 1,
-        "severity_major": 0,
-        "severity_minor": 0,
-        "overdue_count": 0,
-        "copq_estimated": 0.0,
-        "row_count": 2
-      },
-      "site_breakdown": {
-        "GS1": {
-          "kpis": {
-            "total_ncr": 2,
-            "open": 1,
-            "closed": 0,
-            "severity_critical": 1,
-            "severity_major": 0,
-            "severity_minor": 0,
-            "overdue_count": 0,
-            "copq_estimated": 0.0,
-            "row_count": 2
-          },
-          "row_count": 2
-        },
-        "GS5": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        },
-        "GS6": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        },
-        "GSQV": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        }
-      },
-      "calculated_at": "2026-06-03T23:46:57.711978Z"
+      "description": "Chất Lượng – NCR/CAR (V3 RMA/ECN/Recovery)",
+      "dqg_status": "FAIL",
+      "official": false,
+      "kpis": null,
+      "note": "Missing required columns: ['Ngày']",
+      "calculated_at": "2026-06-04T04:19:06.274955Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
       "description": "Thiết Bị – Machine Downtime",
-      "dqg_status": "PASS",
-      "official": true,
-      "kpis": {
-        "total_downtime_min": 125.0,
-        "total_downtime_hrs": 2.08,
-        "breakdown_events": 2,
-        "pm_events": 0,
-        "top_machines": [
-          {
-            "machine": "R906",
-            "downtime_min": 95.0
-          },
-          {
-            "machine": "R900",
-            "downtime_min": 30.0
-          }
-        ],
-        "row_count": 2
-      },
-      "site_breakdown": {
-        "GS1": {
-          "kpis": {
-            "total_downtime_min": 125.0,
-            "total_downtime_hrs": 2.08,
-            "breakdown_events": 2,
-            "pm_events": 0,
-            "top_machines": [
-              {
-                "machine": "R906",
-                "downtime_min": 95.0
-              },
-              {
-                "machine": "R900",
-                "downtime_min": 30.0
-              }
-            ],
-            "row_count": 2
-          },
-          "row_count": 2
-        },
-        "GS5": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        },
-        "GS6": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        },
-        "GSQV": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        }
-      },
-      "calculated_at": "2026-06-03T23:46:57.712022Z"
+      "dqg_status": "FAIL",
+      "official": false,
+      "kpis": null,
+      "note": "Missing required columns: ['Ngày']",
+      "calculated_at": "2026-06-04T04:19:06.274957Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
-      "description": "Kho GS5 – WIP/FIFO",
-      "dqg_status": "PASS",
-      "official": true,
-      "kpis": {
-        "total_wip_qty": 8.0,
-        "fifo_ok": 0,
-        "fifo_risk": 2,
-        "fifo_breach": 0,
-        "age_days_avg": 4.5,
-        "risk_high": 2,
-        "risk_medium": 0,
-        "risk_low": 0,
-        "high_risk_wos": [
-          "Cannon_hộp 01",
-          "Cannon_Hộp mực"
-        ],
-        "row_count": 2
-      },
-      "site_breakdown": {
-        "GS1": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        },
-        "GS5": {
-          "kpis": {
-            "total_wip_qty": 8.0,
-            "fifo_ok": 0,
-            "fifo_risk": 2,
-            "fifo_breach": 0,
-            "age_days_avg": 4.5,
-            "risk_high": 2,
-            "risk_medium": 0,
-            "risk_low": 0,
-            "high_risk_wos": [
-              "Cannon_hộp 01",
-              "Cannon_Hộp mực"
-            ],
-            "row_count": 2
-          },
-          "row_count": 2
-        },
-        "GS6": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        },
-        "GSQV": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        }
-      },
-      "calculated_at": "2026-06-03T23:46:57.712056Z"
+      "description": "Kho – WIP/FIFO (V3 Inventory/Capacity/Aging)",
+      "dqg_status": "FAIL",
+      "official": false,
+      "kpis": null,
+      "note": "Missing required columns: ['Ngày']",
+      "calculated_at": "2026-06-04T04:19:06.274960Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -200,7 +60,7 @@
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['Check_Date']",
-      "calculated_at": "2026-06-03T23:46:57.712062Z"
+      "calculated_at": "2026-06-04T04:19:06.274963Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -208,8 +68,8 @@
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
-      "note": "Missing required columns: ['Request_Date']",
-      "calculated_at": "2026-06-03T23:46:57.712065Z"
+      "note": "Missing required columns: ['Request_Date', 'Site', 'Status']",
+      "calculated_at": "2026-06-04T04:19:06.274966Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -218,7 +78,7 @@
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['Issue_Date']",
-      "calculated_at": "2026-06-03T23:46:57.712075Z"
+      "calculated_at": "2026-06-04T04:19:06.274976Z"
     }
   }
 }

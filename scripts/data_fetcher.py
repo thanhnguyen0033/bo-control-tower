@@ -64,7 +64,7 @@ def build_csv_url(sheet_id, tab_name):
     )
 
 
-def fetch_csv(url, timeout=30):
+def fetch_csv(url, timeout=30, config_fallback_first_col=""):
     """
     Fetch CSV from URL. Adaptively detects header row.
 
@@ -113,6 +113,13 @@ def fetch_csv(url, timeout=30):
             return [], "EMPTY"
 
         data_rows = all_rows[header_idx + 1:]
+
+        # Apply fallback_first_col: GVIZ exports merged header cells as ''
+        # e.g. "Ngay" col in 01_SAN_XUAT becomes empty string in CSV export
+        if config_fallback_first_col and headers and not headers[0]:
+            print(f"    DEBUG: first col empty -> fallback '{config_fallback_first_col}'")
+            headers[0] = config_fallback_first_col
+
         print(f"    DEBUG headers: {headers[:8]}")
 
         records = []
@@ -196,7 +203,8 @@ def fetch_all_sheets():
         url = build_csv_url(sheet_id, tab_name)
         print(f"    URL: {url[:80]}...")
 
-        records, fetch_status = fetch_csv(url)
+        fallback = config.get("fallback_first_col", "")
+        records, fetch_status = fetch_csv(url, config_fallback_first_col=fallback)
 
         if fetch_status == "OK":
             columns = list(records[0].keys())

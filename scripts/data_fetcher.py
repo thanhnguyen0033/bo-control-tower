@@ -64,9 +64,16 @@ def build_csv_url(sheet_id, tab_name):
     )
 
 
-def fetch_csv(url, timeout=30, config_fallback_first_col=""):
+def fetch_csv(url, timeout=30, config_fallback_first_col="", config_fallback_columns=None):
     """
     Fetch CSV from URL. Adaptively detects header row.
+
+    Args:
+        config_fallback_first_col: fill headers[0] if it is empty (GVIZ merged first col).
+        config_fallback_columns:   dict {col_index: "col_name"} — fill any header at
+                                   that index if it is empty (GVIZ merged mid-table cols).
+                                   e.g. {9: "% Tuân thủ KH"} for 01_SAN_XUAT.
+                                   FIXED 2026-06-04 Session 13.
 
     Returns: (records, fetch_status)
         fetch_status = "OK"            accessible + has data rows
@@ -120,7 +127,16 @@ def fetch_csv(url, timeout=30, config_fallback_first_col=""):
             print(f"    DEBUG: first col empty -> fallback '{config_fallback_first_col}'")
             headers[0] = config_fallback_first_col
 
-        print(f"    DEBUG headers: {headers[:8]}")
+        # Apply fallback_columns: fix mid-table merged header cols exported as ''
+        # e.g. 01_SAN_XUAT index 9 → '% Tuân thủ KH'; 04_QLTB_CD index 4 → 'Thời gian dừng (phút)'
+        # FIXED 2026-06-04 Session 13
+        if config_fallback_columns:
+            for col_idx, col_name in config_fallback_columns.items():
+                if col_idx < len(headers) and not headers[col_idx]:
+                    print(f"    DEBUG: col[{col_idx}] empty -> fallback '{col_name}'")
+                    headers[col_idx] = col_name
+
+        print(f"    DEBUG headers: {headers[:12]}")
 
         records = []
         for row in data_rows:
@@ -203,8 +219,13 @@ def fetch_all_sheets():
         url = build_csv_url(sheet_id, tab_name)
         print(f"    URL: {url[:80]}...")
 
-        fallback = config.get("fallback_first_col", "")
-        records, fetch_status = fetch_csv(url, config_fallback_first_col=fallback)
+        fallback      = config.get("fallback_first_col", "")
+        fallback_cols = config.get("fallback_columns", None)
+        records, fetch_status = fetch_csv(
+            url,
+            config_fallback_first_col=fallback,
+            config_fallback_columns=fallback_cols,
+        )
 
         if fetch_status == "OK":
             columns = list(records[0].keys())
@@ -264,30 +285,35 @@ def fetch_all_sheets():
                 "note":        "Network/DNS error — transient issue, retry on next run",
             }
 
-    # Save raw data log
+    # ── Save raw_data.json ──────────────────────────────────────────
+    summary = {
+        "total":        total,
+        "configured":   configured,
+        "ok":           sum(1 for v in results.values() if v["status"] == "OK"),
+        "empty":        sum(1 for v in results.values() if v["status"] == "EMPTY"),
+        "pending":      sum(1 for v in results.values() if v["status"] == "PENDING"),
+        "access_error": sum(1 for v in results.values() if v["status"] == "ACCESS_ERROR"),
+        "network_error":sum(1 for v in results.values() if v["status"] == "NETWORK_ERROR"),
+    }
+
     output = {
         "generated_at": datetime.datetime.utcnow().isoformat() + "Z",
-        "summary": {
-            "total_depts":   total,
-            "ok":            sum(1 for v in results.values() if v["status"] == "OK"),
-            "empty":         sum(1 for v in results.values() if v["status"] == "EMPTY"),
-            "pending":       sum(1 for v in results.values() if v["status"] == "PENDING"),
-            "access_error":  sum(1 for v in results.values() if v["status"] == "ACCESS_ERROR"),
-            "network_error": sum(1 for v in results.values() if v["status"] == "NETWORK_ERROR"),
-        },
-        "departments": results,
+        "summary":      summary,
+        "departments":  results,
     }
 
     with open(RAW_DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
+    ok  = summary["ok"]
+    err = summary["access_error"] + summary["network_error"]
     print(f"\n{'='*60}")
-    print(f"Raw data saved -> logs/raw_data.json")
-    s = output["summary"]
-    print(f"Summary: OK={s['ok']} | EMPTY={s['empty']} | PENDING={s['pending']} | ACCESS_ERR={s['access_error']} | NET_ERR={s['network_error']}")
+    print(f"Summary: OK={ok} | EMPTY={summary['empty']} | PENDING={summary['pending']} "
+          f"| ACCESS_ERR={summary['access_error']} | NET_ERR={summary['network_error']}")
+    print(f"Raw data saved: {RAW_DATA_FILE}")
     print(f"{'='*60}\n")
 
-    return results
+    return output
 
 
 if __name__ == "__main__":

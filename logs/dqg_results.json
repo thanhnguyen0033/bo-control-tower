@@ -1,11 +1,6 @@
 {
-<<<<<<< Updated upstream
-  "generated_at": "2026-06-04T13:01:41.236665Z",
-  "raw_data_from": "2026-06-04T13:01:41.179585Z",
-=======
-  "generated_at": "2026-06-04T14:16:04.028131Z",
-  "raw_data_from": "2026-06-04T12:50:55.357272Z",
->>>>>>> Stashed changes
+  "generated_at": "2026-06-04T16:55:54.552830Z",
+  "raw_data_from": "2026-06-04T16:55:54.498414Z",
   "summary": {
     "PASS": 8,
     "WARN": 0,
@@ -20,20 +15,10 @@
       "row_count": 513,
       "fail_count": 0,
       "warn_count": 0,
-<<<<<<< Updated upstream
-      "missing_columns": [
-        "Ngày"
-      ],
-      "issues": [
-        "Missing required columns: ['Ngày']"
-      ],
-      "validated_at": "2026-06-04T13:01:41.236496Z"
-=======
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-04T14:16:04.027916Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-04T16:55:54.552633Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -45,11 +30,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-<<<<<<< Updated upstream
-      "validated_at": "2026-06-04T13:01:41.236532Z"
-=======
-      "validated_at": "2026-06-04T14:16:04.027945Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-04T16:55:54.552660Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -61,11 +42,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-<<<<<<< Updated upstream
-      "validated_at": "2026-06-04T13:01:41.236561Z"
-=======
-      "validated_at": "2026-06-04T14:16:04.027966Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-04T16:55:54.552680Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -74,20 +51,10 @@
       "row_count": 10,
       "fail_count": 0,
       "warn_count": 0,
-<<<<<<< Updated upstream
-      "missing_columns": [
-        "Ngày"
-      ],
-      "issues": [
-        "Missing required columns: ['Ngày']"
-      ],
-      "validated_at": "2026-06-04T13:01:41.236581Z"
-=======
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-04T14:16:04.027982Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-04T16:55:54.552701Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -99,11 +66,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-<<<<<<< Updated upstream
-      "validated_at": "2026-06-04T13:01:41.236606Z"
-=======
-      "validated_at": "2026-06-04T14:16:04.027996Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-04T16:55:54.552717Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -115,11 +78,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-<<<<<<< Updated upstream
-      "validated_at": "2026-06-04T13:01:41.236626Z"
-=======
-      "validated_at": "2026-06-04T14:16:04.028005Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-04T16:55:54.552729Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -128,22 +87,10 @@
       "row_count": 136,
       "fail_count": 0,
       "warn_count": 0,
-<<<<<<< Updated upstream
-      "missing_columns": [
-        "Request_Date",
-        "Site",
-        "Status"
-      ],
-      "issues": [
-        "Missing required columns: ['Request_Date', 'Site', 'Status']"
-      ],
-      "validated_at": "2026-06-04T13:01:41.236640Z"
-=======
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-04T14:16:04.028080Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-04T16:55:54.552805Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -155,11 +102,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-<<<<<<< Updated upstream
-      "validated_at": "2026-06-04T13:01:41.236654Z"
-=======
-      "validated_at": "2026-06-04T14:16:04.028120Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-04T16:55:54.552820Z"
     }
   }
 }

@@ -1,32 +1,16 @@
 {
-<<<<<<< Updated upstream
-  "generated_at": "2026-06-04T13:01:41.279046Z",
-=======
-  "generated_at": "2026-06-04T14:16:11.210287Z",
->>>>>>> Stashed changes
+  "generated_at": "2026-06-04T16:55:54.592885Z",
   "summary": {
     "total_depts": 8,
     "kpi_official": 8,
     "kpi_skipped": 0,
-<<<<<<< Updated upstream
-    "kpi_excluded": 3,
-    "generated_at": "2026-06-04T13:01:41.279044Z"
-=======
     "kpi_excluded": 0,
-    "generated_at": "2026-06-04T14:16:11.210285Z"
->>>>>>> Stashed changes
+    "generated_at": "2026-06-04T16:55:54.592883Z"
   },
   "departments": {
     "01_SAN_XUAT": {
       "dept": "01_SAN_XUAT",
       "description": "San Xuat - Plan/DO",
-<<<<<<< Updated upstream
-      "dqg_status": "FAIL",
-      "official": false,
-      "kpis": null,
-      "note": "Missing required columns: ['Ngày']",
-      "calculated_at": "2026-06-04T13:01:41.278906Z"
-=======
       "dqg_status": "PASS",
       "official": true,
       "kpis": {
@@ -63,8 +47,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T14:16:11.209805Z"
->>>>>>> Stashed changes
+      "calculated_at": "2026-06-04T16:55:54.592508Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -102,11 +85,7 @@
           "note": "No data for this site"
         }
       },
-<<<<<<< Updated upstream
-      "calculated_at": "2026-06-04T13:01:41.278928Z"
-=======
-      "calculated_at": "2026-06-04T14:16:11.209852Z"
->>>>>>> Stashed changes
+      "calculated_at": "2026-06-04T16:55:54.592536Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -146,22 +125,11 @@
           "note": "No data for this site"
         }
       },
-<<<<<<< Updated upstream
-      "calculated_at": "2026-06-04T13:01:41.278961Z"
-=======
-      "calculated_at": "2026-06-04T14:16:11.209871Z"
->>>>>>> Stashed changes
+      "calculated_at": "2026-06-04T16:55:54.592553Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
       "description": "Thiet Bi - Machine Downtime",
-<<<<<<< Updated upstream
-      "dqg_status": "FAIL",
-      "official": false,
-      "kpis": null,
-      "note": "Missing required columns: ['Ngày']",
-      "calculated_at": "2026-06-04T13:01:41.278967Z"
-=======
       "dqg_status": "PASS",
       "official": true,
       "kpis": {
@@ -199,8 +167,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T14:16:11.209897Z"
->>>>>>> Stashed changes
+      "calculated_at": "2026-06-04T16:55:54.592587Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -241,11 +208,7 @@
           "note": "No data for this site"
         }
       },
-<<<<<<< Updated upstream
-      "calculated_at": "2026-06-04T13:01:41.278983Z"
-=======
-      "calculated_at": "2026-06-04T14:16:11.209909Z"
->>>>>>> Stashed changes
+      "calculated_at": "2026-06-04T16:55:54.592602Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -300,22 +263,11 @@
           "note": "No data for this site"
         }
       },
-<<<<<<< Updated upstream
-      "calculated_at": "2026-06-04T13:01:41.279003Z"
-=======
-      "calculated_at": "2026-06-04T14:16:11.209928Z"
->>>>>>> Stashed changes
+      "calculated_at": "2026-06-04T16:55:54.592621Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
       "description": "Cong Nghe - SPM Technology",
-<<<<<<< Updated upstream
-      "dqg_status": "FAIL",
-      "official": false,
-      "kpis": null,
-      "note": "Missing required columns: ['Request_Date', 'Site', 'Status']",
-      "calculated_at": "2026-06-04T13:01:41.279010Z"
-=======
       "dqg_status": "PASS",
       "official": true,
       "kpis": {
@@ -349,8 +301,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T14:16:11.210256Z"
->>>>>>> Stashed changes
+      "calculated_at": "2026-06-04T16:55:54.592851Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -399,11 +350,7 @@
           "note": "No data for this site"
         }
       },
-<<<<<<< Updated upstream
-      "calculated_at": "2026-06-04T13:01:41.279033Z"
-=======
-      "calculated_at": "2026-06-04T14:16:11.210277Z"
->>>>>>> Stashed changes
+      "calculated_at": "2026-06-04T16:55:54.592873Z"
     }
   }
 }

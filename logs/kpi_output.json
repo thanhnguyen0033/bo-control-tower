@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-04T06:54:24.650687Z",
+  "generated_at": "2026-06-04T07:09:18.941012Z",
   "summary": {
     "total_depts": 8,
     "kpi_official": 4,
     "kpi_skipped": 0,
     "kpi_excluded": 4,
-    "generated_at": "2026-06-04T06:54:24.650685Z"
+    "generated_at": "2026-06-04T07:09:18.941010Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -14,8 +14,8 @@
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
-      "note": "Missing required columns: ['Ngày', '% Tuân thủ KH']",
-      "calculated_at": "2026-06-04T06:54:24.650558Z"
+      "note": "Missing required columns: ['% Tuân thủ KH']",
+      "calculated_at": "2026-06-04T07:09:18.940862Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -53,7 +53,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T06:54:24.650579Z"
+      "calculated_at": "2026-06-04T07:09:18.940903Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -93,7 +93,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T06:54:24.650613Z"
+      "calculated_at": "2026-06-04T07:09:18.940939Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -101,8 +101,8 @@
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
-      "note": "Missing required columns: ['Ngày', 'Thời gian dừng (phút)']",
-      "calculated_at": "2026-06-04T06:54:24.650624Z"
+      "note": "Missing required columns: ['Thời gian dừng (phút)']",
+      "calculated_at": "2026-06-04T07:09:18.940948Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -111,7 +111,7 @@
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['SL bán thành phẩm']",
-      "calculated_at": "2026-06-04T06:54:24.650629Z"
+      "calculated_at": "2026-06-04T07:09:18.940954Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -166,7 +166,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T06:54:24.650648Z"
+      "calculated_at": "2026-06-04T07:09:18.940974Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -175,7 +175,7 @@
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['Request_Date', 'Site', 'Status']",
-      "calculated_at": "2026-06-04T06:54:24.650654Z"
+      "calculated_at": "2026-06-04T07:09:18.940979Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -224,7 +224,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T06:54:24.650674Z"
+      "calculated_at": "2026-06-04T07:09:18.940999Z"
     }
   }
 }

@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-06-04T07:09:18.941012Z",
+  "generated_at": "2026-06-04T07:36:28.766049Z",
   "summary": {
     "total_depts": 8,
     "kpi_official": 4,
     "kpi_skipped": 0,
     "kpi_excluded": 4,
-    "generated_at": "2026-06-04T07:09:18.941010Z"
+    "generated_at": "2026-06-04T07:36:28.766047Z"
   },
   "departments": {
     "01_SAN_XUAT": {
       "dept": "01_SAN_XUAT",
-      "description": "Sản Xuất – Plan/DO",
+      "description": "San Xuat - Plan/DO",
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
-      "note": "Missing required columns: ['% Tuân thủ KH']",
-      "calculated_at": "2026-06-04T07:09:18.940862Z"
+      "note": "Missing required columns: ['Ngày', '% Tuân thủ KH']",
+      "calculated_at": "2026-06-04T07:36:28.765901Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
-      "description": "KHSX – OTIF Delivery",
+      "description": "KHSX - OTIF Delivery",
       "dqg_status": "PASS",
       "official": true,
       "kpis": {
@@ -53,11 +53,11 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T07:09:18.940903Z"
+      "calculated_at": "2026-06-04T07:36:28.765924Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
-      "description": "Chất Lượng – NCR/CAR (V3 RMA/ECN/Recovery)",
+      "description": "Chat Luong - NCR/CAR (V3 RMA/ECN/Recovery)",
       "dqg_status": "PASS",
       "official": true,
       "kpis": {
@@ -93,29 +93,29 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T07:09:18.940939Z"
+      "calculated_at": "2026-06-04T07:36:28.765956Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
-      "description": "Thiết Bị – Machine Downtime",
+      "description": "Thiet Bi - Machine Downtime",
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
-      "note": "Missing required columns: ['Thời gian dừng (phút)']",
-      "calculated_at": "2026-06-04T07:09:18.940948Z"
+      "note": "Missing required columns: ['Ngày', 'Thời gian dừng (phút)']",
+      "calculated_at": "2026-06-04T07:36:28.765963Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
-      "description": "Kho – WIP/FIFO (V3 Inventory/Capacity/Aging)",
+      "description": "Kho - WIP/FIFO (V3 Inventory/Capacity/Aging)",
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['SL bán thành phẩm']",
-      "calculated_at": "2026-06-04T07:09:18.940954Z"
+      "calculated_at": "2026-06-04T07:36:28.765966Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
-      "description": "GSTT – Field Verification",
+      "description": "GSTT - Field Verification",
       "dqg_status": "PASS",
       "official": true,
       "kpis": {
@@ -166,20 +166,20 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T07:09:18.940974Z"
+      "calculated_at": "2026-06-04T07:36:28.765986Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
-      "description": "Công Nghệ – SPM Technology",
+      "description": "Cong Nghe - SPM Technology",
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['Request_Date', 'Site', 'Status']",
-      "calculated_at": "2026-06-04T07:09:18.940979Z"
+      "calculated_at": "2026-06-04T07:36:28.765991Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
-      "description": "BO Control – Issue/Action",
+      "description": "BO Control - Issue/Action",
       "dqg_status": "PASS",
       "official": true,
       "kpis": {
@@ -224,7 +224,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T07:09:18.940999Z"
+      "calculated_at": "2026-06-04T07:36:28.766035Z"
     }
   }
 }

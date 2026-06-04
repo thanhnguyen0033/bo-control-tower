@@ -3,10 +3,12 @@ data_fetcher.py — GSBB BO Control Tower
 METHOD: Public CSV export URL — NO Google Cloud, NO Service Account, NO billing required.
 
 Requires: Google Sheets must be shared as "Anyone with the link can view"
-CSV URL:  https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={TAB_NAME}&headers=3
+CSV URL:  https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={TAB_NAME}&headers=0
 
-FIX 2026-06-04: Added headers=3 parameter so GVIZ uses row 3 as column names directly,
-eliminating the merged-title-cell parsing workaround that was misidentifying col0 names.
+FIX 2026-06-04 v2: Use headers=0 in GVIZ (returns ALL rows as raw data, no header combining).
+Then in fetch_csv: skip rows 0+1 (title + instructions), use row 2 as column names (= spreadsheet row 3).
+Root cause of previous bug: headers=3 caused GVIZ to CONCATENATE rows 1+2+3 for column A
+(which had title text in rows 1-2), producing a long garbage string instead of clean "Ngày" etc.
 """
 
 import json
@@ -22,17 +24,17 @@ LOGS_DIR = os.path.join(os.path.dirname(__file__), "..", "logs")
 RAW_DATA_FILE = os.path.join(LOGS_DIR, "raw_data.json")
 
 
-def build_csv_url(sheet_id: str, tab_name: str, header_row: int = 3) -> str:
+def build_csv_url(sheet_id: str, tab_name: str) -> str:
     """Build the public CSV export URL for a Google Sheet tab.
 
-    headers={header_row} tells GVIZ to treat rows 1..header_row as header rows
-    and use row 3 as column names. Result: CSV row[0] = actual column names from
-    row 3 of the sheet (no merged-title confusion). row[1+] = data rows.
+    headers=0 → GVIZ returns ALL rows as raw data (no header combining).
+    fetch_csv() then skips rows 0-1 (title + instructions) and uses row 2
+    (= spreadsheet row 3) as column names.
     """
     encoded_tab = urllib.request.quote(tab_name)
     return (
         f"https://docs.google.com/spreadsheets/d/{sheet_id}"
-        f"/gviz/tq?tqx=out:csv&sheet={encoded_tab}&headers={header_row}"
+        f"/gviz/tq?tqx=out:csv&sheet={encoded_tab}&headers=0"
     )
 
 
@@ -62,17 +64,21 @@ def fetch_csv(url: str, timeout: int = 30) -> tuple[list[dict], str]:
 
         print(f"    🔍 DEBUG total CSV rows: {len(all_rows)}")
 
-        if len(all_rows) < 1:
+        # With headers=0 in GVIZ: ALL rows returned as raw data
+        # Row 0 = spreadsheet row 1 (merged title cell — skip)
+        # Row 1 = spreadsheet row 2 (instructions — skip)
+        # Row 2 = spreadsheet row 3 (ACTUAL column headers — use this)
+        # Row 3+ = data rows
+        if len(all_rows) < 3:
             return [], "EMPTY"
 
-        # With headers=3: row[0] IS the actual column header row (row 3 of sheet)
-        raw_headers = all_rows[0]
+        raw_headers = all_rows[2]   # row 2 = spreadsheet row 3 = actual headers
         headers = [h.strip() for h in raw_headers]
         # Remove trailing empty column names
         while headers and not headers[-1]:
             headers.pop()
 
-        data_rows = all_rows[1:]
+        data_rows = all_rows[3:]    # row 3+ = actual data
         print(f"    🔍 DEBUG headers: {headers[:8]}")
 
         records = []
@@ -153,7 +159,7 @@ def fetch_all_sheets() -> dict:
             }
             continue
 
-        url = build_csv_url(sheet_id, tab_name)
+        url = build_csv_url(sheet_id, tab_name)  # headers=0 in URL
         print(f"    URL: {url[:80]}...")
 
         records, fetch_status = fetch_csv(url)

@@ -26,16 +26,19 @@ DQG_RESULT_FILE = os.path.join(LOGS_DIR, "dqg_results.json")
 DQG_RULES = {
 
     "01_SAN_XUAT": {
-        # UPDATED 2026-06-04: Google Sheet uses Vietnamese column headers (verified from sync_sources).
-        # Tab: 01_SX_PLAN_DO | Row3 actual headers:
-        # Ngày, Ca, Nhà máy, Lệnh SX, Máy / Dây chuyền, Nhóm sản phẩm,
-        # SL Kế hoạch, SL Thực tế, SL Lỗi (NG), % Tuân thủ KH, RAG, ...
+        # UPDATED 2026-06-04 Session 14: fallback_first_col loses diacritics on Windows mount.
+        # Actual column[0] fetched = 'Ngay' (no diacritics) — confirmed from GitHub Actions log.
+        # Tab: 01_SX_PLAN_DO | Row3 actual headers (14 cols):
+        # Ngay, Ca, Nhà máy, Lệnh SX, Máy / Dây chuyền, Nhóm sản phẩm,
+        # SL Kế hoạch, SL Thực tế, SL Lỗi (NG), % Tuân thủ KH, RAG,
+        # Hạng mục vấn đề, Ghi chú, Người kiểm tra DL
         "required_columns": [
-            "Ngày", "Ca", "Nhà máy", "Lệnh SX",
+            "Ngay", "Ca", "Nhà máy", "Lệnh SX",
             "Nhóm sản phẩm", "SL Kế hoạch", "SL Thực tế", "% Tuân thủ KH", "RAG",
         ],
         "numeric_columns": ["SL Kế hoạch", "SL Thực tế", "SL Lỗi (NG)", "% Tuân thủ KH"],
         "site_column": "Nhà máy",
+        "date_column": "Ngay",
     },
 
     "02_KHSX_OTIF": {
@@ -65,16 +68,17 @@ DQG_RULES = {
     },
 
     "04_QLTB_CD": {
-        # UPDATED 2026-06-04: Google Sheet uses Vietnamese column headers.
-        # Tab: 04_MACHINE_DOWNTIME | Row3 actual headers:
-        # Ngày, Ca, Nhà máy, Mã máy, Thời gian dừng (phút), Loại dừng máy,
-        # Mã nguyên nhân, Loại sự cố, PIC trực tiếp, Hành động cần làm, Trạng thái, ...
+        # UPDATED 2026-06-04 Session 14: fallback_first_col loses diacritics on Windows mount.
+        # Actual column[0] fetched = 'Ngay' (no diacritics) — confirmed from GitHub Actions log.
+        # Tab: 04_MACHINE_DOWNTIME | Row3 actual headers (12 cols):
+        # Ngay, Ca, Nhà máy, Mã máy, Thời gian dừng (phút), Loại dừng máy,
+        # Mã nguyên nhân, Loại sự cố, PIC trực tiếp, Hành động cần làm, Trạng thái, Link bằng chứng
         "required_columns": [
-            "Ngày", "Nhà máy", "Mã máy", "Thời gian dừng (phút)", "Trạng thái",
+            "Ngay", "Nhà máy", "Mã máy", "Thời gian dừng (phút)", "Trạng thái",
         ],
         "numeric_columns": ["Thời gian dừng (phút)"],
         "site_column": "Nhà máy",
-        "date_column": "Ngày",
+        "date_column": "Ngay",
     },
 
     "05_KHO": {
@@ -112,13 +116,18 @@ DQG_RULES = {
     },
 
     "07_CONG_NGHE_SPM": {
-        # FIXED 2026-06-04: xlsx row3 col0 = "Request_Date" (verified from xlsx).
+        # FIXED 2026-06-04 Session 14: required_columns updated to match actual fetched headers.
+        # Actual headers (14 cols) from GitHub Actions log:
+        # Ngay, Nhà máy, Khách hàng, Sample_ID, Nhóm sản phẩm, PIC,
+        # Due_Date, Ngày hoàn thành, Trạng thái, Leadtime_Days,
+        # Redo_Count, Risk_Level, Customer_Impact, Remark
+        # NOTE: col0='Ngay' (no diacritics) — fallback_first_col encoding issue.
         "required_columns": [
-            "Request_Date", "Site", "Sample_ID", "Status",
+            "Ngay", "Nhà máy", "Sample_ID", "Trạng thái",
         ],
-        "numeric_columns": [],
-        "site_column": "Site",
-        "date_column": "Request_Date",
+        "numeric_columns": ["Leadtime_Days", "Redo_Count"],
+        "site_column": "Nhà máy",
+        "date_column": "Ngay",
     },
 
     "08_BO_CONTROL": {

@@ -1,21 +1,70 @@
 {
+<<<<<<< Updated upstream
   "generated_at": "2026-06-04T13:01:41.279046Z",
+=======
+  "generated_at": "2026-06-04T14:16:11.210287Z",
+>>>>>>> Stashed changes
   "summary": {
     "total_depts": 8,
-    "kpi_official": 5,
+    "kpi_official": 8,
     "kpi_skipped": 0,
+<<<<<<< Updated upstream
     "kpi_excluded": 3,
     "generated_at": "2026-06-04T13:01:41.279044Z"
+=======
+    "kpi_excluded": 0,
+    "generated_at": "2026-06-04T14:16:11.210285Z"
+>>>>>>> Stashed changes
   },
   "departments": {
     "01_SAN_XUAT": {
       "dept": "01_SAN_XUAT",
       "description": "San Xuat - Plan/DO",
+<<<<<<< Updated upstream
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['Ngày']",
       "calculated_at": "2026-06-04T13:01:41.278906Z"
+=======
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_plan_qty": 0,
+        "total_actual_qty": 0,
+        "total_ng_qty": 0,
+        "plan_do_pct_avg": null,
+        "ng_pct": null,
+        "rag_R": 0,
+        "rag_A": 0,
+        "rag_G": 48,
+        "rag_unknown": 465,
+        "row_count": 513
+      },
+      "site_breakdown": {
+        "GS1": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GS5": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GS6": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GSQV": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        }
+      },
+      "calculated_at": "2026-06-04T14:16:11.209805Z"
+>>>>>>> Stashed changes
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -53,7 +102,11 @@
           "note": "No data for this site"
         }
       },
+<<<<<<< Updated upstream
       "calculated_at": "2026-06-04T13:01:41.278928Z"
+=======
+      "calculated_at": "2026-06-04T14:16:11.209852Z"
+>>>>>>> Stashed changes
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -93,16 +146,61 @@
           "note": "No data for this site"
         }
       },
+<<<<<<< Updated upstream
       "calculated_at": "2026-06-04T13:01:41.278961Z"
+=======
+      "calculated_at": "2026-06-04T14:16:11.209871Z"
+>>>>>>> Stashed changes
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
       "description": "Thiet Bi - Machine Downtime",
+<<<<<<< Updated upstream
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['Ngày']",
       "calculated_at": "2026-06-04T13:01:41.278967Z"
+=======
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_downtime_min": 0.0,
+        "total_downtime_hrs": 0.0,
+        "breakdown_events": 0,
+        "pm_events": 0,
+        "top_machines": [
+          {
+            "machine": "Unknown",
+            "downtime_min": 0.0
+          }
+        ],
+        "row_count": 10
+      },
+      "site_breakdown": {
+        "GS1": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GS5": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GS6": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GSQV": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        }
+      },
+      "calculated_at": "2026-06-04T14:16:11.209897Z"
+>>>>>>> Stashed changes
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -143,7 +241,11 @@
           "note": "No data for this site"
         }
       },
+<<<<<<< Updated upstream
       "calculated_at": "2026-06-04T13:01:41.278983Z"
+=======
+      "calculated_at": "2026-06-04T14:16:11.209909Z"
+>>>>>>> Stashed changes
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -198,16 +300,57 @@
           "note": "No data for this site"
         }
       },
+<<<<<<< Updated upstream
       "calculated_at": "2026-06-04T13:01:41.279003Z"
+=======
+      "calculated_at": "2026-06-04T14:16:11.209928Z"
+>>>>>>> Stashed changes
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
       "description": "Cong Nghe - SPM Technology",
+<<<<<<< Updated upstream
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['Request_Date', 'Site', 'Status']",
       "calculated_at": "2026-06-04T13:01:41.279010Z"
+=======
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_samples": 136,
+        "in_progress": 0,
+        "completed": 0,
+        "leadtime_avg_days": 5.4,
+        "redo_count_total": 0,
+        "risk_high": 0,
+        "row_count": 136
+      },
+      "site_breakdown": {
+        "GS1": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GS5": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GS6": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GSQV": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        }
+      },
+      "calculated_at": "2026-06-04T14:16:11.210256Z"
+>>>>>>> Stashed changes
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -256,7 +399,11 @@
           "note": "No data for this site"
         }
       },
+<<<<<<< Updated upstream
       "calculated_at": "2026-06-04T13:01:41.279033Z"
+=======
+      "calculated_at": "2026-06-04T14:16:11.210277Z"
+>>>>>>> Stashed changes
     }
   }
 }

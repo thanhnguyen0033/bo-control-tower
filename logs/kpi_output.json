@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-04T07:36:28.766049Z",
+  "generated_at": "2026-06-04T08:12:36.127313Z",
   "summary": {
     "total_depts": 8,
-    "kpi_official": 4,
+    "kpi_official": 5,
     "kpi_skipped": 0,
-    "kpi_excluded": 4,
-    "generated_at": "2026-06-04T07:36:28.766047Z"
+    "kpi_excluded": 3,
+    "generated_at": "2026-06-04T08:12:36.127311Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -14,8 +14,8 @@
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
-      "note": "Missing required columns: ['Ngày', '% Tuân thủ KH']",
-      "calculated_at": "2026-06-04T07:36:28.765901Z"
+      "note": "Missing required columns: ['Ngày']",
+      "calculated_at": "2026-06-04T08:12:36.127167Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -53,7 +53,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T07:36:28.765924Z"
+      "calculated_at": "2026-06-04T08:12:36.127188Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -93,7 +93,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T07:36:28.765956Z"
+      "calculated_at": "2026-06-04T08:12:36.127215Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -101,17 +101,49 @@
       "dqg_status": "FAIL",
       "official": false,
       "kpis": null,
-      "note": "Missing required columns: ['Ngày', 'Thời gian dừng (phút)']",
-      "calculated_at": "2026-06-04T07:36:28.765963Z"
+      "note": "Missing required columns: ['Ngày']",
+      "calculated_at": "2026-06-04T08:12:36.127236Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
       "description": "Kho - WIP/FIFO (V3 Inventory/Capacity/Aging)",
-      "dqg_status": "FAIL",
-      "official": false,
-      "kpis": null,
-      "note": "Missing required columns: ['SL bán thành phẩm']",
-      "calculated_at": "2026-06-04T07:36:28.765966Z"
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_wip_qty": 0.0,
+        "fifo_ok": 0,
+        "fifo_risk": 0,
+        "fifo_breach": 0,
+        "age_days_avg": null,
+        "risk_high": 0,
+        "risk_medium": 0,
+        "risk_low": 0,
+        "high_risk_wos": [],
+        "row_count": 2
+      },
+      "site_breakdown": {
+        "GS1": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GS5": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GS6": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GSQV": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        }
+      },
+      "calculated_at": "2026-06-04T08:12:36.127252Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -166,7 +198,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T07:36:28.765986Z"
+      "calculated_at": "2026-06-04T08:12:36.127271Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -175,7 +207,7 @@
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['Request_Date', 'Site', 'Status']",
-      "calculated_at": "2026-06-04T07:36:28.765991Z"
+      "calculated_at": "2026-06-04T08:12:36.127278Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -224,7 +256,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-04T07:36:28.766035Z"
+      "calculated_at": "2026-06-04T08:12:36.127298Z"
     }
   }
 }

@@ -1,24 +1,28 @@
 {
-  "generated_at": "2026-06-05T04:02:38.919728Z",
-  "raw_data_from": "2026-06-05T04:02:38.850376Z",
+  "generated_at": "2026-06-05T09:56:43.767562Z",
+  "raw_data_from": "2026-06-05T09:56:43.714494Z",
   "summary": {
-    "PASS": 8,
+    "PASS": 7,
     "WARN": 0,
-    "FAIL": 0,
+    "FAIL": 1,
     "SKIP": 0
   },
   "departments": {
     "01_SAN_XUAT": {
       "dept": "01_SAN_XUAT",
-      "dqg_status": "PASS",
+      "dqg_status": "FAIL",
       "description": "San Xuat - Plan/DO",
       "row_count": 513,
-      "fail_count": 0,
+      "fail_count": 513,
       "warn_count": 0,
-      "fail_pct": 0.0,
-      "missing_columns": [],
-      "issues": [],
-      "validated_at": "2026-06-05T04:02:38.919518Z"
+      "missing_columns": [
+        "SL Kế hoạch",
+        "SL Thực tế"
+      ],
+      "issues": [
+        "Missing required columns: ['SL Kế hoạch', 'SL Thực tế']"
+      ],
+      "validated_at": "2026-06-05T09:56:43.767332Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -30,7 +34,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-05T04:02:38.919548Z"
+      "validated_at": "2026-06-05T09:56:43.767364Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -42,19 +46,19 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-05T04:02:38.919569Z"
+      "validated_at": "2026-06-05T09:56:43.767392Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
       "dqg_status": "PASS",
       "description": "Thiet Bi - Machine Downtime",
-      "row_count": 10,
+      "row_count": 24,
       "fail_count": 0,
       "warn_count": 0,
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-05T04:02:38.919591Z"
+      "validated_at": "2026-06-05T09:56:43.767423Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -66,7 +70,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-05T04:02:38.919608Z"
+      "validated_at": "2026-06-05T09:56:43.767441Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -78,7 +82,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-05T04:02:38.919620Z"
+      "validated_at": "2026-06-05T09:56:43.767456Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -90,7 +94,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-05T04:02:38.919698Z"
+      "validated_at": "2026-06-05T09:56:43.767538Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -102,7 +106,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-05T04:02:38.919717Z"
+      "validated_at": "2026-06-05T09:56:43.767552Z"
     }
   }
 }

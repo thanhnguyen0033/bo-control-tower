@@ -1,53 +1,21 @@
 {
-  "generated_at": "2026-06-05T04:02:38.964219Z",
+  "generated_at": "2026-06-05T09:56:43.806160Z",
   "summary": {
     "total_depts": 8,
-    "kpi_official": 8,
+    "kpi_official": 7,
     "kpi_skipped": 0,
-    "kpi_excluded": 0,
-    "generated_at": "2026-06-05T04:02:38.964218Z"
+    "kpi_excluded": 1,
+    "generated_at": "2026-06-05T09:56:43.806159Z"
   },
   "departments": {
     "01_SAN_XUAT": {
       "dept": "01_SAN_XUAT",
       "description": "San Xuat - Plan/DO",
-      "dqg_status": "PASS",
-      "official": true,
-      "kpis": {
-        "total_plan_qty": 0,
-        "total_actual_qty": 0,
-        "total_ng_qty": 0,
-        "plan_do_pct_avg": null,
-        "ng_pct": null,
-        "rag_R": 0,
-        "rag_A": 0,
-        "rag_G": 48,
-        "rag_unknown": 465,
-        "row_count": 513
-      },
-      "site_breakdown": {
-        "GS1": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        },
-        "GS5": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        },
-        "GS6": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        },
-        "GSQV": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        }
-      },
-      "calculated_at": "2026-06-05T04:02:38.963830Z"
+      "dqg_status": "FAIL",
+      "official": false,
+      "kpis": null,
+      "note": "Missing required columns: ['SL Kế hoạch', 'SL Thực tế']",
+      "calculated_at": "2026-06-05T09:56:43.805748Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -85,7 +53,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T04:02:38.963863Z"
+      "calculated_at": "2026-06-05T09:56:43.805768Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -125,7 +93,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T04:02:38.963881Z"
+      "calculated_at": "2026-06-05T09:56:43.805795Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -143,7 +111,7 @@
             "downtime_min": 0.0
           }
         ],
-        "row_count": 10
+        "row_count": 24
       },
       "site_breakdown": {
         "GS1": {
@@ -167,7 +135,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T04:02:38.963914Z"
+      "calculated_at": "2026-06-05T09:56:43.805838Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -208,7 +176,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T04:02:38.963931Z"
+      "calculated_at": "2026-06-05T09:56:43.805859Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -263,7 +231,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T04:02:38.963948Z"
+      "calculated_at": "2026-06-05T09:56:43.805877Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -274,7 +242,7 @@
         "total_samples": 136,
         "in_progress": 0,
         "completed": 0,
-        "leadtime_avg_days": 5.4,
+        "leadtime_avg_days": 5.5,
         "redo_count_total": 0,
         "risk_high": 0,
         "row_count": 136
@@ -301,7 +269,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T04:02:38.964185Z"
+      "calculated_at": "2026-06-05T09:56:43.806119Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -350,7 +318,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T04:02:38.964207Z"
+      "calculated_at": "2026-06-05T09:56:43.806142Z"
     }
   }
 }

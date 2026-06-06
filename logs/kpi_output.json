@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-05T23:12:57.622963Z",
+  "generated_at": "2026-06-06T03:45:12.026781Z",
   "summary": {
     "total_depts": 8,
     "kpi_official": 7,
     "kpi_skipped": 0,
     "kpi_excluded": 1,
-    "generated_at": "2026-06-05T23:12:57.622961Z"
+    "generated_at": "2026-06-06T03:45:12.026779Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -15,7 +15,7 @@
       "official": false,
       "kpis": null,
       "note": "Missing required columns: ['SL Kế hoạch', 'SL Thực tế']",
-      "calculated_at": "2026-06-05T23:12:57.622519Z"
+      "calculated_at": "2026-06-06T03:45:12.026371Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -53,7 +53,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T23:12:57.622541Z"
+      "calculated_at": "2026-06-06T03:45:12.026391Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -93,7 +93,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T23:12:57.622567Z"
+      "calculated_at": "2026-06-06T03:45:12.026417Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -111,7 +111,7 @@
             "downtime_min": 0.0
           }
         ],
-        "row_count": 24
+        "row_count": 27
       },
       "site_breakdown": {
         "GS1": {
@@ -135,7 +135,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T23:12:57.622610Z"
+      "calculated_at": "2026-06-06T03:45:12.026462Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -176,7 +176,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T23:12:57.622630Z"
+      "calculated_at": "2026-06-06T03:45:12.026477Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -231,7 +231,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T23:12:57.622648Z"
+      "calculated_at": "2026-06-06T03:45:12.026497Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -269,7 +269,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T23:12:57.622924Z"
+      "calculated_at": "2026-06-06T03:45:12.026749Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -318,7 +318,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-05T23:12:57.622950Z"
+      "calculated_at": "2026-06-06T03:45:12.026769Z"
     }
   }
 }

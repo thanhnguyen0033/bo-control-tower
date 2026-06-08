@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T04:16:53.306478Z",
+  "generated_at": "2026-06-08T04:45:12.297991Z",
   "summary": {
     "total": 8,
     "configured": 8,
@@ -8242,7 +8242,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 513,
-      "fetched_at": "2026-06-08T04:16:51.175624Z",
+      "fetched_at": "2026-06-08T04:45:08.504781Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -8304,7 +8304,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-08T04:16:51.392997Z",
+      "fetched_at": "2026-06-08T04:45:09.310993Z",
       "note": ""
     },
     "03_QLCL": {
@@ -8381,7 +8381,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-08T04:16:51.663070Z",
+      "fetched_at": "2026-06-08T04:45:09.772841Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -8773,13 +8773,139 @@
           "Ca": "HC",
           "Nhà máy": "GS1",
           "Mã máy": "R900",
-          "Thời gian dừng (phút)": "",
-          "Loại dừng máy": "",
+          "Thời gian dừng (phút)": "480",
+          "Loại dừng máy": "Setup/Changeover",
           "Mã nguyên nhân": "",
-          "Loại sự cố": "",
+          "Loại sự cố": "Setup",
           "PIC trực tiếp": "Mr Thập",
           "Hành động cần làm": "",
-          "Trạng thái": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-06-04",
+          "Ca": "Ca 2",
+          "Nhà máy": "GS1",
+          "Mã máy": "Dán 2 mảnh",
+          "Thời gian dừng (phút)": "30",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Thập",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-06-04",
+          "Ca": "Ca 2",
+          "Nhà máy": "GS1",
+          "Mã máy": "máy sóng G",
+          "Thời gian dừng (phút)": "30",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Thập",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-06-05",
+          "Ca": "Ca 1",
+          "Nhà máy": "GS1",
+          "Mã máy": "R906",
+          "Thời gian dừng (phút)": "180",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Thập",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-06-06",
+          "Ca": "Ca 1",
+          "Nhà máy": "GS1",
+          "Mã máy": "Máy cưa phôi giấy",
+          "Thời gian dừng (phút)": "20",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Thập",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-06-06",
+          "Ca": "Ca 1",
+          "Nhà máy": "GS1",
+          "Mã máy": "R900",
+          "Thời gian dừng (phút)": "25",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Thập",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-06-06",
+          "Ca": "Ca 1",
+          "Nhà máy": "GS1",
+          "Mã máy": "Máy sóng G",
+          "Thời gian dừng (phút)": "60",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Thập",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-06-06",
+          "Ca": "Ca 1",
+          "Nhà máy": "GS1",
+          "Mã máy": "máy sóng",
+          "Thời gian dừng (phút)": "140",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Thập",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-06-06",
+          "Ca": "Ca 2",
+          "Nhà máy": "GS1",
+          "Mã máy": "máy ép lề",
+          "Thời gian dừng (phút)": "50",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Thập",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-06-07",
+          "Ca": "Ca 2",
+          "Nhà máy": "GS1",
+          "Mã máy": "in martin",
+          "Thời gian dừng (phút)": "90",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Thập",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
           "Link bằng chứng": ""
         }
       ],
@@ -8797,8 +8923,8 @@
         "Trạng thái",
         "Link bằng chứng"
       ],
-      "row_count": 28,
-      "fetched_at": "2026-06-08T04:16:52.052050Z",
+      "row_count": 37,
+      "fetched_at": "2026-06-08T04:45:10.148255Z",
       "note": ""
     },
     "05_KHO": {
@@ -8869,7 +8995,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-08T04:16:52.428594Z",
+      "fetched_at": "2026-06-08T04:45:10.944954Z",
       "note": ""
     },
     "06_GSTT": {
@@ -8928,7 +9054,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-08T04:16:52.671672Z",
+      "fetched_at": "2026-06-08T04:45:11.281758Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -11339,7 +11465,7 @@
         "Remark"
       ],
       "row_count": 149,
-      "fetched_at": "2026-06-08T04:16:52.916260Z",
+      "fetched_at": "2026-06-08T04:45:11.799407Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -11384,7 +11510,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-06-08T04:16:53.306455Z",
+      "fetched_at": "2026-06-08T04:45:12.297969Z",
       "note": ""
     }
   }

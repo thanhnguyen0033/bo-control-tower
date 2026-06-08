@@ -217,6 +217,7 @@ body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
 /* Header */
 .hdr{background:linear-gradient(160deg,#0a2e12 0%,#145522 45%,#0a2e12 100%);
      color:#fff;padding:14px 18px 12px;padding-right:240px;
+     position:relative;overflow:hidden;
      box-shadow:0 4px 20px rgba(0,0,0,.5);border-bottom:3px solid #d4a017;
      position:relative;overflow:hidden}
 /* Brand row */
@@ -240,11 +241,11 @@ body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
 .hdr-tagline{font-size:9px;color:rgba(240,192,64,.7);letter-spacing:1.2px;
              font-weight:700;margin-top:6px;text-transform:uppercase}
 /* GSP NEXT 30 badge — right side of header */
-.gsp-badge-30{position:absolute;right:30px;top:6px;bottom:6px;
-             display:flex;align-items:center}
-.gsp-badge-30 img{height:100%;width:auto;display:block;
-                  filter:drop-shadow(0 0 14px rgba(212,160,23,.85))
-                          drop-shadow(0 0 28px rgba(34,197,94,.3))}
+.gsp-badge-30{position:absolute;right:16px;top:50%;
+             transform:translateY(-50%);display:flex;align-items:center}
+.gsp-badge-30 img{height:88px;width:88px;display:block;object-fit:contain;
+                  filter:drop-shadow(0 0 12px rgba(212,160,23,.9))
+                          drop-shadow(0 0 24px rgba(34,197,94,.35))}
 @media(max-width:960px){.gsp-badge-30{display:none}.hdr{padding-right:18px}}
 .badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
 .bdg{font-size:10px;font-weight:800;border-radius:5px;padding:3px 9px;letter-spacing:.3px}

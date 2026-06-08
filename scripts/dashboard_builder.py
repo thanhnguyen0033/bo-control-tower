@@ -241,9 +241,9 @@ body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
              font-weight:700;margin-top:6px;text-transform:uppercase}
 /* GSP NEXT 30 badge — right side of header */
 .gsp-badge-30{position:absolute;right:14px;top:10px;bottom:10px;
-             border-radius:10px;overflow:hidden;
-             box-shadow:0 4px 18px rgba(0,0,0,.55),0 0 0 1.5px rgba(212,160,23,.6)}
-.gsp-badge-30 img{height:100%;width:auto;display:block;object-fit:cover}
+             border-radius:0;overflow:visible;box-shadow:none}
+.gsp-badge-30 img{height:100%;width:auto;display:block;object-fit:cover;
+                  mix-blend-mode:screen}
 @media(max-width:960px){.gsp-badge-30{display:none}.hdr{padding-right:18px}}
 .badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
 .bdg{font-size:10px;font-weight:800;border-radius:5px;padding:3px 9px;letter-spacing:.3px}

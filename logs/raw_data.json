@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T04:15:36.205288Z",
+  "generated_at": "2026-06-08T04:16:53.306478Z",
   "summary": {
     "total": 8,
     "configured": 8,
@@ -8242,7 +8242,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 513,
-      "fetched_at": "2026-06-08T04:15:30.419943Z",
+      "fetched_at": "2026-06-08T04:16:51.175624Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -8304,7 +8304,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-08T04:15:30.818780Z",
+      "fetched_at": "2026-06-08T04:16:51.392997Z",
       "note": ""
     },
     "03_QLCL": {
@@ -8381,7 +8381,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-08T04:15:31.728129Z",
+      "fetched_at": "2026-06-08T04:16:51.663070Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -8767,6 +8767,20 @@
           "Hành động cần làm": "",
           "Trạng thái": "Done",
           "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-06-04",
+          "Ca": "HC",
+          "Nhà máy": "GS1",
+          "Mã máy": "R900",
+          "Thời gian dừng (phút)": "",
+          "Loại dừng máy": "",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "",
+          "PIC trực tiếp": "Mr Thập",
+          "Hành động cần làm": "",
+          "Trạng thái": "",
+          "Link bằng chứng": ""
         }
       ],
       "columns": [
@@ -8783,8 +8797,8 @@
         "Trạng thái",
         "Link bằng chứng"
       ],
-      "row_count": 27,
-      "fetched_at": "2026-06-08T04:15:31.985651Z",
+      "row_count": 28,
+      "fetched_at": "2026-06-08T04:16:52.052050Z",
       "note": ""
     },
     "05_KHO": {
@@ -8855,7 +8869,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-08T04:15:32.597446Z",
+      "fetched_at": "2026-06-08T04:16:52.428594Z",
       "note": ""
     },
     "06_GSTT": {
@@ -8914,7 +8928,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-08T04:15:33.437943Z",
+      "fetched_at": "2026-06-08T04:16:52.671672Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -11325,7 +11339,7 @@
         "Remark"
       ],
       "row_count": 149,
-      "fetched_at": "2026-06-08T04:15:35.387372Z",
+      "fetched_at": "2026-06-08T04:16:52.916260Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -11370,7 +11384,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-06-08T04:15:36.205262Z",
+      "fetched_at": "2026-06-08T04:16:53.306455Z",
       "note": ""
     }
   }

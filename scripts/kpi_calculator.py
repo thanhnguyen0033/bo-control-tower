@@ -50,8 +50,11 @@ def rag_label(val):
     return "?"
 
 
-def status_group(val, open_vals=("OPEN", "IN PROGRESS", "IN_PROGRESS", "ĐANG XỬ LÝ", "PENDING"),
-                 closed_vals=("CLOSED", "DONE", "COMPLETE", "COMPLETED", "ĐÃ ĐÓNG", "OK")):
+def status_group(val,
+                 open_vals=("OPEN", "IN PROGRESS", "IN_PROGRESS", "ĐANG XỬ LÝ", "PENDING",
+                            "CHỚ", "CHƯA XỬ LÝ", "ĐANG LÀM", "MỜI"),
+                 closed_vals=("CLOSED", "DONE", "COMPLETE", "COMPLETED", "ĐÃ ĐÓNG", "OK",
+                              "HOÀN THàNH", "PASS", "ĐẠT", "XỬ LÝ XONG")):
     v = str(val).strip().upper()
     if v in open_vals:
         return "open"
@@ -65,7 +68,9 @@ def status_group(val, open_vals=("OPEN", "IN PROGRESS", "IN_PROGRESS", "ĐANG X�
 # ─────────────────────────────────────────────────────────────
 
 def calc_san_xuat(records):
-    """01_SAN_XUAT — Plan/DO, NG, RAG breakdown."""
+    """01_SAN_XUAT — Plan/DO, NG, RAG breakdown.
+    Actual col names (Vietnamese): SL Ke hoach, SL Thuc te, SL Loi (NG), % Tuan thu KH, RAG
+    """
     total_plan   = 0.0
     total_actual = 0.0
     total_ng     = 0.0
@@ -73,11 +78,12 @@ def calc_san_xuat(records):
     plan_do_vals = []
 
     for r in records:
-        total_plan   += safe_float(r.get("Plan_Qty", 0))
-        total_actual += safe_float(r.get("Actual_Qty", 0))
-        total_ng     += safe_float(r.get("NG_Qty", 0))
-        pd = safe_float(r.get("Plan_Do_%", None), default=None)
-        if pd is not None and r.get("Plan_Do_%", "").strip():
+        total_plan   += safe_float(r.get("SL Kế hoạch", r.get("Plan_Qty", 0)))
+        total_actual += safe_float(r.get("SL Thực tế", r.get("Actual_Qty", 0)))
+        total_ng     += safe_float(r.get("SL Lỗi (NG)", r.get("NG_Qty", 0)))
+        pd_raw = r.get("% Tuân thủ KH", r.get("Plan_Do_%", ""))
+        pd = safe_float(pd_raw, default=None)
+        if pd is not None and str(pd_raw).strip():
             plan_do_vals.append(pd)
         rag_counts[rag_label(r.get("RAG", "?"))] += 1
 
@@ -105,20 +111,27 @@ def calc_qlcl(records):
     overdue_count = 0
     copq_total    = 0.0
 
+    # Actual cols: "Muc do" (severity), "Trang thai" (status), "Qua han?" (overdue), "COPQ uoc tinh (VND)"
+    _sev_map = {
+        "CRITICAL": "Critical", "NGHIêm TRọNG": "Critical", "NGHÊm TRọNG": "Critical",
+        "MAJOR": "Major", "LỚN": "Major", "ĐạI": "Major",
+        "MINOR": "Minor", "NHỏ": "Minor",
+    }
     for r in records:
-        sv = str(r.get("Severity", "")).strip()
+        sv_raw = str(r.get("Mức độ", r.get("Severity", ""))).strip()
+        sv = _sev_map.get(sv_raw.upper(), "Other")
         if sv in severity:
             severity[sv] += 1
         else:
             severity["Other"] += 1
 
-        st = status_group(r.get("Status", ""))
+        st = status_group(r.get("Trạng thái", r.get("Status", "")))
         status[st] += 1
 
-        if is_overdue(r.get("Overdue?", "")):
+        if is_overdue(r.get("Quá hạn?", r.get("Overdue?", ""))):
             overdue_count += 1
 
-        copq_total += safe_float(r.get("COPQ_Estimated", 0))
+        copq_total += safe_float(r.get("COPQ ước tính (VNĐ)", r.get("COPQ_Estimated", 0)))
 
     return {
         "total_ncr":        len(records),
@@ -140,17 +153,20 @@ def calc_qltb_cd(records):
     pm        = 0
     machine_dt = {}
 
+    # Actual cols: "Thoi gian dung (phut)", "Loai dung may", "Ma may"
+    _bp_breakdown = {"BREAKDOWN", "BD", "HỊNG MÁY", "SỰ CỐ", "HỊNG"}
+    _bp_pm        = {"PM", "PREVENTIVE", "BẢO TRÌ", "BAO TRI", "BẢO DƯỤNG"}
     for r in records:
-        dt = safe_float(r.get("Downtime_Min", 0))
+        dt = safe_float(r.get("Thời gian dừng (phút)", r.get("Downtime_Min", 0)))
         total_dt += dt
 
-        bp = str(r.get("Breakdown_PM", "")).strip().upper()
-        if bp in ("BREAKDOWN", "BD"):
+        bp = str(r.get("Loại dừng máy", r.get("Breakdown_PM", ""))).strip().upper()
+        if bp in _bp_breakdown:
             breakdown += 1
-        elif bp in ("PM", "PREVENTIVE"):
+        elif bp in _bp_pm:
             pm += 1
 
-        machine = str(r.get("Machine", "")).strip() or "Unknown"
+        machine = str(r.get("Mã máy", r.get("Machine", ""))).strip() or "Unknown"
         machine_dt[machine] = machine_dt.get(machine, 0.0) + dt
 
     top_machines = sorted(machine_dt.items(), key=lambda x: x[1], reverse=True)[:5]
@@ -173,32 +189,37 @@ def calc_kho(records):
     risk_level  = {"High": 0, "Medium": 0, "Low": 0, "Other": 0}
     high_risk_wos = []
 
+    # Actual cols: "SL ban thanh pham", "So ngay ton", "Trang thai FIFO", "Muc rui ro", "Lenh SX"
+    _rl_map = {"CAO": "High", "HIGH": "High",
+               "TRUNG BÌNH": "Medium", "MEDIUM": "Medium",
+               "THẤP": "Low", "LOW": "Low"}
     for r in records:
-        wip = safe_float(r.get("WIP_Qty", 0))
+        wip = safe_float(r.get("SL bán thành phẩm", r.get("WIP_Qty", 0)))
         total_wip += wip
 
-        age = r.get("Age_Days", "").strip()
+        age = str(r.get("Số ngày tồn", r.get("Age_Days", ""))).strip()
         if age:
             age_vals.append(safe_float(age))
 
-        fs = str(r.get("FIFO_Status", "")).strip().upper()
-        if fs in ("OK",):
+        fs = str(r.get("Trạng thái FIFO", r.get("FIFO_Status", ""))).strip().upper()
+        if fs in ("OK", "ĐẠT", "TỐT"):
             fifo_status["OK"] += 1
-        elif fs in ("RISK", "AT RISK"):
+        elif fs in ("RISK", "AT RISK", "RỦI RO", "CẦN KIỂM TRA"):
             fifo_status["RISK"] += 1
-        elif fs in ("BREACH", "VIOLATED"):
+        elif fs in ("BREACH", "VIOLATED", "VI PHẠM", "QUÁ HẠN"):
             fifo_status["BREACH"] += 1
         else:
             fifo_status["Other"] += 1
 
-        rl = str(r.get("Risk_Level", "")).strip()
+        rl_raw = str(r.get("Mức rủi ro", r.get("Risk_Level", ""))).strip()
+        rl = _rl_map.get(rl_raw.upper(), "Other")
         if rl in risk_level:
             risk_level[rl] += 1
         else:
             risk_level["Other"] += 1
 
         if rl == "High":
-            high_risk_wos.append(str(r.get("Work_Order", "")).strip())
+            high_risk_wos.append(str(r.get("Lệnh SX", r.get("Work_Order", ""))).strip())
 
     age_avg = round(sum(age_vals) / len(age_vals), 1) if age_vals else None
 
@@ -255,8 +276,9 @@ def calc_cong_nghe_spm(records):
     redo_total = 0
     risk_high  = 0
 
+    # Actual cols: "Trang thai" (Status); Leadtime_Days, Redo_Count, Risk_Level are English (kept as-is)
     for r in records:
-        st = status_group(r.get("Status", ""))
+        st = status_group(r.get("Trạng thái", r.get("Status", "")))
         status[st] += 1
 
         lt = r.get("Leadtime_Days", "").strip()
@@ -326,17 +348,21 @@ def calc_khsx_otif(records):
     if not records:
         return {"note": "No data", "row_count": 0}
 
+    # Actual cols: "Dung han?" (OTIF), "So ngay tre" (delay), "Rui ro giao hang" (risk)
     on_time   = sum(1 for r in records
-                    if str(r.get("OTIF?", "")).strip().upper() in ("YES", "Y", "ON TIME", "OK", "PASS"))
+                    if str(r.get("Đúng hạn?", r.get("OTIF?", ""))).strip().upper()
+                    in ("YES", "Y", "ON TIME", "OK", "PASS", "CÓ", "CO", "X", "ĐÚNG"))
     late      = len(records) - on_time
     otif_pct  = round(on_time / len(records) * 100, 1) if records else None
 
-    delay_vals = [safe_float(r.get("Delay_Days", 0)) for r in records
-                  if r.get("Delay_Days", "").strip()]
+    delay_col = "Số ngày trễ"
+    delay_vals = [safe_float(r.get(delay_col, r.get("Delay_Days", "")))
+                  for r in records if str(r.get(delay_col, r.get("Delay_Days", ""))).strip()]
     avg_delay  = round(sum(delay_vals) / len(delay_vals), 1) if delay_vals else 0.0
 
     risk_high = sum(1 for r in records
-                    if str(r.get("Delivery_Risk", "")).strip().upper() in ("HIGH", "CAO"))
+                    if str(r.get("Rủi ro giao hàng", r.get("Delivery_Risk", ""))).strip().upper()
+                    in ("HIGH", "CAO"))
 
     return {
         "total_orders":  len(records),
@@ -385,7 +411,7 @@ def calc_site_breakdown(dept_key: str, records: list) -> dict:
     result = {}
     for site in VALID_SITES:
         site_recs = [r for r in records
-                     if r.get("Site", r.get("site", "")).strip() == site]
+                     if r.get("Site", r.get("site", r.get("Nhà máy", ""))).strip() == site]
         if site_recs:
             try:
                 result[site] = {"kpis": calc_fn(site_recs), "row_count": len(site_recs)}

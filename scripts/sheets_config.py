@@ -17,7 +17,14 @@ SHEET_CONFIG = {
         "tab_name":           "01_SX_PLAN_DO",
         "description":        "San Xuat - Plan/DO",
         "fallback_first_col": "Ngay",
-        "fallback_columns":   {9: "% Tuân thủ KH"},
+        # UPDATED Session 14: cols 6,7,8 also empty from GVIZ merged header.
+        # Confirmed 2026-06-08: [6]->SL Ke hoach, [7]->SL Thuc te, [8]->SL Loi(NG)
+        "fallback_columns":   {
+            6: "SL Kế hoạch",
+            7: "SL Thực tế",
+            8: "SL Lỗi (NG)",
+            9: "% Tuân thủ KH",
+        },
     },
     "02_KHSX_OTIF": {
         # Verified 2026-06-04 -- sheet_id from .gsheet file

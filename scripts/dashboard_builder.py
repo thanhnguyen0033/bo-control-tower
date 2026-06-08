@@ -19,8 +19,8 @@ from datetime import datetime
 # ─────────────────────────────────────────────────────────────
 # Config — cập nhật khi PIC nhập đủ data
 # ─────────────────────────────────────────────────────────────
-EXPECTED_DATE      = "03/06"        # Ngày dự kiến PIC nhập đủ data
-EXPECTED_DATE_FULL = "03/06/2026"   # Dùng trong ghi chú / báo cáo
+EXPECTED_DATE      = "15/06"        # Session 15: next milestone GS5/GS6 real data
+EXPECTED_DATE_FULL = "15/06/2026"   # Dùng trong ghi chú / báo cáo
 PEND_TXT           = f"Chờ DQG · {EXPECTED_DATE}"  # Text thay thế PEND_TXT
 
 # ─────────────────────────────────────────────────────────────
@@ -295,10 +295,11 @@ input[name=tab]{display:none}
 
 /* KPI cards */
 .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:11px;margin-bottom:14px}
-.kpi-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:11px;margin-bottom:14px}
+.kpi-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:11px;margin-bottom:14px;align-items:stretch}
 .kpi-card{background:#fff;border-radius:12px;padding:15px 13px;text-align:center;
           box-shadow:0 2px 8px rgba(0,0,0,.08),0 0 1px rgba(0,0,0,.04);
-          border-top:4px solid #2563eb;transition:transform .15s,box-shadow .15s;min-width:0}
+          border-top:4px solid #2563eb;transition:transform .15s,box-shadow .15s;min-width:0;
+          display:flex;flex-direction:column;align-items:center}
 .kpi-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.12)}
 .kpi-card.rag-green{border-top-color:#16a34a;background:linear-gradient(180deg,#f0fdf4 0%,#fff 35%)}
 .kpi-card.rag-amber{border-top-color:#d97706;background:linear-gradient(180deg,#fffbeb 0%,#fff 35%)}
@@ -306,10 +307,10 @@ input[name=tab]{display:none}
 .kpi-card.rag-gray{border-top-color:#9ca3af;background:#fff}
 .kpi-card.rag-blue{border-top-color:#2563eb;background:linear-gradient(180deg,#eff6ff 0%,#fff 35%)}
 .kpi-card.rag-purple{border-top-color:#7c3aed;background:linear-gradient(180deg,#f5f3ff 0%,#fff 35%)}
-.kpi-val{font-size:26px;font-weight:900;line-height:1.1;color:#1e293b}
+.kpi-val{font-size:26px;font-weight:900;line-height:1.1;color:#1e293b;width:100%}
 .kpi-val.red{color:#dc2626}.kpi-val.green{color:#16a34a}.kpi-val.amber{color:#d97706}
 .kpi-val.blue{color:#2563eb}.kpi-val.gray{color:#6b7280}
-.kpi-lbl{font-size:11px;font-weight:700;color:#374151;margin-top:5px;line-height:1.35}
+.kpi-lbl{font-size:11px;font-weight:700;color:#374151;margin-top:5px;line-height:1.35;width:100%}
 .kpi-sub{font-size:10px;color:#9ca3af;margin-top:3px;line-height:1.3}
 
 /* Factory heatmap */
@@ -408,6 +409,9 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
 .footer{background:linear-gradient(135deg,#061a0d,#0a2e12);
         color:rgba(255,255,255,.5);text-align:center;font-size:10px;padding:14px;letter-spacing:.3px}
 
+/* Tab content padding — cho tabs GS1/GS5/GS6/KPI-PIC/GSTT (không có sidebar) */
+.tab-pad{padding:16px 20px 40px;max-width:100%}
+
 /* Section fold — accordion cho sections phụ */
 .sec-fold{border-radius:10px;overflow:visible;margin-bottom:13px}
 .sec-fold>summary{list-style:none;cursor:pointer;
@@ -453,7 +457,8 @@ details.drill:not([open])>summary::after{content:" ▼";float:right;color:#94a3b
 /* ── Mobile responsive ── */
 .tab-short{display:none}
 @media(max-width:960px){
-  .kpi-grid-5,.grid-2,.grid-3{grid-template-columns:1fr}
+  .kpi-grid-5{grid-template-columns:repeat(2,1fr)}
+  .grid-2,.grid-3{grid-template-columns:1fr}
   .heat-grid,.gstt-grid{min-width:700px}
   .panel{padding:12px 12px 30px}
   .nav label{padding:8px 12px;font-size:12px;margin:4px 2px 0;border-radius:5px 5px 0 0}
@@ -517,9 +522,9 @@ def build_sidebar(kpi, build_time):
         return f'<span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:{c};margin-right:5px;flex-shrink:0"></span>'
 
     sites = [
-        ("GS1 / GSHN", "Trial data",          "#d97706"),
-        ("GS5 / GSQV", f"Chờ {EXPECTED_DATE}", "#9ca3af"),
-        ("GS6 / GSQV", f"Chờ {EXPECTED_DATE}", "#9ca3af"),
+        ("GS1 / GSHN", "8/8 DQG PASS", "#16a34a"),
+        ("GS5 / GSQV", f"Dữ liệu thật · {EXPECTED_DATE}", "#9ca3af"),
+        ("GS6 / GSQV", f"Dữ liệu thật · {EXPECTED_DATE}", "#9ca3af"),
     ]
     site_rows = "".join(
         f'<div style="font-size:11px;color:#374151;padding:4px 0;border-bottom:1px solid #f1f5f9;'
@@ -589,12 +594,12 @@ def build_alert_bar(d_bo):
 
     # Top 3 issues — static critical items (sẽ tự động từ 08_BO_CONTROL khi có data)
     top3 = [
-        {"issue": "Machine Log GS1 chưa đủ trường: thiếu reason code, start/end time",
-         "rag": "Red",    "owner": "Mr Thập",             "deadline": "03/06", "site": "GS1"},
-        {"issue": "PROD_LOG GS5/GS6 thiếu ORDER_ID — không map được OTIF",
-         "rag": "Red",    "owner": "Mr Lam / Mr Mạnh",    "deadline": "03/06", "site": "GS5/GS6"},
-        {"issue": "OTIF GS1 = 50.0% — cần xác nhận root cause với Mr Hào",
-         "rag": "Yellow", "owner": "Mr Hào",               "deadline": "05/06", "site": "GS1"},
+        {"issue": "PROD_LOG GS5/GS6 thiếu ORDER_ID — không map được OTIF, cần bổ sung ngay",
+         "rag": "Red",    "owner": "Mr Lam / Mr Mạnh",    "deadline": "15/06", "site": "GS5/GS6"},
+        {"issue": "OTIF GS1 = 50.0% — chưa có root cause, cần xác nhận với Mr Hào",
+         "rag": "Red",    "owner": "Mr Hào",               "deadline": "15/06", "site": "GS1"},
+        {"issue": "Machine Log GS1/GS5/GS6 thiếu reason code, start/end time — OEE chưa tính được",
+         "rag": "Yellow", "owner": "Mr Thập / Mr Nam",     "deadline": "15/06", "site": "GS1/GS5/GS6"},
     ]
 
     rag_border = {"Red": "#dc2626", "Yellow": "#d97706", "Green": "#16a34a"}
@@ -651,7 +656,7 @@ def build_alert_bar(d_bo):
       </div>
       <div style="font-size:10px;color:rgba(255,255,255,.45);margin-top:11px;
                   border-top:1px solid rgba(255,255,255,.12);padding-top:9px">
-        ⚠️ Issues từ Action Register — Dữ liệu thử nghiệm (Trial). KPI chính thức sau DQG PASS ≥ 5/8 bộ phận · Dự kiến: {EXPECTED_DATE_FULL}
+        ✅ Pipeline 8/8 DQG PASS · KPI chính thức từ 08/06/2026 · Dữ liệu thật GS5/GS6 dự kiến: {EXPECTED_DATE_FULL}
       </div>
     </div>"""
 
@@ -1338,11 +1343,11 @@ def build_html(kpi_full, dqg_data, build_time):
         # Tab 1: #c1 IS the grid container (panel-sb layout)
         # t1 is a tuple: (sidebar_html, main_col_html)
         + f'<div id="c1" class="panel">{t1[0]}{t1[1]}</div>\n'
-        + f'<div id="c2" class="panel">{t2}</div>\n'
-        + f'<div id="c3" class="panel">{t3}</div>\n'
-        + f'<div id="c4" class="panel">{t4}</div>\n'
-        + f'<div id="c5" class="panel">{t5}</div>\n'
-        + f'<div id="c6" class="panel">{t6}</div>\n'
+        + f'<div id="c2" class="panel"><div class="tab-pad">{t2}</div></div>\n'
+        + f'<div id="c3" class="panel"><div class="tab-pad">{t3}</div></div>\n'
+        + f'<div id="c4" class="panel"><div class="tab-pad">{t4}</div></div>\n'
+        + f'<div id="c5" class="panel"><div class="tab-pad">{t5}</div></div>\n'
+        + f'<div id="c6" class="panel"><div class="tab-pad">{t6}</div></div>\n'
         + '</body>\n</html>\n'
     )
 

@@ -260,24 +260,26 @@ def validate_dept(dept_key: str, dept_data: dict) -> dict:
         }
 
     # ── 2. Row-level checks ──
+    # Design decision (Session 14): numeric/site issues → warn_count only.
+    # Only missing_columns triggers hard FAIL. This prevents false FAIL on
+    # sheets with formula errors, blank KPI cells, or new site codes.
     for i, row in enumerate(records, start=4):   # row 4 = first data row in sheet
-        row_issues = []
 
-        # Check numeric columns
+        # Check numeric columns — WARN only, not FAIL
         for col in numeric_cols:
             val = row.get(col, "").strip()
             if val and not is_numeric(val):
-                row_issues.append(f"Row {i} col '{col}' = '{val}' is not numeric")
+                warn_count += 1
+                if len(issues) < 5:  # cap issue log
+                    issues.append(f"WARN Row {i} col '{col}' = '{val}' not numeric")
 
-        # Check site validity
+        # Check site validity — WARN only
         if site_col:
             site_val = row.get(site_col, "").strip()
             if site_val and site_val not in VALID_SITES:
-                row_issues.append(f"Row {i} col '{site_col}' = '{site_val}' not in {VALID_SITES}")
-
-        if row_issues:
-            fail_count += 1
-            issues.extend(row_issues)
+                warn_count += 1
+                if len(issues) < 5:
+                    issues.append(f"WARN Row {i} col '{site_col}' = '{site_val}' not in {VALID_SITES}")
 
     # ── 3. Determine DQG status ──
     total_rows = len(records)

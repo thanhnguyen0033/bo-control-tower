@@ -1,39 +1,28 @@
 {
-<<<<<<< Updated upstream
-  "generated_at": "2026-06-04T13:01:41.236665Z",
-  "raw_data_from": "2026-06-04T13:01:41.179585Z",
-=======
-  "generated_at": "2026-06-04T14:16:04.028131Z",
-  "raw_data_from": "2026-06-04T12:50:55.357272Z",
->>>>>>> Stashed changes
+  "generated_at": "2026-06-07T23:08:30.879304Z",
+  "raw_data_from": "2026-06-07T23:08:30.826695Z",
   "summary": {
-    "PASS": 8,
+    "PASS": 7,
     "WARN": 0,
-    "FAIL": 0,
+    "FAIL": 1,
     "SKIP": 0
   },
   "departments": {
     "01_SAN_XUAT": {
       "dept": "01_SAN_XUAT",
-      "dqg_status": "PASS",
+      "dqg_status": "FAIL",
       "description": "San Xuat - Plan/DO",
       "row_count": 513,
-      "fail_count": 0,
+      "fail_count": 513,
       "warn_count": 0,
-<<<<<<< Updated upstream
       "missing_columns": [
-        "Ngày"
+        "SL Kế hoạch",
+        "SL Thực tế"
       ],
       "issues": [
-        "Missing required columns: ['Ngày']"
+        "Missing required columns: ['SL Kế hoạch', 'SL Thực tế']"
       ],
-      "validated_at": "2026-06-04T13:01:41.236496Z"
-=======
-      "fail_pct": 0.0,
-      "missing_columns": [],
-      "issues": [],
-      "validated_at": "2026-06-04T14:16:04.027916Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-07T23:08:30.879070Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -45,11 +34,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-<<<<<<< Updated upstream
-      "validated_at": "2026-06-04T13:01:41.236532Z"
-=======
-      "validated_at": "2026-06-04T14:16:04.027945Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-07T23:08:30.879099Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -61,33 +46,19 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-<<<<<<< Updated upstream
-      "validated_at": "2026-06-04T13:01:41.236561Z"
-=======
-      "validated_at": "2026-06-04T14:16:04.027966Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-07T23:08:30.879126Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
       "dqg_status": "PASS",
       "description": "Thiet Bi - Machine Downtime",
-      "row_count": 10,
+      "row_count": 27,
       "fail_count": 0,
       "warn_count": 0,
-<<<<<<< Updated upstream
-      "missing_columns": [
-        "Ngày"
-      ],
-      "issues": [
-        "Missing required columns: ['Ngày']"
-      ],
-      "validated_at": "2026-06-04T13:01:41.236581Z"
-=======
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-04T14:16:04.027982Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-07T23:08:30.879160Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -99,11 +70,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-<<<<<<< Updated upstream
-      "validated_at": "2026-06-04T13:01:41.236606Z"
-=======
-      "validated_at": "2026-06-04T14:16:04.027996Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-07T23:08:30.879178Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -115,35 +82,19 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-<<<<<<< Updated upstream
-      "validated_at": "2026-06-04T13:01:41.236626Z"
-=======
-      "validated_at": "2026-06-04T14:16:04.028005Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-07T23:08:30.879193Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
       "dqg_status": "PASS",
       "description": "Cong Nghe - SPM Technology",
-      "row_count": 136,
+      "row_count": 149,
       "fail_count": 0,
       "warn_count": 0,
-<<<<<<< Updated upstream
-      "missing_columns": [
-        "Request_Date",
-        "Site",
-        "Status"
-      ],
-      "issues": [
-        "Missing required columns: ['Request_Date', 'Site', 'Status']"
-      ],
-      "validated_at": "2026-06-04T13:01:41.236640Z"
-=======
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-04T14:16:04.028080Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-07T23:08:30.879282Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -155,11 +106,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-<<<<<<< Updated upstream
-      "validated_at": "2026-06-04T13:01:41.236654Z"
-=======
-      "validated_at": "2026-06-04T14:16:04.028120Z"
->>>>>>> Stashed changes
+      "validated_at": "2026-06-07T23:08:30.879295Z"
     }
   }
 }

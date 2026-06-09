@@ -244,10 +244,10 @@ body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
 .gsp-badge-30{position:absolute;right:16px;top:50%;
              transform:translateY(-50%);display:flex;align-items:center;
              outline:none;text-decoration:none}
-.gsp-badge-30 img{height:120px;width:120px;display:block;object-fit:cover;
+.gsp-badge-30 img{height:100px;width:100px;display:block;object-fit:cover;
                   border:none;outline:none;
                   clip-path:circle(50% at 50% 50%);
-                  filter:drop-shadow(0 2px 10px rgba(0,0,0,.6))}
+                  filter:drop-shadow(0 2px 8px rgba(0,0,0,.5))}
 @media(max-width:960px){.gsp-badge-30{display:none}.hdr{padding-right:18px}}
 .badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
 .bdg{font-size:10px;font-weight:800;border-radius:5px;padding:3px 9px;letter-spacing:.3px}

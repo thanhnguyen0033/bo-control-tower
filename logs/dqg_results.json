@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-09T23:18:12.475012Z",
-  "raw_data_from": "2026-06-09T23:18:12.417725Z",
+  "generated_at": "2026-06-10T03:59:28.473237Z",
+  "raw_data_from": "2026-06-10T03:59:28.418118Z",
   "summary": {
     "PASS": 8,
     "WARN": 0,
@@ -18,7 +18,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-09T23:18:12.474793Z"
+      "validated_at": "2026-06-10T03:59:28.473031Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -30,7 +30,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-09T23:18:12.474819Z"
+      "validated_at": "2026-06-10T03:59:28.473055Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -42,19 +42,19 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-09T23:18:12.474840Z"
+      "validated_at": "2026-06-10T03:59:28.473074Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
       "dqg_status": "PASS",
       "description": "Thiet Bi - Machine Downtime",
-      "row_count": 37,
+      "row_count": 42,
       "fail_count": 0,
       "warn_count": 0,
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-09T23:18:12.474873Z"
+      "validated_at": "2026-06-10T03:59:28.473105Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -66,7 +66,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-09T23:18:12.474890Z"
+      "validated_at": "2026-06-10T03:59:28.473122Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -78,7 +78,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-09T23:18:12.474902Z"
+      "validated_at": "2026-06-10T03:59:28.473133Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -90,7 +90,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-09T23:18:12.474981Z"
+      "validated_at": "2026-06-10T03:59:28.473212Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -102,7 +102,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-09T23:18:12.475000Z"
+      "validated_at": "2026-06-10T03:59:28.473227Z"
     }
   }
 }

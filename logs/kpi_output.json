@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-09T23:18:12.519799Z",
+  "generated_at": "2026-06-10T03:59:28.514891Z",
   "summary": {
     "total_depts": 8,
     "kpi_official": 8,
     "kpi_skipped": 0,
     "kpi_excluded": 0,
-    "generated_at": "2026-06-09T23:18:12.519797Z"
+    "generated_at": "2026-06-10T03:59:28.514889Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -67,7 +67,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-09T23:18:12.518997Z"
+      "calculated_at": "2026-06-10T03:59:28.514072Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -112,7 +112,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-09T23:18:12.519037Z"
+      "calculated_at": "2026-06-10T03:59:28.514110Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -161,7 +161,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-09T23:18:12.519067Z"
+      "calculated_at": "2026-06-10T03:59:28.514139Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -169,18 +169,18 @@
       "dqg_status": "PASS",
       "official": true,
       "kpis": {
-        "total_downtime_min": 2480.0,
-        "total_downtime_hrs": 41.33,
-        "breakdown_events": 36,
+        "total_downtime_min": 2625.0,
+        "total_downtime_hrs": 43.75,
+        "breakdown_events": 41,
         "pm_events": 0,
         "top_machines": [
           {
             "machine": "R900",
-            "downtime_min": 635.0
+            "downtime_min": 685.0
           },
           {
             "machine": "R906",
-            "downtime_min": 335.0
+            "downtime_min": 380.0
           },
           {
             "machine": "máy sóng",
@@ -195,23 +195,23 @@
             "downtime_min": 135.0
           }
         ],
-        "row_count": 37
+        "row_count": 42
       },
       "site_breakdown": {
         "GS1": {
           "kpis": {
-            "total_downtime_min": 1590.0,
-            "total_downtime_hrs": 26.5,
-            "breakdown_events": 19,
+            "total_downtime_min": 1735.0,
+            "total_downtime_hrs": 28.92,
+            "breakdown_events": 24,
             "pm_events": 0,
             "top_machines": [
               {
                 "machine": "R900",
-                "downtime_min": 635.0
+                "downtime_min": 685.0
               },
               {
                 "machine": "R906",
-                "downtime_min": 335.0
+                "downtime_min": 380.0
               },
               {
                 "machine": "máy sóng",
@@ -226,9 +226,9 @@
                 "downtime_min": 65.0
               }
             ],
-            "row_count": 20
+            "row_count": 25
           },
-          "row_count": 20
+          "row_count": 25
         },
         "GS5": {
           "kpis": {
@@ -292,7 +292,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-09T23:18:12.519194Z"
+      "calculated_at": "2026-06-10T03:59:28.514291Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -349,7 +349,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-09T23:18:12.519223Z"
+      "calculated_at": "2026-06-10T03:59:28.514327Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -404,7 +404,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-09T23:18:12.519241Z"
+      "calculated_at": "2026-06-10T03:59:28.514346Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -463,7 +463,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-09T23:18:12.519741Z"
+      "calculated_at": "2026-06-10T03:59:28.514855Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -512,7 +512,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-09T23:18:12.519784Z"
+      "calculated_at": "2026-06-10T03:59:28.514876Z"
     }
   }
 }

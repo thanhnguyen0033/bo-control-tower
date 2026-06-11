@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-11T04:13:25.264831Z",
-  "raw_data_from": "2026-06-11T04:13:25.203419Z",
+  "generated_at": "2026-06-11T10:41:19.829592Z",
+  "raw_data_from": "2026-06-11T10:41:19.766966Z",
   "summary": {
     "PASS": 8,
     "WARN": 0,
@@ -12,13 +12,13 @@
       "dept": "01_SAN_XUAT",
       "dqg_status": "PASS",
       "description": "San Xuat - Plan/DO",
-      "row_count": 608,
+      "row_count": 668,
       "fail_count": 0,
       "warn_count": 0,
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-11T04:13:25.264616Z"
+      "validated_at": "2026-06-11T10:41:19.829356Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -30,7 +30,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-11T04:13:25.264641Z"
+      "validated_at": "2026-06-11T10:41:19.829383Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -42,7 +42,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-11T04:13:25.264661Z"
+      "validated_at": "2026-06-11T10:41:19.829404Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -54,7 +54,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-11T04:13:25.264696Z"
+      "validated_at": "2026-06-11T10:41:19.829452Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -66,7 +66,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-11T04:13:25.264712Z"
+      "validated_at": "2026-06-11T10:41:19.829468Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -78,19 +78,19 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-11T04:13:25.264723Z"
+      "validated_at": "2026-06-11T10:41:19.829480Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
       "dqg_status": "PASS",
       "description": "Cong Nghe - SPM Technology",
-      "row_count": 149,
+      "row_count": 156,
       "fail_count": 0,
       "warn_count": 0,
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-11T04:13:25.264803Z"
+      "validated_at": "2026-06-11T10:41:19.829563Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -102,7 +102,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-06-11T04:13:25.264819Z"
+      "validated_at": "2026-06-11T10:41:19.829580Z"
     }
   }
 }

@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-12T23:20:19.126493Z",
+  "generated_at": "2026-06-13T04:02:52.390185Z",
   "summary": {
     "total_depts": 8,
     "kpi_official": 8,
     "kpi_skipped": 0,
     "kpi_excluded": 0,
-    "generated_at": "2026-06-12T23:20:19.126492Z"
+    "generated_at": "2026-06-13T04:02:52.390184Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -22,8 +22,8 @@
         "rag_R": 95,
         "rag_A": 15,
         "rag_G": 86,
-        "rag_unknown": 798,
-        "row_count": 994
+        "rag_unknown": 797,
+        "row_count": 993
       },
       "site_breakdown": {
         "GS1": {
@@ -57,7 +57,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-12T23:20:19.125635Z"
+      "calculated_at": "2026-06-13T04:02:52.389345Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -102,7 +102,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-12T23:20:19.125678Z"
+      "calculated_at": "2026-06-13T04:02:52.389390Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -151,7 +151,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-12T23:20:19.125708Z"
+      "calculated_at": "2026-06-13T04:02:52.389420Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -282,7 +282,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-12T23:20:19.125848Z"
+      "calculated_at": "2026-06-13T04:02:52.389555Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -339,7 +339,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-12T23:20:19.125881Z"
+      "calculated_at": "2026-06-13T04:02:52.389583Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -394,7 +394,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-12T23:20:19.125899Z"
+      "calculated_at": "2026-06-13T04:02:52.389601Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -453,7 +453,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-12T23:20:19.126455Z"
+      "calculated_at": "2026-06-13T04:02:52.390147Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -502,7 +502,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-12T23:20:19.126478Z"
+      "calculated_at": "2026-06-13T04:02:52.390169Z"
     }
   }
 }

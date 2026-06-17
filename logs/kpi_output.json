@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-17T04:22:21.757212Z",
+  "generated_at": "2026-06-17T11:02:27.713648Z",
   "summary": {
     "total_depts": 8,
     "kpi_official": 8,
     "kpi_skipped": 0,
     "kpi_excluded": 0,
-    "generated_at": "2026-06-17T04:22:21.757211Z"
+    "generated_at": "2026-06-17T11:02:27.713647Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -57,7 +57,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-17T04:22:21.756276Z"
+      "calculated_at": "2026-06-17T11:02:27.712646Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -102,7 +102,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-17T04:22:21.756315Z"
+      "calculated_at": "2026-06-17T11:02:27.712694Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -151,7 +151,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-17T04:22:21.756348Z"
+      "calculated_at": "2026-06-17T11:02:27.712731Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -159,66 +159,66 @@
       "dqg_status": "PASS",
       "official": true,
       "kpis": {
-        "total_downtime_min": 2625.0,
-        "total_downtime_hrs": 43.75,
-        "breakdown_events": 41,
+        "total_downtime_min": 3920.0,
+        "total_downtime_hrs": 65.33,
+        "breakdown_events": 65,
         "pm_events": 0,
         "top_machines": [
           {
             "machine": "R900",
-            "downtime_min": 685.0
+            "downtime_min": 820.0
           },
           {
             "machine": "R906",
-            "downtime_min": 380.0
+            "downtime_min": 425.0
           },
           {
             "machine": "máy sóng",
-            "downtime_min": 195.0
-          },
-          {
-            "machine": "máy túi giấy 450-17",
-            "downtime_min": 150.0
+            "downtime_min": 410.0
           },
           {
             "machine": "in martin",
-            "downtime_min": 135.0
+            "downtime_min": 320.0
+          },
+          {
+            "machine": "bồi innovo",
+            "downtime_min": 195.0
           }
         ],
-        "row_count": 42
+        "row_count": 66
       },
       "site_breakdown": {
         "GS1": {
           "kpis": {
-            "total_downtime_min": 1735.0,
-            "total_downtime_hrs": 28.92,
-            "breakdown_events": 24,
+            "total_downtime_min": 3030.0,
+            "total_downtime_hrs": 50.5,
+            "breakdown_events": 48,
             "pm_events": 0,
             "top_machines": [
               {
                 "machine": "R900",
-                "downtime_min": 685.0
+                "downtime_min": 820.0
               },
               {
                 "machine": "R906",
-                "downtime_min": 380.0
+                "downtime_min": 425.0
               },
               {
                 "machine": "máy sóng",
-                "downtime_min": 195.0
+                "downtime_min": 410.0
               },
               {
                 "machine": "in martin",
-                "downtime_min": 135.0
+                "downtime_min": 320.0
               },
               {
-                "machine": "máy ép lề",
-                "downtime_min": 65.0
+                "machine": "bồi innovo",
+                "downtime_min": 195.0
               }
             ],
-            "row_count": 25
+            "row_count": 49
           },
-          "row_count": 25
+          "row_count": 49
         },
         "GS5": {
           "kpis": {
@@ -282,7 +282,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-17T04:22:21.756504Z"
+      "calculated_at": "2026-06-17T11:02:27.712937Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -339,7 +339,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-17T04:22:21.756536Z"
+      "calculated_at": "2026-06-17T11:02:27.712973Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -394,7 +394,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-17T04:22:21.756555Z"
+      "calculated_at": "2026-06-17T11:02:27.712991Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -405,7 +405,7 @@
         "total_samples": 179,
         "in_progress": 1,
         "completed": 0,
-        "leadtime_avg_days": 5.7,
+        "leadtime_avg_days": 5.8,
         "redo_count_total": 0,
         "risk_high": 0,
         "row_count": 179
@@ -416,7 +416,7 @@
             "total_samples": 53,
             "in_progress": 0,
             "completed": 0,
-            "leadtime_avg_days": 5.5,
+            "leadtime_avg_days": 6.0,
             "redo_count_total": 0,
             "risk_high": 0,
             "row_count": 53
@@ -440,7 +440,7 @@
             "total_samples": 7,
             "in_progress": 0,
             "completed": 0,
-            "leadtime_avg_days": 11.7,
+            "leadtime_avg_days": 12.0,
             "redo_count_total": 0,
             "risk_high": 0,
             "row_count": 7
@@ -453,7 +453,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-17T04:22:21.757176Z"
+      "calculated_at": "2026-06-17T11:02:27.713608Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -502,7 +502,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-17T04:22:21.757200Z"
+      "calculated_at": "2026-06-17T11:02:27.713636Z"
     }
   }
 }

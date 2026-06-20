@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T07:55:07.881520Z",
+  "generated_at": "2026-06-20T10:34:47.861305Z",
   "summary": {
     "total": 8,
     "configured": 8,
@@ -15922,7 +15922,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 993,
-      "fetched_at": "2026-06-20T07:55:04.208992Z",
+      "fetched_at": "2026-06-20T10:34:43.976261Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -15984,7 +15984,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-20T07:55:04.961003Z",
+      "fetched_at": "2026-06-20T10:34:44.797389Z",
       "note": ""
     },
     "03_QLCL": {
@@ -16061,7 +16061,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-20T07:55:05.334053Z",
+      "fetched_at": "2026-06-20T10:34:45.178975Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -17010,7 +17010,7 @@
         "Link bằng chứng"
       ],
       "row_count": 66,
-      "fetched_at": "2026-06-20T07:55:05.774881Z",
+      "fetched_at": "2026-06-20T10:34:45.674330Z",
       "note": ""
     },
     "05_KHO": {
@@ -17081,7 +17081,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-20T07:55:06.582541Z",
+      "fetched_at": "2026-06-20T10:34:46.472739Z",
       "note": ""
     },
     "06_GSTT": {
@@ -17140,7 +17140,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-06-20T07:55:07.188418Z",
+      "fetched_at": "2026-06-20T10:34:46.863214Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -19989,7 +19989,7 @@
           "Nhóm sản phẩm": "Duplex",
           "PIC": "Mr Phương",
           "Due_Date": "2026-06-19",
-          "Ngày hoàn thành": "",
+          "Ngày hoàn thành": "2026-06-20",
           "Trạng thái": "New",
           "Leadtime_Days": "7",
           "Redo_Count": "",
@@ -20017,7 +20017,7 @@
           "Ngay": "2026-06-20",
           "Nhà máy": "GS1",
           "Khách hàng": "JUPITER",
-          "Sample_ID": "JUPITER - Deviceframe KT",
+          "Sample_ID": "khuôn chọc lề JUPITER - Deviceframe KT",
           "Nhóm sản phẩm": "Carton",
           "PIC": "Mr Phương",
           "Due_Date": "2026-06-30",
@@ -20033,7 +20033,7 @@
           "Ngay": "2026-06-20",
           "Nhà máy": "GS1",
           "Khách hàng": "Canon",
-          "Sample_ID": "G14 - QX2 - 5470 - REV 003",
+          "Sample_ID": "Khuôn chọc lề G14 - QX2 - 5470 - REV 003",
           "Nhóm sản phẩm": "Carton",
           "PIC": "Mr Phương",
           "Due_Date": "2026-06-30",
@@ -20063,7 +20063,7 @@
         "Remark"
       ],
       "row_count": 181,
-      "fetched_at": "2026-06-20T07:55:07.483548Z",
+      "fetched_at": "2026-06-20T10:34:47.495373Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -20108,7 +20108,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-06-20T07:55:07.881496Z",
+      "fetched_at": "2026-06-20T10:34:47.861283Z",
       "note": ""
     }
   }

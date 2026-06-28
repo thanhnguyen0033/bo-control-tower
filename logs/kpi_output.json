@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-27T23:04:39.674433Z",
+  "generated_at": "2026-06-28T04:05:48.748888Z",
   "summary": {
     "total_depts": 8,
-    "kpi_official": 8,
-    "kpi_skipped": 0,
+    "kpi_official": 7,
+    "kpi_skipped": 1,
     "kpi_excluded": 0,
-    "generated_at": "2026-06-27T23:04:39.674431Z"
+    "generated_at": "2026-06-28T04:05:48.748887Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -67,7 +67,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-27T23:04:39.673401Z"
+      "calculated_at": "2026-06-28T04:05:48.747798Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -112,7 +112,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-27T23:04:39.673452Z"
+      "calculated_at": "2026-06-28T04:05:48.747846Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -161,7 +161,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-27T23:04:39.673489Z"
+      "calculated_at": "2026-06-28T04:05:48.747883Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -292,7 +292,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-27T23:04:39.673670Z"
+      "calculated_at": "2026-06-28T04:05:48.748078Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -349,7 +349,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-27T23:04:39.673699Z"
+      "calculated_at": "2026-06-28T04:05:48.748112Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -404,7 +404,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-27T23:04:39.673716Z"
+      "calculated_at": "2026-06-28T04:05:48.748135Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -463,56 +463,16 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-27T23:04:39.674398Z"
+      "calculated_at": "2026-06-28T04:05:48.748864Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
       "description": "BO Control - Issue/Action",
-      "dqg_status": "PASS",
-      "official": true,
-      "kpis": {
-        "total_issues": 1,
-        "open": 0,
-        "closed": 1,
-        "overdue": 0,
-        "severity_critical": 1,
-        "severity_high": 0,
-        "severity_medium": 0,
-        "escalated": 1,
-        "row_count": 1
-      },
-      "site_breakdown": {
-        "GS1": {
-          "kpis": {
-            "total_issues": 1,
-            "open": 0,
-            "closed": 1,
-            "overdue": 0,
-            "severity_critical": 1,
-            "severity_high": 0,
-            "severity_medium": 0,
-            "escalated": 1,
-            "row_count": 1
-          },
-          "row_count": 1
-        },
-        "GS5": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        },
-        "GS6": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        },
-        "GSQV": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        }
-      },
-      "calculated_at": "2026-06-27T23:04:39.674419Z"
+      "dqg_status": "SKIP",
+      "official": false,
+      "kpis": null,
+      "note": "Network/DNS error — transient, will retry on next run",
+      "calculated_at": "2026-06-28T04:05:48.748877Z"
     }
   }
 }

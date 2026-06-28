@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-28T04:05:48.748888Z",
+  "generated_at": "2026-06-28T08:56:34.346450Z",
   "summary": {
     "total_depts": 8,
-    "kpi_official": 7,
-    "kpi_skipped": 1,
+    "kpi_official": 8,
+    "kpi_skipped": 0,
     "kpi_excluded": 0,
-    "generated_at": "2026-06-28T04:05:48.748887Z"
+    "generated_at": "2026-06-28T08:56:34.346449Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -67,7 +67,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-28T04:05:48.747798Z"
+      "calculated_at": "2026-06-28T08:56:34.345396Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -112,7 +112,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-28T04:05:48.747846Z"
+      "calculated_at": "2026-06-28T08:56:34.345434Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -161,7 +161,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-28T04:05:48.747883Z"
+      "calculated_at": "2026-06-28T08:56:34.345479Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -292,7 +292,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-28T04:05:48.748078Z"
+      "calculated_at": "2026-06-28T08:56:34.345651Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -349,7 +349,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-28T04:05:48.748112Z"
+      "calculated_at": "2026-06-28T08:56:34.345693Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -404,7 +404,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-28T04:05:48.748135Z"
+      "calculated_at": "2026-06-28T08:56:34.345728Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -415,7 +415,7 @@
         "total_samples": 204,
         "in_progress": 1,
         "completed": 0,
-        "leadtime_avg_days": 6.6,
+        "leadtime_avg_days": 6.7,
         "redo_count_total": 0,
         "risk_high": 0,
         "row_count": 204
@@ -426,7 +426,7 @@
             "total_samples": 78,
             "in_progress": 0,
             "completed": 0,
-            "leadtime_avg_days": 7.4,
+            "leadtime_avg_days": 7.7,
             "redo_count_total": 0,
             "risk_high": 0,
             "row_count": 78
@@ -450,7 +450,7 @@
             "total_samples": 7,
             "in_progress": 0,
             "completed": 0,
-            "leadtime_avg_days": 14.9,
+            "leadtime_avg_days": 15.1,
             "redo_count_total": 0,
             "risk_high": 0,
             "row_count": 7
@@ -463,16 +463,56 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-06-28T04:05:48.748864Z"
+      "calculated_at": "2026-06-28T08:56:34.346414Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
       "description": "BO Control - Issue/Action",
-      "dqg_status": "SKIP",
-      "official": false,
-      "kpis": null,
-      "note": "Network/DNS error — transient, will retry on next run",
-      "calculated_at": "2026-06-28T04:05:48.748877Z"
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_issues": 1,
+        "open": 0,
+        "closed": 1,
+        "overdue": 0,
+        "severity_critical": 1,
+        "severity_high": 0,
+        "severity_medium": 0,
+        "escalated": 1,
+        "row_count": 1
+      },
+      "site_breakdown": {
+        "GS1": {
+          "kpis": {
+            "total_issues": 1,
+            "open": 0,
+            "closed": 1,
+            "overdue": 0,
+            "severity_critical": 1,
+            "severity_high": 0,
+            "severity_medium": 0,
+            "escalated": 1,
+            "row_count": 1
+          },
+          "row_count": 1
+        },
+        "GS5": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GS6": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GSQV": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        }
+      },
+      "calculated_at": "2026-06-28T08:56:34.346437Z"
     }
   }
 }

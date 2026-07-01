@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-01T04:08:44.780220Z",
+  "generated_at": "2026-07-01T09:53:14.448199Z",
   "summary": {
     "total_depts": 8,
     "kpi_official": 8,
     "kpi_skipped": 0,
     "kpi_excluded": 0,
-    "generated_at": "2026-07-01T04:08:44.780219Z"
+    "generated_at": "2026-07-01T09:53:14.448197Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -67,7 +67,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-01T04:08:44.779188Z"
+      "calculated_at": "2026-07-01T09:53:14.447174Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -112,7 +112,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-01T04:08:44.779228Z"
+      "calculated_at": "2026-07-01T09:53:14.447212Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -161,7 +161,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-01T04:08:44.779261Z"
+      "calculated_at": "2026-07-01T09:53:14.447244Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -292,7 +292,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-01T04:08:44.779433Z"
+      "calculated_at": "2026-07-01T09:53:14.447416Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -349,7 +349,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-01T04:08:44.779464Z"
+      "calculated_at": "2026-07-01T09:53:14.447446Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -404,7 +404,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-01T04:08:44.779482Z"
+      "calculated_at": "2026-07-01T09:53:14.447464Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -415,7 +415,7 @@
         "total_samples": 204,
         "in_progress": 1,
         "completed": 0,
-        "leadtime_avg_days": 7.0,
+        "leadtime_avg_days": 7.1,
         "redo_count_total": 0,
         "risk_high": 0,
         "row_count": 204
@@ -426,7 +426,7 @@
             "total_samples": 78,
             "in_progress": 0,
             "completed": 0,
-            "leadtime_avg_days": 8.3,
+            "leadtime_avg_days": 8.6,
             "redo_count_total": 0,
             "risk_high": 0,
             "row_count": 78
@@ -450,7 +450,7 @@
             "total_samples": 7,
             "in_progress": 0,
             "completed": 0,
-            "leadtime_avg_days": 15.7,
+            "leadtime_avg_days": 16.0,
             "redo_count_total": 0,
             "risk_high": 0,
             "row_count": 7
@@ -463,7 +463,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-01T04:08:44.780181Z"
+      "calculated_at": "2026-07-01T09:53:14.448160Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -512,7 +512,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-01T04:08:44.780204Z"
+      "calculated_at": "2026-07-01T09:53:14.448184Z"
     }
   }
 }

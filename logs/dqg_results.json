@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T08:23:16.670240Z",
-  "raw_data_from": "2026-07-06T08:23:16.579502Z",
+  "generated_at": "2026-07-06T13:49:17.978672Z",
+  "raw_data_from": "2026-07-06T13:49:17.883395Z",
   "summary": {
     "PASS": 8,
     "WARN": 0,
@@ -24,7 +24,7 @@
         "WARN Row 1001 col 'Nhà máy' = 'GS10' not in ['GS1', 'GS5', 'GS6', 'GSQV']",
         "WARN Row 1002 col 'Nhà máy' = 'GS11' not in ['GS1', 'GS5', 'GS6', 'GSQV']"
       ],
-      "validated_at": "2026-07-06T08:23:16.669954Z"
+      "validated_at": "2026-07-06T13:49:17.978393Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -36,7 +36,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-07-06T08:23:16.669982Z"
+      "validated_at": "2026-07-06T13:49:17.978420Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -48,19 +48,19 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-07-06T08:23:16.670002Z"
+      "validated_at": "2026-07-06T13:49:17.978440Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
       "dqg_status": "PASS",
       "description": "Thiet Bi - Machine Downtime",
-      "row_count": 145,
+      "row_count": 162,
       "fail_count": 0,
       "warn_count": 0,
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-07-06T08:23:16.670082Z"
+      "validated_at": "2026-07-06T13:49:17.978519Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -72,7 +72,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-07-06T08:23:16.670105Z"
+      "validated_at": "2026-07-06T13:49:17.978538Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -84,7 +84,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-07-06T08:23:16.670118Z"
+      "validated_at": "2026-07-06T13:49:17.978550Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -96,7 +96,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-07-06T08:23:16.670219Z"
+      "validated_at": "2026-07-06T13:49:17.978652Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -108,7 +108,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-07-06T08:23:16.670231Z"
+      "validated_at": "2026-07-06T13:49:17.978664Z"
     }
   }
 }

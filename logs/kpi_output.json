@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-17T06:19:20.196483Z",
+  "generated_at": "2026-07-17T10:00:03.932512Z",
   "summary": {
     "total_depts": 8,
     "kpi_official": 8,
     "kpi_skipped": 0,
     "kpi_excluded": 0,
-    "generated_at": "2026-07-17T06:19:20.196482Z"
+    "generated_at": "2026-07-17T10:00:03.932511Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -67,7 +67,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-17T06:19:20.194992Z"
+      "calculated_at": "2026-07-17T10:00:03.931026Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -112,7 +112,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-17T06:19:20.195053Z"
+      "calculated_at": "2026-07-17T10:00:03.931079Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -161,7 +161,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-17T06:19:20.195083Z"
+      "calculated_at": "2026-07-17T10:00:03.931108Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -169,9 +169,9 @@
       "dqg_status": "PASS",
       "official": true,
       "kpis": {
-        "total_downtime_min": 16615.0,
-        "total_downtime_hrs": 276.92,
-        "breakdown_events": 230,
+        "total_downtime_min": 16755.0,
+        "total_downtime_hrs": 279.25,
+        "breakdown_events": 232,
         "pm_events": 1,
         "top_machines": [
           {
@@ -195,7 +195,7 @@
             "downtime_min": 765.0
           }
         ],
-        "row_count": 232
+        "row_count": 234
       },
       "site_breakdown": {
         "GS1": {
@@ -232,9 +232,9 @@
         },
         "GS5": {
           "kpis": {
-            "total_downtime_min": 5175.0,
-            "total_downtime_hrs": 86.25,
-            "breakdown_events": 72,
+            "total_downtime_min": 5315.0,
+            "total_downtime_hrs": 88.58,
+            "breakdown_events": 74,
             "pm_events": 0,
             "top_machines": [
               {
@@ -247,7 +247,7 @@
               },
               {
                 "machine": "Máy H4 số 1",
-                "downtime_min": 425.0
+                "downtime_min": 455.0
               },
               {
                 "machine": "Máy CTP kodak số 2",
@@ -258,9 +258,9 @@
                 "downtime_min": 220.0
               }
             ],
-            "row_count": 72
+            "row_count": 74
           },
-          "row_count": 72
+          "row_count": 74
         },
         "GS6": {
           "kpis": {
@@ -300,7 +300,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-17T06:19:20.195603Z"
+      "calculated_at": "2026-07-17T10:00:03.931603Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -357,7 +357,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-17T06:19:20.195637Z"
+      "calculated_at": "2026-07-17T10:00:03.931637Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -412,7 +412,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-17T06:19:20.195654Z"
+      "calculated_at": "2026-07-17T10:00:03.931656Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -423,7 +423,7 @@
         "total_samples": 243,
         "in_progress": 1,
         "completed": 0,
-        "leadtime_avg_days": 7.8,
+        "leadtime_avg_days": 7.9,
         "redo_count_total": 0,
         "risk_high": 0,
         "row_count": 243
@@ -434,7 +434,7 @@
             "total_samples": 117,
             "in_progress": 0,
             "completed": 0,
-            "leadtime_avg_days": 9.1,
+            "leadtime_avg_days": 9.3,
             "redo_count_total": 0,
             "risk_high": 0,
             "row_count": 117
@@ -458,7 +458,7 @@
             "total_samples": 7,
             "in_progress": 0,
             "completed": 0,
-            "leadtime_avg_days": 20.3,
+            "leadtime_avg_days": 20.6,
             "redo_count_total": 0,
             "risk_high": 0,
             "row_count": 7
@@ -471,7 +471,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-17T06:19:20.196449Z"
+      "calculated_at": "2026-07-17T10:00:03.932475Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -520,7 +520,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-17T06:19:20.196470Z"
+      "calculated_at": "2026-07-17T10:00:03.932497Z"
     }
   }
 }

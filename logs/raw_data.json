@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-25T02:50:02.619851Z",
+  "generated_at": "2026-07-25T06:20:00.002434Z",
   "summary": {
     "total": 8,
     "configured": 8,
-    "ok": 8,
+    "ok": 7,
     "empty": 0,
     "pending": 0,
-    "access_error": 0,
+    "access_error": 1,
     "network_error": 0
   },
   "departments": {
@@ -31938,7 +31938,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 1994,
-      "fetched_at": "2026-07-25T02:49:57.524017Z",
+      "fetched_at": "2026-07-25T06:19:44.077631Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -32000,85 +32000,19 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-07-25T02:49:58.378050Z",
+      "fetched_at": "2026-07-25T06:19:44.878260Z",
       "note": ""
     },
     "03_QLCL": {
-      "status": "OK",
+      "status": "ACCESS_ERROR",
       "description": "Chat Luong - NCR/CAR (V3 RMA/ECN/Recovery)",
       "tab_name": "03_QLCL_NCR_CAR",
       "sheet_id": "1fK3UGw4BGpqX4zay7gIyq9JP5MsLUGYf3ZsJMDSjzTY",
-      "records": [
-        {
-          "Ngày": "2026-05-12",
-          "Nhà máy": "GS1",
-          "Khách hàng": "Cannon",
-          "Mã NCR/CAR": "GS_NCR01",
-          "Nhóm lỗi": "abc",
-          "Mức độ": "Critical",
-          "SL bị ảnh hưởng": "550",
-          "Trạng thái": "Blocked",
-          "PIC trực tiếp": "Mr Giang",
-          "Ngày hạn xử lý": "",
-          "Quá hạn?": "",
-          "Nhóm nguyên nhân gốc": "Man",
-          "Tóm tắt hành động": "",
-          "Link bằng chứng": "",
-          "Ghi chú": "",
-          "Linked_RMA_ID": "",
-          "Linked_ECN_ID": "",
-          "COPQ ước tính (VNĐ)": "",
-          "Recovery_Status": "",
-          "Ghi chú kiểm tra DL": "Thiếu Owner/Deadline/Action cho lỗi nghiêm trọng"
-        },
-        {
-          "Ngày": "2026-05-14",
-          "Nhà máy": "GS1",
-          "Khách hàng": "Brother",
-          "Mã NCR/CAR": "GS_NCR02",
-          "Nhóm lỗi": "cdf",
-          "Mức độ": "Medium",
-          "SL bị ảnh hưởng": "200",
-          "Trạng thái": "Pending",
-          "PIC trực tiếp": "Mr Giang",
-          "Ngày hạn xử lý": "",
-          "Quá hạn?": "",
-          "Nhóm nguyên nhân gốc": "Material",
-          "Tóm tắt hành động": "",
-          "Link bằng chứng": "",
-          "Ghi chú": "",
-          "Linked_RMA_ID": "",
-          "Linked_ECN_ID": "",
-          "COPQ ước tính (VNĐ)": "",
-          "Recovery_Status": "",
-          "Ghi chú kiểm tra DL": "OK"
-        }
-      ],
-      "columns": [
-        "Ngày",
-        "Nhà máy",
-        "Khách hàng",
-        "Mã NCR/CAR",
-        "Nhóm lỗi",
-        "Mức độ",
-        "SL bị ảnh hưởng",
-        "Trạng thái",
-        "PIC trực tiếp",
-        "Ngày hạn xử lý",
-        "Quá hạn?",
-        "Nhóm nguyên nhân gốc",
-        "Tóm tắt hành động",
-        "Link bằng chứng",
-        "Ghi chú",
-        "Linked_RMA_ID",
-        "Linked_ECN_ID",
-        "COPQ ước tính (VNĐ)",
-        "Recovery_Status",
-        "Ghi chú kiểm tra DL"
-      ],
-      "row_count": 2,
-      "fetched_at": "2026-07-25T02:49:59.375906Z",
-      "note": ""
+      "records": [],
+      "columns": [],
+      "row_count": 0,
+      "fetched_at": "2026-07-25T06:19:56.926652Z",
+      "note": "Access denied — set sheet sharing to Anyone with link, or verify Sheet ID"
     },
     "04_QLTB_CD": {
       "status": "OK",
@@ -35952,7 +35886,7 @@
         "Link bằng chứng"
       ],
       "row_count": 275,
-      "fetched_at": "2026-07-25T02:49:59.759066Z",
+      "fetched_at": "2026-07-25T06:19:57.579221Z",
       "note": ""
     },
     "05_KHO": {
@@ -36023,7 +35957,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-07-25T02:50:00.648879Z",
+      "fetched_at": "2026-07-25T06:19:58.444170Z",
       "note": ""
     },
     "06_GSTT": {
@@ -36082,7 +36016,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-07-25T02:50:01.122536Z",
+      "fetched_at": "2026-07-25T06:19:58.904942Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -39997,7 +39931,7 @@
         "Remark"
       ],
       "row_count": 243,
-      "fetched_at": "2026-07-25T02:50:02.123723Z",
+      "fetched_at": "2026-07-25T06:19:59.534690Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -40042,7 +39976,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-07-25T02:50:02.619825Z",
+      "fetched_at": "2026-07-25T06:20:00.002407Z",
       "note": ""
     }
   }

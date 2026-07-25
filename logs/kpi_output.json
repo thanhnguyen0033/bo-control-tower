@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-25T02:50:02.780961Z",
+  "generated_at": "2026-07-25T06:20:00.160170Z",
   "summary": {
     "total_depts": 8,
-    "kpi_official": 8,
+    "kpi_official": 7,
     "kpi_skipped": 0,
-    "kpi_excluded": 0,
-    "generated_at": "2026-07-25T02:50:02.780959Z"
+    "kpi_excluded": 1,
+    "generated_at": "2026-07-25T06:20:00.160168Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -67,7 +67,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-25T02:50:02.779272Z"
+      "calculated_at": "2026-07-25T06:20:00.158599Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -112,56 +112,16 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-25T02:50:02.779326Z"
+      "calculated_at": "2026-07-25T06:20:00.158654Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
       "description": "Chat Luong - NCR/CAR (V3 RMA/ECN/Recovery)",
-      "dqg_status": "PASS",
-      "official": true,
-      "kpis": {
-        "total_ncr": 2,
-        "open": 1,
-        "closed": 0,
-        "severity_critical": 1,
-        "severity_major": 0,
-        "severity_minor": 0,
-        "overdue_count": 0,
-        "copq_estimated": 0.0,
-        "row_count": 2
-      },
-      "site_breakdown": {
-        "GS1": {
-          "kpis": {
-            "total_ncr": 2,
-            "open": 1,
-            "closed": 0,
-            "severity_critical": 1,
-            "severity_major": 0,
-            "severity_minor": 0,
-            "overdue_count": 0,
-            "copq_estimated": 0.0,
-            "row_count": 2
-          },
-          "row_count": 2
-        },
-        "GS5": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        },
-        "GS6": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        },
-        "GSQV": {
-          "kpis": null,
-          "row_count": 0,
-          "note": "No data for this site"
-        }
-      },
-      "calculated_at": "2026-07-25T02:50:02.779355Z"
+      "dqg_status": "FAIL",
+      "official": false,
+      "kpis": null,
+      "note": "Access denied — verify sheet is set to 'Anyone with link can view' AND Sheet ID is correct",
+      "calculated_at": "2026-07-25T06:20:00.158662Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -300,7 +260,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-25T02:50:02.780020Z"
+      "calculated_at": "2026-07-25T06:20:00.159222Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -357,7 +317,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-25T02:50:02.780061Z"
+      "calculated_at": "2026-07-25T06:20:00.159256Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -412,7 +372,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-25T02:50:02.780081Z"
+      "calculated_at": "2026-07-25T06:20:00.159280Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -471,7 +431,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-25T02:50:02.780923Z"
+      "calculated_at": "2026-07-25T06:20:00.160132Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -520,7 +480,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-07-25T02:50:02.780947Z"
+      "calculated_at": "2026-07-25T06:20:00.160157Z"
     }
   }
 }

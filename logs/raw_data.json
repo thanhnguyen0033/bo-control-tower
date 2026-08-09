@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T06:59:40.601137Z",
+  "generated_at": "2026-08-09T08:45:28.863689Z",
   "summary": {
     "total": 8,
     "configured": 8,
@@ -31938,7 +31938,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 1994,
-      "fetched_at": "2026-08-09T06:59:32.441301Z",
+      "fetched_at": "2026-08-09T08:45:23.317259Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -32000,7 +32000,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-09T06:59:33.363864Z",
+      "fetched_at": "2026-08-09T08:45:24.847959Z",
       "note": ""
     },
     "03_QLCL": {
@@ -32077,7 +32077,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-09T06:59:33.755370Z",
+      "fetched_at": "2026-08-09T08:45:25.247036Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -36820,7 +36820,7 @@
         "Link bằng chứng"
       ],
       "row_count": 337,
-      "fetched_at": "2026-08-09T06:59:34.255171Z",
+      "fetched_at": "2026-08-09T08:45:25.759330Z",
       "note": ""
     },
     "05_KHO": {
@@ -36891,7 +36891,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-09T06:59:36.458599Z",
+      "fetched_at": "2026-08-09T08:45:26.665379Z",
       "note": ""
     },
     "06_GSTT": {
@@ -36950,7 +36950,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-09T06:59:36.905532Z",
+      "fetched_at": "2026-08-09T08:45:27.100650Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -37513,7 +37513,7 @@
           "Due_Date": "2026-05-14",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "93",
+          "Leadtime_Days": "94",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -38073,7 +38073,7 @@
           "Due_Date": "2026-05-20",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "84",
+          "Leadtime_Days": "85",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -38569,7 +38569,7 @@
           "Due_Date": "2026-06-03",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "78",
+          "Leadtime_Days": "79",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -38921,7 +38921,7 @@
           "Due_Date": "2026-06-06",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "71",
+          "Leadtime_Days": "72",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -39225,7 +39225,7 @@
           "Due_Date": "2026-06-12",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "64",
+          "Leadtime_Days": "65",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -39289,7 +39289,7 @@
           "Due_Date": "2026-06-12",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "64",
+          "Leadtime_Days": "65",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -39833,7 +39833,7 @@
           "Due_Date": "2026-06-30",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "49",
+          "Leadtime_Days": "50",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -39849,7 +39849,7 @@
           "Due_Date": "2026-06-30",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "49",
+          "Leadtime_Days": "50",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -39913,7 +39913,7 @@
           "Due_Date": "2026-06-21",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "53",
+          "Leadtime_Days": "54",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -39945,7 +39945,7 @@
           "Due_Date": "2026-06-26",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "49",
+          "Leadtime_Days": "50",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40457,7 +40457,7 @@
           "Due_Date": "2026-07-10",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "36",
+          "Leadtime_Days": "37",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40473,7 +40473,7 @@
           "Due_Date": "2026-07-10",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "36",
+          "Leadtime_Days": "37",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40489,7 +40489,7 @@
           "Due_Date": "2026-07-09",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "36",
+          "Leadtime_Days": "37",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40505,7 +40505,7 @@
           "Due_Date": "2026-07-09",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "36",
+          "Leadtime_Days": "37",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40521,7 +40521,7 @@
           "Due_Date": "2026-07-09",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "36",
+          "Leadtime_Days": "37",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40537,7 +40537,7 @@
           "Due_Date": "2026-07-09",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "35",
+          "Leadtime_Days": "36",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40617,7 +40617,7 @@
           "Due_Date": "2026-07-14",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "31",
+          "Leadtime_Days": "32",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40633,7 +40633,7 @@
           "Due_Date": "2026-07-14",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "31",
+          "Leadtime_Days": "32",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40649,7 +40649,7 @@
           "Due_Date": "2026-07-14",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "31",
+          "Leadtime_Days": "32",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40665,7 +40665,7 @@
           "Due_Date": "2026-07-15",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "31",
+          "Leadtime_Days": "32",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40681,7 +40681,7 @@
           "Due_Date": "2026-07-15",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "31",
+          "Leadtime_Days": "32",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40697,7 +40697,7 @@
           "Due_Date": "2026-07-15",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "31",
+          "Leadtime_Days": "32",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40809,7 +40809,7 @@
           "Due_Date": "2026-07-13",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "31",
+          "Leadtime_Days": "32",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40825,7 +40825,7 @@
           "Due_Date": "2026-07-14",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "28",
+          "Leadtime_Days": "29",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40841,7 +40841,7 @@
           "Due_Date": "2026-07-14",
           "Ngày hoàn thành": "",
           "Trạng thái": "New",
-          "Leadtime_Days": "28",
+          "Leadtime_Days": "29",
           "Redo_Count": "",
           "Risk_Level": "Low",
           "Customer_Impact": "",
@@ -40865,7 +40865,7 @@
         "Remark"
       ],
       "row_count": 243,
-      "fetched_at": "2026-08-09T06:59:37.497127Z",
+      "fetched_at": "2026-08-09T08:45:27.790228Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -40910,7 +40910,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-08-09T06:59:40.601115Z",
+      "fetched_at": "2026-08-09T08:45:28.863674Z",
       "note": ""
     }
   }

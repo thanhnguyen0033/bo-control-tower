@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-09T20:35:00.691867Z",
-  "raw_data_from": "2026-08-09T20:35:00.595403Z",
+  "generated_at": "2026-08-09T22:33:22.674039Z",
+  "raw_data_from": "2026-08-09T22:33:22.575501Z",
   "summary": {
     "PASS": 8,
     "WARN": 0,
@@ -24,7 +24,7 @@
         "WARN Row 1001 col 'Nhà máy' = 'GS10' not in ['GS1', 'GS5', 'GS6', 'GSQV']",
         "WARN Row 1002 col 'Nhà máy' = 'GS11' not in ['GS1', 'GS5', 'GS6', 'GSQV']"
       ],
-      "validated_at": "2026-08-09T20:35:00.691479Z"
+      "validated_at": "2026-08-09T22:33:22.673660Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -36,7 +36,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-08-09T20:35:00.691506Z"
+      "validated_at": "2026-08-09T22:33:22.673689Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -48,7 +48,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-08-09T20:35:00.691541Z"
+      "validated_at": "2026-08-09T22:33:22.673709Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -60,7 +60,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-08-09T20:35:00.691693Z"
+      "validated_at": "2026-08-09T22:33:22.673866Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -72,7 +72,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-08-09T20:35:00.691714Z"
+      "validated_at": "2026-08-09T22:33:22.673886Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -84,7 +84,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-08-09T20:35:00.691727Z"
+      "validated_at": "2026-08-09T22:33:22.673898Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -96,7 +96,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-08-09T20:35:00.691847Z"
+      "validated_at": "2026-08-09T22:33:22.674018Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -108,7 +108,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-08-09T20:35:00.691858Z"
+      "validated_at": "2026-08-09T22:33:22.674029Z"
     }
   }
 }

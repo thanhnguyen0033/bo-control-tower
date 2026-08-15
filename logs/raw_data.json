@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-08-15T20:24:52.595203Z",
+  "generated_at": "2026-08-15T22:24:52.318818Z",
   "summary": {
     "total": 8,
     "configured": 8,
-    "ok": 8,
+    "ok": 7,
     "empty": 0,
     "pending": 0,
     "access_error": 0,
-    "network_error": 0
+    "network_error": 1
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -31938,7 +31938,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 1994,
-      "fetched_at": "2026-08-15T20:24:46.474845Z",
+      "fetched_at": "2026-08-15T22:24:18.532791Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -32000,7 +32000,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-15T20:24:47.363530Z",
+      "fetched_at": "2026-08-15T22:24:19.404912Z",
       "note": ""
     },
     "03_QLCL": {
@@ -32077,7 +32077,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-15T20:24:47.815900Z",
+      "fetched_at": "2026-08-15T22:24:19.804414Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -37352,7 +37352,7 @@
         "Link bằng chứng"
       ],
       "row_count": 375,
-      "fetched_at": "2026-08-15T20:24:48.901353Z",
+      "fetched_at": "2026-08-15T22:24:20.452779Z",
       "note": ""
     },
     "05_KHO": {
@@ -37423,7 +37423,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-15T20:24:49.793534Z",
+      "fetched_at": "2026-08-15T22:24:21.286942Z",
       "note": ""
     },
     "06_GSTT": {
@@ -37482,7 +37482,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-15T20:24:50.234680Z",
+      "fetched_at": "2026-08-15T22:24:21.686380Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -41397,53 +41397,19 @@
         "Remark"
       ],
       "row_count": 243,
-      "fetched_at": "2026-08-15T20:24:51.354474Z",
+      "fetched_at": "2026-08-15T22:24:22.253205Z",
       "note": ""
     },
     "08_BO_CONTROL": {
-      "status": "OK",
+      "status": "NETWORK_ERROR",
       "description": "BO Control - Issue/Action",
       "tab_name": "09_ISSUE_ACTION",
       "sheet_id": "12Bi3CKN1FTXDYmnXWxMNQAErYSTsjpWQF8NIaq4T84Q",
-      "records": [
-        {
-          "Issue_Date": "Hỏng máy R906",
-          "Source_Module": "QLTB",
-          "Site": "GS1",
-          "Issue_Description": "Hỏng dao mực",
-          "Severity": "Critical",
-          "Owner": "Mr Thập",
-          "PIC": "Mr Thập",
-          "Action_Required": "Thay dao mực mới",
-          "Due_Date": "2026-05-15",
-          "Status": "Done",
-          "Overdue?": "No",
-          "Evidence_Link": "",
-          "Escalation_Level": "L1",
-          "Close_Condition": "",
-          "Remark": "Máy đã trở lại hoạt động BT"
-        }
-      ],
-      "columns": [
-        "Issue_Date",
-        "Source_Module",
-        "Site",
-        "Issue_Description",
-        "Severity",
-        "Owner",
-        "PIC",
-        "Action_Required",
-        "Due_Date",
-        "Status",
-        "Overdue?",
-        "Evidence_Link",
-        "Escalation_Level",
-        "Close_Condition",
-        "Remark"
-      ],
-      "row_count": 1,
-      "fetched_at": "2026-08-15T20:24:52.595182Z",
-      "note": ""
+      "records": [],
+      "columns": [],
+      "row_count": 0,
+      "fetched_at": "2026-08-15T22:24:52.318789Z",
+      "note": "Network/DNS error — transient issue, retry on next run"
     }
   }
 }

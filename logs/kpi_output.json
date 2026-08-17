@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-17T16:30:10.109004Z",
+  "generated_at": "2026-08-17T18:41:58.455002Z",
   "summary": {
     "total_depts": 8,
-    "kpi_official": 7,
-    "kpi_skipped": 1,
+    "kpi_official": 8,
+    "kpi_skipped": 0,
     "kpi_excluded": 0,
-    "generated_at": "2026-08-17T16:30:10.109002Z"
+    "generated_at": "2026-08-17T18:41:58.455001Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -67,7 +67,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-08-17T16:30:10.107997Z"
+      "calculated_at": "2026-08-17T18:41:58.453271Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -112,7 +112,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-08-17T16:30:10.108046Z"
+      "calculated_at": "2026-08-17T18:41:58.453323Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -161,16 +161,146 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-08-17T16:30:10.108077Z"
+      "calculated_at": "2026-08-17T18:41:58.453352Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
       "description": "Thiet Bi - Machine Downtime",
-      "dqg_status": "SKIP",
-      "official": false,
-      "kpis": null,
-      "note": "Network/DNS error — transient, will retry on next run",
-      "calculated_at": "2026-08-17T16:30:10.108083Z"
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_downtime_min": 26800.4,
+        "total_downtime_hrs": 446.67,
+        "breakdown_events": 386,
+        "pm_events": 2,
+        "top_machines": [
+          {
+            "machine": "in R900",
+            "downtime_min": 1185.0
+          },
+          {
+            "machine": "Máy túi giấy 450-9",
+            "downtime_min": 1160.0
+          },
+          {
+            "machine": "in martin",
+            "downtime_min": 1110.0
+          },
+          {
+            "machine": "máy sóng",
+            "downtime_min": 1015.0
+          },
+          {
+            "machine": "in R906",
+            "downtime_min": 935.0
+          }
+        ],
+        "row_count": 389
+      },
+      "site_breakdown": {
+        "GS1": {
+          "kpis": {
+            "total_downtime_min": 12805.4,
+            "total_downtime_hrs": 213.42,
+            "breakdown_events": 192,
+            "pm_events": 2,
+            "top_machines": [
+              {
+                "machine": "in R900",
+                "downtime_min": 1185.0
+              },
+              {
+                "machine": "in martin",
+                "downtime_min": 1110.0
+              },
+              {
+                "machine": "máy sóng",
+                "downtime_min": 1015.0
+              },
+              {
+                "machine": "in R906",
+                "downtime_min": 935.0
+              },
+              {
+                "machine": "bế nikko 1300",
+                "downtime_min": 895.0
+              }
+            ],
+            "row_count": 195
+          },
+          "row_count": 195
+        },
+        "GS5": {
+          "kpis": {
+            "total_downtime_min": 7170.0,
+            "total_downtime_hrs": 119.5,
+            "breakdown_events": 100,
+            "pm_events": 0,
+            "top_machines": [
+              {
+                "machine": "Máy KBA số 1",
+                "downtime_min": 925.0
+              },
+              {
+                "machine": "Máy KBA số 2",
+                "downtime_min": 625.0
+              },
+              {
+                "machine": "Máy in KBA số 1",
+                "downtime_min": 595.0
+              },
+              {
+                "machine": "Máy H4 số 1",
+                "downtime_min": 455.0
+              },
+              {
+                "machine": "Máy in H2 số 1",
+                "downtime_min": 310.0
+              }
+            ],
+            "row_count": 100
+          },
+          "row_count": 100
+        },
+        "GS6": {
+          "kpis": {
+            "total_downtime_min": 6825.0,
+            "total_downtime_hrs": 113.75,
+            "breakdown_events": 94,
+            "pm_events": 0,
+            "top_machines": [
+              {
+                "machine": "Máy túi giấy 450-9",
+                "downtime_min": 1160.0
+              },
+              {
+                "machine": "Máy túi giấy 450-17",
+                "downtime_min": 580.0
+              },
+              {
+                "machine": "Máy túi giấy 450-15",
+                "downtime_min": 580.0
+              },
+              {
+                "machine": "Máy ép khay số 7",
+                "downtime_min": 485.0
+              },
+              {
+                "machine": "Máy túi giấy 450-16",
+                "downtime_min": 370.0
+              }
+            ],
+            "row_count": 94
+          },
+          "row_count": 94
+        },
+        "GSQV": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        }
+      },
+      "calculated_at": "2026-08-17T18:41:58.454078Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -227,7 +357,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-08-17T16:30:10.108111Z"
+      "calculated_at": "2026-08-17T18:41:58.454129Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -282,7 +412,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-08-17T16:30:10.108132Z"
+      "calculated_at": "2026-08-17T18:41:58.454148Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -341,7 +471,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-08-17T16:30:10.108961Z"
+      "calculated_at": "2026-08-17T18:41:58.454964Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -390,7 +520,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-08-17T16:30:10.108990Z"
+      "calculated_at": "2026-08-17T18:41:58.454990Z"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T01:20:56.347745Z",
+  "generated_at": "2026-08-20T02:58:47.518796Z",
   "summary": {
     "total": 8,
     "configured": 8,
@@ -31938,7 +31938,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 1994,
-      "fetched_at": "2026-08-20T01:20:50.971113Z",
+      "fetched_at": "2026-08-20T02:58:43.023136Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -32000,7 +32000,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-20T01:20:51.658316Z",
+      "fetched_at": "2026-08-20T02:58:43.420325Z",
       "note": ""
     },
     "03_QLCL": {
@@ -32077,7 +32077,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-20T01:20:52.626702Z",
+      "fetched_at": "2026-08-20T02:58:44.271562Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -37713,6 +37713,20 @@
           "Hành động cần làm": "",
           "Trạng thái": "Done",
           "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-08-19",
+          "Ca": "Ca 1",
+          "Nhà máy": "GS6",
+          "Mã máy": "Máy túi giấy 330-6",
+          "Thời gian dừng (phút)": "90",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Nam",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
         }
       ],
       "columns": [
@@ -37729,8 +37743,8 @@
         "Trạng thái",
         "Link bằng chứng"
       ],
-      "row_count": 402,
-      "fetched_at": "2026-08-20T01:20:53.270470Z",
+      "row_count": 403,
+      "fetched_at": "2026-08-20T02:58:44.868518Z",
       "note": ""
     },
     "05_KHO": {
@@ -37801,7 +37815,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-20T01:20:54.231535Z",
+      "fetched_at": "2026-08-20T02:58:45.397916Z",
       "note": ""
     },
     "06_GSTT": {
@@ -37860,7 +37874,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-20T01:20:54.982625Z",
+      "fetched_at": "2026-08-20T02:58:46.159216Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -41775,7 +41789,7 @@
         "Remark"
       ],
       "row_count": 243,
-      "fetched_at": "2026-08-20T01:20:55.786337Z",
+      "fetched_at": "2026-08-20T02:58:47.092007Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -41820,7 +41834,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-08-20T01:20:56.347722Z",
+      "fetched_at": "2026-08-20T02:58:47.518776Z",
       "note": ""
     }
   }

@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-08-26T03:06:49.459693Z",
+  "generated_at": "2026-08-26T04:42:12.121450Z",
   "summary": {
     "total": 8,
     "configured": 8,
-    "ok": 8,
+    "ok": 7,
     "empty": 0,
     "pending": 0,
     "access_error": 0,
-    "network_error": 0
+    "network_error": 1
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -31938,7 +31938,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 1994,
-      "fetched_at": "2026-08-26T03:06:44.833694Z",
+      "fetched_at": "2026-08-26T04:41:37.905813Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -32000,85 +32000,19 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-26T03:06:45.680856Z",
+      "fetched_at": "2026-08-26T04:41:38.732799Z",
       "note": ""
     },
     "03_QLCL": {
-      "status": "OK",
+      "status": "NETWORK_ERROR",
       "description": "Chat Luong - NCR/CAR (V3 RMA/ECN/Recovery)",
       "tab_name": "03_QLCL_NCR_CAR",
       "sheet_id": "1fK3UGw4BGpqX4zay7gIyq9JP5MsLUGYf3ZsJMDSjzTY",
-      "records": [
-        {
-          "Ngày": "2026-05-12",
-          "Nhà máy": "GS1",
-          "Khách hàng": "Cannon",
-          "Mã NCR/CAR": "GS_NCR01",
-          "Nhóm lỗi": "abc",
-          "Mức độ": "Critical",
-          "SL bị ảnh hưởng": "550",
-          "Trạng thái": "Blocked",
-          "PIC trực tiếp": "Mr Giang",
-          "Ngày hạn xử lý": "",
-          "Quá hạn?": "",
-          "Nhóm nguyên nhân gốc": "Man",
-          "Tóm tắt hành động": "",
-          "Link bằng chứng": "",
-          "Ghi chú": "",
-          "Linked_RMA_ID": "",
-          "Linked_ECN_ID": "",
-          "COPQ ước tính (VNĐ)": "",
-          "Recovery_Status": "",
-          "Ghi chú kiểm tra DL": "Thiếu Owner/Deadline/Action cho lỗi nghiêm trọng"
-        },
-        {
-          "Ngày": "2026-05-14",
-          "Nhà máy": "GS1",
-          "Khách hàng": "Brother",
-          "Mã NCR/CAR": "GS_NCR02",
-          "Nhóm lỗi": "cdf",
-          "Mức độ": "Medium",
-          "SL bị ảnh hưởng": "200",
-          "Trạng thái": "Pending",
-          "PIC trực tiếp": "Mr Giang",
-          "Ngày hạn xử lý": "",
-          "Quá hạn?": "",
-          "Nhóm nguyên nhân gốc": "Material",
-          "Tóm tắt hành động": "",
-          "Link bằng chứng": "",
-          "Ghi chú": "",
-          "Linked_RMA_ID": "",
-          "Linked_ECN_ID": "",
-          "COPQ ước tính (VNĐ)": "",
-          "Recovery_Status": "",
-          "Ghi chú kiểm tra DL": "OK"
-        }
-      ],
-      "columns": [
-        "Ngày",
-        "Nhà máy",
-        "Khách hàng",
-        "Mã NCR/CAR",
-        "Nhóm lỗi",
-        "Mức độ",
-        "SL bị ảnh hưởng",
-        "Trạng thái",
-        "PIC trực tiếp",
-        "Ngày hạn xử lý",
-        "Quá hạn?",
-        "Nhóm nguyên nhân gốc",
-        "Tóm tắt hành động",
-        "Link bằng chứng",
-        "Ghi chú",
-        "Linked_RMA_ID",
-        "Linked_ECN_ID",
-        "COPQ ước tính (VNĐ)",
-        "Recovery_Status",
-        "Ghi chú kiểm tra DL"
-      ],
-      "row_count": 2,
-      "fetched_at": "2026-08-26T03:06:46.106393Z",
-      "note": ""
+      "records": [],
+      "columns": [],
+      "row_count": 0,
+      "fetched_at": "2026-08-26T04:42:08.794981Z",
+      "note": "Network/DNS error — transient issue, retry on next run"
     },
     "04_QLTB_CD": {
       "status": "OK",
@@ -38147,6 +38081,104 @@
           "Hành động cần làm": "",
           "Trạng thái": "Done",
           "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-08-25",
+          "Ca": "Ca 1",
+          "Nhà máy": "GS6",
+          "Mã máy": "Máy ép khay số 1",
+          "Thời gian dừng (phút)": "180",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Nam",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-08-25",
+          "Ca": "Ca 1",
+          "Nhà máy": "GS6",
+          "Mã máy": "Máy cắt via số 3",
+          "Thời gian dừng (phút)": "190",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Nam",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-08-25",
+          "Ca": "Ca 1",
+          "Nhà máy": "GS6",
+          "Mã máy": "Máy túi giấy 330-7",
+          "Thời gian dừng (phút)": "100",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Nam",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-08-25",
+          "Ca": "Ca 2",
+          "Nhà máy": "GS6",
+          "Mã máy": "Máy túi giấy 330-7",
+          "Thời gian dừng (phút)": "40",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Nam",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-08-25",
+          "Ca": "Ca 2",
+          "Nhà máy": "GS6",
+          "Mã máy": "Máy túi giấy 360-1",
+          "Thời gian dừng (phút)": "120",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Nam",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-08-25",
+          "Ca": "Ca 2",
+          "Nhà máy": "GS6",
+          "Mã máy": "Máy túi giấy 360-2",
+          "Thời gian dừng (phút)": "110",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Nam",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-08-25",
+          "Ca": "Ca 2",
+          "Nhà máy": "GS6",
+          "Mã máy": "Máy ép khay số 2",
+          "Thời gian dừng (phút)": "20",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Nam",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
         }
       ],
       "columns": [
@@ -38163,8 +38195,8 @@
         "Trạng thái",
         "Link bằng chứng"
       ],
-      "row_count": 433,
-      "fetched_at": "2026-08-26T03:06:46.723837Z",
+      "row_count": 440,
+      "fetched_at": "2026-08-26T04:42:09.184392Z",
       "note": ""
     },
     "05_KHO": {
@@ -38235,7 +38267,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-26T03:06:47.600404Z",
+      "fetched_at": "2026-08-26T04:42:10.207299Z",
       "note": ""
     },
     "06_GSTT": {
@@ -38294,7 +38326,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-08-26T03:06:47.998215Z",
+      "fetched_at": "2026-08-26T04:42:10.637075Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -42209,7 +42241,7 @@
         "Remark"
       ],
       "row_count": 243,
-      "fetched_at": "2026-08-26T03:06:48.623078Z",
+      "fetched_at": "2026-08-26T04:42:11.197137Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -42254,7 +42286,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-08-26T03:06:49.459670Z",
+      "fetched_at": "2026-08-26T04:42:12.121427Z",
       "note": ""
     }
   }

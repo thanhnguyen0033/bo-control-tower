@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-29T23:57:09.570104Z",
-  "raw_data_from": "2026-08-29T23:57:09.493985Z",
+  "generated_at": "2026-08-30T04:53:54.884226Z",
+  "raw_data_from": "2026-08-30T04:53:54.784815Z",
   "summary": {
-    "PASS": 7,
+    "PASS": 8,
     "WARN": 0,
     "FAIL": 0,
-    "SKIP": 1
+    "SKIP": 0
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -24,7 +24,7 @@
         "WARN Row 1001 col 'Nhà máy' = 'GS10' not in ['GS1', 'GS5', 'GS6', 'GSQV']",
         "WARN Row 1002 col 'Nhà máy' = 'GS11' not in ['GS1', 'GS5', 'GS6', 'GSQV']"
       ],
-      "validated_at": "2026-08-29T23:57:09.569776Z"
+      "validated_at": "2026-08-30T04:53:54.883765Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -36,20 +36,19 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-08-29T23:57:09.569803Z"
+      "validated_at": "2026-08-30T04:53:54.883797Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
-      "dqg_status": "SKIP",
+      "dqg_status": "PASS",
       "description": "Chat Luong - NCR/CAR (V3 RMA/ECN/Recovery)",
-      "row_count": 0,
+      "row_count": 2,
       "fail_count": 0,
       "warn_count": 0,
+      "fail_pct": 0.0,
       "missing_columns": [],
-      "issues": [
-        "Network/DNS error — transient, will retry on next run"
-      ],
-      "validated_at": "2026-08-29T23:57:09.569808Z"
+      "issues": [],
+      "validated_at": "2026-08-30T04:53:54.883818Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -61,7 +60,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-08-29T23:57:09.569969Z"
+      "validated_at": "2026-08-30T04:53:54.884025Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -73,7 +72,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-08-29T23:57:09.569985Z"
+      "validated_at": "2026-08-30T04:53:54.884046Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -85,7 +84,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-08-29T23:57:09.569995Z"
+      "validated_at": "2026-08-30T04:53:54.884059Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -97,7 +96,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-08-29T23:57:09.570086Z"
+      "validated_at": "2026-08-30T04:53:54.884202Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -109,7 +108,7 @@
       "fail_pct": 0.0,
       "missing_columns": [],
       "issues": [],
-      "validated_at": "2026-08-29T23:57:09.570095Z"
+      "validated_at": "2026-08-30T04:53:54.884215Z"
     }
   }
 }

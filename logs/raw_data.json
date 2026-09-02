@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-01T23:52:18.767868Z",
+  "generated_at": "2026-09-02T03:32:25.064881Z",
   "summary": {
     "total": 8,
     "configured": 8,
-    "ok": 8,
+    "ok": 7,
     "empty": 0,
     "pending": 0,
     "access_error": 0,
-    "network_error": 0
+    "network_error": 1
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -31938,7 +31938,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 1994,
-      "fetched_at": "2026-09-01T23:52:13.811495Z",
+      "fetched_at": "2026-09-02T03:31:51.110223Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -32000,7 +32000,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-01T23:52:14.294063Z",
+      "fetched_at": "2026-09-02T03:31:51.875131Z",
       "note": ""
     },
     "03_QLCL": {
@@ -32077,7 +32077,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-01T23:52:15.400609Z",
+      "fetched_at": "2026-09-02T03:31:52.410098Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -38430,79 +38430,19 @@
         "Link bằng chứng"
       ],
       "row_count": 452,
-      "fetched_at": "2026-09-01T23:52:16.070773Z",
+      "fetched_at": "2026-09-02T03:31:52.883561Z",
       "note": ""
     },
     "05_KHO": {
-      "status": "OK",
+      "status": "NETWORK_ERROR",
       "description": "Kho - WIP/FIFO (V3 Inventory/Capacity/Aging)",
       "tab_name": "05_WIP_FIFO_KHO",
       "sheet_id": "1yl8K7TVN5XQXcWT3IlRWptoEg7J4Lb127aBHWE8Ve1s",
-      "records": [
-        {
-          "Ngày": "2026-05-14",
-          "Nhà máy": "GS5",
-          "Khu vực": "Sau bế Eterna",
-          "Lệnh SX": "Cannon_hộp 01",
-          "Công đoạn": "In Bế",
-          "SL bán thành phẩm": "5.000",
-          "Số ngày tồn": "3",
-          "Trạng thái FIFO": "Risk",
-          "PIC trực tiếp": "Mr Luân",
-          "Mức rủi ro": "High",
-          "Ghi chú": "Sale Thả sai lệnh giao hàng",
-          "Khu vực lưu trữ": "",
-          "Mã vị trí": "",
-          "Loại tồn kho": "",
-          "Nhóm tuổi tồn": "0-7",
-          "Mã Issue liên quan": "",
-          "Link bằng chứng": "",
-          "Ghi chú kiểm tra DL": "Thiếu Owner/Evidence cho rủi ro cao"
-        },
-        {
-          "Ngày": "2026-05-15",
-          "Nhà máy": "GS5",
-          "Khu vực": "Sau bế Eterna",
-          "Lệnh SX": "Cannon_Hộp mực",
-          "Công đoạn": "In Bế",
-          "SL bán thành phẩm": "3.500",
-          "Số ngày tồn": "6",
-          "Trạng thái FIFO": "Risk",
-          "PIC trực tiếp": "Mr Luân",
-          "Mức rủi ro": "High",
-          "Ghi chú": "SX trước chưa  hoàn thiện",
-          "Khu vực lưu trữ": "",
-          "Mã vị trí": "",
-          "Loại tồn kho": "",
-          "Nhóm tuổi tồn": "0-7",
-          "Mã Issue liên quan": "",
-          "Link bằng chứng": "",
-          "Ghi chú kiểm tra DL": "Thiếu Owner/Evidence cho rủi ro cao"
-        }
-      ],
-      "columns": [
-        "Ngày",
-        "Nhà máy",
-        "Khu vực",
-        "Lệnh SX",
-        "Công đoạn",
-        "SL bán thành phẩm",
-        "Số ngày tồn",
-        "Trạng thái FIFO",
-        "PIC trực tiếp",
-        "Mức rủi ro",
-        "Ghi chú",
-        "Khu vực lưu trữ",
-        "Mã vị trí",
-        "Loại tồn kho",
-        "Nhóm tuổi tồn",
-        "Mã Issue liên quan",
-        "Link bằng chứng",
-        "Ghi chú kiểm tra DL"
-      ],
-      "row_count": 2,
-      "fetched_at": "2026-09-01T23:52:16.577694Z",
-      "note": ""
+      "records": [],
+      "columns": [],
+      "row_count": 0,
+      "fetched_at": "2026-09-02T03:32:22.961589Z",
+      "note": "Network/DNS error — transient issue, retry on next run"
     },
     "06_GSTT": {
       "status": "OK",
@@ -38560,7 +38500,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-01T23:52:17.579970Z",
+      "fetched_at": "2026-09-02T03:32:23.497624Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -42475,7 +42415,7 @@
         "Remark"
       ],
       "row_count": 243,
-      "fetched_at": "2026-09-01T23:52:18.387464Z",
+      "fetched_at": "2026-09-02T03:32:24.232237Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -42520,7 +42460,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-09-01T23:52:18.767844Z",
+      "fetched_at": "2026-09-02T03:32:25.064859Z",
       "note": ""
     }
   }

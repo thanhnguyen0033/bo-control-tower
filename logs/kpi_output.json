@@ -1,21 +1,73 @@
 {
-  "generated_at": "2026-09-06T13:28:25.150029Z",
+  "generated_at": "2026-09-06T16:45:34.096440Z",
   "summary": {
     "total_depts": 8,
-    "kpi_official": 6,
-    "kpi_skipped": 2,
+    "kpi_official": 8,
+    "kpi_skipped": 0,
     "kpi_excluded": 0,
-    "generated_at": "2026-09-06T13:28:25.150028Z"
+    "generated_at": "2026-09-06T16:45:34.096439Z"
   },
   "departments": {
     "01_SAN_XUAT": {
       "dept": "01_SAN_XUAT",
       "description": "San Xuat - Plan/DO",
-      "dqg_status": "SKIP",
-      "official": false,
-      "kpis": null,
-      "note": "Network/DNS error — transient, will retry on next run",
-      "calculated_at": "2026-09-06T13:28:25.148130Z"
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_plan_qty": 28984562,
+        "total_actual_qty": 10273111,
+        "total_ng_qty": 6808,
+        "plan_do_pct_avg": 63.4,
+        "ng_pct": 0.07,
+        "rag_R": 95,
+        "rag_A": 15,
+        "rag_G": 86,
+        "rag_unknown": 1798,
+        "row_count": 1994
+      },
+      "site_breakdown": {
+        "GS1": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GS5": {
+          "kpis": {
+            "total_plan_qty": 969575,
+            "total_actual_qty": 3266111,
+            "total_ng_qty": 6808,
+            "plan_do_pct_avg": 63.4,
+            "ng_pct": 0.21,
+            "rag_R": 95,
+            "rag_A": 15,
+            "rag_G": 86,
+            "rag_unknown": 797,
+            "row_count": 993
+          },
+          "row_count": 993
+        },
+        "GS6": {
+          "kpis": {
+            "total_plan_qty": 27987,
+            "total_actual_qty": 7000,
+            "total_ng_qty": 0,
+            "plan_do_pct_avg": null,
+            "ng_pct": 0.0,
+            "rag_R": 0,
+            "rag_A": 0,
+            "rag_G": 0,
+            "rag_unknown": 1,
+            "row_count": 1
+          },
+          "row_count": 1
+        },
+        "GSQV": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        }
+      },
+      "calculated_at": "2026-09-06T16:45:34.094511Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -60,16 +112,56 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-06T13:28:25.148164Z"
+      "calculated_at": "2026-09-06T16:45:34.094579Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
       "description": "Chat Luong - NCR/CAR (V3 RMA/ECN/Recovery)",
-      "dqg_status": "SKIP",
-      "official": false,
-      "kpis": null,
-      "note": "Network/DNS error — transient, will retry on next run",
-      "calculated_at": "2026-09-06T13:28:25.148195Z"
+      "dqg_status": "PASS",
+      "official": true,
+      "kpis": {
+        "total_ncr": 2,
+        "open": 1,
+        "closed": 0,
+        "severity_critical": 1,
+        "severity_major": 0,
+        "severity_minor": 0,
+        "overdue_count": 0,
+        "copq_estimated": 0.0,
+        "row_count": 2
+      },
+      "site_breakdown": {
+        "GS1": {
+          "kpis": {
+            "total_ncr": 2,
+            "open": 1,
+            "closed": 0,
+            "severity_critical": 1,
+            "severity_major": 0,
+            "severity_minor": 0,
+            "overdue_count": 0,
+            "copq_estimated": 0.0,
+            "row_count": 2
+          },
+          "row_count": 2
+        },
+        "GS5": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GS6": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        },
+        "GSQV": {
+          "kpis": null,
+          "row_count": 0,
+          "note": "No data for this site"
+        }
+      },
+      "calculated_at": "2026-09-06T16:45:34.094612Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -208,7 +300,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-06T13:28:25.149098Z"
+      "calculated_at": "2026-09-06T16:45:34.095497Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -265,7 +357,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-06T13:28:25.149137Z"
+      "calculated_at": "2026-09-06T16:45:34.095531Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -320,7 +412,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-06T13:28:25.149155Z"
+      "calculated_at": "2026-09-06T16:45:34.095549Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -379,7 +471,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-06T13:28:25.149991Z"
+      "calculated_at": "2026-09-06T16:45:34.096403Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -428,7 +520,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-06T13:28:25.150017Z"
+      "calculated_at": "2026-09-06T16:45:34.096427Z"
     }
   }
 }

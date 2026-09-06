@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T20:08:41.450194Z",
+  "generated_at": "2026-09-06T23:36:17.536484Z",
   "summary": {
     "total": 8,
     "configured": 8,
@@ -31938,7 +31938,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 1994,
-      "fetched_at": "2026-09-06T20:08:07.582630Z",
+      "fetched_at": "2026-09-06T23:35:43.717582Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -32000,7 +32000,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-06T20:08:07.961264Z",
+      "fetched_at": "2026-09-06T23:35:44.585149Z",
       "note": ""
     },
     "03_QLCL": {
@@ -32077,7 +32077,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-06T20:08:08.752245Z",
+      "fetched_at": "2026-09-06T23:35:45.279626Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -38808,7 +38808,7 @@
         "Link bằng chứng"
       ],
       "row_count": 479,
-      "fetched_at": "2026-09-06T20:08:09.503791Z",
+      "fetched_at": "2026-09-06T23:35:45.802460Z",
       "note": ""
     },
     "05_KHO": {
@@ -38819,7 +38819,7 @@
       "records": [],
       "columns": [],
       "row_count": 0,
-      "fetched_at": "2026-09-06T20:08:39.567223Z",
+      "fetched_at": "2026-09-06T23:36:15.864481Z",
       "note": "Network/DNS error — transient issue, retry on next run"
     },
     "06_GSTT": {
@@ -38878,7 +38878,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-06T20:08:40.267785Z",
+      "fetched_at": "2026-09-06T23:36:16.277262Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -42793,7 +42793,7 @@
         "Remark"
       ],
       "row_count": 243,
-      "fetched_at": "2026-09-06T20:08:41.136830Z",
+      "fetched_at": "2026-09-06T23:36:17.117913Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -42838,7 +42838,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-09-06T20:08:41.450172Z",
+      "fetched_at": "2026-09-06T23:36:17.536461Z",
       "note": ""
     }
   }

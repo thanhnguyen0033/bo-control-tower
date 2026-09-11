@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T08:43:35.292022Z",
+  "generated_at": "2026-09-11T14:07:18.500038Z",
   "summary": {
     "total": 8,
     "configured": 8,
@@ -31938,7 +31938,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 1994,
-      "fetched_at": "2026-09-11T08:43:31.044395Z",
+      "fetched_at": "2026-09-11T14:07:13.103589Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -32000,7 +32000,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-11T08:43:31.668071Z",
+      "fetched_at": "2026-09-11T14:07:13.870790Z",
       "note": ""
     },
     "03_QLCL": {
@@ -32077,7 +32077,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-11T08:43:32.407817Z",
+      "fetched_at": "2026-09-11T14:07:14.713984Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -38917,6 +38917,34 @@
           "Hành động cần làm": "",
           "Trạng thái": "Done",
           "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-09-10",
+          "Ca": "Ca 1",
+          "Nhà máy": "GS6",
+          "Mã máy": "Máy túi giấy 260-1",
+          "Thời gian dừng (phút)": "120",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Nam",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-09-10",
+          "Ca": "Ca 1",
+          "Nhà máy": "GS6",
+          "Mã máy": "Máy túi giấy 550-2",
+          "Thời gian dừng (phút)": "60",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Nam",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
         }
       ],
       "columns": [
@@ -38933,8 +38961,8 @@
         "Trạng thái",
         "Link bằng chứng"
       ],
-      "row_count": 488,
-      "fetched_at": "2026-09-11T08:43:32.891589Z",
+      "row_count": 490,
+      "fetched_at": "2026-09-11T14:07:15.372861Z",
       "note": ""
     },
     "05_KHO": {
@@ -39005,7 +39033,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-11T08:43:33.491431Z",
+      "fetched_at": "2026-09-11T14:07:16.246240Z",
       "note": ""
     },
     "06_GSTT": {
@@ -39064,7 +39092,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-11T08:43:34.015887Z",
+      "fetched_at": "2026-09-11T14:07:16.817767Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -42979,7 +43007,7 @@
         "Remark"
       ],
       "row_count": 243,
-      "fetched_at": "2026-09-11T08:43:34.648582Z",
+      "fetched_at": "2026-09-11T14:07:17.519196Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -43024,7 +43052,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-09-11T08:43:35.291998Z",
+      "fetched_at": "2026-09-11T14:07:18.500016Z",
       "note": ""
     }
   }

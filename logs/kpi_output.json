@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-23T03:52:53.661281Z",
+  "generated_at": "2026-09-23T09:10:03.380825Z",
   "summary": {
     "total_depts": 8,
     "kpi_official": 8,
     "kpi_skipped": 0,
     "kpi_excluded": 0,
-    "generated_at": "2026-09-23T03:52:53.661280Z"
+    "generated_at": "2026-09-23T09:10:03.380824Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -67,7 +67,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-23T03:52:53.659185Z"
+      "calculated_at": "2026-09-23T09:10:03.378827Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -112,7 +112,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-23T03:52:53.659245Z"
+      "calculated_at": "2026-09-23T09:10:03.378873Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -161,7 +161,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-23T03:52:53.659281Z"
+      "calculated_at": "2026-09-23T09:10:03.378903Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -169,9 +169,9 @@
       "dqg_status": "PASS",
       "official": true,
       "kpis": {
-        "total_downtime_min": 39203.4,
-        "total_downtime_hrs": 653.39,
-        "breakdown_events": 529,
+        "total_downtime_min": 39423.4,
+        "total_downtime_hrs": 657.06,
+        "breakdown_events": 532,
         "pm_events": 2,
         "top_machines": [
           {
@@ -195,7 +195,7 @@
             "downtime_min": 1250.0
           }
         ],
-        "row_count": 532
+        "row_count": 535
       },
       "site_breakdown": {
         "GS1": {
@@ -264,9 +264,9 @@
         },
         "GS6": {
           "kpis": {
-            "total_downtime_min": 12525.0,
-            "total_downtime_hrs": 208.75,
-            "breakdown_events": 160,
+            "total_downtime_min": 12745.0,
+            "total_downtime_hrs": 212.42,
+            "breakdown_events": 163,
             "pm_events": 0,
             "top_machines": [
               {
@@ -279,20 +279,20 @@
               },
               {
                 "machine": "Máy túi giấy 360-1",
-                "downtime_min": 750.0
+                "downtime_min": 810.0
+              },
+              {
+                "machine": "Máy túi giấy 450-17",
+                "downtime_min": 730.0
               },
               {
                 "machine": "Máy túi giấy 450-15",
                 "downtime_min": 640.0
-              },
-              {
-                "machine": "Máy túi giấy 330-6",
-                "downtime_min": 620.0
               }
             ],
-            "row_count": 160
+            "row_count": 163
           },
-          "row_count": 160
+          "row_count": 163
         },
         "GSQV": {
           "kpis": null,
@@ -300,7 +300,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-23T03:52:53.660308Z"
+      "calculated_at": "2026-09-23T09:10:03.379899Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -357,7 +357,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-23T03:52:53.660349Z"
+      "calculated_at": "2026-09-23T09:10:03.379933Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -412,7 +412,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-23T03:52:53.660369Z"
+      "calculated_at": "2026-09-23T09:10:03.379952Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -423,7 +423,7 @@
         "total_samples": 243,
         "in_progress": 1,
         "completed": 0,
-        "leadtime_avg_days": 14.8,
+        "leadtime_avg_days": 14.9,
         "redo_count_total": 0,
         "risk_high": 0,
         "row_count": 243
@@ -434,7 +434,7 @@
             "total_samples": 117,
             "in_progress": 0,
             "completed": 0,
-            "leadtime_avg_days": 21.3,
+            "leadtime_avg_days": 21.5,
             "redo_count_total": 0,
             "risk_high": 0,
             "row_count": 117
@@ -458,7 +458,7 @@
             "total_samples": 7,
             "in_progress": 0,
             "completed": 0,
-            "leadtime_avg_days": 39.7,
+            "leadtime_avg_days": 40.0,
             "redo_count_total": 0,
             "risk_high": 0,
             "row_count": 7
@@ -471,7 +471,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-23T03:52:53.661240Z"
+      "calculated_at": "2026-09-23T09:10:03.380786Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -520,7 +520,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-09-23T03:52:53.661265Z"
+      "calculated_at": "2026-09-23T09:10:03.380810Z"
     }
   }
 }

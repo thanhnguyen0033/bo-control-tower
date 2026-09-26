@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T07:13:20.503482Z",
+  "generated_at": "2026-09-26T12:45:27.177015Z",
   "summary": {
     "total": 8,
     "configured": 8,
@@ -31938,7 +31938,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 1994,
-      "fetched_at": "2026-09-26T07:13:16.356903Z",
+      "fetched_at": "2026-09-26T12:45:22.614795Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -32000,7 +32000,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-26T07:13:16.858800Z",
+      "fetched_at": "2026-09-26T12:45:23.477401Z",
       "note": ""
     },
     "03_QLCL": {
@@ -32077,7 +32077,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-26T07:13:17.579239Z",
+      "fetched_at": "2026-09-26T12:45:23.908609Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -39816,7 +39816,7 @@
         "Link bằng chứng"
       ],
       "row_count": 551,
-      "fetched_at": "2026-09-26T07:13:17.970845Z",
+      "fetched_at": "2026-09-26T12:45:24.449418Z",
       "note": ""
     },
     "05_KHO": {
@@ -39887,7 +39887,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-26T07:13:18.442768Z",
+      "fetched_at": "2026-09-26T12:45:25.308040Z",
       "note": ""
     },
     "06_GSTT": {
@@ -39946,7 +39946,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-09-26T07:13:19.152831Z",
+      "fetched_at": "2026-09-26T12:45:25.720593Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -43861,7 +43861,7 @@
         "Remark"
       ],
       "row_count": 243,
-      "fetched_at": "2026-09-26T07:13:20.089501Z",
+      "fetched_at": "2026-09-26T12:45:26.291681Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -43906,7 +43906,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-09-26T07:13:20.503462Z",
+      "fetched_at": "2026-09-26T12:45:27.176994Z",
       "note": ""
     }
   }

@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-01T22:27:15.498025Z",
+  "generated_at": "2026-10-02T04:40:40.120356Z",
   "summary": {
     "total_depts": 8,
     "kpi_official": 8,
     "kpi_skipped": 0,
     "kpi_excluded": 0,
-    "generated_at": "2026-10-01T22:27:15.498024Z"
+    "generated_at": "2026-10-02T04:40:40.120354Z"
   },
   "departments": {
     "01_SAN_XUAT": {
@@ -67,7 +67,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-10-01T22:27:15.496780Z"
+      "calculated_at": "2026-10-02T04:40:40.118596Z"
     },
     "02_KHSX_OTIF": {
       "dept": "02_KHSX_OTIF",
@@ -112,7 +112,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-10-01T22:27:15.496821Z"
+      "calculated_at": "2026-10-02T04:40:40.118651Z"
     },
     "03_QLCL": {
       "dept": "03_QLCL",
@@ -161,7 +161,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-10-01T22:27:15.496842Z"
+      "calculated_at": "2026-10-02T04:40:40.118679Z"
     },
     "04_QLTB_CD": {
       "dept": "04_QLTB_CD",
@@ -169,9 +169,9 @@
       "dqg_status": "PASS",
       "official": true,
       "kpis": {
-        "total_downtime_min": 41173.4,
-        "total_downtime_hrs": 686.22,
-        "breakdown_events": 558,
+        "total_downtime_min": 41413.4,
+        "total_downtime_hrs": 690.22,
+        "breakdown_events": 561,
         "pm_events": 2,
         "top_machines": [
           {
@@ -195,7 +195,7 @@
             "downtime_min": 1290.0
           }
         ],
-        "row_count": 561
+        "row_count": 564
       },
       "site_breakdown": {
         "GS1": {
@@ -232,9 +232,9 @@
         },
         "GS5": {
           "kpis": {
-            "total_downtime_min": 8935.0,
-            "total_downtime_hrs": 148.92,
-            "breakdown_events": 132,
+            "total_downtime_min": 8995.0,
+            "total_downtime_hrs": 149.92,
+            "breakdown_events": 133,
             "pm_events": 0,
             "top_machines": [
               {
@@ -258,15 +258,15 @@
                 "downtime_min": 535.0
               }
             ],
-            "row_count": 132
+            "row_count": 133
           },
-          "row_count": 132
+          "row_count": 133
         },
         "GS6": {
           "kpis": {
-            "total_downtime_min": 13185.0,
-            "total_downtime_hrs": 219.75,
-            "breakdown_events": 172,
+            "total_downtime_min": 13365.0,
+            "total_downtime_hrs": 222.75,
+            "breakdown_events": 174,
             "pm_events": 0,
             "top_machines": [
               {
@@ -279,7 +279,7 @@
               },
               {
                 "machine": "Máy túi giấy 360-1",
-                "downtime_min": 870.0
+                "downtime_min": 930.0
               },
               {
                 "machine": "Máy túi giấy 450-17",
@@ -290,9 +290,9 @@
                 "downtime_min": 640.0
               }
             ],
-            "row_count": 172
+            "row_count": 174
           },
-          "row_count": 172
+          "row_count": 174
         },
         "GSQV": {
           "kpis": null,
@@ -300,7 +300,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-10-01T22:27:15.497459Z"
+      "calculated_at": "2026-10-02T04:40:40.119547Z"
     },
     "05_KHO": {
       "dept": "05_KHO",
@@ -357,7 +357,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-10-01T22:27:15.497480Z"
+      "calculated_at": "2026-10-02T04:40:40.119578Z"
     },
     "06_GSTT": {
       "dept": "06_GSTT",
@@ -412,7 +412,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-10-01T22:27:15.497492Z"
+      "calculated_at": "2026-10-02T04:40:40.119595Z"
     },
     "07_CONG_NGHE_SPM": {
       "dept": "07_CONG_NGHE_SPM",
@@ -471,7 +471,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-10-01T22:27:15.498000Z"
+      "calculated_at": "2026-10-02T04:40:40.120320Z"
     },
     "08_BO_CONTROL": {
       "dept": "08_BO_CONTROL",
@@ -520,7 +520,7 @@
           "note": "No data for this site"
         }
       },
-      "calculated_at": "2026-10-01T22:27:15.498016Z"
+      "calculated_at": "2026-10-02T04:40:40.120342Z"
     }
   }
 }

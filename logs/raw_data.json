@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T22:19:26.288960Z",
+  "generated_at": "2026-10-29T04:53:34.534302Z",
   "summary": {
     "total": 8,
     "configured": 8,
@@ -31938,7 +31938,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 1994,
-      "fetched_at": "2026-10-28T22:19:21.607970Z",
+      "fetched_at": "2026-10-29T04:53:29.598688Z",
       "note": ""
     },
     "02_KHSX_OTIF": {
@@ -32000,7 +32000,7 @@
         "Người kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-10-28T22:19:22.391592Z",
+      "fetched_at": "2026-10-29T04:53:30.471318Z",
       "note": ""
     },
     "03_QLCL": {
@@ -32077,7 +32077,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-10-28T22:19:22.786480Z",
+      "fetched_at": "2026-10-29T04:53:31.054277Z",
       "note": ""
     },
     "04_QLTB_CD": {
@@ -41591,6 +41591,48 @@
           "Hành động cần làm": "",
           "Trạng thái": "Done",
           "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-10-28",
+          "Ca": "Ca 1",
+          "Nhà máy": "GS6",
+          "Mã máy": "Máy in 6 màu",
+          "Thời gian dừng (phút)": "90",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Nam",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-10-28",
+          "Ca": "Ca 2",
+          "Nhà máy": "GS6",
+          "Mã máy": "Máy ép khay số 2",
+          "Thời gian dừng (phút)": "200",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Nam",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
+        },
+        {
+          "Ngay": "2026-10-28",
+          "Ca": "Ca 1",
+          "Nhà máy": "GS6",
+          "Mã máy": "Máy nghiền số 1",
+          "Thời gian dừng (phút)": "30",
+          "Loại dừng máy": "Breakdown",
+          "Mã nguyên nhân": "",
+          "Loại sự cố": "Breakdown",
+          "PIC trực tiếp": "Mr Nam",
+          "Hành động cần làm": "",
+          "Trạng thái": "Done",
+          "Link bằng chứng": ""
         }
       ],
       "columns": [
@@ -41607,8 +41649,8 @@
         "Trạng thái",
         "Link bằng chứng"
       ],
-      "row_count": 679,
-      "fetched_at": "2026-10-28T22:19:23.340575Z",
+      "row_count": 682,
+      "fetched_at": "2026-10-29T04:53:31.494878Z",
       "note": ""
     },
     "05_KHO": {
@@ -41679,7 +41721,7 @@
         "Ghi chú kiểm tra DL"
       ],
       "row_count": 2,
-      "fetched_at": "2026-10-28T22:19:24.180962Z",
+      "fetched_at": "2026-10-29T04:53:32.292635Z",
       "note": ""
     },
     "06_GSTT": {
@@ -41738,7 +41780,7 @@
         "Remark"
       ],
       "row_count": 2,
-      "fetched_at": "2026-10-28T22:19:24.812689Z",
+      "fetched_at": "2026-10-29T04:53:32.980836Z",
       "note": ""
     },
     "07_CONG_NGHE_SPM": {
@@ -45653,7 +45695,7 @@
         "Remark"
       ],
       "row_count": 243,
-      "fetched_at": "2026-10-28T22:19:25.404030Z",
+      "fetched_at": "2026-10-29T04:53:33.738621Z",
       "note": ""
     },
     "08_BO_CONTROL": {
@@ -45698,7 +45740,7 @@
         "Remark"
       ],
       "row_count": 1,
-      "fetched_at": "2026-10-28T22:19:26.288938Z",
+      "fetched_at": "2026-10-29T04:53:34.534280Z",
       "note": ""
     }
   }
